@@ -5,7 +5,7 @@ repo_name: Xiaokang2022/tkintertools-docs # 仓库名称
 edit_uri: edit/main/2.6/ # 编辑地址（页面会出现编辑按钮）
 site_description: Official documentation website of tkintertools  # 站点描述
 site_author: Xiaokang2022 # 站点作者
-copyright: Copyright &copy; 2024 Xiaokang2022 # 版权信息（会出现在左下角）
+copyright: Copyright &copy; 2022 Xiaokang2022 # 版权信息（会出现在左下角）
 remote_branch: gh-pages # GitHub Pages 分支名称（此处为默认值）
 remote_name: origin # 远程分支的名称（默认值）
 docs_dir: 2.6/ # 文档目录（默认值）
@@ -206,13 +206,9 @@ extra_javascript: # 额外 JS
   - extra/js/mathjax.js # 保证数学表达式能正确显示的运行时环境（下面两个也是）
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不蒜子统计脚本
-  - https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js # 不蒜子数据修正需求文件
-  - extra/js/modify.js # 不蒜子数据修正（这个要放在需求文件的后面）
 
 extra_css: # 额外 CSS
   - extra/css/extra.css # 加载自定义的样式
-  - https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css # 访问统计转圈加载样式
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 自定义字体（霞鹜文楷）
 
 plugins: # 插件
