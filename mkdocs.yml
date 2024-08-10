@@ -271,15 +271,15 @@ nav: # 导航栏
       - 第一章：简单体验:
           - 1.1 安装 tkintertools: tutorials/1-1.md
           - 1.2 实现一个简单的界面: tutorials/1-2.md
-          - 1.2 框架概述: tutorials/1-3.md
+          - 1.3 框架概述 *: tutorials/1-3.md
     
-      # - 第二章：容器部件:
-      #     - 2.1 窗口容器部件: tutorials/1-1.md
-      #     - 2.2 画布容器部件: tutorials/1-1.md
-      # - 第三章：基本部件:
-      #     - 3.1 信息类部件: tutorials/1-1.md
-      #     - 3.2 功能类部件: tutorials/1-1.md
-      #     - 3.3 高级部件: tutorials/1-1.md
+      - 第二章：容器控件:
+          - 2.1 窗口容器控件: tutorials/2-1.md
+      #     - 2.2 画布容器控件: tutorials/2-2.md
+      # - 第三章：基本控件:
+      #     - 3.1 信息类控件: tutorials/1-1.md
+      #     - 3.2 功能类控件: tutorials/1-1.md
+      #     - 3.3 高级控件: tutorials/1-1.md
       # - 第四章：界面布局:
       #     - 4.1 Place: tutorials/1-1.md
       #     - 4.2 Pack 和 Grid: tutorials/1-1.md
@@ -296,8 +296,8 @@ nav: # 导航栏
       #     - 7.2 HSL: tutorials/1-1.md
       #     - 7.3 RGBA: tutorials/1-1.md
       # - 第八章：自定义开发:
-      #     - 8.1 自定义容器部件: tutorials/1-1.md
-      #     - 8.2 自定义基础部件: tutorials/1-1.md
+      #     - 8.1 自定义容器控件: tutorials/1-1.md
+      #     - 8.2 自定义基础控件: tutorials/1-1.md
       #     - 8.3 自定义组件: tutorials/1-1.md
       #     - 8.4 自定义控制器: tutorials/1-1.md
       #     - 8.5 自定义动画: tutorials/1-1.md
