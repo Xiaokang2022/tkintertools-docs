@@ -216,7 +216,7 @@ plugins: # 插件
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 分隔符，我也不懂，我从官方那里找来的
       lang: # 支持的语言
         - zh # 中文
-  - mike:
+  - mike:  # 版本控制（pip install mike）
       alias_type: symlink
       redirect_template: null
       deploy_prefix: ''
