@@ -5,6 +5,16 @@
     --md-code-font: "Consolas";
 }
 
+/*给图片加圆角*/
+img {
+    border-radius: 5px;
+}
+
+/*Markdown mermaid 图标居中*/
+.mermaid {
+    text-align: center;
+}
+
 [data-md-color-scheme="default"] {
     /*亮色样式*/
     --md-default-fg-color: #333;
