@@ -28,28 +28,124 @@ Usage:
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-__version__ = "0.0.1"
-__author__ = "Xiaokang2022 <2951256653@qq.com>"
+# __version__ = "0.0.1"
+# __author__ = "Xiaokang2022 <2951256653@qq.com>"
 
+import importlib
 import inspect
 import pathlib
 import pkgutil
 import types
 import typing
 
-import tkintertools.standard
+import tkintertools as tkt
+import tkintertools.toolbox as toolbox
 from rich import print
 
 
-def get_packages(path: typing.Iterable[str], prefix: str = "    ") -> None:
+def get_package_contents(package: types.ModuleType) -> dict:
     """"""
-    for _, modname, ispkg in pkgutil.iter_modules(path):
+    contents = {}
+
+    for _, modname, ispkg in pkgutil.iter_modules(package.__path__, package.__name__ + '.'):
         if ispkg:
-            print(f"{prefix}{modname}/", )
-            get_packages([f"{path[0]}\\{modname}"], prefix + "    ")
+            subpkg = importlib.import_module(modname)
+            contents[modname.split('.')[-1]] = get_package_contents(subpkg)
         else:
-            print(f"{prefix}{modname}.py")
+            contents[modname.split('.')[-1]] = None
+
+    return contents
 
 
-print("tkintertools/")
-get_packages(tkintertools.__path__)
+def get_function_data(func: types.FunctionType) -> dict:
+    """"""
+    signature = inspect.signature(func)
+
+    data = {
+        "name": func.__name__,
+        "parameters": [],
+        "return_type": signature.return_annotation,
+        "docstring": func.__doc__,
+    }
+
+    positional_only_flag = False
+    keyword_only_flag = False
+
+    for para in signature.parameters.values():
+        if para.kind is inspect.Parameter.POSITIONAL_ONLY:
+            positional_only_flag = True
+        elif positional_only_flag:
+            positional_only_flag = False
+            data["parameters"].append({"name": "/"})
+
+        if not keyword_only_flag and para.kind is inspect.Parameter.KEYWORD_ONLY:
+            data["parameters"].append({"name": "*"})
+            keyword_only_flag = True
+        elif not keyword_only_flag and para.kind is inspect.Parameter.VAR_POSITIONAL:
+            keyword_only_flag = True
+
+        data["parameters"].append({
+            "name": para.name,
+            "kind": para.kind,
+            "type": para.annotation,
+            "default": para.default,
+        })
+
+    return data
+
+
+def _get_para_name(name: str, kind) -> str:
+    """"""
+    match kind:
+        case inspect.Parameter.VAR_POSITIONAL: return f"*{name}"
+        case inspect.Parameter.VAR_KEYWORD: return f"**{name}"
+        case _: return name
+
+
+def _get_type_hint_string(type_hint) -> str:
+    """"""
+    if type_hint.__class__ is type:
+        return type_hint.__name__
+    return type_hint
+
+
+def _get_value_string(value) -> str:
+    """"""
+    if isinstance(value, str):
+        return f"'{value}'"
+    return value
+
+
+def get_function_define(func_data: dict) -> str:
+    """"""
+    define = f"def {func_data["name"]}(\n"
+
+    for para in func_data["parameters"]:
+        if para.get("kind") is None:
+            para_define = para["name"]
+        elif para["name"] == "self":
+            para_define = para["name"]
+        elif para["type"] is inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
+            para_define = _get_para_name(para["name"], para["kind"])
+        elif para["type"] is not inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
+            para_define = f"{_get_para_name(para["name"], para["kind"])}: {
+                _get_type_hint_string(para["type"])}"
+        elif para["type"] is inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
+            para_define = f"{_get_para_name(para["name"], para["kind"])} = {
+                _get_value_string(para["default"])}"
+        else:
+            para_define = f"{_get_para_name(para["name"], para["kind"])}: {
+                _get_type_hint_string(para["type"])} = {_get_value_string(para["default"])}"
+
+        define += f"    {para_define},\n"
+
+    return define + f") -> {_get_type_hint_string(func_data["return_type"])}: ..."
+
+
+def parse_doc_string(doc_string: str) -> dict:
+    """"""
+
+
+if __name__ == "__main__":
+    print(get_package_contents(tkt))
+    print(get_function_define(get_function_data(tkt.InputBox.__init__)))
