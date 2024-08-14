@@ -1,10 +1,4 @@
-"""
-Convert the documentation of a given Python package into Markdown
-
-Usage:
-
-
-"""
+"""Convert the documentation of a given Python package into Markdown"""
 
 # MIT License
 
@@ -33,18 +27,15 @@ Usage:
 
 import importlib
 import inspect
-import pathlib
 import pkgutil
 import types
 import typing
 
-import tkintertools as tkt
-import tkintertools.toolbox as toolbox
 from rich import print
 
 
 def get_package_contents(package: types.ModuleType) -> dict:
-    """"""
+    """Get the contents of a package"""
     contents = {}
 
     for _, modname, ispkg in pkgutil.iter_modules(package.__path__, package.__name__ + '.'):
@@ -57,8 +48,44 @@ def get_package_contents(package: types.ModuleType) -> dict:
     return contents
 
 
+def get_module_data(module: types.ModuleType) -> dict:
+    """Get the data for a module"""
+    data = {
+        'docstring': module.__doc__,
+        'classes': [],
+        'functions': [],
+        'variables': []
+    }
+
+    for name, member in inspect.getmembers(module):
+        if inspect.ismodule(member) or name.startswith('__'):
+            continue
+
+        if inspect.isclass(member) and member.__module__ == module.__name__:
+            data['classes'].append(name)
+        elif inspect.isfunction(member) and member.__module__ == module.__name__:
+            data['functions'].append(name)
+        elif not inspect.isbuiltin(member) and not inspect.isroutine(member):
+            if not inspect.isclass(member) and not inspect.isfunction(member):
+                data['variables'].append(name)
+
+    return data
+
+
+def get_class_data(cls: object) -> dict:
+    """Get the data for a class"""
+    data = {
+        "name": cls.__name__,
+        "parents": cls.__bases__,
+        "methods": [method for method in set(cls.__dict__.values()) if callable(method)],
+        "docstring": cls.__doc__,
+    }
+
+    return data
+
+
 def get_function_data(func: types.FunctionType) -> dict:
-    """"""
+    """Get the data for a function"""
     signature = inspect.signature(func)
 
     data = {
@@ -94,30 +121,30 @@ def get_function_data(func: types.FunctionType) -> dict:
     return data
 
 
-def _get_para_name(name: str, kind) -> str:
-    """"""
+def _get_para_name(name: str, kind: str) -> str:
+    """Get the string form of a parameter"""
     match kind:
         case inspect.Parameter.VAR_POSITIONAL: return f"*{name}"
         case inspect.Parameter.VAR_KEYWORD: return f"**{name}"
         case _: return name
 
 
-def _get_type_hint_string(type_hint) -> str:
-    """"""
+def _get_type_hint_string(type_hint: typing.Any) -> str:
+    """Get the string form of a type hint"""
     if type_hint.__class__ is type:
         return type_hint.__name__
     return type_hint
 
 
-def _get_value_string(value) -> str:
-    """"""
+def _get_value_string(value: typing.Any) -> str:
+    """Get the string form of a value"""
     if isinstance(value, str):
         return f"'{value}'"
     return value
 
 
 def get_function_define(func_data: dict) -> str:
-    """"""
+    """Get the definition of a function"""
     define = f"def {func_data["name"]}(\n"
 
     for para in func_data["parameters"]:
@@ -125,27 +152,19 @@ def get_function_define(func_data: dict) -> str:
             para_define = para["name"]
         elif para["name"] == "self":
             para_define = para["name"]
-        elif para["type"] is inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
-            para_define = _get_para_name(para["name"], para["kind"])
-        elif para["type"] is not inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
-            para_define = f"{_get_para_name(para["name"], para["kind"])}: {
-                _get_type_hint_string(para["type"])}"
-        elif para["type"] is inspect.Parameter.empty and para["default"] is inspect.Parameter.empty:
-            para_define = f"{_get_para_name(para["name"], para["kind"])} = {
-                _get_value_string(para["default"])}"
         else:
-            para_define = f"{_get_para_name(para["name"], para["kind"])}: {
-                _get_type_hint_string(para["type"])} = {_get_value_string(para["default"])}"
+            name = _get_para_name(para["name"], para["kind"])
+            if para["type"] is inspect.Parameter.empty:
+                type = ""
+            else:
+                type = f": {_get_type_hint_string(para["type"])}"
+            if para["default"] is inspect.Parameter.empty:
+                default = ""
+            else:
+                default = f" = {_get_value_string(para["default"])}"
+
+            para_define = f"{name}{type}{default}"
 
         define += f"    {para_define},\n"
 
     return define + f") -> {_get_type_hint_string(func_data["return_type"])}: ..."
-
-
-def parse_doc_string(doc_string: str) -> dict:
-    """"""
-
-
-if __name__ == "__main__":
-    print(get_package_contents(tkt))
-    print(get_function_define(get_function_data(tkt.InputBox.__init__)))
