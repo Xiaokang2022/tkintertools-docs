@@ -4,10 +4,11 @@ Standard Geometries
 
 ## 🟢 Classes / 类
 
-### Cuboid
+### <big>`Cuboid`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Geometry`
 
 
 ```python
@@ -41,10 +42,11 @@ Cuboid
 
 
 
-### Tetrahedron
+### <big>`Tetrahedron`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Geometry`
 
 
 ```python

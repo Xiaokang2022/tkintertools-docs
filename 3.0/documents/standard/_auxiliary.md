@@ -4,14 +4,12 @@ Some auxiliary class
 
 ## 🟢 Classes / 类
 
-### \_AuxiliaryButton
+### <big>`_AuxiliaryButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code>
 
-#### \_\_init\_\_
+<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code> | `Widget`
 
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
 
 ```python
 def __init__(
@@ -41,14 +39,13 @@ def __init__(
 
 
 
-### \_AuxiliaryInputBox
+
+### <big>`_AuxiliaryInputBox`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code>
 
-#### \_\_init\_\_
+<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code> | `Widget`
 
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
 
 ```python
 def __init__(
@@ -76,7 +73,9 @@ def __init__(
 ```
 
 
-#### append
+
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -88,7 +87,8 @@ def append(
 ```
 Append text to Entry
 
-#### clear
+#### <big>`clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -99,7 +99,8 @@ def clear(
 ```
 Clear the text value of the Entry
 
-#### delete
+#### <big>`delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -111,7 +112,8 @@ def delete(
 ```
 Delete a specified amount of text
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -122,7 +124,8 @@ def get(
 ```
 Get the value of the Entry
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -136,14 +139,12 @@ Set the text value of the Entry
 
 
 
-### \_AuxiliaryLabel
+### <big>`_AuxiliaryLabel`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code>
 
-#### \_\_init\_\_
+<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code> | `Widget`
 
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
 
 ```python
 def __init__(
@@ -168,6 +169,7 @@ def __init__(
     animation: bool = True,
 ) -> None: ...
 ```
+
 
 
 

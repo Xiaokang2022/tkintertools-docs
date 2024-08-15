@@ -21,7 +21,8 @@ The built-in control functions are:
 
 ## 🔵 Functions / 函数
 
-### \_map\_t
+### <big>`_map_t`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -38,7 +39,8 @@ Map parameters in any range between 0 and 1
 * `end`: the last value of the parameter of control function
 
 
-### \_map\_y
+### <big>`_map_y`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -55,7 +57,8 @@ Map the final return value to 1
 * `end`: the last value of the parameter of control function
 
 
-### controller\_generator
+### <big>`controller_generator`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -84,7 +87,8 @@ For example:
 * After modifying: `y = sin(t*π/2)`, `0 <= t <= 1`
 
 
-### flat
+### <big>`flat`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -95,7 +99,8 @@ def flat(
 ```
 Flat animation: speed remains the same
 
-### rebound
+### <big>`rebound`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -106,7 +111,8 @@ def rebound(
 ```
 Rebound animation: before the end, displacement will bounce off a bit
 
-### smooth
+### <big>`smooth`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 

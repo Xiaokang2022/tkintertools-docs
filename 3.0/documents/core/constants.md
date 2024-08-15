@@ -4,7 +4,8 @@ All constants
 
 ## 🔵 Functions / 函数
 
-### reset
+### <big>`reset`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -16,7 +17,8 @@ Reset all constants to default value
 
 ## 🟡 Variables / 变量
 
-### FONT
+### <big>`FONT`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
@@ -25,7 +27,8 @@ FONT: str = 'Microsoft YaHei'
 ```
 
 
-### GOLDEN\_RATIO
+### <big>`GOLDEN_RATIO`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
@@ -34,7 +37,8 @@ GOLDEN_RATIO: float = 0.6180339887498949
 ```
 
 
-### SIZE
+### <big>`SIZE`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
@@ -43,7 +47,8 @@ SIZE: int = -20
 ```
 
 
-### SYSTEM
+### <big>`SYSTEM`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 

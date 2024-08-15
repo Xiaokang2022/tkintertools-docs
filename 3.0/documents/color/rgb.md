@@ -4,7 +4,8 @@ Support for RGB
 
 ## 🔵 Functions / 函数
 
-### \_str\_to\_rgba
+### <big>`_str_to_rgba`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -17,7 +18,8 @@ def _str_to_rgba(
 ```
 Experimental: Convert color strings(RGBA) to RGB codes
 
-### blend
+### <big>`blend`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -35,7 +37,8 @@ Mix colors by weight
 * `weights`: weight list
 
 
-### contrast
+### <big>`contrast`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -53,7 +56,8 @@ Get a contrasting color of a color
 * `channels`: three color channels
 
 
-### convert
+### <big>`convert`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -75,7 +79,8 @@ Convert one color to another proportionally
 * `channels`: three color channels
 
 
-### gradient
+### <big>`gradient`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -101,7 +106,8 @@ Get a list of color gradients from one color to another proportionally
 * `controller`: control function
 
 
-### rgb\_to\_str
+### <big>`rgb_to_str`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -112,7 +118,8 @@ def rgb_to_str(
 ```
 Convert RGB codes to color strings
 
-### str\_to\_rgb
+### <big>`str_to_rgb`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -125,16 +132,20 @@ Convert color strings to RGB codes
 
 ## 🟡 Variables / 变量
 
-### MAX
+### <big>`MAX`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-MAX: tuple = (255, 255, 255)
+MAX: tuple = (
+    255, 255, 255,
+)
 ```
 
 
-### RGB
+### <big>`RGB`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 

@@ -59,7 +59,8 @@ missing parts are empty by default.
 
 ## 🔵 Functions / 函数
 
-### \_get\_name
+### <big>`_get_name`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -70,7 +71,8 @@ def _get_name(
 ```
 Get the name of the object
 
-### get
+### <big>`get`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 

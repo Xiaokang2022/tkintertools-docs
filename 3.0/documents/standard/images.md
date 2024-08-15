@@ -4,12 +4,14 @@ All standard Images
 
 ## 🟢 Classes / 类
 
-### StillImage
+### <big>`StillImage`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### coords
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Image`
+
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -22,7 +24,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 

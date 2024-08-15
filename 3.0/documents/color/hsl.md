@@ -4,7 +4,8 @@ Support for HSL
 
 ## 🔵 Functions / 函数
 
-### blend
+### <big>`blend`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -22,7 +23,8 @@ Mix colors by weight
 * `weights`: weight list
 
 
-### contrast
+### <big>`contrast`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -40,7 +42,8 @@ Get a contrasting color of a color
 * `channels`: three color channels
 
 
-### convert
+### <big>`convert`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -62,7 +65,8 @@ Convert one color to another proportionally
 * `channels`: three color channels
 
 
-### gradient
+### <big>`gradient`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -88,7 +92,8 @@ Get a list of color gradients from one color to another proportionally
 * `controller`: control function
 
 
-### hsl\_to\_rgb
+### <big>`hsl_to_rgb`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -99,7 +104,8 @@ def hsl_to_rgb(
 ```
 Convert HSL to RGB codes
 
-### rgb\_to\_hsl
+### <big>`rgb_to_hsl`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -112,7 +118,8 @@ Convert RGB to HSL codes
 
 ## 🟡 Variables / 变量
 
-### HSL
+### <big>`HSL`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
@@ -121,12 +128,15 @@ HSL: GenericAlias = tuple[float, float, float]
 ```
 
 
-### MAX
+### <big>`MAX`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-MAX: tuple = (6.283185307179586, 1, 1)
+MAX: tuple = (
+    6.283185307179586, 1, 1,
+)
 ```
 
 

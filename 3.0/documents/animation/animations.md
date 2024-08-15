@@ -4,10 +4,11 @@ Standard animation class
 
 ## 🟢 Classes / 类
 
-### Animation
+### <big>`Animation`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -36,7 +37,8 @@ with the parameter being the percentage of the current animation progress
 * `derivation`: whether the callback function is derivative
 
 
-#### \_wrapper
+#### <big>`_wrapper`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -52,7 +54,8 @@ Make the ending function call correctly
 * `func`: the callback function to be wrapped
 
 
-#### start
+#### <big>`start`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -69,7 +72,8 @@ Start the animation
 * `delay`: length of the delay before the animation starts, in milliseconds 
 
 
-#### stop
+#### <big>`stop`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -82,10 +86,11 @@ Stop the animation
 
 
 
-### GradientItem
+### <big>`GradientItem`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -122,10 +127,11 @@ entire animation movement
 
 
 
-### GradientTkWidget
+### <big>`GradientTkWidget`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -160,10 +166,11 @@ entire animation movement
 
 
 
-### MoveComponent
+### <big>`MoveComponent`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -193,10 +200,11 @@ entire animation movement
 
 
 
-### MoveItem
+### <big>`MoveItem`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -228,10 +236,11 @@ entire animation movement
 
 
 
-### MoveTkWidget
+### <big>`MoveTkWidget`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -261,10 +270,11 @@ entire animation movement
 
 
 
-### MoveWidget
+### <big>`MoveWidget`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -294,10 +304,11 @@ entire animation movement
 
 
 
-### ScaleFontSize
+### <big>`ScaleFontSize`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
 
 
 ```python
@@ -327,7 +338,8 @@ entire animation movement
 * `derivation`: whether the callback function is derivative
 
 
-#### \_scale
+#### <big>`_scale`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 

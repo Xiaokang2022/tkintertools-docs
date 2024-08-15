@@ -4,10 +4,11 @@ All containers
 
 ## 🟢 Classes / 类
 
-### Canvas
+### <big>`Canvas`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
 
 
 ```python
@@ -38,7 +39,8 @@ value, `max` follows the maximum value
 * `kwargs`: compatible with other parameters of class `tkinter.Canvas`
 
 
-#### \_click
+#### <big>`_click`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -51,7 +53,8 @@ def _click(
 ```
 Events to active the mouse
 
-#### \_copy
+#### <big>`_copy`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -63,7 +66,8 @@ def _copy(
 ```
 Event for copy operation
 
-#### \_cut
+#### <big>`_cut`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -75,7 +79,8 @@ def _cut(
 ```
 Event for cut operation
 
-#### \_initialization
+#### <big>`_initialization`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -86,7 +91,8 @@ def _initialization(
 ```
 Initialization of size data
 
-#### \_input
+#### <big>`_input`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -98,7 +104,8 @@ def _input(
 ```
 Event for typing
 
-#### \_move
+#### <big>`_move`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -111,7 +118,8 @@ def _move(
 ```
 Internal Method: Events to move the mouse
 
-#### \_paste
+#### <big>`_paste`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -123,7 +131,8 @@ def _paste(
 ```
 Event for paste operation
 
-#### \_re\_place
+#### <big>`_re_place`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -140,7 +149,8 @@ WARNING:
 This method only works for Canvas with Place layout
 
 
-#### \_release
+#### <big>`_release`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -153,7 +163,8 @@ def _release(
 ```
 Events to release the mouse
 
-#### \_select\_all
+#### <big>`_select_all`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -165,7 +176,8 @@ def _select_all(
 ```
 Event for operation of selecting all
 
-#### \_theme
+#### <big>`_theme`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -181,7 +193,8 @@ Change the color theme of the Canvas and its items
 * `dark`: whether it is in dark mode
 
 
-#### \_wheel
+#### <big>`_wheel`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -194,7 +207,8 @@ def _wheel(
 ```
 Events to scroll the mouse wheel
 
-#### \_zoom\_children
+#### <big>`_zoom_children`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -206,7 +220,8 @@ def _zoom_children(
 ```
 Experimental: Scale the tkinter Widgets
 
-#### \_zoom\_self
+#### <big>`_zoom_self`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -217,7 +232,8 @@ def _zoom_self(
 ```
 Scale the `Canvas` itself
 
-#### clear
+#### <big>`clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -228,7 +244,8 @@ def clear(
 ```
 Clear all things in the Canvas
 
-#### create\_text
+#### <big>`create_text`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -243,7 +260,8 @@ def create_text(
 ```
 
 
-#### destroy
+#### <big>`destroy`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -256,10 +274,11 @@ def destroy(
 
 
 
-### Frame
+### <big>`Frame`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
 
 
 ```python
@@ -288,10 +307,11 @@ value, `max` follows the maximum value
 
 
 
-### Tk
+### <big>`Tk`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Tk`
 
 
 ```python
@@ -317,7 +337,8 @@ the location is random
 * `**kwargs`: compatible with other parameters of class `tkinter.Tk`
 
 
-#### \_theme
+#### <big>`_theme`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -338,7 +359,8 @@ Change the color theme of the window
 * `include_canvases`: wether include its canvases
 
 
-#### \_zoom
+#### <big>`_zoom`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -349,7 +371,8 @@ def _zoom(
 ```
 Zoom contents of the window
 
-#### alpha
+#### <big>`alpha`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -365,7 +388,8 @@ Set or get the transparency of the window
 * `value`: the transparency of the window, range is 0~1
 
 
-#### center
+#### <big>`center`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -382,7 +406,8 @@ Center the widget
 means that the reference area is the entire screen
 
 
-#### fullscreen
+#### <big>`fullscreen`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -403,7 +428,8 @@ The method should be called at the end of the code,
 or after some time after the program has started
 
 
-#### geometry
+#### <big>`geometry`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -433,7 +459,8 @@ CAUTION:
 This method causes the event `<configure>` to be triggered
 
 
-#### shutdown
+#### <big>`shutdown`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -458,7 +485,8 @@ Regardless of whether the function is successfully called or not,
 the window will still close gracefully
 
 
-#### toolwindow
+#### <big>`toolwindow`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -474,7 +502,8 @@ Set or get whether the window is tool-window
 * `value`: indicate whether the window is tool-window
 
 
-#### topmost
+#### <big>`topmost`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -490,7 +519,8 @@ Set or get whether the window is pinned or not
 * `value`: indicate whether the window is topmost
 
 
-#### transparentcolor
+#### <big>`transparentcolor`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -508,10 +538,11 @@ Set or get the penetration color of the window
 
 
 
-### Toplevel
+### <big>`Toplevel`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Toplevel` `Tk`
 
 
 ```python
@@ -547,7 +578,8 @@ with regard to its master
 * `**kwargs`: compatible with other parameters of class `tkinter.Toplevel`
 
 
-#### destroy
+#### <big>`destroy`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 

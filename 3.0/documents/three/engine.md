@@ -4,10 +4,11 @@ Core codes of 3D
 
 ## 🟢 Classes / 类
 
-### Canvas
+### <big>`Canvas`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
 
 
 ```python
@@ -25,7 +26,8 @@ def __init__(
 Base class of 3D Canvas
 
 
-#### space\_sort
+#### <big>`space_sort`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -38,10 +40,11 @@ Sort the contextual relationship between the spatial positions of the components
 
 
 
-### Component
+### <big>`Component`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ABC`
 
 
 ```python
@@ -53,7 +56,8 @@ def __init__(
 3D 对象基类
 
 
-#### \_project
+#### <big>`_project`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -70,7 +74,8 @@ def _project(
 * `canvas`: 投影到的画布
 
 
-#### center
+#### <big>`center`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -81,7 +86,8 @@ def center(
 ```
 几何中心
 
-#### rotate
+#### <big>`rotate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -105,7 +111,8 @@ def rotate(
 * `axis`: 旋转轴线，无默认值
 
 
-#### scale
+#### <big>`scale`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -127,7 +134,8 @@ def scale(
 * `center`: 缩放中心，默认为几何中心
 
 
-#### translate
+#### <big>`translate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -146,7 +154,8 @@ def translate(
 * `dz`: z 方向位移长度
 
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -159,10 +168,11 @@ def update(
 
 
 
-### Geometry
+### <big>`Geometry`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -178,7 +188,8 @@ def __init__(
 * `sides`: 组成几何体的面
 
 
-#### append
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -193,7 +204,8 @@ def append(
 * `sides`: `Side` 类
 
 
-#### center
+#### <big>`center`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -204,7 +216,8 @@ def center(
 ```
 几何中心
 
-#### rotate
+#### <big>`rotate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -228,7 +241,8 @@ def rotate(
 * `axis`: 旋转轴线，无默认值
 
 
-#### scale
+#### <big>`scale`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -250,7 +264,8 @@ def scale(
 * `center`: 缩放中心，默认为几何中心
 
 
-#### translate
+#### <big>`translate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -269,7 +284,8 @@ def translate(
 * `dz`: z 方向位移长度
 
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -282,10 +298,11 @@ def update(
 
 
 
-### Line
+### <big>`Line`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
 
 
 ```python
@@ -308,7 +325,8 @@ def __init__(
 * `fill`: 线的颜色
 
 
-#### \_camera\_distance
+#### <big>`_camera_distance`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -319,7 +337,8 @@ def _camera_distance(
 ```
 与相机距离
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -332,10 +351,11 @@ def update(
 
 
 
-### Plane
+### <big>`Plane`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
 
 
 ```python
@@ -357,7 +377,8 @@ def __init__(
 * `outline`: 面轮廓的颜色
 
 
-#### \_camera\_distance
+#### <big>`_camera_distance`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -368,7 +389,8 @@ def _camera_distance(
 ```
 与相机距离
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -381,10 +403,11 @@ def update(
 
 
 
-### Point
+### <big>`Point`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
 
 
 ```python
@@ -419,7 +442,8 @@ def __init__(
 * `markupjustify`: 标记文本多行对齐方式
 
 
-#### \_camera\_distance
+#### <big>`_camera_distance`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -430,7 +454,8 @@ def _camera_distance(
 ```
 与相机距离
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -443,10 +468,11 @@ def update(
 
 
 
-### Space
+### <big>`Space`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
 
 
 ```python
@@ -464,7 +490,8 @@ def __init__(
 A canvas where you can view 3D objects
 
 
-#### \_initialization
+#### <big>`_initialization`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -475,7 +502,8 @@ def _initialization(
 ```
 
 
-#### \_rotate
+#### <big>`_rotate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -495,7 +523,8 @@ Triggering of a rotation event
 * `_cache`: cache values that record the coordinates of mouse presses
 
 
-#### \_scale
+#### <big>`_scale`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -508,7 +537,8 @@ def _scale(
 ```
 Triggering of a scaling event
 
-#### \_translate
+#### <big>`_translate`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -528,7 +558,8 @@ Triggering of a translation event
 * `_cache`: cache values that record the coordinates of mouse presses
 
 
-#### \_zoom\_self
+#### <big>`_zoom_self`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -541,10 +572,11 @@ def _zoom_self(
 
 
 
-### Text3D
+### <big>`Text3D`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
 
 
 ```python
@@ -570,7 +602,8 @@ def __init__(
 * `fill`: 点内部的填充颜色
 
 
-#### \_camera\_distance
+#### <big>`_camera_distance`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -581,7 +614,8 @@ def _camera_distance(
 ```
 与相机距离
 
-#### update
+#### <big>`update`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -596,7 +630,8 @@ def update(
 
 ## 🔵 Functions / 函数
 
-### project
+### <big>`project`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -612,7 +647,8 @@ def project(
 * `distance`: 正向平面的距离（平面正对着我们）
 
 
-### rotate
+### <big>`rotate`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -637,7 +673,8 @@ def rotate(
 * `axis`: 旋转轴线的空间坐标
 
 
-### scale
+### <big>`scale`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -660,7 +697,8 @@ def scale(
 * `center`: 缩放中心的空间坐标
 
 
-### translate
+### <big>`translate`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 

@@ -4,12 +4,14 @@ All standard Texts
 
 ## 🟢 Classes / 类
 
-### Information
+### <big>`Information`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### append
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Text`
+
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -21,7 +23,8 @@ def append(
 ```
 Append value to the value of `Text`
 
-#### clear
+#### <big>`clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -32,7 +35,8 @@ def clear(
 ```
 Clear the value of `Text`
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -45,7 +49,8 @@ def coords(
 ```
 
 
-#### delete
+#### <big>`delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -57,7 +62,8 @@ def delete(
 ```
 Remove a portion of the `Text` value from the trail
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -68,7 +74,8 @@ def display(
 ```
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -79,7 +86,8 @@ def get(
 ```
 Get the value of `Text`
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -93,10 +101,11 @@ Set the value of `Text`
 
 
 
-### SingleLineText
+### <big>`SingleLineText`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Text`
 
 
 ```python
@@ -145,7 +154,8 @@ Single-line editable text
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### \_move\_left
+#### <big>`_move_left`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -156,7 +166,8 @@ def _move_left(
 ```
 Move the text to the left as a whole, i.e. press the right arrow
 
-#### \_move\_right
+#### <big>`_move_right`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -167,7 +178,8 @@ def _move_right(
 ```
 Move the text to the right as a whole, i.e. press the left arrow
 
-#### \_text\_delete
+#### <big>`_text_delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -180,7 +192,8 @@ def _text_delete(
 ```
 Delete the actual text that appears on the component
 
-#### \_text\_get
+#### <big>`_text_get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -191,7 +204,8 @@ def _text_get(
 ```
 Get the actual text that appears on the component
 
-#### \_text\_insert
+#### <big>`_text_insert`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -204,7 +218,8 @@ def _text_insert(
 ```
 Insert the actual text that appears on the component
 
-#### \_text\_length
+#### <big>`_text_length`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -215,7 +230,8 @@ def _text_length(
 ```
 Get the length of actual text that appears on the component
 
-#### \_text\_overflow
+#### <big>`_text_overflow`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -226,7 +242,8 @@ def _text_overflow(
 ```
 Whether the text content extends beyond the text box
 
-#### \_text\_set
+#### <big>`_text_set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -238,7 +255,8 @@ def _text_set(
 ```
 Set the actual text that appears on the component
 
-#### append
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -250,7 +268,8 @@ def append(
 ```
 Add some characters to the text cursor
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -263,7 +282,8 @@ def coords(
 ```
 
 
-#### cursor\_find
+#### <big>`cursor_find`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -275,7 +295,8 @@ def cursor_find(
 ```
 Return the index of text with the x position of mouse
 
-#### cursor\_get
+#### <big>`cursor_get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -286,7 +307,8 @@ def cursor_get(
 ```
 Get the index position of the text cursor
 
-#### cursor\_move
+#### <big>`cursor_move`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -298,7 +320,8 @@ def cursor_move(
 ```
 Move the index position of the text cursor
 
-#### cursor\_move\_to
+#### <big>`cursor_move_to`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -310,7 +333,8 @@ def cursor_move_to(
 ```
 Move the index position of the text cursor to a certain index
 
-#### cursor\_set
+#### <big>`cursor_set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -322,7 +346,8 @@ def cursor_set(
 ```
 Set the index position of the text cursor
 
-#### delete
+#### <big>`delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -335,7 +360,8 @@ def delete(
 ```
 Delete text within the specified index range, [start, end]
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -346,7 +372,8 @@ def display(
 ```
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -357,7 +384,8 @@ def get(
 ```
 Get text of the component
 
-#### get\_gap
+#### <big>`get_gap`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -368,7 +396,8 @@ def get_gap(
 ```
 Get the size of the spacing between the text and the border
 
-#### insert
+#### <big>`insert`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -381,7 +410,8 @@ def insert(
 ```
 Insert text to the location of the specified index
 
-#### pop
+#### <big>`pop`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -392,7 +422,8 @@ def pop(
 ```
 Delete a character at the text cursor
 
-#### select\_all
+#### <big>`select_all`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -403,7 +434,8 @@ def select_all(
 ```
 Select all texts
 
-#### select\_clear
+#### <big>`select_clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -414,7 +446,8 @@ def select_clear(
 ```
 Clear the selected text
 
-#### select\_get
+#### <big>`select_get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -425,7 +458,8 @@ def select_get(
 ```
 Get the index tuple of the selected text
 
-#### select\_set
+#### <big>`select_set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -438,7 +472,8 @@ def select_set(
 ```
 Set the index tuple of the selected text, [start, end]
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 

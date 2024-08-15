@@ -4,10 +4,11 @@ All standard Dialogs
 
 ## 🟢 Classes / 类
 
-### TkColorChooser
+### <big>`TkColorChooser`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -30,10 +31,11 @@ Color chooser pop-up
 
 
 
-### TkFontChooser
+### <big>`TkFontChooser`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -56,10 +58,11 @@ Font chooser pop-up
 
 
 
-### TkMessage
+### <big>`TkMessage`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python

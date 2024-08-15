@@ -4,183 +4,400 @@ Dark theme
 
 ## 🟡 Variables / 变量
 
-### Button
+### <big>`Button`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Button: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}, 'active': {'fill': '#666666', 'outline': '#666666'}}, 'RoundedRectangle': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+Button: dict = {
+    'Information': {'active': {'fill': '#F1F1F1'},
+                    'hover': {'fill': '#F1F1F1'},
+                    'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'active': {'fill': '#666666', 'outline': '#666666'},
+                  'hover': {'fill': '#333333', 'outline': '#858585'},
+                  'normal': {'fill': '#333333', 'outline': '#333333'}},
+    'RoundedRectangle': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                         'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### Canvas
+### <big>`Canvas`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Canvas: dict = {'bg': '#202020', 'insertbackground': '#FFFFFF', 'highlightthickness': 0}
+Canvas: dict = {
+    'bg': '#202020', 'highlightthickness': 0, 'insertbackground': '#FFFFFF',
+}
 ```
 
 
-### CheckButton
+### <big>`CheckButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-CheckButton: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}, 'active': {'fill': '#666666', 'outline': '#666666'}}, 'RoundedRectangle': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+CheckButton: dict = {
+    'Information': {'active': {'fill': '#F1F1F1'},
+                    'hover': {'fill': '#F1F1F1'},
+                    'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'active': {'fill': '#666666', 'outline': '#666666'},
+                  'hover': {'fill': '#333333', 'outline': '#858585'},
+                  'normal': {'fill': '#333333', 'outline': '#333333'}},
+    'RoundedRectangle': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                         'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### Frame
+### <big>`Frame`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Frame: dict = {'bg': '#1C1C1C', 'insertbackground': '#FFFFFF', 'highlightthickness': 0}
+Frame: dict = {
+    'bg': '#1C1C1C', 'highlightthickness': 0, 'insertbackground': '#FFFFFF',
+}
 ```
 
 
-### HighlightButton
+### <big>`HighlightButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-HighlightButton: dict = {'Information': {'normal': {'fill': 'grey'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#FFFFFF'}}}
+HighlightButton: dict = {
+    'Information': {'active': {'fill': '#FFFFFF'},
+                    'hover': {'fill': '#F1F1F1'},
+                    'normal': {'fill': 'grey'}},
+}
 ```
 
 
-### IconButton
+### <big>`IconButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-IconButton: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}, 'active': {'fill': '#666666', 'outline': '#666666'}}, 'RoundedRectangle': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+IconButton: dict = {
+    'Information': {'active': {'fill': '#F1F1F1'},
+                    'hover': {'fill': '#F1F1F1'},
+                    'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'active': {'fill': '#666666', 'outline': '#666666'},
+                  'hover': {'fill': '#333333', 'outline': '#858585'},
+                  'normal': {'fill': '#333333', 'outline': '#333333'}},
+    'RoundedRectangle': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                         'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### InputBox
+### <big>`InputBox`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-InputBox: dict = {'Rectangle': {'normal': {'fill': '#131313', 'outline': '#797979'}, 'hover': {'fill': '#0C0C0C', 'outline': '#A5A5A5'}, 'active': {'fill': '#090909', 'outline': '#0078D7'}}, 'RoundedRectangle.in': {'normal': {'fill': '#2D2D2D', 'outline': '#303030'}, 'hover': {'fill': '#323232', 'outline': '#303030'}, 'active': {'fill': '#1F1F1F', 'outline': '#303030'}}, 'RoundedRectangle.out': {'normal': {'fill': '#8F8F8F', 'outline': '#8F8F8F'}, 'hover': {'fill': '#8F8F8F', 'outline': '#8F8F8F'}, 'active': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}}, 'SingleLineText': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}}
+InputBox: dict = {
+    'Rectangle': {'active': {'fill': '#090909', 'outline': '#0078D7'},
+                  'hover': {'fill': '#0C0C0C', 'outline': '#A5A5A5'},
+                  'normal': {'fill': '#131313', 'outline': '#797979'}},
+    'RoundedRectangle.in': {'active': {'fill': '#1F1F1F', 'outline': '#303030'},
+                            'hover': {'fill': '#323232', 'outline': '#303030'},
+                            'normal': {'fill': '#2D2D2D', 'outline': '#303030'}},
+    'RoundedRectangle.out': {'active': {'fill': '#4CC2FF', 'outline': '#4CC2FF'},
+                             'hover': {'fill': '#8F8F8F', 'outline': '#8F8F8F'},
+                             'normal': {'fill': '#8F8F8F', 'outline': '#8F8F8F'}},
+    'SingleLineText': {'active': {'fill': '#F1F1F1'},
+                       'hover': {'fill': '#F1F1F1'},
+                       'normal': {'fill': '#F1F1F1'}},
+}
 ```
 
 
-### Label
+### <big>`Label`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Label: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}, 'RoundedRectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+Label: dict = {
+    'Information': {'hover': {'fill': '#F1F1F1'}, 'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                  'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+    'RoundedRectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### OptionButton
+### <big>`OptionButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-OptionButton: dict = {'Rectangle': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}, 'active': {'fill': '#666666', 'outline': '#666666'}}, 'HalfRoundedRectangle': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+OptionButton: dict = {
+    'HalfRoundedRectangle': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                             'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                             'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+    'Rectangle': {'active': {'fill': '#666666', 'outline': '#666666'},
+                  'hover': {'fill': '#333333', 'outline': '#858585'},
+                  'normal': {'fill': '#333333', 'outline': '#333333'}},
+}
 ```
 
 
-### ProgressBar
+### <big>`ProgressBar`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-ProgressBar: dict = {'Rectangle.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'}}, 'Rectangle.out': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}}, 'SemicircularRectangle.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'}}, 'SemicircularRectangle.out': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+ProgressBar: dict = {
+    'Rectangle.in': {'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                     'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}},
+    'Rectangle.out': {'hover': {'fill': '#333333', 'outline': '#858585'},
+                      'normal': {'fill': '#333333', 'outline': '#333333'}},
+    'SemicircularRectangle.in': {'hover': {'fill': '#49B3EB',
+                                           'outline': '#49B3EB'},
+                                 'normal': {'fill': '#4CC2FF',
+                                            'outline': '#4CC2FF'}},
+    'SemicircularRectangle.out': {'hover': {'fill': '#323232',
+                                            'outline': '#3D3D3D'},
+                                  'normal': {'fill': '#2B2B2B',
+                                             'outline': '#3D3D3D'}},
+}
 ```
 
 
-### RadioButton
+### <big>`RadioButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-RadioButton: dict = {'Oval.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'}, 'active': {'fill': '#49B3EB', 'outline': '#49B3EB'}}, 'Oval.out': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}, 'Rectangle.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'}, 'active': {'fill': '#49B3EB', 'outline': '#49B3EB'}}, 'Rectangle.out': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#858585'}, 'active': {'fill': '#323232', 'outline': '#666666'}}}
+RadioButton: dict = {
+    'Oval.in': {'active': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}},
+    'Oval.out': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                 'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+    'Rectangle.in': {'active': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                     'hover': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                     'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}},
+    'Rectangle.out': {'active': {'fill': '#323232', 'outline': '#666666'},
+                      'hover': {'fill': '#3C3C3C', 'outline': '#858585'},
+                      'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### SegmentedButton
+### <big>`SegmentedButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-SegmentedButton: dict = {'Rectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}, 'RoundedRectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+SegmentedButton: dict = {
+    'Rectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                  'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+    'RoundedRectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+}
 ```
 
 
-### Slider
+### <big>`Slider`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Slider: dict = {'Oval.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}}, 'Oval.out': {'normal': {'fill': '#454545', 'outline': '#454545'}}, 'Rectangle.in': {'normal': {'fill': '#429CE3', 'outline': '#429CE3'}}, 'Rectangle': {'normal': {'fill': '#0078D7', 'outline': '#0078D7'}, 'hover': {'fill': '#FFFFFF', 'outline': '#FFFFFF'}, 'active': {'fill': '#767676', 'outline': '#767676'}}, 'Rectangle.out': {'normal': {'fill': '#7C7C7C', 'outline': '#7C7C7C'}}, 'SemicircularRectangle.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}}, 'SemicircularRectangle.out': {'normal': {'fill': '#9E9E9E', 'outline': '#9E9E9E'}}}
+Slider: dict = {
+    'Oval.in': {'normal': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}},
+    'Oval.out': {'normal': {'fill': '#454545', 'outline': '#454545'}},
+    'Rectangle': {'active': {'fill': '#767676', 'outline': '#767676'},
+                  'hover': {'fill': '#FFFFFF', 'outline': '#FFFFFF'},
+                  'normal': {'fill': '#0078D7', 'outline': '#0078D7'}},
+    'Rectangle.in': {'normal': {'fill': '#429CE3', 'outline': '#429CE3'}},
+    'Rectangle.out': {'normal': {'fill': '#7C7C7C', 'outline': '#7C7C7C'}},
+    'SemicircularRectangle.in': {'normal': {'fill': '#4CC2FF',
+                                            'outline': '#4CC2FF'}},
+    'SemicircularRectangle.out': {'normal': {'fill': '#9E9E9E',
+                                             'outline': '#9E9E9E'}},
+}
 ```
 
 
-### Switch
+### <big>`Switch`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Switch: dict = {'Oval': {'normal-off': {'fill': '#CECECE', 'outline': '#CECECE'}, 'hover-off': {'fill': '#D2D2D2', 'outline': '#D2D2D2'}, 'active-off': {'fill': '#D4D4D4', 'outline': '#D4D4D4'}, 'normal-on': {'fill': '#000000', 'outline': '#000000'}, 'hover-on': {'fill': '#000000', 'outline': '#000000'}, 'active-on': {'fill': '#000000', 'outline': '#000000'}}, 'Rectangle.in': {'normal-off': {'fill': '#CECECE', 'outline': '#CECECE'}, 'hover-off': {'fill': '#D2D2D2', 'outline': '#D2D2D2'}, 'active-off': {'fill': '#D4D4D4', 'outline': '#D4D4D4'}, 'normal-on': {'fill': '#000000', 'outline': '#000000'}, 'hover-on': {'fill': '#000000', 'outline': '#000000'}, 'active-on': {'fill': '#000000', 'outline': '#000000'}}, 'Rectangle.out': {'normal-off': {'fill': '#272727', 'outline': '#9E9E9E'}, 'hover-off': {'fill': '#3B3B3B', 'outline': '#A3A3A3'}, 'active-off': {'fill': '#404040', 'outline': '#A3A3A3'}, 'normal-on': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover-on': {'fill': '#49B3EB', 'outline': '#49B3EB'}, 'active-on': {'fill': '#49A8DA', 'outline': '#5DBCED'}}, 'SemicircularRectangle': {'normal-off': {'fill': '#272727', 'outline': '#9E9E9E'}, 'hover-off': {'fill': '#3B3B3B', 'outline': '#A3A3A3'}, 'active-off': {'fill': '#404040', 'outline': '#A3A3A3'}, 'normal-on': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}, 'hover-on': {'fill': '#49B3EB', 'outline': '#49B3EB'}, 'active-on': {'fill': '#49A8DA', 'outline': '#5DBCED'}}}
+Switch: dict = {
+    'Oval': {'active-off': {'fill': '#D4D4D4', 'outline': '#D4D4D4'},
+             'active-on': {'fill': '#000000', 'outline': '#000000'},
+             'hover-off': {'fill': '#D2D2D2', 'outline': '#D2D2D2'},
+             'hover-on': {'fill': '#000000', 'outline': '#000000'},
+             'normal-off': {'fill': '#CECECE', 'outline': '#CECECE'},
+             'normal-on': {'fill': '#000000', 'outline': '#000000'}},
+    'Rectangle.in': {'active-off': {'fill': '#D4D4D4', 'outline': '#D4D4D4'},
+                     'active-on': {'fill': '#000000', 'outline': '#000000'},
+                     'hover-off': {'fill': '#D2D2D2', 'outline': '#D2D2D2'},
+                     'hover-on': {'fill': '#000000', 'outline': '#000000'},
+                     'normal-off': {'fill': '#CECECE', 'outline': '#CECECE'},
+                     'normal-on': {'fill': '#000000', 'outline': '#000000'}},
+    'Rectangle.out': {'active-off': {'fill': '#404040', 'outline': '#A3A3A3'},
+                      'active-on': {'fill': '#49A8DA', 'outline': '#5DBCED'},
+                      'hover-off': {'fill': '#3B3B3B', 'outline': '#A3A3A3'},
+                      'hover-on': {'fill': '#49B3EB', 'outline': '#49B3EB'},
+                      'normal-off': {'fill': '#272727', 'outline': '#9E9E9E'},
+                      'normal-on': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}},
+    'SemicircularRectangle': {'active-off': {'fill': '#404040',
+                                             'outline': '#A3A3A3'},
+                              'active-on': {'fill': '#49A8DA',
+                                            'outline': '#5DBCED'},
+                              'hover-off': {'fill': '#3B3B3B',
+                                            'outline': '#A3A3A3'},
+                              'hover-on': {'fill': '#49B3EB',
+                                           'outline': '#49B3EB'},
+                              'normal-off': {'fill': '#272727',
+                                             'outline': '#9E9E9E'},
+                              'normal-on': {'fill': '#4CC2FF',
+                                            'outline': '#4CC2FF'}},
+}
 ```
 
 
-### Text
+### <big>`Text`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-Text: dict = {'Information': {'normal': {'fill': '#F1F1F1'}}}
+Text: dict = {
+    'Information': {'normal': {'fill': '#F1F1F1'}},
+}
 ```
 
 
-### ToggleButton
+### <big>`ToggleButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-ToggleButton: dict = {'Information': {'normal-off': {'fill': '#F1F1F1'}, 'hover-off': {'fill': '#F1F1F1'}, 'active-off': {'fill': '#F1F1F1'}, 'normal-on': {'fill': '#F1F1F1'}, 'hover-on': {'fill': '#F1F1F1'}, 'active-on': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal-off': {'fill': '#333333', 'outline': '#333333'}, 'hover-off': {'fill': '#333333', 'outline': '#858585'}, 'active-off': {'fill': '#666666', 'outline': '#666666'}, 'normal-on': {'fill': '#0067C0', 'outline': '#0078D7'}, 'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'}, 'active-on': {'fill': '#2D7FC6', 'outline': '#2072B9'}}, 'RoundedRectangle': {'normal-off': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover-off': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active-off': {'fill': '#323232', 'outline': '#3D3D3D'}, 'normal-on': {'fill': '#0067C0', 'outline': '#0078D7'}, 'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'}, 'active-on': {'fill': '#2D7FC6', 'outline': '#2072B9'}}}
+ToggleButton: dict = {
+    'Information': {'active-off': {'fill': '#F1F1F1'},
+                    'active-on': {'fill': '#F1F1F1'},
+                    'hover-off': {'fill': '#F1F1F1'},
+                    'hover-on': {'fill': '#F1F1F1'},
+                    'normal-off': {'fill': '#F1F1F1'},
+                    'normal-on': {'fill': '#F1F1F1'}},
+    'Rectangle': {'active-off': {'fill': '#666666', 'outline': '#666666'},
+                  'active-on': {'fill': '#2D7FC6', 'outline': '#2072B9'},
+                  'hover-off': {'fill': '#333333', 'outline': '#858585'},
+                  'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'},
+                  'normal-off': {'fill': '#333333', 'outline': '#333333'},
+                  'normal-on': {'fill': '#0067C0', 'outline': '#0078D7'}},
+    'RoundedRectangle': {'active-off': {'fill': '#323232', 'outline': '#3D3D3D'},
+                         'active-on': {'fill': '#2D7FC6', 'outline': '#2072B9'},
+                         'hover-off': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                         'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'},
+                         'normal-off': {'fill': '#373737', 'outline': '#3D3D3D'},
+                         'normal-on': {'fill': '#0067C0', 'outline': '#0078D7'}},
+}
 ```
 
 
-### UnderlineButton
+### <big>`UnderlineButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-UnderlineButton: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': 'royalblue'}, 'active': {'fill': 'purple'}}}
+UnderlineButton: dict = {
+    'Information': {'active': {'fill': 'purple'},
+                    'hover': {'fill': 'royalblue'},
+                    'normal': {'fill': '#F1F1F1'}},
+}
 ```
 
 
-### \_AuxiliaryButton
+### <big>`_AuxiliaryButton`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
 ```python linenums="0"
-_AuxiliaryButton: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#333333', 'outline': '#333333'}, 'hover': {'fill': '#333333', 'outline': '#858585'}, 'active': {'fill': '#666666', 'outline': '#666666'}}, 'HalfRoundedRectangle': {'normal': {'fill': '#373737', 'outline': '#3D3D3D'}, 'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'}, 'active': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+_AuxiliaryButton: dict = {
+    'HalfRoundedRectangle': {'active': {'fill': '#323232', 'outline': '#3D3D3D'},
+                             'hover': {'fill': '#3C3C3C', 'outline': '#3D3D3D'},
+                             'normal': {'fill': '#373737', 'outline': '#3D3D3D'}},
+    'Information': {'active': {'fill': '#F1F1F1'},
+                    'hover': {'fill': '#F1F1F1'},
+                    'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'active': {'fill': '#666666', 'outline': '#666666'},
+                  'hover': {'fill': '#333333', 'outline': '#858585'},
+                  'normal': {'fill': '#333333', 'outline': '#333333'}},
+}
 ```
 
 
-### \_AuxiliaryInputBox
+### <big>`_AuxiliaryInputBox`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
 ```python linenums="0"
-_AuxiliaryInputBox: dict = {'Rectangle': {'normal': {'fill': '#131313', 'outline': '#797979'}, 'hover': {'fill': '#0C0C0C', 'outline': '#A5A5A5'}, 'active': {'fill': '#090909', 'outline': '#0078D7'}}, 'SingleLineText': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}, 'active': {'fill': '#F1F1F1'}}, 'HalfRoundedRectangle.in': {'normal': {'fill': '#2D2D2D', 'outline': '#303030'}, 'hover': {'fill': '#323232', 'outline': '#303030'}, 'active': {'fill': '#1F1F1F', 'outline': '#303030'}}, 'HalfRoundedRectangle.out': {'normal': {'fill': '#8F8F8F', 'outline': '#8F8F8F'}, 'hover': {'fill': '#8F8F8F', 'outline': '#8F8F8F'}, 'active': {'fill': '#4CC2FF', 'outline': '#4CC2FF'}}}
+_AuxiliaryInputBox: dict = {
+    'HalfRoundedRectangle.in': {'active': {'fill': '#1F1F1F',
+                                           'outline': '#303030'},
+                                'hover': {'fill': '#323232', 'outline': '#303030'},
+                                'normal': {'fill': '#2D2D2D',
+                                           'outline': '#303030'}},
+    'HalfRoundedRectangle.out': {'active': {'fill': '#4CC2FF',
+                                            'outline': '#4CC2FF'},
+                                 'hover': {'fill': '#8F8F8F',
+                                           'outline': '#8F8F8F'},
+                                 'normal': {'fill': '#8F8F8F',
+                                            'outline': '#8F8F8F'}},
+    'Rectangle': {'active': {'fill': '#090909', 'outline': '#0078D7'},
+                  'hover': {'fill': '#0C0C0C', 'outline': '#A5A5A5'},
+                  'normal': {'fill': '#131313', 'outline': '#797979'}},
+    'SingleLineText': {'active': {'fill': '#F1F1F1'},
+                       'hover': {'fill': '#F1F1F1'},
+                       'normal': {'fill': '#F1F1F1'}},
+}
 ```
 
 
-### \_AuxiliaryLabel
+### <big>`_AuxiliaryLabel`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
 ```python linenums="0"
-_AuxiliaryLabel: dict = {'Information': {'normal': {'fill': '#F1F1F1'}, 'hover': {'fill': '#F1F1F1'}}, 'Rectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}, 'HalfRoundedRectangle': {'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}, 'hover': {'fill': '#323232', 'outline': '#3D3D3D'}}}
+_AuxiliaryLabel: dict = {
+    'HalfRoundedRectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                             'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+    'Information': {'hover': {'fill': '#F1F1F1'}, 'normal': {'fill': '#F1F1F1'}},
+    'Rectangle': {'hover': {'fill': '#323232', 'outline': '#3D3D3D'},
+                  'normal': {'fill': '#2B2B2B', 'outline': '#3D3D3D'}},
+}
 ```
 
 

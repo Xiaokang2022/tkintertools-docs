@@ -4,10 +4,11 @@ All standard Widgets
 
 ## 🟢 Classes / 类
 
-### Button
+### <big>`Button`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -56,10 +57,11 @@ Button widget, typically used to trigger a function
 
 
 
-### CheckButton
+### <big>`CheckButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -90,7 +92,8 @@ Checkbox button widget, generally used to check some options
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -101,7 +104,8 @@ def get(
 ```
 Get the state of the check button
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -115,14 +119,12 @@ Set the state of the check button
 
 
 
-### ComboBox
+### <big>`ComboBox`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### \_\_init\_\_
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
 
 ```python
 def __init__(
@@ -145,6 +147,7 @@ def __init__(
 ) -> None: ...
 ```
 
+
 * `master`: parent canvas
 * `position`: position of the widget
 * `size`: size of the widget
@@ -163,10 +166,11 @@ def __init__(
 
 
 
-### HighlightButton
+### <big>`HighlightButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -213,10 +217,11 @@ Highlight button, no outline, which added a highlight effect
 
 
 
-### IconButton
+### <big>`IconButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -265,10 +270,11 @@ A button with an icon on the left side
 
 
 
-### Image
+### <big>`Image`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -295,7 +301,8 @@ Image widget, generally used to display normal still image
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -306,7 +313,8 @@ def get(
 ```
 Get the image of the widget
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -320,10 +328,11 @@ Set the image of the widget
 
 
 
-### InputBox
+### <big>`InputBox`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -370,7 +379,8 @@ Input box widget, generally used to enter certain information on a single line
 * `animation`: wether enable animation
 
 
-#### append
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -382,7 +392,8 @@ def append(
 ```
 Append text to Entry
 
-#### clear
+#### <big>`clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -393,7 +404,8 @@ def clear(
 ```
 Clear the text value of the Entry
 
-#### delete
+#### <big>`delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -405,7 +417,8 @@ def delete(
 ```
 Delete a specified amount of text
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -416,7 +429,8 @@ def get(
 ```
 Get the value of the Entry
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -430,10 +444,11 @@ Set the text value of the Entry
 
 
 
-### Label
+### <big>`Label`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -480,10 +495,11 @@ Label widget, which is generally used to display key information
 
 
 
-### OptionButton
+### <big>`OptionButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -523,7 +539,8 @@ A Button with multiple options
 * `animation`: wether enable animation
 
 
-#### append
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -535,7 +552,8 @@ def append(
 ```
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -546,7 +564,8 @@ def get(
 ```
 
 
-#### pop\_menu
+#### <big>`pop_menu`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -557,7 +576,8 @@ def pop_menu(
 ```
 
 
-#### remove
+#### <big>`remove`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -569,7 +589,8 @@ def remove(
 ```
 
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -583,10 +604,11 @@ def set(
 
 
 
-### ProgressBar
+### <big>`ProgressBar`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -615,7 +637,8 @@ Progress bar widget, typically used to show the progress of an event
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -626,7 +649,8 @@ def get(
 ```
 Get the progress of the progress bar
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -640,10 +664,11 @@ Set the progress of the progress bar
 
 
 
-### RadioButton
+### <big>`RadioButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -674,7 +699,8 @@ Radio button widget, generally used to select one of several options
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -685,7 +711,8 @@ def get(
 ```
 Get the state of the radio button
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -699,10 +726,11 @@ Set the state of the radio button
 
 
 
-### SegmentedButton
+### <big>`SegmentedButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -753,7 +781,8 @@ A segmented button that can be used to toggle between multiple states
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -767,7 +796,8 @@ Get the index of the child toggle button with a value of True.
 If not, None is returned.
 
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -781,10 +811,11 @@ Activate the child toggle button for the specified index
 
 
 
-### Slider
+### <big>`Slider`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -813,7 +844,8 @@ A slider for visually resizing values
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -824,7 +856,8 @@ def get(
 ```
 Get the value of the slider
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -838,10 +871,11 @@ Set the value of the slider
 
 
 
-### SpinBox
+### <big>`SpinBox`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -890,7 +924,8 @@ A widget that makes it easy to enter numeric type data
 * `animation`: wether enable animation
 
 
-#### append
+#### <big>`append`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -902,7 +937,8 @@ def append(
 ```
 Append text to Entry
 
-#### change
+#### <big>`change`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -914,7 +950,8 @@ def change(
 ```
 Try change the current value
 
-#### clear
+#### <big>`clear`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -925,7 +962,8 @@ def clear(
 ```
 Clear the text value of the Entry
 
-#### delete
+#### <big>`delete`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -937,7 +975,8 @@ def delete(
 ```
 Delete a specified amount of text
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -948,7 +987,8 @@ def get(
 ```
 Get the value of the Entry
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -962,10 +1002,11 @@ Set the text value of the Entry
 
 
 
-### Switch
+### <big>`Switch`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -996,7 +1037,8 @@ Switch widget, typically used to control the turning of a function on and off
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1007,7 +1049,8 @@ def get(
 ```
 Get the state of the switch
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1021,10 +1064,11 @@ Set the state of the switch
 
 
 
-### Text
+### <big>`Text`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -1065,7 +1109,8 @@ Text widget, generally used to display plain text
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1076,7 +1121,8 @@ def get(
 ```
 Get the text of the widget
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1090,10 +1136,11 @@ Set the text of the widget
 
 
 
-### ToggleButton
+### <big>`ToggleButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python
@@ -1142,7 +1189,8 @@ A button that can display information and switch statuses
 * `animation`: wether enable animation
 
 
-#### get
+#### <big>`get`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1153,7 +1201,8 @@ def get(
 ```
 Get the state of the check button
 
-#### set
+#### <big>`set`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -1167,10 +1216,11 @@ Set the state of the switch
 
 
 
-### UnderlineButton
+### <big>`UnderlineButton`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
 
 
 ```python

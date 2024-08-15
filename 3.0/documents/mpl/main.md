@@ -4,10 +4,11 @@ APIs for Matplotlib
 
 ## 🟢 Classes / 类
 
-### FigureCanvas
+### <big>`FigureCanvas`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas` `FigureCanvasTkAgg`
 
 
 ```python
@@ -25,7 +26,8 @@ A canvas for interface of `matplotlib`
 * `master`: parent widget
 
 
-#### \_fix\_size
+#### <big>`_fix_size`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -37,7 +39,8 @@ def _fix_size(
 ```
 Correct the size of Figure
 
-#### \_theme
+#### <big>`_theme`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -49,7 +52,8 @@ def _theme(
 ```
 Change the color theme of the Figure
 
-#### destroy
+#### <big>`destroy`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -62,10 +66,11 @@ def destroy(
 
 
 
-### FigureToolbar
+### <big>`FigureToolbar`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `NavigationToolbar2Tk`
 
 
 ```python
@@ -91,7 +96,8 @@ If you want to use the toolbar with a different layout manager,
 use `pack_toolbar=False`
 
 
-#### \_theme
+#### <big>`_theme`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
@@ -103,7 +109,8 @@ def _theme(
 ```
 Change the color theme of the Toolbar
 
-#### destroy
+#### <big>`destroy`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -118,7 +125,8 @@ def destroy(
 
 ## 🔵 Functions / 函数
 
-### \_forward\_methods
+### <big>`_forward_methods`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -135,7 +143,8 @@ Forward methods and attributes of one object to another object
 * `target_object`: the target object, that is, the object to be forwarded
 
 
-### set\_mpl\_default\_theme
+### <big>`set_mpl_default_theme`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -152,21 +161,57 @@ Set default color constants of `matplotlib`
 
 ## 🟡 Variables / 变量
 
-### DARK\_THEME
+### <big>`DARK_THEME`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-DARK_THEME: dict = {'axes.edgecolor': '#AAAAAA', 'axes.facecolor': '#202020', 'axes.labelcolor': '#CCCCCC', 'axes.titlecolor': '#CCCCCC', 'axes3d.xaxis.panecolor': '#2A2A2A', 'axes3d.yaxis.panecolor': '#2A2A2A', 'axes3d.zaxis.panecolor': '#2A2A2A', 'figure.facecolor': '#202020', 'legend.edgecolor': '#707070', 'legend.facecolor': '#202020', 'legend.labelcolor': '#CCCCCC', 'grid.color': '#505050', 'xtick.color': '#CCCCCC', 'xtick.labelcolor': '#CCCCCC', 'ytick.color': '#CCCCCC', 'ytick.labelcolor': '#CCCCCC'}
+DARK_THEME: dict = {
+    'axes.edgecolor': '#AAAAAA',
+    'axes.facecolor': '#202020',
+    'axes.labelcolor': '#CCCCCC',
+    'axes.titlecolor': '#CCCCCC',
+    'axes3d.xaxis.panecolor': '#2A2A2A',
+    'axes3d.yaxis.panecolor': '#2A2A2A',
+    'axes3d.zaxis.panecolor': '#2A2A2A',
+    'figure.facecolor': '#202020',
+    'grid.color': '#505050',
+    'legend.edgecolor': '#707070',
+    'legend.facecolor': '#202020',
+    'legend.labelcolor': '#CCCCCC',
+    'xtick.color': '#CCCCCC',
+    'xtick.labelcolor': '#CCCCCC',
+    'ytick.color': '#CCCCCC',
+    'ytick.labelcolor': '#CCCCCC',
+}
 ```
 
 
-### LIGHT\_THEME
+### <big>`LIGHT_THEME`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-LIGHT_THEME: dict = {'axes.edgecolor': '#2A2A2A', 'axes.facecolor': '#FFFFFF', 'axes.labelcolor': '#000000', 'axes.titlecolor': '#000000', 'axes3d.xaxis.panecolor': '#F5F5F5', 'axes3d.yaxis.panecolor': '#F5F5F5', 'axes3d.zaxis.panecolor': '#F5F5F5', 'figure.facecolor': '#FFFFFF', 'legend.edgecolor': '#D6D6D6', 'legend.facecolor': '#FFFFFF', 'legend.labelcolor': '#000000', 'grid.color': '#BDBDBD', 'xtick.color': '#000000', 'xtick.labelcolor': '#000000', 'ytick.color': '#000000', 'ytick.labelcolor': '#000000'}
+LIGHT_THEME: dict = {
+    'axes.edgecolor': '#2A2A2A',
+    'axes.facecolor': '#FFFFFF',
+    'axes.labelcolor': '#000000',
+    'axes.titlecolor': '#000000',
+    'axes3d.xaxis.panecolor': '#F5F5F5',
+    'axes3d.yaxis.panecolor': '#F5F5F5',
+    'axes3d.zaxis.panecolor': '#F5F5F5',
+    'figure.facecolor': '#FFFFFF',
+    'grid.color': '#BDBDBD',
+    'legend.edgecolor': '#D6D6D6',
+    'legend.facecolor': '#FFFFFF',
+    'legend.labelcolor': '#000000',
+    'xtick.color': '#000000',
+    'xtick.labelcolor': '#000000',
+    'ytick.color': '#000000',
+    'ytick.labelcolor': '#000000',
+}
 ```
 
 

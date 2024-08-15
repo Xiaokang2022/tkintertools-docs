@@ -4,10 +4,11 @@ All standard Shapes
 
 ## 🟢 Classes / 类
 
-### HalfRoundedRectangle
+### <big>`HalfRoundedRectangle`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -38,7 +39,8 @@ Create a half rounded rectangle for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -51,7 +53,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -64,10 +67,11 @@ def display(
 
 
 
-### Line
+### <big>`Line`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -96,7 +100,8 @@ Create a line for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -109,7 +114,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -122,12 +128,14 @@ def display(
 
 
 
-### Oval
+### <big>`Oval`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### coords
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
+
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -140,7 +148,8 @@ def coords(
 ```
 
 
-#### detect
+#### <big>`detect`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -153,7 +162,8 @@ def detect(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -166,10 +176,11 @@ def display(
 
 
 
-### Parallelogram
+### <big>`Parallelogram`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -198,7 +209,8 @@ Create a parallelogram for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -211,7 +223,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -224,12 +237,14 @@ def display(
 
 
 
-### Rectangle
+### <big>`Rectangle`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### coords
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
+
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -242,7 +257,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -255,10 +271,11 @@ def display(
 
 
 
-### RegularPolygon
+### <big>`RegularPolygon`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -289,7 +306,8 @@ Create a regular polygon for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -302,7 +320,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -315,10 +334,11 @@ def display(
 
 
 
-### RoundedRectangle
+### <big>`RoundedRectangle`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -347,7 +367,8 @@ Create a rounded rectangle for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -360,7 +381,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -373,12 +395,14 @@ def display(
 
 
 
-### SemicircularRectangle
+### <big>`SemicircularRectangle`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
 
-#### coords
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
+
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -391,7 +415,8 @@ def coords(
 ```
 
 
-#### detect
+#### <big>`detect`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -404,7 +429,8 @@ def detect(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -417,10 +443,11 @@ def display(
 
 
 
-### SharpRectangle
+### <big>`SharpRectangle`</big>
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code>
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
 
 
 ```python
@@ -451,7 +478,8 @@ Create a sharp rectangle for a widget
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### coords
+#### <big>`coords`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
@@ -464,7 +492,8 @@ def coords(
 ```
 
 
-#### display
+#### <big>`display`</big>
+
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 

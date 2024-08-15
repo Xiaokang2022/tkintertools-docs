@@ -29,8 +29,10 @@ import importlib
 import inspect
 import os
 import pkgutil
+import pprint
 import types
 import typing
+
 import tkintertools
 from rich import print
 
@@ -138,10 +140,12 @@ def _get_type_hint_string(type_hint: typing.Any) -> str:
     return type_hint
 
 
-def _get_value_string(value: typing.Any) -> str:
+def _get_value_string(value: typing.Any, *, pp: bool = False) -> str:
     """Get the string form of a value"""
-    if isinstance(value, str):
+    if isinstance(value, str) and not pp:
         return f"'{value}'"
+    elif inspect.ismodule(value):
+        return value.__name__
     elif inspect.isfunction(value):
         return value.__name__
     elif inspect.ismethod(value):
@@ -228,7 +232,7 @@ def create_class_md(cls: object) -> str:
     """"""
     data = get_class_data(cls)
 
-    string = f"### {data["name"].replace("_", "\\_")}\n"
+    string = f"### <big>`{data["name"]}`</big>\n\n"
 
     if data["name"].startswith("__") and data["name"].endswith("__"):
         label = "<code style='color: purple;'>built-in</code>"
@@ -239,9 +243,12 @@ def create_class_md(cls: object) -> str:
     else:
         label = "<code style='color: green;'>public</code>"
 
-    parent = data["parents"]
+    if data["parents"]:
+        parent = f" | {" ".join(f"`{p.__name__}`" for p in data["parents"])}"
+    else:
+        parent = ""
 
-    string += f"\n\n{"<code style='color: limegreen;'>class</code>"} {label}\n\n"
+    string += f"\n\n{"<code style='color: limegreen;'>class</code>"} {label}{parent}\n\n"
 
     for method in data["methods"]:
         if method.__name__ == "__init__":
@@ -256,12 +263,12 @@ def create_class_md(cls: object) -> str:
     return string + "\n\n"
 
 
-def create_function_md(func: types.FunctionType | types.MethodType, *, is_method: bool = False, init_doc: str = "") -> str:
+def create_function_md(func: types.FunctionType | types.MethodType, *, is_method: bool = False, init_doc: str | None = None) -> str:
     """"""
     data = get_function_data(func)
     string = ""
-    if not init_doc:
-        string = f"### {data["name"].replace("_", "\\_")}\n"
+    if init_doc is None:
+        string = f"### <big>`{data["name"]}`</big>\n\n"
         if is_method:
             string = "#" + string
 
@@ -279,7 +286,7 @@ def create_function_md(func: types.FunctionType | types.MethodType, *, is_method
     else:
         kind = "<code style='color: royalblue;'>function</code>"
 
-    if init_doc:
+    if init_doc is not None:
         string += f"\n```python\n{get_function_define(data)}\n```\n"
     else:
         string += f"""
@@ -290,7 +297,7 @@ def create_function_md(func: types.FunctionType | types.MethodType, *, is_method
 ```
 """
 
-    if init_doc:
+    if init_doc is not None:
         string += init_doc.replace("    ", "") + "\n"
     if data["docstring"]:
         string += data["docstring"].replace("    ", "")
@@ -300,7 +307,7 @@ def create_function_md(func: types.FunctionType | types.MethodType, *, is_method
 
 def create_variable_md(var: object, *, name: str) -> str:
     """"""
-    string = f"### {name.replace("_", "\\_")}\n"
+    string = f"### <big>`{name}`</big>\n\n"
 
     if name.isupper():
         kind = "<code style='color: skyblue;'>constant</code>"
@@ -316,11 +323,22 @@ def create_variable_md(var: object, *, name: str) -> str:
     else:
         label = "<code style='color: green;'>public</code>"
 
+    ps = pprint.pformat(_get_value_string(var, pp=True), width=100)
+
+    if ps[0] in "{[(" and var:
+        l = ps[0] + "\n"
+        r = ",\n" + "}])"["{[(".index(ps[0])]
+        ps = "    " + ps[1:-1]
+    else:
+        l = r = ""
+
+    ps = "\n   ".join(ps.split("\n"))
+
     string += f"""
 {kind} {label}
 
 ```python linenums="0"
-{name}: {_get_type_hint_string(type(var))} = {_get_value_string(var)}
+{name}: {_get_type_hint_string(type(var))} = {l}{ps}{r}
 ```
 """
 

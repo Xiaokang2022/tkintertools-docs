@@ -15,7 +15,8 @@ All third packages which relative to style introduced by `tkintertools` are ther
 
 ## 🔵 Functions / 函数
 
-### \_callback
+### <big>`_callback`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -31,7 +32,8 @@ Valid only if the theme mode is set to Follow System
 * `theme`: theme name
 
 
-### \_process\_event
+### <big>`_process_event`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
 
@@ -46,7 +48,8 @@ Handle registered callback functions
 * `dark`: Wether it is dark mode
 
 
-### customize\_window
+### <big>`customize_window`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -87,7 +90,8 @@ This function is only works on Windows OS!
 And some parameters are useless on Windows 7/10!
 
 
-### get\_color\_mode
+### <big>`get_color_mode`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -97,7 +101,8 @@ def get_color_mode(
 ```
 Get the color mode of the program
 
-### get\_theme\_map
+### <big>`get_theme_map`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -107,7 +112,8 @@ def get_theme_map(
 ```
 Get the theme map
 
-### register\_event
+### <big>`register_event`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -125,7 +131,8 @@ and the parameter is a boolean value indicating whether it is currently a dark t
 * `args`: extra arguments
 
 
-### remove\_event
+### <big>`remove_event`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -140,7 +147,8 @@ Remove a registered function
 * `func`: callback function
 
 
-### reset\_theme\_map
+### <big>`reset_theme_map`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -150,7 +158,8 @@ def reset_theme_map(
 ```
 Reset the value of theme map
 
-### set\_color\_mode
+### <big>`set_color_mode`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -169,7 +178,8 @@ TIPS:
 `"system"` is the following system
 
 
-### set\_theme\_map
+### <big>`set_theme_map`</big>
+
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
@@ -189,7 +199,8 @@ Set the path to the theme file used by the current program
 
 ## 🟡 Variables / 变量
 
-### SYSTEM\_DARK\_MODE
+### <big>`SYSTEM_DARK_MODE`</big>
+
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
@@ -198,7 +209,8 @@ SYSTEM_DARK_MODE: bool = True
 ```
 
 
-### \_callback\_events
+### <big>`_callback_events`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
@@ -207,7 +219,8 @@ _callback_events: dict = {}
 ```
 
 
-### \_color\_mode
+### <big>`_color_mode`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
@@ -216,12 +229,16 @@ _color_mode: str = 'system'
 ```
 
 
-### \_theme\_map
+### <big>`_theme_map`</big>
+
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
 
 ```python linenums="0"
-_theme_map: dict = {'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>, 'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\light.py'>}
+_theme_map: dict = {
+    'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>,
+    'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\light.py'>,
+}
 ```
 
 
