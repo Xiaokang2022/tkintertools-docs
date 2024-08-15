@@ -27,34 +27,36 @@
 
 import importlib
 import inspect
+import os
 import pkgutil
 import types
 import typing
-
+import tkintertools
 from rich import print
 
 
-def get_package_contents(package: types.ModuleType) -> dict:
-    """Get the contents of a package"""
-    contents = {}
+def get_package_data(package: types.ModuleType) -> dict:
+    """Get the data of a package"""
+    data = {}
 
     for _, modname, ispkg in pkgutil.iter_modules(package.__path__, package.__name__ + '.'):
         if ispkg:
             subpkg = importlib.import_module(modname)
-            contents[modname.split('.')[-1]] = get_package_contents(subpkg)
+            data[modname.split('.')[-1]] = get_package_data(subpkg)
         else:
-            contents[modname.split('.')[-1]] = None
+            data[modname.split('.')[-1]] = None
 
-    return contents
+    return data
 
 
 def get_module_data(module: types.ModuleType) -> dict:
     """Get the data for a module"""
     data = {
-        'docstring': module.__doc__,
-        'classes': [],
-        'functions': [],
-        'variables': []
+        "name": module.__name__,
+        "docstring": module.__doc__,
+        "classes": [],
+        "functions": [],
+        "variables": []
     }
 
     for name, member in inspect.getmembers(module):
@@ -140,6 +142,12 @@ def _get_value_string(value: typing.Any) -> str:
     """Get the string form of a value"""
     if isinstance(value, str):
         return f"'{value}'"
+    elif inspect.isfunction(value):
+        return value.__name__
+    elif inspect.ismethod(value):
+        return value.__name__
+    elif inspect.isclass(value):
+        return value.__name__
     return value
 
 
@@ -168,3 +176,167 @@ def get_function_define(func_data: dict) -> str:
         define += f"    {para_define},\n"
 
     return define + f") -> {_get_type_hint_string(func_data["return_type"])}: ..."
+
+
+def create_index(package: types.ModuleType) -> None:
+    """"""
+    data_package = get_package_data(package)
+
+    with open("./3.0/documents/index.md", "w", encoding="utf-8") as file:
+        file.write("# Documents Index / 文档索引\n")
+
+        for sub_package, modules in data_package.items():
+            _sub_package = importlib.import_module(
+                f"{package.__name__}.{sub_package}")
+            data_sub_package = get_module_data(_sub_package)
+            file.write(
+                f"\n* 📦 `{data_sub_package["name"]}`\n")
+
+            for module in modules:
+                _module = importlib.import_module(
+                    f"{_sub_package.__name__}.{module}")
+                data_module = get_module_data(_module)
+                file.write(
+                    f"    - 📑 [`{data_module["name"]}`](./{sub_package}/{module}.md)\n")
+
+
+def create_pages(module: types.ModuleType) -> None:
+    """"""
+    data_module = get_module_data(module)
+
+    *_, sub_package_name, module_name = data_module["name"].split(".")
+    file = f"./3.0/documents/{sub_package_name}/{module_name}.md"
+
+    with open(file, "w", encoding="utf-8") as file:
+        file.write(f"# {data_module["name"]}\n\n")
+        file.write(f"{data_module["docstring"]}\n\n")
+        if data_module["classes"]:
+            file.write("## 🟢 Classes / 类\n\n")
+            for cls in sorted(data_module["classes"]):
+                file.write(create_class_md(getattr(module, cls)))
+        if data_module["functions"]:
+            file.write("## 🔵 Functions / 函数\n\n")
+            for func in sorted(data_module["functions"]):
+                file.write(create_function_md(getattr(module, func)))
+        if data_module["variables"]:
+            file.write("## 🟡 Variables / 变量\n\n")
+            for var in sorted(data_module["variables"]):
+                file.write(create_variable_md(getattr(module, var), name=var))
+
+
+def create_class_md(cls: object) -> str:
+    """"""
+    data = get_class_data(cls)
+
+    string = f"### {data["name"].replace("_", "\\_")}\n"
+
+    if data["name"].startswith("__") and data["name"].endswith("__"):
+        label = "<code style='color: purple;'>built-in</code>"
+    elif data["name"].startswith("__"):
+        label = "<code style='color: red;'>private</code>"
+    elif data["name"].startswith("_"):
+        label = "<code style='color: orange;'>protected</code>"
+    else:
+        label = "<code style='color: green;'>public</code>"
+
+    parent = data["parents"]
+
+    string += f"\n\n{"<code style='color: limegreen;'>class</code>"} {label}\n\n"
+
+    for method in data["methods"]:
+        if method.__name__ == "__init__":
+            string += create_function_md(
+                method, is_method=True, init_doc=data["docstring"])
+
+    for method in sorted(data["methods"], key=lambda m: m.__name__):
+        if method.__name__ == "__init__":
+            continue
+        string += create_function_md(method, is_method=True)
+
+    return string + "\n\n"
+
+
+def create_function_md(func: types.FunctionType | types.MethodType, *, is_method: bool = False, init_doc: str = "") -> str:
+    """"""
+    data = get_function_data(func)
+    string = ""
+    if not init_doc:
+        string = f"### {data["name"].replace("_", "\\_")}\n"
+        if is_method:
+            string = "#" + string
+
+    if data["name"].startswith("__") and data["name"].endswith("__"):
+        label = "<code style='color: purple;'>special</code>"
+    elif data["name"].startswith("__"):
+        label = "<code style='color: red;'>private</code>"
+    elif data["name"].startswith("_"):
+        label = "<code style='color: orange;'>protected</code>"
+    else:
+        label = "<code style='color: green;'>public</code>"
+
+    if is_method:
+        kind = "<code style='color: #BBBB00;'>method</code>"
+    else:
+        kind = "<code style='color: royalblue;'>function</code>"
+
+    if init_doc:
+        string += f"\n```python\n{get_function_define(data)}\n```\n"
+    else:
+        string += f"""
+{kind} {label}
+
+```python
+{get_function_define(data)}
+```
+"""
+
+    if init_doc:
+        string += init_doc.replace("    ", "") + "\n"
+    if data["docstring"]:
+        string += data["docstring"].replace("    ", "")
+
+    return string + "\n\n"
+
+
+def create_variable_md(var: object, *, name: str) -> str:
+    """"""
+    string = f"### {name.replace("_", "\\_")}\n"
+
+    if name.isupper():
+        kind = "<code style='color: skyblue;'>constant</code>"
+    else:
+        kind = "<code style='color: #BBBB00;'>variable</code>"
+
+    if name.startswith("__") and name.endswith("__"):
+        label = "<code style='color: purple;'>special</code>"
+    elif name.startswith("__"):
+        label = "<code style='color: red;'>private</code>"
+    elif name.startswith("_"):
+        label = "<code style='color: orange;'>protected</code>"
+    else:
+        label = "<code style='color: green;'>public</code>"
+
+    string += f"""
+{kind} {label}
+
+```python linenums="0"
+{name}: {_get_type_hint_string(type(var))} = {_get_value_string(var)}
+```
+"""
+
+    return string + "\n\n"
+
+
+def create_docs() -> None:
+    """"""
+    create_index(tkintertools)
+
+    for sub_package, modules in get_package_data(tkintertools).items():
+        os.makedirs(f"./3.0/documents/{sub_package}/", exist_ok=True)
+        for module in modules:
+            create_pages(importlib.import_module(
+                f"tkintertools.{sub_package}.{module}"))
+
+
+if __name__ == "__main__":
+    create_docs()

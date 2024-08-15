@@ -205,7 +205,7 @@ extra_javascript:
 
 extra_css:
   - extra/css/extra.css # 加载自定义的样式
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 设置字体（霞鹜文楷）
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/css # 设置字体（霞鹜文楷）
 
 plugins:
   - search: # built-in
@@ -279,3 +279,50 @@ nav:
       #     - 9.2 matplotlib 扩展包: tutorials/1-1.md
       #     - 9.3 3D 扩展包: tutorials/1-1.md
       #     - 9.4 Demos & Projects: tutorials/1-1.md
+
+  - Documents / 文档:
+      - index: documents/index.md
+
+      - 📦 animation:
+          - 📑 animations: documents/animation/animations.md
+          - 📑 controllers: documents/animation/controllers.md
+
+      - 📦 color:
+          - 📑 colormap: documents/color/colormap.md
+          - 📑 hsl: documents/color/hsl.md
+          - 📑 rgb: documents/color/rgb.md
+
+      - 📦 core:
+          - 📑 constants: documents/core/constants.md
+          - 📑 containers: documents/core/containers.md
+          - 📑 virtual: documents/core/virtual.md
+
+      - 📦 standard:
+          - 📑 _auxiliary: documents/standard/_auxiliary.md
+          - 📑 dialogs: documents/standard/dialogs.md
+          - 📑 features: documents/standard/features.md
+          - 📑 images: documents/standard/images.md
+          - 📑 shapes: documents/standard/shapes.md
+          - 📑 texts: documents/standard/texts.md
+          - 📑 widgets: documents/standard/widgets.md
+
+      - 📦 style:
+          - 📑 manager: documents/style/manager.md
+          - 📑 parser: documents/style/parser.md
+
+      - 📦 theme:
+          - 📑 dark: documents/theme/dark.md
+          - 📑 light: documents/theme/light.md
+
+      - 📦 toolbox:
+          - 📑 enhanced: documents/toolbox/enhanced.md
+          - 📑 tools: documents/toolbox/tools.md
+
+      - 📦 mpl (Extension):
+          - 📑 constants: documents/mpl/constants.md
+          - 📑 main: documents/mpl/main.md
+
+      - 📦 three (Extension):
+          - 📑 constants: documents/three/constants.md
+          - 📑 engine: documents/three/engine.md
+          - 📑 geometries: documents/three/geometries.md
