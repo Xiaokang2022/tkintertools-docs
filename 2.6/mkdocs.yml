@@ -223,6 +223,7 @@ plugins:
       repository: Xiaokang2022/tkintertools-docs
       branch: main
       docs_path: 2.6/
+      cache_dir: .cache/plugin/git-committers/2.6/
       token: !ENV ["GH_TOKEN"] # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
   - glightbox:
       background: none
