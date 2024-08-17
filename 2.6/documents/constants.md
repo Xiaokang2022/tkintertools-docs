@@ -2,7 +2,7 @@
 
 文件描述: All constants  
 外部引用: `math`, `platform`  
-源码位置: tkintertools\constants.py
+源码位置: tkintertools\\constants.py
 
 ## Constants - 常量
 

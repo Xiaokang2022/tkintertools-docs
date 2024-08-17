@@ -2,7 +2,7 @@
 
 文件描述: Main File  
 外部引用: `Image`, `ImageTk`, `constants`, `exceptions`, `fractions`, `math`, `tkinter`, `typing`  
-源码位置: tkintertools\main.py
+源码位置: tkintertools\\main.py
 
 ## Functions - 函数
 
