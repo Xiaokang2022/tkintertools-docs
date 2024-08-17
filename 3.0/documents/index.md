@@ -9,6 +9,8 @@ comments: true
     本文档仍在测试中，由于是通过程序将 Python 源代码转换成的数据，可能存在问题，请大家查阅时注意甄别！  
     另外，本文档可以通过网页翻译快速转换成不同语言。
 
+    当前文档适用版本：`tkintertools 3.0.0rc1`
+
 * 📦 `tkintertools.animation`
     - 📑 [`tkintertools.animation.animations`](./animation/animations.md)
     - 📑 [`tkintertools.animation.controllers`](./animation/controllers.md)

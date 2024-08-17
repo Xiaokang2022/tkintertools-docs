@@ -252,7 +252,7 @@ nav:
 
       - 第二章：容器控件:
           - 2.1 窗口容器控件: tutorials/2-1.md
-      #     - 2.2 画布容器控件: tutorials/2-2.md
+          - 2.2 画布容器控件: tutorials/2-2.md
       # - 第三章：基本控件:
       #     - 3.1 信息类控件: tutorials/1-1.md
       #     - 3.2 功能类控件: tutorials/1-1.md
@@ -285,7 +285,7 @@ nav:
       #     - 9.4 Demos & Projects: tutorials/1-1.md
 
   - Documents / 文档:
-      - index: documents/index.md
+      - Documents Index: documents/index.md
 
       - 📦 animation:
           - 📑 animations: documents/animation/animations.md
