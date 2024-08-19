@@ -5,16 +5,6 @@
     --md-code-font: "Consolas";
 }
 
-/*给图片加圆角*/
-img {
-    border-radius: 5px;
-}
-
-/*Markdown mermaid 图标居中*/
-.mermaid {
-    text-align: center;
-}
-
 [data-md-color-scheme="default"] {
     /*亮色样式*/
     --md-default-fg-color: #333;
@@ -60,6 +50,22 @@ img {
     background-color: var(--md-header-bg-color);
 }
 
+/*给图片加圆角*/
+img {
+    border-radius: 4px;
+}
+
+/*给按键（kbd）加阴影*/
+kbd:hover {
+    box-shadow: #787878 0px 1px 1px;
+    cursor: pointer;
+}
+
+/*居中 mermaid 绘制的图*/
+.mermaid {
+    text-align: center;
+}
+
 /*去除音乐播放器背景颜色*/
 audio::-webkit-media-controls-enclosure {
     background-color: rgba(0, 0, 0, 0.0);
@@ -82,9 +88,42 @@ audio::-webkit-media-controls-enclosure {
     height: 100%;
 }
 
+/*打字机文本*/
+.text {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+}
+
+/*打字机光标*/
+.text::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 4px;
+    height: 17px;
+    width: 1px;
+    background-color: #fff;
+    animation: san 0.5s steps(1) infinite;
+}
+
+/*光标动画*/
+@keyframes san {
+
+    0%,
+    100% {
+        background-color: var(--md-default-fg-color);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+}
+
+/*心脏跳动的样式表，抄官网的代码*/
 @keyframes heart {
 
-    /*心脏跳动的样式表，抄官网的代码*/
     0%,
     40%,
     80%,
