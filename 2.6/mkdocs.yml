@@ -1,7 +1,7 @@
 site_name: tkintertools # 站点名称
-site_url: https://Xiaokang2022.github.io/tkintertools-doc/ # 站点链接
-repo_url: https://github.com/Xiaokang2022/tkintertools-doc # 仓库地址
-repo_name: Xiaokang2022/tkintertools-doc # 仓库名称
+site_url: https://Xiaokang2022.github.io/tkintertools-docs/ # 站点链接
+repo_url: https://github.com/Xiaokang2022/tkintertools-docs # 仓库地址
+repo_name: Xiaokang2022/tkintertools-docs # 仓库名称
 edit_uri: edit/main/2.6/ # 编辑地址
 edit_uri_template: null # 编辑地址模板（默认值）
 site_description: Official documentation website of tkintertools # 站点描述
