@@ -286,8 +286,8 @@ nav:
       - 第三章：基本控件:
           - tutorials/chapter_03/index.md
           - 3.1 信息类控件: tutorials/chapter_03/1.md
-      #     - 3.2 功能类控件: tutorials/1-1.md
-      #     - 3.3 高级控件: tutorials/1-1.md
+          - 3.2 功能类控件: tutorials/chapter_03/2.md
+      #     - 3.3 文本类控件: tutorials/chapter_03/3.md
       # - 第四章：界面布局:
       #     - 4.1 Place: tutorials/1-1.md
       #     - 4.2 Pack 和 Grid: tutorials/1-1.md

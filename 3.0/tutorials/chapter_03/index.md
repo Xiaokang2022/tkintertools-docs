@@ -4,7 +4,7 @@ comments: true
 
 # 第三章：基本控件
 
-!!! abstract "简要说明"
+!!! abstract "章节概述"
 
     本章会详细说明如何使用 tkt 中所有的基本控件。
 

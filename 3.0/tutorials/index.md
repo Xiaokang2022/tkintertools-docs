@@ -26,10 +26,10 @@ comments: true
 
 * <code style='color: limegreen;'>new</code>: 最新功能，需要[最新提交](./chapter_01/1.md#三体验最新功能)的 tkintertools 版本，而非已发行的版本；
 * <code style='color: orange;'>deprecated</code>: 弃用功能，未来将不再使用；
-* <code style='color: purple;'>experimental</code>: 实验性功能，功能可能不完善或者存在问题；
+* <code style='color: mediumpurple;'>experimental</code>: 实验性功能，功能可能不完善或者存在问题；
 * <code style='color: royalblue;'>fixed</code>: 修复的功能，当前版本存在问题但最新版本中修复的；
 * <code style='color: red;'>bug</code>: 存在已知问题的功能；
-* <code style='color: yellow;'>third-party</code>: 第三方功能，功能由第三方包提供；
+* <code style='color: darkgoldenrod;'>third-party</code>: 第三方功能，功能由第三方包提供；
 
 ### 1.2 主题说明<font color="red">*</font>
 
@@ -68,6 +68,7 @@ tkintertools 3（以下简称 tkt 3 或 tkt） 专门对 VSC 做了文档字符�
 
 ```mermaid
 flowchart LR
+
     subgraph module / 模块
     1(0.1) -.-> 2(2.5.11)
     end
