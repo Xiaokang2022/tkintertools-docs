@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# Documents Index / 文档索引
+# Documents / 文档
 
 !!! warning "特别说明"
 

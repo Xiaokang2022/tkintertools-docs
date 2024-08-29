@@ -187,7 +187,7 @@ def create_index(package: types.ModuleType) -> None:
     data_package = get_package_data(package)
 
     with open("./3.0/documents/index.md", "w", encoding="utf-8") as file:
-        file.write("# Documents Index / 文档索引\n")
+        file.write("# Documents / 文档\n")
 
         for sub_package, modules in data_package.items():
             _sub_package = importlib.import_module(
