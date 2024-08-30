@@ -16,3 +16,7 @@ comments: true
     * 每个版本顶部的音乐都不相同哦！❤️
 
     最后，祝您阅读愉快！
+
+!!! note "本站统计信息"
+
+    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，约 `#!py {{ words }}` 个字/词，`#!py {{ codes }}` 行代码

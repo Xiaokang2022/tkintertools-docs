@@ -17,6 +17,10 @@ comments: true
 
     最后，祝您阅读愉快！
 
+!!! note "本站统计信息"
+
+    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，约 `#!py {{ words }}` 个字/词，`#!py {{ codes }}` 行代码
+
 !!! failure "<font color="red"><b>特别说明</b></font>"
 
     由于当前版本（tkt 2）不再更新！故当前版本的教程和文档也已停止更新！  
