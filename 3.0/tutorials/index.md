@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# Tutorials / 教程
+# 官方教程
 
 !!! warning "特别注意"
 
@@ -94,4 +94,4 @@ flowchart LR
 
     不要通过该网站右上角链接来帮我 Star，因为这个是文档站，其 GitHub 仓库不是 tkt 项目源代码的存储库，而是 tkt 文档的存储库，望悉知。
 
-    若要点 Star，请在左上角点击 “[Back / 返回主站](https://xiaokang2022.github.io/tkintertools)” 后再通过右上角访问存储库。当然，直接访问 https://github.com/Xiaokang2022/tkintertools 存储库也可。
+    若要点 Star，请在左上角点击 “[返回主站](https://xiaokang2022.github.io/tkintertools)” 后再通过右上角访问存储库。当然，直接访问 https://github.com/Xiaokang2022/tkintertools 存储库也可。

@@ -4,11 +4,9 @@ repo_url: https://github.com/Xiaokang2022/tkintertools-docs # 仓库地址
 repo_name: Xiaokang2022/tkintertools-docs # 仓库名称
 edit_uri: edit/main/3.0/ # 编辑地址
 edit_uri_template: null # 编辑地址模板（默认值）
-site_description: Official documentation website of tkintertools # 站点描述
+site_description: tkintertools 的官方文档网站 # 站点描述
 site_author: Xiaokang2022 # 站点作者
-copyright: >- # 版权信息和 Cookie 设置
-  <a href="#__consent">Cookie Settings / Cookie 设置</a><br/>
-  Copyright &copy; 2022 Xiaokang2022
+copyright: <a href="#__consent">修改 Cookie 设置</a><br/>Copyright &copy; 2022 Xiaokang2022 # 版权信息和 Cookie 设置
 remote_branch: gh-pages # GitHub Pages 远程分支名称（默认值）
 remote_name: origin # 远程名称（默认值）
 docs_dir: 3.0/ # 文档目录（默认值）
@@ -41,10 +39,10 @@ markdown_extensions:
 
   - toc: # 目录
       marker: "" # 目录替换文本，空字符串则不替换，缺省为 [TOC]
-      title: Contents / 目录 # 目录标题，material 主题会自动根据语言计算
+      title: 目录 # 目录标题，material 主题会自动根据语言计算
       anchorlink: false # 锚点链接（默认值），给标题自身锚定链接
       permalink: "&para;" # 锚点符号
-      permalink_title: "" # 锚点链接提示词，空字符表示没有
+      permalink_title: "永久连接" # 锚点链接提示词，空字符表示没有
       permalink_leading: false # 前置锚点链接（默认值），将锚点放到标题前面
       baselevel: 1 # 最高级别（默认值），往下顺延
       separator: "-" # 分隔符（默认值），替换空格字符
@@ -169,21 +167,21 @@ theme: # 此项各个设定因主题而异
     - media: "(prefers-color-scheme)" # 系统主题
       toggle:
         icon: material/theme-light-dark
-        name: 切换至明亮主题
+        name: 系统主题
     - media: "(prefers-color-scheme: light)" # 亮色主题
       scheme: default
       primary: white
       accent: purple
       toggle:
         icon: material/weather-sunny
-        name: 切换至暗黑主题
+        name: 明亮主题
     - media: "(prefers-color-scheme: dark)" # 暗色主题
       scheme: slate
       primary: black
       accent: yellow
       toggle:
         icon: material/weather-night
-        name: 切换至系统主题
+        name: 暗黑主题
   font: false # 避免从谷歌加载字体导致网页加载变慢（具体参数可以在自定义 CSS 中指定）
   logo: logo.png # 页面左上角徽标
   favicon: logo.png # 网页的图标
@@ -195,21 +193,17 @@ theme: # 此项各个设定因主题而异
     view: material/eye # 页面查看源代码的图标
 
 extra: # 额外设定
-  alternate:
-    - name: 简体中文
-      link: /
-      lang: zh
-    - name: English
-      link: /
-      lang: en
   generator: false # 页面底部不显示生成信息
+  status: # 元信息状态标识
+    new: 最近添加
+    deprecated: 不久将被移除
   homepage: . # 左上角徽标链接的地址
   annotate: # 允许代码块非注释内的提示，我也不太懂什么意思，貌似是可以在代码里面加悬浮提示框，而不只是在注释中（感觉这样不好，虽然我不用，但不能没有）
     json: [.s2]
   social: # 社交联系方式（页面右下角内容）
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/tkintertools/
-      name: GitHub Repository
+      name: GitHub 存储库
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/tkintertools/
       name: PyPI
@@ -218,7 +212,7 @@ extra: # 额外设定
       name: 哔哩哔哩
     - icon: fontawesome/solid/paper-plane
       link: mailto:2951256653@qq.com
-      name: Contact the author
+      name: 联系作者
   version:
     provider: mike
     alias: true
@@ -227,32 +221,26 @@ extra: # 额外设定
       - accept
       - reject
       - manage
-    title: Cookie Consent / Cookie 许可
-    description: >-
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-      <br/>
-      我们使用 cookie 来识别您的重复访问和偏好，以及衡量我们文档的有效性和用户是否找到他们正在搜索的内容。在您的同意下，您将帮助我们改进我们的文档。
+    title: Cookie 设置
+    description: 我们使用 cookie 来识别您的重复访问和偏好，以及衡量我们文档的有效性和用户是否找到他们正在搜索的内容。<br/>在您的同意下，您将帮助我们改进我们的文档。
   analytics: # 谷歌统计
     provider: google
     property: G-C5GHN09YHC
     feedback:
-      title: Was this page helpful?<br/>该页面对你有帮助吗？
+      title: 该页面对你有帮助吗？
       ratings:
         - icon: material/emoticon-happy-outline
-          name: Helpful / 有帮助
+          name: 有帮助
           data: 1
-          note: Thanks for your feedback!<br/>感谢您的反馈！
+          note: 感谢您的反馈！
         - icon: material/emoticon-neutral-outline
-          name: Just so-so / 还行吧
+          name: 一般般
           data: 0
-          note: Thanks for your feedback!<br/>感谢您的反馈！
+          note: 感谢您的反馈！
         - icon: material/emoticon-sad-outline
-          name: Could be improved / 有待改进
+          name: 有待改进
           data: -1
-          note: Thanks for your feedback!<br/>感谢您的反馈！
+          note: 感谢您的反馈！
 
 extra_javascript:
   - extra/javascript/shortcuts.js # 绑定左右键换页的键盘快捷键
@@ -277,17 +265,12 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 设置字体（霞鹜文楷）
 
 plugins:
-  - search: # 搜索栏（内置插件）
-      separator: '[\s\-\.]+' # 分隔符（默认值）
-      lang:
-        - zh
-        - en
+  - search
   - mike
   - git-revision-date-localized:
       enable_creation_date: true
       type: custom
       custom_format: "%Y-%m-%d %H:%M:%S +08"
-      locale: zh
       timezone: Asia/Shanghai
   # - git-authors: # 当配置不好下方的 git-committers 时可采用这个
   - git-committers:
@@ -298,20 +281,18 @@ plugins:
       token: !ENV ["GH_TOKEN"] # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
   - glightbox:
       background: none
-  - statistics:
-      codelines_per_minute: 10
-      words_per_minute: 300
+  - statistics
   - minify:
       minify_html: true
       htmlmin_opts:
         remove_comments: true
 
 nav:
-  - Back / 返回主站: https://Xiaokang2022.github.io/tkintertools
+  - 返回主站: https://Xiaokang2022.github.io/tkintertools
 
-  - Home / 主页: index.md
+  - 文档主页: index.md
 
-  - Tutorials / 教程:
+  - 官方教程:
       - tutorials/index.md
       - 第一章：简单体验:
           - tutorials/chapter_01/index.md
@@ -355,7 +336,7 @@ nav:
       #     - 9.3 3D 扩展包: tutorials/1-1.md
       #     - 9.4 Demos & Projects: tutorials/1-1.md
 
-  - Documents / 文档:
+  - 官方文档:
       - documents/index.md
 
       - 📦 animation:

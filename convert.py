@@ -187,7 +187,7 @@ def create_index(package: types.ModuleType) -> None:
     data_package = get_package_data(package)
 
     with open("./3.0/documents/index.md", "w", encoding="utf-8") as file:
-        file.write("# Documents / 文档\n")
+        file.write("# 官方文档\n")
 
         for sub_package, modules in data_package.items():
             _sub_package = importlib.import_module(
@@ -215,15 +215,15 @@ def create_pages(module: types.ModuleType) -> None:
         file.write(f"# {data_module["name"]}\n\n")
         file.write(f"{data_module["docstring"]}\n\n")
         if data_module["classes"]:
-            file.write("## 🟢 Classes / 类\n\n")
+            file.write("## 🟢 类\n\n")
             for cls in sorted(data_module["classes"]):
                 file.write(create_class_md(getattr(module, cls)))
         if data_module["functions"]:
-            file.write("## 🔵 Functions / 函数\n\n")
+            file.write("## 🔵 函数\n\n")
             for func in sorted(data_module["functions"]):
                 file.write(create_function_md(getattr(module, func)))
         if data_module["variables"]:
-            file.write("## 🟡 Variables / 变量\n\n")
+            file.write("## 🟡 变量\n\n")
             for var in sorted(data_module["variables"]):
                 file.write(create_variable_md(getattr(module, var), name=var))
 
