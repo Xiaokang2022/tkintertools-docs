@@ -10,5 +10,5 @@ comments: true
 
     所有控件被分为三类：信息类控件、功能类控件和文本类控件。
 
-![light](images/1-4.light.png#only-light)
-![dark](images/1-4.dark.png#only-dark)
+![](images/1-4.light.png#only-light)
+![](images/1-4.dark.png#only-dark)

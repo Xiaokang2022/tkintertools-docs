@@ -10,5 +10,5 @@ comments: true
 
     tkt 中的容器控件包括 `Tk`、`Toplevel`、`Canvas` 和 `Frame`。
 
-![light](images/1-1.light.png#only-light)
-![dark](images/1-1.dark.png#only-dark)
+![](images/1-1.light.png#only-light)
+![](images/1-1.dark.png#only-dark)
