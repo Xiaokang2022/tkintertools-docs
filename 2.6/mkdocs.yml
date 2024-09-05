@@ -57,10 +57,10 @@ markdown_extensions:
   # - pymdownx.pathconverter # 相对链接转绝对链接【?】
   # - pymdownx.b64 # 允许使用 base64 编码【?】
 
-  # - pymdownx.striphtml # 去除 HTML 中不需要的注释和 / 或标记属性，被插件 minify 替代
   # - pymdownx.progressbar # 进度条（暂不支持）
 
   - pymdownx.extra # 见上面 Python Markdown 配置说明
+  - pymdownx.striphtml # 去除 HTML 中不需要的注释和 / 或标记属性，与插件 minify 有交叉但没有完全覆盖
 
   - pymdownx.blocks.tab # 支持更高级的标签块写法（可能与 pymdownx.tabbed 混淆）
   - pymdownx.blocks.html # 支持一些更高级的 Markdown 内嵌 HTML 语法（pymdownx.blocks 默认开启）
@@ -267,6 +267,8 @@ extra_css:
 plugins:
   - search
   - mike
+  - statistics
+  - glightbox
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
@@ -277,21 +279,17 @@ plugins:
       docs_path: 2.6/
       cache_dir: .cache/plugin/git-committers/2.6/
       token: !ENV ["GH_TOKEN"] # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
-  - glightbox:
-      background: none
-  - statistics
   - minify:
       minify_html: true
       htmlmin_opts:
         remove_comments: true
 
 nav:
-  - 返回主站: https://Xiaokang2022.github.io/tkintertools
-
-  - 文档主页: index.md
+  - 站点主页:
+      - index.md
 
   - 官方教程:
-      - 第零章：前言: tutorials/0-0.md
+      - tutorials/index.md
       - 第一章：安装与初识:
           - 1.1 安装 tkintertools: tutorials/1-1.md
           - 1.2 认识 tkintertools: tutorials/1-2.md
@@ -332,7 +330,8 @@ nav:
         # - 引导式实战教学
         # - 实战项目推荐
 
-  - 官方文档:
+  - 参考文档:
+      - documents/index.md
       - main.py: documents/main.md
       - tools_3d.py: documents/tools_3d.md
       - exceptions.py: documents/exceptions.md
