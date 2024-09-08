@@ -20,7 +20,7 @@ icon: material/home
 
 !!! note "本站统计"
 
-    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，大约 `#!py {{ words }}` 个字/词，以及 `#!py {{ codes }}` 行代码。
+    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 幅图片，总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
 
 !!! failure "<font color="red"><b>特别说明！！！</b></font>"
 
