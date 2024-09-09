@@ -18,9 +18,11 @@ icon: material/home
 
     最后，祝您阅读愉快！❤️
 
-!!! note "本站统计"
+!!! info ""
 
-    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 幅图片
+    <div markdown align="center">
+    本站共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 张图片
+    </div>
 
 <div align="center" markdown>
 [<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/tkintertools){ .md-button title="点我闪现返回主站！" }

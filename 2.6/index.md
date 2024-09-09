@@ -18,16 +18,18 @@ icon: material/home
 
     最后，祝您阅读愉快！❤️
 
-!!! note "本站统计"
-
-    本站己运行 <span id="timeDate"></span><span id="times"></span>，共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 幅图片
-
 !!! failure "<font color="red"><b>特别说明！！！</b></font>"
 
     <font color="red">由于当前版本（tkt 2）不再更新！故当前版本的教程和文档也已停止更新！请使用较新的版本！（左上切换）</font>(1)
     { .annotate }
 
     1. 如果页面左上角没看到切换版本的按钮，请刷新页面！
+
+!!! info ""
+
+    <div markdown align="center">
+    本站共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 张图片
+    </div>
 
 <div align="center" markdown>
 [<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/tkintertools){ .md-button title="点我闪现返回主站！" }
