@@ -264,6 +264,7 @@ plugins:
   - mike
   - statistics
   - glightbox:
+      background: none
       auto_themed: true
   - git-revision-date-localized:
       enable_creation_date: true
