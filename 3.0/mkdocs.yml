@@ -303,8 +303,8 @@ nav:
       - 第四章：动画:
           - tutorials/chapter_04/index.md
           - 4.1 基础动画: tutorials/chapter_04/1.md
-      #     - 4.2 自定义动画:  tutorials/chapter_04/2.md
-      #     - 4.3 控制函数:  tutorials/chapter_04/3.md
+          - 4.2 控制函数: /404.html
+      #     - 4.3 自定义动画:  tutorials/chapter_04/3.md
       # - 第七章：颜色:
       #     - 7.1 RGB: tutorials/1-1.md
       #     - 7.2 HSL: tutorials/1-1.md
