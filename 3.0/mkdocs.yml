@@ -286,7 +286,7 @@ nav:
 
   - 官方教程:
       - tutorials/index.md
-      - 第一章：小试牛刀:
+      - 第一章：安装与初识:
           - tutorials/chapter_01/index.md
           - 1.1 安装 tkintertools: tutorials/chapter_01/1.md
           - 1.2 实现一个简单的界面: tutorials/chapter_01/2.md
@@ -303,7 +303,7 @@ nav:
       - 第四章：动画:
           - tutorials/chapter_04/index.md
           - 4.1 基础动画: tutorials/chapter_04/1.md
-          - 4.2 控制函数: /404.html
+          - 4.2 控制函数: tutorials/chapter_04/2.md
       #     - 4.3 自定义动画:  tutorials/chapter_04/3.md
       # - 第七章：颜色:
       #     - 7.1 RGB: tutorials/1-1.md
