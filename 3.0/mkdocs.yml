@@ -304,11 +304,12 @@ nav:
           - tutorials/chapter_04/index.md
           - 4.1 基础动画: tutorials/chapter_04/1.md
           - 4.2 控制函数: tutorials/chapter_04/2.md
-      #     - 4.3 自定义动画:  tutorials/chapter_04/3.md
-      # - 第七章：颜色:
-      #     - 7.1 RGB: tutorials/1-1.md
-      #     - 7.2 HSL: tutorials/1-1.md
-      #     - 7.3 RGBA: tutorials/1-1.md
+          - 4.3 自定义动画: tutorials/chapter_04/3.md
+      - 第五章：颜色:
+          - tutorials/chapter_05/index.md
+      #     - 5.1 RGB: tutorials/1-1.md
+      #     - 5.2 HSL: tutorials/1-1.md
+      #     - 5.3 RGBA: tutorials/1-1.md
       # - 第八章：自定义开发:
       #     - 8.1 自定义容器控件: tutorials/1-1.md
       #     - 8.2 自定义基础控件: tutorials/1-1.md

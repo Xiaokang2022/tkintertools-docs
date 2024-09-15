@@ -26,5 +26,5 @@ icon: material/home
 
 <div align="center" markdown>
 [<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/tkintertools){ .md-button title="点我闪现返回主站！" }
-[<small>:fontawesome-solid-paper-plane:</small> 最新内容](./tutorials/chapter_04/2.md){ .md-button title="点我飞到最近更新的内容！" }
+[<small>:fontawesome-solid-paper-plane:</small> 最新内容](./tutorials/chapter_04/3.md){ .md-button title="点我飞到最近更新的内容！" }
 </div>

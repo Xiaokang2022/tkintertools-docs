@@ -18,12 +18,11 @@ icon: material/home
 
     最后，祝您阅读愉快！❤️
 
-!!! failure "<font color="red"><b>特别说明！！！</b></font>"
+!!! failure annotate "<font color="red"><b>特别说明！！！</b></font>"
 
     <font color="red">由于当前版本（tkt 2）不再更新！故当前版本的教程和文档也已停止更新！请使用较新的版本！（左上切换）</font>(1)
-    { .annotate }
 
-    1. 如果页面左上角没看到切换版本的按钮，请刷新页面！
+1. 如果页面左上角没看到切换版本的按钮，请刷新页面！
 
 !!! info ""
 
