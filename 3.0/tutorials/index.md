@@ -9,7 +9,7 @@ icon: material/book
 
     目前此教程对应的环境如下：
 
-    * tkintertools: `3.0.0rc1`
+    * tkintertools: `3.0.0rc2`
     * Python: `3.12.0`
     * OS: `Windows 11`
 
