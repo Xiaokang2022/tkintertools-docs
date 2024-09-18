@@ -22,8 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# __version__ = "0.0.1"
-# __author__ = "Xiaokang2022 <2951256653@qq.com>"
+__version__ = "0.2.0"
+__author__ = "Xiaokang2022 <2951256653@qq.com>"
 
 import importlib
 import inspect
@@ -34,6 +34,9 @@ import types
 import typing
 
 import tkintertools
+import tkintertools.media
+import tkintertools.mpl
+import tkintertools.three
 from rich import print
 
 
@@ -188,6 +191,19 @@ def create_index(package: types.ModuleType) -> None:
 
     with open("./3.0/documents/index.md", "w", encoding="utf-8") as file:
         file.write("# 官方文档\n")
+
+        file.write(f"""
+!!! warning "特别说明"
+
+    本文档仍在测试中，由于是直接通过程序将 Python 源代码转换成的数据，因此语言为英语，且可能存在数据不完整的问题，请大家查阅时注意甄别！
+
+    当前文档适用版本：
+
+    * tkintertools: `{tkintertools.__version__}`
+    * tkintertools-mpl (EX): `{tkintertools.mpl.__version__}`
+    * tkintertools-media (EX): `{tkintertools.media.__version__}`
+    * tkintertools-three (EX): `{tkintertools.three.__version__}`
+""")
 
         for sub_package, modules in data_package.items():
             _sub_package = importlib.import_module(

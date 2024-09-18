@@ -1,15 +1,15 @@
----
-comments: true
-icon: material/file-document
----
-
-# 参考文档
+# 官方文档
 
 !!! warning "特别说明"
 
     本文档仍在测试中，由于是直接通过程序将 Python 源代码转换成的数据，因此语言为英语，且可能存在数据不完整的问题，请大家查阅时注意甄别！
 
-    当前文档适用版本：`tkintertools 3.0.0rc2`
+    当前文档适用版本：
+
+    * tkintertools: `3.0.0rc2`
+    * tkintertools-mpl (EX): `1.1.1`
+    * tkintertools-media (EX): `1.0.6`
+    * tkintertools-three (EX): `1.0.1`
 
 * 📦 [`tkintertools.animation`](./animation/index.md)
     - 📑 [`tkintertools.animation.animations`](./animation/animations.md)
