@@ -1,3 +1,8 @@
+---
+comments: true
+icon: material/file-document
+---
+
 # 官方文档
 
 !!! warning "特别说明"
