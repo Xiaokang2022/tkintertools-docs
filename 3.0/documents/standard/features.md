@@ -2,9 +2,7 @@
 
 All standard `Feature` classes
 
-## 🟢 类
-
-### <big>`ButtonFeature`</big>
+## 🟢`ButtonFeature`
 
 
 
@@ -27,7 +25,7 @@ Feature of Button
 * `args`: arguments of callback function
 
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -40,7 +38,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_center`</big>
+### 🟡`_move_center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -53,7 +51,7 @@ def _move_center(
 ```
 
 
-#### <big>`_move_left`</big>
+### 🟡`_move_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -66,7 +64,7 @@ def _move_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -79,7 +77,7 @@ def _move_none(
 ```
 
 
-#### <big>`_move_right`</big>
+### 🟡`_move_right`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -92,7 +90,7 @@ def _move_right(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -107,13 +105,13 @@ def _release_left(
 
 
 
-### <big>`CheckButtonFeature`</big>
+## 🟢`CheckButtonFeature`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -126,7 +124,7 @@ def _click_left(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -141,13 +139,13 @@ def _release_left(
 
 
 
-### <big>`Highlight`</big>
+## 🟢`Highlight`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -160,7 +158,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -173,7 +171,7 @@ def _move_none(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -188,7 +186,7 @@ def _release_left(
 
 
 
-### <big>`InputBoxFeature`</big>
+## 🟢`InputBoxFeature`
 
 
 
@@ -207,7 +205,7 @@ def __init__(
 Feature of input box
 
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -220,7 +218,7 @@ def _click_left(
 ```
 
 
-#### <big>`_copy`</big>
+### 🟡`_copy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -233,7 +231,7 @@ def _copy(
 ```
 
 
-#### <big>`_cut`</big>
+### 🟡`_cut`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -246,7 +244,7 @@ def _cut(
 ```
 
 
-#### <big>`_input`</big>
+### 🟡`_input`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -259,7 +257,7 @@ def _input(
 ```
 
 
-#### <big>`_move_left`</big>
+### 🟡`_move_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -272,7 +270,7 @@ def _move_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -285,7 +283,7 @@ def _move_none(
 ```
 
 
-#### <big>`_paste`</big>
+### 🟡`_paste`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -298,7 +296,7 @@ def _paste(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -311,7 +309,7 @@ def _release_left(
 ```
 
 
-#### <big>`_select_all`</big>
+### 🟡`_select_all`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -326,13 +324,13 @@ def _select_all(
 
 
 
-### <big>`LabelFeature`</big>
+## 🟢`LabelFeature`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -347,13 +345,13 @@ def _move_none(
 
 
 
-### <big>`OptionButtonFeature`</big>
+## 🟢`OptionButtonFeature`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -368,7 +366,7 @@ def _click_left(
 
 
 
-### <big>`ProgressBarFeature`</big>
+## 🟢`ProgressBarFeature`
 
 
 
@@ -376,7 +374,7 @@ def _click_left(
 
 
 
-### <big>`RadioButtonFeature`</big>
+## 🟢`RadioButtonFeature`
 
 
 
@@ -384,7 +382,7 @@ def _click_left(
 
 
 
-### <big>`SliderFeature`</big>
+## 🟢`SliderFeature`
 
 
 
@@ -400,7 +398,7 @@ def __init__(
 Feature of Slider
 
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -413,7 +411,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_left`</big>
+### 🟡`_move_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -426,7 +424,7 @@ def _move_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -439,7 +437,7 @@ def _move_none(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -454,7 +452,7 @@ def _release_left(
 
 
 
-### <big>`SpinBoxFeature`</big>
+## 🟢`SpinBoxFeature`
 
 
 
@@ -475,7 +473,7 @@ Feature of SpinBox
 * `command`: callback function
 
 
-#### <big>`_wheel`</big>
+### 🟡`_wheel`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -490,13 +488,13 @@ def _wheel(
 
 
 
-### <big>`SwitchFeature`</big>
+## 🟢`SwitchFeature`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -509,7 +507,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -522,7 +520,7 @@ def _move_none(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -537,13 +535,13 @@ def _release_left(
 
 
 
-### <big>`ToggleButtonFeature`</big>
+## 🟢`ToggleButtonFeature`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -556,7 +554,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -569,7 +567,7 @@ def _move_none(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -584,13 +582,13 @@ def _release_left(
 
 
 
-### <big>`Underline`</big>
+## 🟢`Underline`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -603,7 +601,7 @@ def _click_left(
 ```
 
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -616,7 +614,7 @@ def _move_none(
 ```
 
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>

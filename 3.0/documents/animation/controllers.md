@@ -20,9 +20,7 @@ The built-in control functions are:
 * `rebound`: before the end, displacement will bounce off a bit
 
 
-## 🔵 函数
-
-### <big>`_map_t`</big>
+## 🔵`_map_t`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -40,7 +38,7 @@ Map parameters in any range between 0 and 1
 * `end`: the last value of the parameter of control function
 
 
-### <big>`_map_y`</big>
+## 🔵`_map_y`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -58,7 +56,7 @@ Map the final return value to 1
 * `end`: the last value of the parameter of control function
 
 
-### <big>`controller_generator`</big>
+## 🔵`controller_generator`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -88,7 +86,7 @@ For example:
 * After modifying: $y = \sin\frac{\pi}{2}t, 0 <= t <= 1$
 
 
-### <big>`flat`</big>
+## 🔵`flat`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -100,7 +98,7 @@ def flat(
 ```
 Flat animation: speed remains the same
 
-### <big>`rebound`</big>
+## 🔵`rebound`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -112,7 +110,7 @@ def rebound(
 ```
 Rebound animation: before the end, displacement will bounce off a bit
 
-### <big>`smooth`</big>
+## 🔵`smooth`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>

@@ -2,9 +2,7 @@
 
 Some auxiliary classes
 
-## 🟢 类
-
-### <big>`_AuxiliaryButton`</big>
+## 🟢`_AuxiliaryButton`
 
 
 
@@ -40,7 +38,7 @@ def __init__(
 
 
 
-### <big>`_AuxiliaryInputBox`</big>
+## 🟢`_AuxiliaryInputBox`
 
 
 
@@ -74,7 +72,7 @@ def __init__(
 
 
 
-#### <big>`append`</big>
+### 🟡`append`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -87,7 +85,7 @@ def append(
 ```
 Append text to Entry
 
-#### <big>`clear`</big>
+### 🟡`clear`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -99,7 +97,7 @@ def clear(
 ```
 Clear the text value of the Entry
 
-#### <big>`delete`</big>
+### 🟡`delete`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -112,7 +110,7 @@ def delete(
 ```
 Delete a specified amount of text
 
-#### <big>`get`</big>
+### 🟡`get`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -124,7 +122,7 @@ def get(
 ```
 Get the value of the Entry
 
-#### <big>`set`</big>
+### 🟡`set`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -139,7 +137,7 @@ Set the text value of the Entry
 
 
 
-### <big>`_AuxiliaryLabel`</big>
+## 🟢`_AuxiliaryLabel`
 
 
 

@@ -2,9 +2,7 @@
 
 APIs for playing videos
 
-## 🟢 类
-
-### <big>`VideoCanvas`</big>
+## 🟢`VideoCanvas`
 
 
 
@@ -41,7 +39,7 @@ value, `max` follows the maximum value
 * `kwargs`: compatible with other parameters of class `tkinter.Canvas`
 
 
-#### <big>`_an`</big>
+### 🟡`_an`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -54,7 +52,7 @@ def _an(
 ```
 Animation for bottom bar
 
-#### <big>`_control_ui`</big>
+### 🟡`_control_ui`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -66,7 +64,7 @@ def _control_ui(
 ```
 UI for bottom bar
 
-#### <big>`_initialization`</big>
+### 🟡`_initialization`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -78,7 +76,7 @@ def _initialization(
 ```
 
 
-#### <big>`_re_place`</big>
+### 🟡`_re_place`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -90,7 +88,7 @@ def _re_place(
 ```
 
 
-#### <big>`_refresh`</big>
+### 🟡`_refresh`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -102,7 +100,7 @@ def _refresh(
 ```
 Refresh the canvas
 
-#### <big>`_tiem_convert`</big>
+### 🟡`_tiem_convert`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -115,7 +113,7 @@ def _tiem_convert(
 ```
 Convert seconds to a special format
 
-#### <big>`play`</big>
+### 🟡`play`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>

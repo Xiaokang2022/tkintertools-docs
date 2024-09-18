@@ -57,9 +57,7 @@ Style files in JSON format must strictly follow the above format, and the
 missing parts are empty by default.
 
 
-## 🔵 函数
-
-### <big>`_get_name`</big>
+## 🔵`_get_name`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -71,7 +69,7 @@ def _get_name(
 ```
 Get the name of the object
 
-### <big>`get`</big>
+## 🔵`get`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>

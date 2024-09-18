@@ -12,9 +12,7 @@ there:
 * hPyT: https://github.com/Zingzy/hPyT
 
 
-## 🔵 函数
-
-### <big>`_callback`</big>
+## 🔵`_callback`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -31,7 +29,7 @@ Valid only if the theme mode is set to Follow System
 * `theme`: theme name
 
 
-### <big>`_process_event`</big>
+## 🔵`_process_event`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -47,7 +45,7 @@ Handle registered callback functions
 * `dark`: Wether it is dark mode
 
 
-### <big>`customize_window`</big>
+## 🔵`customize_window`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -89,7 +87,7 @@ This function is only works on Windows OS!
 And some parameters are useless on Windows 7/10!
 
 
-### <big>`get_color_mode`</big>
+## 🔵`get_color_mode`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -100,7 +98,7 @@ def get_color_mode(
 ```
 Get the color mode of the program
 
-### <big>`get_theme_map`</big>
+## 🔵`get_theme_map`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -111,7 +109,7 @@ def get_theme_map(
 ```
 Get the theme map
 
-### <big>`register_event`</big>
+## 🔵`register_event`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -131,7 +129,7 @@ currently a dark theme
 * `args`: extra arguments
 
 
-### <big>`remove_event`</big>
+## 🔵`remove_event`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -147,7 +145,7 @@ Remove a registered function
 * `func`: callback function
 
 
-### <big>`reset_theme_map`</big>
+## 🔵`reset_theme_map`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -158,7 +156,7 @@ def reset_theme_map(
 ```
 Reset the value of theme map
 
-### <big>`set_color_mode`</big>
+## 🔵`set_color_mode`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -178,7 +176,7 @@ TIPS:
 `"system"` is the following system
 
 
-### <big>`set_theme_map`</big>
+## 🔵`set_theme_map`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -197,9 +195,7 @@ Set the path to the theme file used by the current program
 * `dark`: the name of the theme of the dark theme
 
 
-## 🟡 变量
-
-### <big>`SYSTEM_DARK_MODE`</big>
+## 🟣`SYSTEM_DARK_MODE`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -209,7 +205,7 @@ SYSTEM_DARK_MODE: bool = True
 ```
 
 
-### <big>`_callback_events`</big>
+## 🟣`_callback_events`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
@@ -219,7 +215,7 @@ _callback_events: dict = {}
 ```
 
 
-### <big>`_color_mode`</big>
+## 🟣`_color_mode`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
@@ -229,7 +225,7 @@ _color_mode: str = 'system'
 ```
 
 
-### <big>`_theme_map`</big>
+## 🟣`_theme_map`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>

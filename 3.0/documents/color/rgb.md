@@ -2,9 +2,7 @@
 
 Support for RGB
 
-## 🔵 函数
-
-### <big>`_str_to_rgba`</big>
+## 🔵`_str_to_rgba`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -18,7 +16,7 @@ def _str_to_rgba(
 ```
 Experimental: Convert color strings(RGBA) to RGB codes
 
-### <big>`_str_to_rgba`</big>
+## 🔵`_str_to_rgba`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -32,7 +30,7 @@ def _str_to_rgba(
 ```
 Experimental: Convert color strings(RGBA) to RGB codes
 
-### <big>`blend`</big>
+## 🔵`blend`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -51,7 +49,7 @@ Mix colors by weight
 * `weights`: weight list
 
 
-### <big>`contrast`</big>
+## 🔵`contrast`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -70,7 +68,7 @@ Get a contrasting color of a color
 * `channels`: three color channels
 
 
-### <big>`convert`</big>
+## 🔵`convert`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -93,7 +91,7 @@ Convert one color to another proportionally
 * `channels`: three color channels
 
 
-### <big>`gradient`</big>
+## 🔵`gradient`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -120,7 +118,7 @@ Get a list of color gradients from one color to another proportionally
 * `controller`: control function
 
 
-### <big>`rgb_to_str`</big>
+## 🔵`rgb_to_str`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -132,7 +130,7 @@ def rgb_to_str(
 ```
 Convert RGB codes to color strings
 
-### <big>`rgb_to_str`</big>
+## 🔵`rgb_to_str`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -144,7 +142,7 @@ def rgb_to_str(
 ```
 Convert RGB codes to color strings
 
-### <big>`str_to_rgb`</big>
+## 🔵`str_to_rgb`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -156,7 +154,7 @@ def str_to_rgb(
 ```
 Convert color strings to RGB codes
 
-### <big>`str_to_rgb`</big>
+## 🔵`str_to_rgb`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -168,9 +166,7 @@ def str_to_rgb(
 ```
 Convert color strings to RGB codes
 
-## 🟡 变量
-
-### <big>`MAX`</big>
+## 🟣`MAX`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -182,7 +178,7 @@ MAX: tuple = (
 ```
 
 
-### <big>`RGB`</big>
+## 🟣`RGB`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>

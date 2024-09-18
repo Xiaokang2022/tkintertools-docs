@@ -2,9 +2,7 @@
 
 All constants for 3D
 
-## 🟡 变量
-
-### <big>`FONT`</big>
+## 🟣`FONT`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -14,7 +12,7 @@ FONT: str = 'Microsoft YaHei'
 ```
 
 
-### <big>`SIZE`</big>
+## 🟣`SIZE`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>

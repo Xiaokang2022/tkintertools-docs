@@ -2,9 +2,7 @@
 
 Dark theme
 
-## 🟡 变量
-
-### <big>`Button`</big>
+## 🟣`Button`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -24,7 +22,7 @@ Button: dict = {
 ```
 
 
-### <big>`Canvas`</big>
+## 🟣`Canvas`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -36,7 +34,7 @@ Canvas: dict = {
 ```
 
 
-### <big>`CheckButton`</big>
+## 🟣`CheckButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -56,7 +54,7 @@ CheckButton: dict = {
 ```
 
 
-### <big>`Frame`</big>
+## 🟣`Frame`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -68,7 +66,7 @@ Frame: dict = {
 ```
 
 
-### <big>`HighlightButton`</big>
+## 🟣`HighlightButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -82,7 +80,7 @@ HighlightButton: dict = {
 ```
 
 
-### <big>`IconButton`</big>
+## 🟣`IconButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -102,7 +100,7 @@ IconButton: dict = {
 ```
 
 
-### <big>`InputBox`</big>
+## 🟣`InputBox`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -125,7 +123,7 @@ InputBox: dict = {
 ```
 
 
-### <big>`Label`</big>
+## 🟣`Label`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -141,7 +139,7 @@ Label: dict = {
 ```
 
 
-### <big>`OptionButton`</big>
+## 🟣`OptionButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -158,7 +156,7 @@ OptionButton: dict = {
 ```
 
 
-### <big>`ProgressBar`</big>
+## 🟣`ProgressBar`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -177,7 +175,7 @@ ProgressBar: dict = {
 ```
 
 
-### <big>`RadioButton`</big>
+## 🟣`RadioButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -200,7 +198,7 @@ RadioButton: dict = {
 ```
 
 
-### <big>`SegmentedButton`</big>
+## 🟣`SegmentedButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -215,7 +213,7 @@ SegmentedButton: dict = {
 ```
 
 
-### <big>`Slider`</big>
+## 🟣`Slider`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -235,7 +233,7 @@ Slider: dict = {
 ```
 
 
-### <big>`Switch`</big>
+## 🟣`Switch`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -270,7 +268,7 @@ Switch: dict = {
 ```
 
 
-### <big>`Text`</big>
+## 🟣`Text`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -282,7 +280,7 @@ Text: dict = {
 ```
 
 
-### <big>`ToggleButton`</big>
+## 🟣`ToggleButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -311,7 +309,7 @@ ToggleButton: dict = {
 ```
 
 
-### <big>`UnderlineButton`</big>
+## 🟣`UnderlineButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
@@ -325,7 +323,7 @@ UnderlineButton: dict = {
 ```
 
 
-### <big>`_AuxiliaryButton`</big>
+## 🟣`_AuxiliaryButton`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
@@ -345,7 +343,7 @@ _AuxiliaryButton: dict = {
 ```
 
 
-### <big>`_AuxiliaryInputBox`</big>
+## 🟣`_AuxiliaryInputBox`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
@@ -368,7 +366,7 @@ _AuxiliaryInputBox: dict = {
 ```
 
 
-### <big>`_AuxiliaryLabel`</big>
+## 🟣`_AuxiliaryLabel`
 
 
 <code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>

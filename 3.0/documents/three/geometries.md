@@ -2,9 +2,7 @@
 
 Standard Geometries
 
-## 🟢 类
-
-### <big>`Cuboid`</big>
+## 🟢`Cuboid`
 
 
 
@@ -42,7 +40,7 @@ Cuboid
 
 
 
-### <big>`Tetrahedron`</big>
+## 🟢`Tetrahedron`
 
 
 

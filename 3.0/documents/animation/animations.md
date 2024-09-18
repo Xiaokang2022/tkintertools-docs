@@ -7,9 +7,7 @@ The built-in basic animation classes are: `MoveTkWidget`, `MoveWidget`,
 `MoveComponent`, `MoveItem`, `GradientTkWidget`, `GradientItem`, `ScaleFontSize`
 
 
-## 🟢 类
-
-### <big>`Animation`</big>
+## 🟢`Animation`
 
 
 
@@ -44,7 +42,7 @@ animation
 * `derivation`: whether the callback function is derivative
 
 
-#### <big>`_wrapper`</big>
+### 🟡`_wrapper`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -61,7 +59,7 @@ Make the ending function call correctly
 * `func`: the callback function to be wrapped
 
 
-#### <big>`start`</big>
+### 🟡`start`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -80,7 +78,7 @@ Start the animation
 milliseconds 
 
 
-#### <big>`stop`</big>
+### 🟡`stop`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -94,7 +92,7 @@ Stop the animation
 
 
 
-### <big>`GradientItem`</big>
+## 🟢`GradientItem`
 
 
 
@@ -136,7 +134,7 @@ animation
 
 
 
-### <big>`GradientTkWidget`</big>
+## 🟢`GradientTkWidget`
 
 
 
@@ -176,7 +174,7 @@ animation
 
 
 
-### <big>`MoveComponent`</big>
+## 🟢`MoveComponent`
 
 
 
@@ -211,7 +209,7 @@ animation
 
 
 
-### <big>`MoveItem`</big>
+## 🟢`MoveItem`
 
 
 
@@ -248,7 +246,7 @@ animation
 
 
 
-### <big>`MoveTkWidget`</big>
+## 🟢`MoveTkWidget`
 
 
 
@@ -283,7 +281,7 @@ animation
 
 
 
-### <big>`MoveWidget`</big>
+## 🟢`MoveWidget`
 
 
 
@@ -318,7 +316,7 @@ animation
 
 
 
-### <big>`ScaleFontSize`</big>
+## 🟢`ScaleFontSize`
 
 
 
@@ -354,7 +352,7 @@ animation
 * `derivation`: whether the callback function is derivative
 
 
-#### <big>`_scale`</big>
+### 🟡`_scale`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>

@@ -2,15 +2,13 @@
 
 All standard `Image` classes
 
-## 🟢 类
-
-### <big>`StillImage`</big>
+## 🟢`StillImage`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Image`
 
-#### <big>`coords`</big>
+### 🟡`coords`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -24,7 +22,7 @@ def coords(
 ```
 
 
-#### <big>`display`</big>
+### 🟡`display`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>

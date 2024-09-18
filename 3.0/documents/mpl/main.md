@@ -2,9 +2,7 @@
 
 APIs for Matplotlib
 
-## 🟢 类
-
-### <big>`FigureCanvas`</big>
+## 🟢`FigureCanvas`
 
 
 
@@ -26,7 +24,7 @@ A canvas for interface of `matplotlib`
 * `master`: parent widget
 
 
-#### <big>`_fix_size`</big>
+### 🟡`_fix_size`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -39,7 +37,7 @@ def _fix_size(
 ```
 Correct the size of Figure
 
-#### <big>`_theme`</big>
+### 🟡`_theme`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -52,7 +50,7 @@ def _theme(
 ```
 Change the color theme of the Figure
 
-#### <big>`destroy`</big>
+### 🟡`destroy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -66,7 +64,7 @@ def destroy(
 
 
 
-### <big>`FigureToolbar`</big>
+## 🟢`FigureToolbar`
 
 
 
@@ -97,7 +95,7 @@ If you want to use the toolbar with a different layout manager,
 use `pack_toolbar=False`
 
 
-#### <big>`_theme`</big>
+### 🟡`_theme`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -110,7 +108,7 @@ def _theme(
 ```
 Change the color theme of the Toolbar
 
-#### <big>`destroy`</big>
+### 🟡`destroy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -124,9 +122,7 @@ def destroy(
 
 
 
-## 🔵 函数
-
-### <big>`_forward_methods`</big>
+## 🔵`_forward_methods`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
@@ -144,7 +140,7 @@ Forward methods and attributes of one object to another object
 * `target_object`: the target object, that is, the object to be forwarded
 
 
-### <big>`set_mpl_default_theme`</big>
+## 🔵`set_mpl_default_theme`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -160,9 +156,7 @@ Set default color constants of `matplotlib`
 * `theme`: theme mode
 
 
-## 🟡 变量
-
-### <big>`DARK_THEME`</big>
+## 🟣`DARK_THEME`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -190,7 +184,7 @@ DARK_THEME: dict = {
 ```
 
 
-### <big>`LIGHT_THEME`</big>
+## 🟣`LIGHT_THEME`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>

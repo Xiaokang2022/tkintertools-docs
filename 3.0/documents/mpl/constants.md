@@ -2,9 +2,7 @@
 
 Constants for theme
 
-## 🟡 变量
-
-### <big>`DARK_THEME`</big>
+## 🟣`DARK_THEME`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -32,7 +30,7 @@ DARK_THEME: dict = {
 ```
 
 
-### <big>`LIGHT_THEME`</big>
+## 🟣`LIGHT_THEME`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>

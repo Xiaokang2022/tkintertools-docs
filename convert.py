@@ -22,9 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-__version__ = "0.2.1"
-__author__ = "Xiaokang2022 <2951256653@qq.com>"
-
 import importlib
 import inspect
 import os
@@ -37,7 +34,24 @@ import tkintertools
 import tkintertools.media
 import tkintertools.mpl
 import tkintertools.three
-from rich import print
+
+__version__ = "0.2.3"
+__author__ = "Xiaokang2022 <2951256653@qq.com>"
+
+TAGS: dict[str, str] = {
+    "public": "green",
+    "protected": "orange",
+    "private": "red",
+    "built-in": "purple",
+    "special": "purple",
+    "class": "limegreen",
+    "function": "royalblue",
+    "method": "#BBBB00",
+    "variable": "#BBBB00",
+    "constant": "skyblue",
+}
+
+TAGS = {n: f"<code style='color: {c};'>{n}</code>" for n, c in TAGS.items()}
 
 
 def get_package_data(package: types.ModuleType) -> dict:
@@ -202,12 +216,21 @@ icon: material/file-document
 
     本文档仍在测试中，由于是直接通过程序将 Python 源代码转换成的数据，因此语言为英语，且可能存在数据不完整的问题，请大家查阅时注意甄别！
 
+    条目类型：
+
+    * 📦 **Package / 包**
+    * 📑 **Module / 模块**
+    * 🟢 **Class / 类**
+    * 🔵 **Function / 函数**
+    * 🟡 **Method / 方法**
+    * 🟣 **Variable / 变量**
+
     当前文档适用版本：
 
     * tkintertools: `{tkintertools.__version__}`
     * tkintertools-mpl (EX): `{tkintertools.mpl.__version__}`
     * tkintertools-media (EX): `{tkintertools.media.__version__}`
-    * tkintertools-three (EX): `{tkintertools.three.__version__}`
+    * tkintertools-3d (EX): `{tkintertools.three.__version__}`
 """)
 
         for sub_package, modules in data_package.items():
@@ -238,15 +261,12 @@ def create_pages(module: types.ModuleType) -> None:
         file.write(f"{data_module["docstring"]}\n\n")
         if module_name != "__init__":
             if data_module["classes"]:
-                file.write("## 🟢 类\n\n")
                 for cls in sorted(data_module["classes"]):
                     file.write(create_class_md(getattr(module, cls)))
             if data_module["functions"]:
-                file.write("## 🔵 函数\n\n")
                 for func in sorted(data_module["functions"]):
                     file.write(create_function_md(getattr(module, func)))
             if data_module["variables"]:
-                file.write("## 🟡 变量\n\n")
                 for var in sorted(data_module["variables"]):
                     file.write(create_variable_md(
                         getattr(module, var), name=var))
@@ -256,16 +276,16 @@ def create_class_md(cls: object) -> str:
     """"""
     data = get_class_data(cls)
 
-    string = f"### <big>`{data["name"]}`</big>\n\n"
+    string = f"## 🟢`{data["name"]}`\n\n"
 
     if data["name"].startswith("__") and data["name"].endswith("__"):
-        label = "<code style='color: purple;'>built-in</code>"
+        label = TAGS["built-in"]
     elif data["name"].startswith("__"):
-        label = "<code style='color: red;'>private</code>"
+        label = TAGS["private"]
     elif data["name"].startswith("_"):
-        label = "<code style='color: orange;'>protected</code>"
+        label = TAGS["protected"]
     else:
-        label = "<code style='color: green;'>public</code>"
+        label = TAGS["public"]
 
     if data["parents"]:
         parent = f" | {" ".join(f"`{p.__name__}`" for p in data["parents"])}"
@@ -292,23 +312,23 @@ def create_function_md(func: types.FunctionType | types.MethodType, *, is_method
     data = get_function_data(func)
     string = ""
     if init_doc is None:
-        string = f"### <big>`{data["name"]}`</big>\n\n"
+        string = f"## 🔵`{data["name"]}`\n\n"
         if is_method:
-            string = "#" + string
+            string = "#" + string.replace("🔵", "🟡")
 
     if data["name"].startswith("__") and data["name"].endswith("__"):
-        label = "<code style='color: purple;'>special</code>"
+        label = TAGS["special"]
     elif data["name"].startswith("__"):
-        label = "<code style='color: red;'>private</code>"
+        label = TAGS["private"]
     elif data["name"].startswith("_"):
-        label = "<code style='color: orange;'>protected</code>"
+        label = TAGS["protected"]
     else:
-        label = "<code style='color: green;'>public</code>"
+        label = TAGS["public"]
 
     if is_method:
-        kind = "<code style='color: #BBBB00;'>method</code>"
+        kind = TAGS["method"]
     else:
-        kind = "<code style='color: royalblue;'>function</code>"
+        kind = TAGS["function"]
 
     if init_doc is not None:
         string += f"\n```python\n{get_function_define(data)}\n```\n"
@@ -331,21 +351,21 @@ def create_function_md(func: types.FunctionType | types.MethodType, *, is_method
 
 def create_variable_md(var: object, *, name: str) -> str:
     """"""
-    string = f"### <big>`{name}`</big>\n\n"
+    string = f"## 🟣`{name}`\n\n"
 
     if name.isupper():
-        kind = "<code style='color: skyblue;'>constant</code>"
+        kind = TAGS["constant"]
     else:
-        kind = "<code style='color: #BBBB00;'>variable</code>"
+        kind = TAGS["variable"]
 
     if name.startswith("__") and name.endswith("__"):
-        label = "<code style='color: purple;'>special</code>"
+        label = TAGS["special"]
     elif name.startswith("__"):
-        label = "<code style='color: red;'>private</code>"
+        label = TAGS["private"]
     elif name.startswith("_"):
-        label = "<code style='color: orange;'>protected</code>"
+        label = TAGS["protected"]
     else:
-        label = "<code style='color: green;'>public</code>"
+        label = TAGS["public"]
 
     ps = pprint.pformat(_get_value_string(var, pp=True), width=100)
 
@@ -369,18 +389,18 @@ def create_variable_md(var: object, *, name: str) -> str:
     return string + "\n\n"
 
 
-def create_docs() -> None:
+def create_docs(lib: types.ModuleType) -> None:
     """"""
-    create_index(tkintertools)
+    create_index(lib)
 
-    for sub_package, modules in get_package_data(tkintertools).items():
+    for sub_package, modules in get_package_data(lib).items():
         os.makedirs(f"./3.0/documents/{sub_package}/", exist_ok=True)
         create_pages(importlib.import_module(
-            f"tkintertools.{sub_package}.__init__"))
+            f"{lib.__name__}.{sub_package}.__init__"))
         for module in modules:
             create_pages(importlib.import_module(
-                f"tkintertools.{sub_package}.{module}"))
+                f"{lib.__name__}.{sub_package}.{module}"))
 
 
 if __name__ == "__main__":
-    create_docs()
+    create_docs(tkintertools)

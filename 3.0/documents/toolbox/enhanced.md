@@ -2,15 +2,13 @@
 
 Enhanced versions of some tkinter classes and functions
 
-## 🟢 类
-
-### <big>`PhotoImage`</big>
+## 🟢`PhotoImage`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `PhotoImage` `PhotoImage`
 
-#### <big>`resize`</big>
+### 🟡`resize`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -24,7 +22,7 @@ def resize(
 ```
 Resize the PhotoImage
 
-#### <big>`scale`</big>
+### 🟡`scale`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>

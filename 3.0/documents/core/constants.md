@@ -7,9 +7,7 @@ In general, they should not be modified, and if you need to modify them, it is
 best before the window is established.
 
 
-## 🔵 函数
-
-### <big>`reset`</big>
+## 🔵`reset`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -20,9 +18,7 @@ def reset(
 ```
 Reset all constants to default value
 
-## 🟡 变量
-
-### <big>`FONT`</big>
+## 🟣`FONT`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -32,7 +28,7 @@ FONT: str = 'Microsoft YaHei'
 ```
 
 
-### <big>`GOLDEN_RATIO`</big>
+## 🟣`GOLDEN_RATIO`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -42,7 +38,7 @@ GOLDEN_RATIO: float = 0.6180339887498949
 ```
 
 
-### <big>`SIZE`</big>
+## 🟣`SIZE`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -52,7 +48,7 @@ SIZE: int = -20
 ```
 
 
-### <big>`SYSTEM`</big>
+## 🟣`SYSTEM`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>

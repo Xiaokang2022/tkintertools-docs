@@ -2,9 +2,7 @@
 
 Some useful utility classes or utility functions
 
-## 🟢 类
-
-### <big>`_Trigger`</big>
+## 🟢`_Trigger`
 
 
 
@@ -27,7 +25,7 @@ invalid. When triggered, the callback function is called.
 * `command`: the function that is called when triggered
 
 
-#### <big>`get`</big>
+### 🟡`get`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -39,7 +37,7 @@ def get(
 ```
 Get the status of the trigger
 
-#### <big>`lock`</big>
+### 🟡`lock`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -51,7 +49,7 @@ def lock(
 ```
 Lock the trigger so that it can't be updated
 
-#### <big>`reset`</big>
+### 🟡`reset`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -63,7 +61,7 @@ def reset(
 ```
 Reset the status of the trigger
 
-#### <big>`unlock`</big>
+### 🟡`unlock`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -75,7 +73,7 @@ def unlock(
 ```
 Unlock this trigger so that it can be updated again
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -96,9 +94,7 @@ Update the status of the trigger
 
 
 
-## 🔵 函数
-
-### <big>`embed_window`</big>
+## 🔵`embed_window`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -120,7 +116,7 @@ screen
 * `focus`: whether direct input focus to this window
 
 
-### <big>`get_hwnd`</big>
+## 🔵`get_hwnd`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -132,7 +128,7 @@ def get_hwnd(
 ```
 Get the HWND of `tkinter.Widget`
 
-### <big>`get_text_size`</big>
+## 🔵`get_text_size`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -160,7 +156,7 @@ ATTENTION:
 * When there is a line break, the return value will be inaccurate!
 
 
-### <big>`load_font`</big>
+## 🔵`load_font`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -190,7 +186,7 @@ CustomTkinter: https://github.com/TomSchimansky/CustomTkinter
 * This function only works on Windows and Linux OS
 
 
-### <big>`screen_size`</big>
+## 🔵`screen_size`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -201,7 +197,7 @@ def screen_size(
 ```
 Return the size of the screen
 
-### <big>`set_mouse_position`</big>
+## 🔵`set_mouse_position`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -220,9 +216,7 @@ ATTENTION:
 This function only works on Windows OS!
 
 
-## 🟡 变量
-
-### <big>`_LINUX_FONTS_DIR`</big>
+## 🟣`_LINUX_FONTS_DIR`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: orange;'>protected</code>

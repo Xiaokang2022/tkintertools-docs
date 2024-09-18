@@ -2,9 +2,7 @@
 
 Core codes of 3D
 
-## 🟢 类
-
-### <big>`Canvas`</big>
+## 🟢`Canvas`
 
 
 
@@ -26,7 +24,7 @@ def __init__(
 Base class of 3D Canvas
 
 
-#### <big>`space_sort`</big>
+### 🟡`space_sort`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -40,7 +38,7 @@ Sort the contextual relationship between the spatial positions of the components
 
 
 
-### <big>`Component`</big>
+## 🟢`Component`
 
 
 
@@ -56,7 +54,7 @@ def __init__(
 3D 对象基类
 
 
-#### <big>`_project`</big>
+### 🟡`_project`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -74,7 +72,7 @@ def _project(
 * `canvas`: 投影到的画布
 
 
-#### <big>`center`</big>
+### 🟡`center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -86,7 +84,7 @@ def center(
 ```
 几何中心
 
-#### <big>`rotate`</big>
+### 🟡`rotate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -111,7 +109,7 @@ def rotate(
 * `axis`: 旋转轴线，无默认值
 
 
-#### <big>`scale`</big>
+### 🟡`scale`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -134,7 +132,7 @@ def scale(
 * `center`: 缩放中心，默认为几何中心
 
 
-#### <big>`translate`</big>
+### 🟡`translate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -154,7 +152,7 @@ def translate(
 * `dz`: z 方向位移长度
 
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -168,7 +166,7 @@ def update(
 
 
 
-### <big>`Geometry`</big>
+## 🟢`Geometry`
 
 
 
@@ -188,7 +186,7 @@ def __init__(
 * `sides`: 组成几何体的面
 
 
-#### <big>`append`</big>
+### 🟡`append`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -204,7 +202,7 @@ def append(
 * `sides`: `Side` 类
 
 
-#### <big>`center`</big>
+### 🟡`center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -216,7 +214,7 @@ def center(
 ```
 几何中心
 
-#### <big>`rotate`</big>
+### 🟡`rotate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -241,7 +239,7 @@ def rotate(
 * `axis`: 旋转轴线，无默认值
 
 
-#### <big>`scale`</big>
+### 🟡`scale`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -264,7 +262,7 @@ def scale(
 * `center`: 缩放中心，默认为几何中心
 
 
-#### <big>`translate`</big>
+### 🟡`translate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -284,7 +282,7 @@ def translate(
 * `dz`: z 方向位移长度
 
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -298,7 +296,7 @@ def update(
 
 
 
-### <big>`Line`</big>
+## 🟢`Line`
 
 
 
@@ -325,7 +323,7 @@ def __init__(
 * `fill`: 线的颜色
 
 
-#### <big>`_camera_distance`</big>
+### 🟡`_camera_distance`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -337,7 +335,7 @@ def _camera_distance(
 ```
 与相机距离
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -351,7 +349,7 @@ def update(
 
 
 
-### <big>`Plane`</big>
+## 🟢`Plane`
 
 
 
@@ -377,7 +375,7 @@ def __init__(
 * `outline`: 面轮廓的颜色
 
 
-#### <big>`_camera_distance`</big>
+### 🟡`_camera_distance`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -389,7 +387,7 @@ def _camera_distance(
 ```
 与相机距离
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -403,7 +401,7 @@ def update(
 
 
 
-### <big>`Point`</big>
+## 🟢`Point`
 
 
 
@@ -442,7 +440,7 @@ def __init__(
 * `markupjustify`: 标记文本多行对齐方式
 
 
-#### <big>`_camera_distance`</big>
+### 🟡`_camera_distance`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -454,7 +452,7 @@ def _camera_distance(
 ```
 与相机距离
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -468,7 +466,7 @@ def update(
 
 
 
-### <big>`Space`</big>
+## 🟢`Space`
 
 
 
@@ -490,7 +488,7 @@ def __init__(
 A canvas where you can view 3D objects
 
 
-#### <big>`_initialization`</big>
+### 🟡`_initialization`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -502,7 +500,7 @@ def _initialization(
 ```
 
 
-#### <big>`_rotate`</big>
+### 🟡`_rotate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -523,7 +521,7 @@ Triggering of a rotation event
 * `_cache`: cache values that record the coordinates of mouse presses
 
 
-#### <big>`_scale`</big>
+### 🟡`_scale`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -537,7 +535,7 @@ def _scale(
 ```
 Triggering of a scaling event
 
-#### <big>`_translate`</big>
+### 🟡`_translate`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -558,7 +556,7 @@ Triggering of a translation event
 * `_cache`: cache values that record the coordinates of mouse presses
 
 
-#### <big>`_zoom_self`</big>
+### 🟡`_zoom_self`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -572,7 +570,7 @@ def _zoom_self(
 
 
 
-### <big>`Text3D`</big>
+## 🟢`Text3D`
 
 
 
@@ -602,7 +600,7 @@ def __init__(
 * `fill`: 点内部的填充颜色
 
 
-#### <big>`_camera_distance`</big>
+### 🟡`_camera_distance`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -614,7 +612,7 @@ def _camera_distance(
 ```
 与相机距离
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -628,9 +626,7 @@ def update(
 
 
 
-## 🔵 函数
-
-### <big>`project`</big>
+## 🔵`project`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -647,7 +643,7 @@ def project(
 * `distance`: 正向平面的距离（平面正对着我们）
 
 
-### <big>`rotate`</big>
+## 🔵`rotate`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -673,7 +669,7 @@ def rotate(
 * `axis`: 旋转轴线的空间坐标
 
 
-### <big>`scale`</big>
+## 🔵`scale`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -697,7 +693,7 @@ def scale(
 * `center`: 缩放中心的空间坐标
 
 
-### <big>`translate`</big>
+## 🔵`translate`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>

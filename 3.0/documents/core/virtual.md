@@ -14,9 +14,7 @@ to one, but in terms of appearance, there is no limit to the number of `Shape`,
 abstract base class `Components`.
 
 
-## 🟢 类
-
-### <big>`Component`</big>
+## 🟢`Component`
 
 
 
@@ -47,7 +45,7 @@ The basic part of a `Widget`
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### <big>`__getitem__`</big>
+### 🟡`__getitem__`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
@@ -60,7 +58,7 @@ def __getitem__(
 ```
 Easy to get style data
 
-#### <big>`__setitem__`</big>
+### 🟡`__setitem__`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
@@ -74,7 +72,7 @@ def __setitem__(
 ```
 Easy to set style data
 
-#### <big>`_get_disabled_style`</big>
+### 🟡`_get_disabled_style`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -87,7 +85,7 @@ def _get_disabled_style(
 ```
 Get the style data of disabled state
 
-#### <big>`appear`</big>
+### 🟡`appear`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -101,7 +99,7 @@ def appear(
 ```
 Let the component to appear
 
-#### <big>`center`</big>
+### 🟡`center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -113,7 +111,7 @@ def center(
 ```
 Return the geometric center of the `Component`
 
-#### <big>`configure`</big>
+### 🟡`configure`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -128,7 +126,7 @@ def configure(
 ```
 Configure properties of `Component` and update them immediately
 
-#### <big>`coords`</big>
+### 🟡`coords`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -142,7 +140,7 @@ def coords(
 ```
 Resize the `Component`
 
-#### <big>`destroy`</big>
+### 🟡`destroy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -154,7 +152,7 @@ def destroy(
 ```
 Destroy the `Component`
 
-#### <big>`detect`</big>
+### 🟡`detect`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -168,7 +166,7 @@ def detect(
 ```
 Detect whether the specified coordinates are within `Component`
 
-#### <big>`disappear`</big>
+### 🟡`disappear`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -182,7 +180,7 @@ def disappear(
 ```
 Let the component to disappear
 
-#### <big>`display`</big>
+### 🟡`display`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -194,7 +192,7 @@ def display(
 ```
 Display the `Component` on a `Canvas`
 
-#### <big>`move`</big>
+### 🟡`move`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -208,7 +206,7 @@ def move(
 ```
 Move the `Component`
 
-#### <big>`moveto`</big>
+### 🟡`moveto`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -222,7 +220,7 @@ def moveto(
 ```
 Move the `Component` to a certain position
 
-#### <big>`region`</big>
+### 🟡`region`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -234,7 +232,7 @@ def region(
 ```
 Return the decision region of the `Component`
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -253,7 +251,7 @@ Update the style of the `Component` to the corresponding state
 * `state`: the state of the `Component`
 
 
-#### <big>`zoom`</big>
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -268,7 +266,7 @@ Zoom the `Component`
 
 
 
-### <big>`Feature`</big>
+## 🟢`Feature`
 
 
 
@@ -286,7 +284,7 @@ The features of a `Widget`
 * `widget`: parent widget
 
 
-#### <big>`_click_center`</big>
+### 🟡`_click_center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -299,7 +297,7 @@ def _click_center(
 ```
 Event of pressing the center mouse button
 
-#### <big>`_click_left`</big>
+### 🟡`_click_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -312,7 +310,7 @@ def _click_left(
 ```
 Event of pressing the left mouse button
 
-#### <big>`_click_right`</big>
+### 🟡`_click_right`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -325,7 +323,7 @@ def _click_right(
 ```
 Event of pressing the right mouse button
 
-#### <big>`_copy`</big>
+### 🟡`_copy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -338,7 +336,7 @@ def _copy(
 ```
 Event of copy operation
 
-#### <big>`_cut`</big>
+### 🟡`_cut`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -351,7 +349,7 @@ def _cut(
 ```
 Event of cut operation
 
-#### <big>`_input`</big>
+### 🟡`_input`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -364,7 +362,7 @@ def _input(
 ```
 Event of typing
 
-#### <big>`_move_center`</big>
+### 🟡`_move_center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -377,7 +375,7 @@ def _move_center(
 ```
 Event of holding down the center mouse button to move the mouse
 
-#### <big>`_move_left`</big>
+### 🟡`_move_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -390,7 +388,7 @@ def _move_left(
 ```
 Event of holding down the left mouse button to move the mouse
 
-#### <big>`_move_none`</big>
+### 🟡`_move_none`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -403,7 +401,7 @@ def _move_none(
 ```
 Event of moving the mouse
 
-#### <big>`_move_right`</big>
+### 🟡`_move_right`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -416,7 +414,7 @@ def _move_right(
 ```
 Event of holding down the right mouse button to move the mouse
 
-#### <big>`_paste`</big>
+### 🟡`_paste`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -429,7 +427,7 @@ def _paste(
 ```
 Event of paste operation
 
-#### <big>`_release_center`</big>
+### 🟡`_release_center`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -442,7 +440,7 @@ def _release_center(
 ```
 Event of releasing the center mouse button
 
-#### <big>`_release_left`</big>
+### 🟡`_release_left`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -455,7 +453,7 @@ def _release_left(
 ```
 Event of releasing the left mouse button
 
-#### <big>`_release_right`</big>
+### 🟡`_release_right`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -468,7 +466,7 @@ def _release_right(
 ```
 Event of releasing the right mouse button
 
-#### <big>`_select_all`</big>
+### 🟡`_select_all`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -481,7 +479,7 @@ def _select_all(
 ```
 Event of selecting all operation
 
-#### <big>`_wheel`</big>
+### 🟡`_wheel`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
@@ -496,7 +494,7 @@ Event of scrolling the mouse wheel
 
 
 
-### <big>`Image`</big>
+## 🟢`Image`
 
 
 
@@ -529,7 +527,7 @@ The Image of a `Widget`
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### <big>`zoom`</big>
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -544,13 +542,13 @@ Scale the image
 
 
 
-### <big>`Shape`</big>
+## 🟢`Shape`
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
 
-#### <big>`zoom`</big>
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -565,7 +563,7 @@ Scale the shape
 
 
 
-### <big>`Text`</big>
+## 🟢`Text`
 
 
 
@@ -620,7 +618,7 @@ The Text of a `Widget`
 * `kwargs`: extra parameters for CanvasItem
 
 
-#### <big>`region`</big>
+### 🟡`region`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -632,7 +630,7 @@ def region(
 ```
 Return the decision region of the `Text`
 
-#### <big>`zoom`</big>
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -647,7 +645,7 @@ Scale the text
 
 
 
-### <big>`Widget`</big>
+## 🟢`Widget`
 
 
 
@@ -682,7 +680,7 @@ Base Widget Class
 * `animation`: wether enable animation
 
 
-#### <big>`appear`</big>
+### 🟡`appear`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -694,7 +692,7 @@ def appear(
 ```
 Let all components of the widget to appear
 
-#### <big>`deregister`</big>
+### 🟡`deregister`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -707,7 +705,7 @@ def deregister(
 ```
 Deregister a component from the widget
 
-#### <big>`destroy`</big>
+### 🟡`destroy`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -719,7 +717,7 @@ def destroy(
 ```
 Destroy the widget
 
-#### <big>`detect`</big>
+### 🟡`detect`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -733,7 +731,7 @@ def detect(
 ```
 Detect whether the specified coordinates are within the `Widget`
 
-#### <big>`disabled`</big>
+### 🟡`disabled`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -746,7 +744,7 @@ def disabled(
 ```
 Disable the widget
 
-#### <big>`disappear`</big>
+### 🟡`disappear`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -758,7 +756,7 @@ def disappear(
 ```
 Let all components of the widget to disappear
 
-#### <big>`move`</big>
+### 🟡`move`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -772,7 +770,7 @@ def move(
 ```
 Move the widget
 
-#### <big>`moveto`</big>
+### 🟡`moveto`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -786,7 +784,7 @@ def moveto(
 ```
 Move the Widget to a certain position
 
-#### <big>`register`</big>
+### 🟡`register`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -799,7 +797,7 @@ def register(
 ```
 Register a component to the widget
 
-#### <big>`update`</big>
+### 🟡`update`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
@@ -814,7 +812,7 @@ def update(
 ```
 Update the widget
 
-#### <big>`zoom`</big>
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>

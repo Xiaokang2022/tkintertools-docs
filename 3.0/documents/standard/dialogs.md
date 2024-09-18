@@ -2,9 +2,7 @@
 
 All standard dialog classes
 
-## 🟢 类
-
-### <big>`TkColorChooser`</big>
+## 🟢`TkColorChooser`
 
 
 
@@ -31,7 +29,7 @@ Color chooser pop-up
 
 
 
-### <big>`TkFontChooser`</big>
+## 🟢`TkFontChooser`
 
 
 
@@ -58,7 +56,7 @@ Font chooser pop-up
 
 
 
-### <big>`TkMessage`</big>
+## 🟢`TkMessage`
 
 
 

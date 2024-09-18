@@ -2,9 +2,7 @@
 
 Support for HSL
 
-## 🔵 函数
-
-### <big>`blend`</big>
+## 🔵`blend`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -23,7 +21,7 @@ Mix colors by weight
 * `weights`: weight list
 
 
-### <big>`contrast`</big>
+## 🔵`contrast`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -42,7 +40,7 @@ Get a contrasting color of a color
 * `channels`: three color channels
 
 
-### <big>`convert`</big>
+## 🔵`convert`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -65,7 +63,7 @@ Convert one color to another proportionally
 * `channels`: three color channels
 
 
-### <big>`gradient`</big>
+## 🔵`gradient`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -92,7 +90,7 @@ Get a list of color gradients from one color to another proportionally
 * `controller`: control function
 
 
-### <big>`hsl_to_rgb`</big>
+## 🔵`hsl_to_rgb`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -104,7 +102,7 @@ def hsl_to_rgb(
 ```
 Convert HSL to RGB codes
 
-### <big>`hsl_to_rgb`</big>
+## 🔵`hsl_to_rgb`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -116,7 +114,7 @@ def hsl_to_rgb(
 ```
 Convert HSL to RGB codes
 
-### <big>`rgb_to_hsl`</big>
+## 🔵`rgb_to_hsl`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -128,7 +126,7 @@ def rgb_to_hsl(
 ```
 Convert RGB to HSL codes
 
-### <big>`rgb_to_hsl`</big>
+## 🔵`rgb_to_hsl`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
@@ -140,9 +138,7 @@ def rgb_to_hsl(
 ```
 Convert RGB to HSL codes
 
-## 🟡 变量
-
-### <big>`HSL`</big>
+## 🟣`HSL`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
@@ -152,7 +148,7 @@ HSL: GenericAlias = tuple[float, float, float]
 ```
 
 
-### <big>`MAX`</big>
+## 🟣`MAX`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
