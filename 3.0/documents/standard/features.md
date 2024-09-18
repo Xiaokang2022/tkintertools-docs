@@ -1,8 +1,8 @@
 # tkintertools.standard.features
 
-All standard Features
+All standard `Feature` classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`ButtonFeature`</big>
 

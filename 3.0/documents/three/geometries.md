@@ -2,7 +2,7 @@
 
 Standard Geometries
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`Cuboid`</big>
 

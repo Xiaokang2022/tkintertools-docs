@@ -3,17 +3,16 @@
 
 Support for theme
 
-ATTENTION:
+All third packages which relative to style introduced by `tkintertools` are
+there:
 
-All third packages which relative to style introduced by `tkintertools` are there:
-
-* darkdetect
-* pywinstyles
-* win32material
-* hPyT
+* darkdetect: https://github.com/albertosottile/darkdetect
+* pywinstyles: https://github.com/Akascape/py-window-styles
+* win32material: https://github.com/littlewhitecloud/win32material
+* hPyT: https://github.com/Zingzy/hPyT
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`_callback`</big>
 
@@ -124,8 +123,9 @@ def register_event(
 ) -> None: ...
 ```
 
-When the system accent color changes, the registered function will be called,
-and the parameter is a boolean value indicating whether it is currently a dark theme
+When the system accent color changes, the registered function will be
+called, and the parameter is a boolean value indicating whether it is
+currently a dark theme
 
 * `func`: callback function
 * `args`: extra arguments
@@ -197,7 +197,7 @@ Set the path to the theme file used by the current program
 * `dark`: the name of the theme of the dark theme
 
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`SYSTEM_DARK_MODE`</big>
 

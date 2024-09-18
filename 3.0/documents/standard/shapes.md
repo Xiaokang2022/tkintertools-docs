@@ -1,8 +1,8 @@
 # tkintertools.standard.shapes
 
-All standard Shapes
+All standard `Shape` classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`HalfRoundedRectangle`</big>
 

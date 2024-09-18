@@ -1,8 +1,13 @@
 # tkintertools.core.constants
 
+
 All constants
 
-## 🔵 Functions / 函数
+In general, they should not be modified, and if you need to modify them, it is
+best before the window is established.
+
+
+## 🔵 函数
 
 ### <big>`reset`</big>
 
@@ -15,7 +20,7 @@ def reset(
 ```
 Reset all constants to default value
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`FONT`</big>
 

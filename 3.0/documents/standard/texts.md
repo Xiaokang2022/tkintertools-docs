@@ -1,8 +1,8 @@
 # tkintertools.standard.texts
 
-All standard Texts
+All standard `Text` classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`Information`</big>
 

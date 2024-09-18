@@ -2,7 +2,7 @@
 
 Light theme
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`Button`</big>
 
@@ -169,14 +169,10 @@ ProgressBar: dict = {
                      'normal': {'fill': '#32BF42', 'outline': '#32BF42'}},
     'Rectangle.out': {'hover': {'fill': '#E5F1FB', 'outline': '#288CDB'},
                       'normal': {'fill': '#E1E1E1', 'outline': '#C0C0C0'}},
-    'SemicircularRectangle.in': {'hover': {'fill': '#06B025',
-                                           'outline': '#06B025'},
-                                 'normal': {'fill': '#32BF42',
-                                            'outline': '#32BF42'}},
-    'SemicircularRectangle.out': {'hover': {'fill': '#F6F6F6',
-                                            'outline': '#DCDCDC'},
-                                  'normal': {'fill': '#FBFBFB',
-                                             'outline': '#DCDCDC'}},
+    'SemicircularRectangle.in': {'hover': {'fill': '#06B025', 'outline': '#06B025'},
+                                 'normal': {'fill': '#32BF42', 'outline': '#32BF42'}},
+    'SemicircularRectangle.out': {'hover': {'fill': '#F6F6F6', 'outline': '#DCDCDC'},
+                                  'normal': {'fill': '#FBFBFB', 'outline': '#DCDCDC'}},
 }
 ```
 
@@ -233,10 +229,8 @@ Slider: dict = {
                   'normal': {'fill': '#0078D7', 'outline': '#0078D7'}},
     'Rectangle.in': {'normal': {'fill': '#0078D7', 'outline': '#0078D7'}},
     'Rectangle.out': {'normal': {'fill': '#878787', 'outline': '#878787'}},
-    'SemicircularRectangle.in': {'normal': {'fill': '#0067C0',
-                                            'outline': '#0067C0'}},
-    'SemicircularRectangle.out': {'normal': {'fill': '#878787',
-                                             'outline': '#878787'}},
+    'SemicircularRectangle.in': {'normal': {'fill': '#0067C0', 'outline': '#0067C0'}},
+    'SemicircularRectangle.out': {'normal': {'fill': '#878787', 'outline': '#878787'}},
 }
 ```
 
@@ -266,18 +260,12 @@ Switch: dict = {
                       'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'},
                       'normal-off': {'fill': '#F5F5F7', 'outline': '#B8B8B9'},
                       'normal-on': {'fill': '#0067C0', 'outline': '#0067C0'}},
-    'SemicircularRectangle': {'active-off': {'fill': '#DEDFE2',
-                                             'outline': '#848586'},
-                              'active-on': {'fill': '#2D7FC6',
-                                            'outline': '#2072B9'},
-                              'hover-off': {'fill': '#E7E8EA',
-                                            'outline': '#858687'},
-                              'hover-on': {'fill': '#1975C5',
-                                           'outline': '#1975C5'},
-                              'normal-off': {'fill': '#F5F5F7',
-                                             'outline': '#B8B8B9'},
-                              'normal-on': {'fill': '#0067C0',
-                                            'outline': '#0067C0'}},
+    'SemicircularRectangle': {'active-off': {'fill': '#DEDFE2', 'outline': '#848586'},
+                              'active-on': {'fill': '#2D7FC6', 'outline': '#2072B9'},
+                              'hover-off': {'fill': '#E7E8EA', 'outline': '#858687'},
+                              'hover-on': {'fill': '#1975C5', 'outline': '#1975C5'},
+                              'normal-off': {'fill': '#F5F5F7', 'outline': '#B8B8B9'},
+                              'normal-on': {'fill': '#0067C0', 'outline': '#0067C0'}},
 }
 ```
 
@@ -364,17 +352,12 @@ _AuxiliaryButton: dict = {
 
 ```python linenums="0"
 _AuxiliaryInputBox: dict = {
-    'HalfRoundedRectangle.in': {'active': {'fill': '#FFFFFF',
-                                           'outline': '#E5E5E5'},
+    'HalfRoundedRectangle.in': {'active': {'fill': '#FFFFFF', 'outline': '#E5E5E5'},
                                 'hover': {'fill': '#F6F6F6', 'outline': '#E5E5E5'},
-                                'normal': {'fill': '#FBFBFB',
-                                           'outline': '#E5E5E5'}},
-    'HalfRoundedRectangle.out': {'active': {'fill': '#0067C0',
-                                            'outline': '#0067C0'},
-                                 'hover': {'fill': '#868686',
-                                           'outline': '#868686'},
-                                 'normal': {'fill': '#868686',
-                                            'outline': '#868686'}},
+                                'normal': {'fill': '#FBFBFB', 'outline': '#E5E5E5'}},
+    'HalfRoundedRectangle.out': {'active': {'fill': '#0067C0', 'outline': '#0067C0'},
+                                 'hover': {'fill': '#868686', 'outline': '#868686'},
+                                 'normal': {'fill': '#868686', 'outline': '#868686'}},
     'Rectangle': {'active': {'fill': '#FFFFFF', 'outline': '#288CDB'},
                   'hover': {'fill': '#F6F6F6', 'outline': '#414141'},
                   'normal': {'fill': '#FBFBFB', 'outline': '#C0C0C0'}},

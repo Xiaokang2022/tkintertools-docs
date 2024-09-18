@@ -2,7 +2,7 @@
 
 Some useful utility classes or utility functions
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`_Trigger`</big>
 
@@ -96,7 +96,7 @@ Update the status of the trigger
 
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`embed_window`</big>
 
@@ -115,7 +115,8 @@ def embed_window(
 Embed a widget into another widget
 
 * `window`: Widget that will be embedded in
-* `parent`: parent widget, `None` indicates that the parent widget is the screen
+* `parent`: parent widget, `None` indicates that the parent widget is the
+screen
 * `focus`: whether direct input focus to this window
 
 
@@ -177,15 +178,16 @@ Make fonts located in file `font_path` available to the font system, and
 return `True` if the operation succeeds, `False` otherwise
 
 * `font_path`: the font file path
-* `private`: if True, other processes cannot see this font, and this font
-will be unloaded when the process dies
-* `enumerable`: if True, this font will appear when enumerating fonts
+* `private`: if True, other processes cannot see this font(Only Windows OS),
+and this font will be unloaded when the process dies
+* `enumerable`: if True, this font will appear when enumerating fonts(Only
+Windows OS)
 
 ATTENTION:
 
 * This function is referenced from `customtkinter.FontManager.load_font`,
 CustomTkinter: https://github.com/TomSchimansky/CustomTkinter
-* This function only works on Windows and Linux operating systems
+* This function only works on Windows and Linux OS
 
 
 ### <big>`screen_size`</big>
@@ -216,5 +218,17 @@ Set mouse cursor position
 ATTENTION:
 
 This function only works on Windows OS!
+
+
+## 🟡 变量
+
+### <big>`_LINUX_FONTS_DIR`</big>
+
+
+<code style='color: skyblue;'>constant</code> <code style='color: orange;'>protected</code>
+
+```python linenums="0"
+_LINUX_FONTS_DIR: str = 'C:\\Users\\Yzk/.fonts/'
+```
 
 

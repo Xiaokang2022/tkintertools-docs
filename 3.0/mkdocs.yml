@@ -333,20 +333,24 @@ nav:
       - documents/index.md
 
       - 📦 animation:
+          - documents/animation/index.md
           - 📑 animations: documents/animation/animations.md
           - 📑 controllers: documents/animation/controllers.md
 
       - 📦 color:
+          - documents/color/index.md
           - 📑 colormap: documents/color/colormap.md
           - 📑 hsl: documents/color/hsl.md
           - 📑 rgb: documents/color/rgb.md
 
       - 📦 core:
+          - documents/core/index.md
           - 📑 constants: documents/core/constants.md
           - 📑 containers: documents/core/containers.md
           - 📑 virtual: documents/core/virtual.md
 
       - 📦 standard:
+          - documents/standard/index.md
           - 📑 _auxiliary: documents/standard/_auxiliary.md
           - 📑 dialogs: documents/standard/dialogs.md
           - 📑 features: documents/standard/features.md
@@ -356,22 +360,31 @@ nav:
           - 📑 widgets: documents/standard/widgets.md
 
       - 📦 style:
+          - documents/style/index.md
           - 📑 manager: documents/style/manager.md
           - 📑 parser: documents/style/parser.md
 
       - 📦 theme:
+          - documents/theme/index.md
           - 📑 dark: documents/theme/dark.md
           - 📑 light: documents/theme/light.md
 
       - 📦 toolbox:
+          - documents/toolbox/index.md
           - 📑 enhanced: documents/toolbox/enhanced.md
           - 📑 tools: documents/toolbox/tools.md
 
       - 📦 mpl (Extension):
+          - documents/mpl/index.md
           - 📑 constants: documents/mpl/constants.md
           - 📑 main: documents/mpl/main.md
 
+      - 📦 media (Extension):
+          - documents/media/index.md
+          - 📑 main: documents/media/main.md
+
       - 📦 three (Extension):
+          - documents/three/index.md
           - 📑 constants: documents/three/constants.md
           - 📑 engine: documents/three/engine.md
           - 📑 geometries: documents/three/geometries.md

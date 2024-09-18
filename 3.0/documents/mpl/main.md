@@ -2,7 +2,7 @@
 
 APIs for Matplotlib
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`FigureCanvas`</big>
 
@@ -87,8 +87,9 @@ An interface class for the matplotlib navigation cursor
 
 * `canvas`: the figure canvas on which to operate
 * `master`: parent widget
-* `pack_toolbar`: if True, add the toolbar to the parent's pack manager's
-packing list during initialization with `side="bottom"` and `fill="x"`.
+* `pack_toolbar`: if True, add the toolbar to the parent's pack
+manager's packing list during initialization with `side="bottom"` and
+`fill="x"`.
 
 TIPS:
 
@@ -123,7 +124,7 @@ def destroy(
 
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`_forward_methods`</big>
 
@@ -150,16 +151,16 @@ Forward methods and attributes of one object to another object
 
 ```python
 def set_mpl_default_theme(
-    dark: bool,
+    theme: typing.Literal['light', 'dark'],
 ) -> None: ...
 ```
 
 Set default color constants of `matplotlib`
 
-* `dark`: Wether it is dark mode
+* `theme`: theme mode
 
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`DARK_THEME`</big>
 
@@ -180,6 +181,7 @@ DARK_THEME: dict = {
     'legend.edgecolor': '#707070',
     'legend.facecolor': '#202020',
     'legend.labelcolor': '#CCCCCC',
+    'text.color': '#CCCCCC',
     'xtick.color': '#CCCCCC',
     'xtick.labelcolor': '#CCCCCC',
     'ytick.color': '#CCCCCC',
@@ -207,6 +209,7 @@ LIGHT_THEME: dict = {
     'legend.edgecolor': '#D6D6D6',
     'legend.facecolor': '#FFFFFF',
     'legend.labelcolor': '#000000',
+    'text.color': '#000000',
     'xtick.color': '#000000',
     'xtick.labelcolor': '#000000',
     'ytick.color': '#000000',

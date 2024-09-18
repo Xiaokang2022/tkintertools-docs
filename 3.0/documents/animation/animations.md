@@ -1,8 +1,13 @@
 # tkintertools.animation.animations
 
-Standard animation class
 
-## 🟢 Classes / 类
+Standard animation classes
+
+The built-in basic animation classes are: `MoveTkWidget`, `MoveWidget`,
+`MoveComponent`, `MoveItem`, `GradientTkWidget`, `GradientItem`, `ScaleFontSize`
+
+
+## 🟢 类
 
 ### <big>`Animation`</big>
 
@@ -30,8 +35,10 @@ Animation base class
 * `controller`: control functions that determine the course of the
 entire animation movement
 * `callback`: callback function, which will be called once per frame,
-with the parameter being the percentage of the current animation progress
-* `end`: ending function, which is called once at the end of the animation
+with the parameter being the percentage of the current animation
+progress
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 * `derivation`: whether the callback function is derivative
@@ -69,7 +76,8 @@ def start(
 
 Start the animation
 
-* `delay`: length of the delay before the animation starts, in milliseconds 
+* `delay`: length of the delay before the animation starts, in
+milliseconds 
 
 
 #### <big>`stop`</big>
@@ -119,7 +127,8 @@ modified in color
 * `colors`: a tuple of the initial and ending colors
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 * `derivation`: whether the callback function is derivative
@@ -158,7 +167,8 @@ modified in color
 * `colors`: a tuple of the initial and ending colors
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 * `derivation`: whether the callback function is derivative
@@ -193,7 +203,8 @@ Animation of moving `Component`
 * `offset`: relative offset of the coordinates
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 
@@ -229,7 +240,8 @@ Animation of moving a item
 * `offset`: relative offset of the coordinates
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 
@@ -263,7 +275,8 @@ Animation of moving `tkinter.Widget`
 * `offset`: relative offset of the coordinates
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 
@@ -297,7 +310,8 @@ Animation of moving `Widget`
 * `offset`: relative offset of the coordinates
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 
@@ -327,12 +341,14 @@ def __init__(
 ```
 Animation of scaling the font size
 
-* `text`: an instance of `virtual.Text` that needs to be scaled in font size
+* `text`: an instance of `virtual.Text` that needs to be scaled in font
+size
 * `ms`: duration of the animation, in milliseconds
 * `sizes`: a tuple of the initial and ending sizes or target font size
 * `controller`: control functions that determine the course of the
 entire animation movement
-* `end`: ending function, which is called once at the end of the animation
+* `end`: ending function, which is called once at the end of the
+animation
 * `repeat`: number of repetitions of the entire animation process
 * `fps`: the FPS of the animation
 * `derivation`: whether the callback function is derivative

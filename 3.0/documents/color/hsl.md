@@ -2,7 +2,7 @@
 
 Support for HSL
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`blend`</big>
 
@@ -104,6 +104,18 @@ def hsl_to_rgb(
 ```
 Convert HSL to RGB codes
 
+### <big>`hsl_to_rgb`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def hsl_to_rgb(
+    hsl: tuple[float, float, float],
+) -> tuple[int, int, int]: ...
+```
+Convert HSL to RGB codes
+
 ### <big>`rgb_to_hsl`</big>
 
 
@@ -116,7 +128,19 @@ def rgb_to_hsl(
 ```
 Convert RGB to HSL codes
 
-## 🟡 Variables / 变量
+### <big>`rgb_to_hsl`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def rgb_to_hsl(
+    rgb: tuple[int, int, int],
+) -> tuple[float, float, float]: ...
+```
+Convert RGB to HSL codes
+
+## 🟡 变量
 
 ### <big>`HSL`</big>
 

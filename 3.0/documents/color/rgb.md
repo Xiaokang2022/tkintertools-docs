@@ -2,7 +2,21 @@
 
 Support for RGB
 
-## 🔵 Functions / 函数
+## 🔵 函数
+
+### <big>`_str_to_rgba`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
+
+```python
+def _str_to_rgba(
+    color: str,
+    *,
+    reference: str,
+) -> tuple[int, int, int]: ...
+```
+Experimental: Convert color strings(RGBA) to RGB codes
 
 ### <big>`_str_to_rgba`</big>
 
@@ -118,6 +132,18 @@ def rgb_to_str(
 ```
 Convert RGB codes to color strings
 
+### <big>`rgb_to_str`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def rgb_to_str(
+    rgb: tuple[int, int, int],
+) -> str: ...
+```
+Convert RGB codes to color strings
+
 ### <big>`str_to_rgb`</big>
 
 
@@ -130,7 +156,19 @@ def str_to_rgb(
 ```
 Convert color strings to RGB codes
 
-## 🟡 Variables / 变量
+### <big>`str_to_rgb`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def str_to_rgb(
+    color: str,
+) -> tuple[int, int, int]: ...
+```
+Convert color strings to RGB codes
+
+## 🟡 变量
 
 ### <big>`MAX`</big>
 

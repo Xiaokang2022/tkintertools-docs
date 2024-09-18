@@ -1,8 +1,8 @@
 # tkintertools.standard._auxiliary
 
-Some auxiliary class
+Some auxiliary classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`_AuxiliaryButton`</big>
 
@@ -26,7 +26,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     ignore: typing.Literal['left', 'right'] = 'left',
@@ -161,7 +161,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     ignore: typing.Literal['left', 'right'] = 'left',
     name: str | None = None,

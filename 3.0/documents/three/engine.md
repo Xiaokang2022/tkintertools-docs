@@ -2,7 +2,7 @@
 
 Core codes of 3D
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`Canvas`</big>
 
@@ -628,7 +628,7 @@ def update(
 
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`project`</big>
 

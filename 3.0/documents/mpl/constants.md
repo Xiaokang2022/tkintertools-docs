@@ -2,7 +2,7 @@
 
 Constants for theme
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`DARK_THEME`</big>
 
@@ -23,6 +23,7 @@ DARK_THEME: dict = {
     'legend.edgecolor': '#707070',
     'legend.facecolor': '#202020',
     'legend.labelcolor': '#CCCCCC',
+    'text.color': '#CCCCCC',
     'xtick.color': '#CCCCCC',
     'xtick.labelcolor': '#CCCCCC',
     'ytick.color': '#CCCCCC',
@@ -50,6 +51,7 @@ LIGHT_THEME: dict = {
     'legend.edgecolor': '#D6D6D6',
     'legend.facecolor': '#FFFFFF',
     'legend.labelcolor': '#000000',
+    'text.color': '#000000',
     'xtick.color': '#000000',
     'xtick.labelcolor': '#000000',
     'ytick.color': '#000000',

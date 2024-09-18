@@ -194,7 +194,7 @@ def create_index(package: types.ModuleType) -> None:
                 f"{package.__name__}.{sub_package}")
             data_sub_package = get_module_data(_sub_package)
             file.write(
-                f"\n* 📦 `{data_sub_package["name"]}`\n")
+                f"\n* 📦 [`{data_sub_package["name"]}`](./{sub_package}/index.md)\n")
 
             for module in modules:
                 _module = importlib.import_module(
@@ -209,23 +209,26 @@ def create_pages(module: types.ModuleType) -> None:
     data_module = get_module_data(module)
 
     *_, sub_package_name, module_name = data_module["name"].split(".")
-    file = f"./3.0/documents/{sub_package_name}/{module_name}.md"
+    file = f"./3.0/documents/{sub_package_name}/{
+        module_name}.md".replace("__init__", "index")
 
     with open(file, "w", encoding="utf-8") as file:
-        file.write(f"# {data_module["name"]}\n\n")
+        file.write(f"# {data_module["name"].replace(".__init__", "")}\n\n")
         file.write(f"{data_module["docstring"]}\n\n")
-        if data_module["classes"]:
-            file.write("## 🟢 类\n\n")
-            for cls in sorted(data_module["classes"]):
-                file.write(create_class_md(getattr(module, cls)))
-        if data_module["functions"]:
-            file.write("## 🔵 函数\n\n")
-            for func in sorted(data_module["functions"]):
-                file.write(create_function_md(getattr(module, func)))
-        if data_module["variables"]:
-            file.write("## 🟡 变量\n\n")
-            for var in sorted(data_module["variables"]):
-                file.write(create_variable_md(getattr(module, var), name=var))
+        if module_name != "__init__":
+            if data_module["classes"]:
+                file.write("## 🟢 类\n\n")
+                for cls in sorted(data_module["classes"]):
+                    file.write(create_class_md(getattr(module, cls)))
+            if data_module["functions"]:
+                file.write("## 🔵 函数\n\n")
+                for func in sorted(data_module["functions"]):
+                    file.write(create_function_md(getattr(module, func)))
+            if data_module["variables"]:
+                file.write("## 🟡 变量\n\n")
+                for var in sorted(data_module["variables"]):
+                    file.write(create_variable_md(
+                        getattr(module, var), name=var))
 
 
 def create_class_md(cls: object) -> str:
@@ -351,6 +354,8 @@ def create_docs() -> None:
 
     for sub_package, modules in get_package_data(tkintertools).items():
         os.makedirs(f"./3.0/documents/{sub_package}/", exist_ok=True)
+        create_pages(importlib.import_module(
+            f"tkintertools.{sub_package}.__init__"))
         for module in modules:
             create_pages(importlib.import_module(
                 f"tkintertools.{sub_package}.{module}"))

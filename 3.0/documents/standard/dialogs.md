@@ -1,8 +1,8 @@
 # tkintertools.standard.dialogs
 
-All standard Dialogs
+All standard dialog classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`TkColorChooser`</big>
 

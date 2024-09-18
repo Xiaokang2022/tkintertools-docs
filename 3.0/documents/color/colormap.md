@@ -2,7 +2,7 @@
 
 The mapping of the color name to its RGB code
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`name_to_rgb`</big>
 
@@ -16,7 +16,19 @@ def name_to_rgb(
 ```
 Convert a color name to RGB code
 
-## 🟡 Variables / 变量
+### <big>`name_to_rgb`</big>
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def name_to_rgb(
+    color_name: str,
+) -> tuple[int, int, int]: ...
+```
+Convert a color name to RGB code
+
+## 🟡 变量
 
 ### <big>`COLOR_MAP`</big>
 

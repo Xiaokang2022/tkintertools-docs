@@ -1,8 +1,8 @@
 # tkintertools.standard.images
 
-All standard Images
+All standard `Image` classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`StillImage`</big>
 

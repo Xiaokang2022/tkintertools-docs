@@ -2,13 +2,27 @@
 
 Enhanced versions of some tkinter classes and functions
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`PhotoImage`</big>
 
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `PhotoImage` `PhotoImage`
+
+#### <big>`resize`</big>
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def resize(
+    self,
+    width: int,
+    height: int,
+) -> PhotoImage: ...
+```
+Resize the PhotoImage
 
 #### <big>`scale`</big>
 

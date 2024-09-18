@@ -3,14 +3,15 @@
 
 Standard control functions
 
-Definition of control function::
+Definition of control function:
 
 ```python
 def f(t: float) -> float: ...
 ```
 
 * t: 0% ~ 100%, indicates the percentage of time
-* return value: Any real number, represents a multiple of the cardinality of the animation
+* return value: Any real number, represents a multiple of the cardinality of
+the animation
 
 The built-in control functions are:
 
@@ -19,7 +20,7 @@ The built-in control functions are:
 * `rebound`: before the end, displacement will bounce off a bit
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`_map_t`</big>
 
@@ -83,8 +84,8 @@ Modify the generic function to a control function suitable for animation
 
 For example:
 
-* Before modifying: `y = 2*sin(t)`, `0 <= t <= π/2`
-* After modifying: `y = sin(t*π/2)`, `0 <= t <= 1`
+* Before modifying: $y = 2\sint, 0 <= t <= \pi/2$
+* After modifying: $y = \sin\frac{\pi}{2}t, 0 <= t <= 1$
 
 
 ### <big>`flat`</big>

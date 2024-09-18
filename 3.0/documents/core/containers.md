@@ -1,8 +1,18 @@
 # tkintertools.core.containers
 
-All containers
 
-## 🟢 Classes / 类
+All container widgets
+
+There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk`
+is generally used for the main window, while `Toplevel` is a pop-up window.
+
+There are two container widgets at the canvas level: `Canvas` and `Frame`.
+`Canvas` is the main widget carrier in tkintertools, and `Frame` is similar to
+`Canvas`, but with a different default color. `Frame` is generally used for
+layout.
+
+
+## 🟢 类
 
 ### <big>`Canvas`</big>
 
@@ -337,6 +347,23 @@ the location is random
 * `**kwargs`: compatible with other parameters of class `tkinter.Tk`
 
 
+#### <big>`_fixed_theme`</big>
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _fixed_theme(
+    method,
+) -> _empty: ...
+```
+
+This is a decorator that to fix a problem that some methods cause the
+window to lose its theme
+
+* `method`: the method of being decorated
+
+
 #### <big>`_theme`</big>
 
 
@@ -358,6 +385,19 @@ Change the color theme of the window
 * `include_children`: wether include its children, like Toplevel
 * `include_canvases`: wether include its canvases
 
+
+#### <big>`_wrap_method`</big>
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _wrap_method(
+    self,
+    method_name: str,
+) -> None: ...
+```
+Some problems can be fixed by decorating the original method
 
 #### <big>`_zoom`</big>
 
@@ -445,7 +485,8 @@ def geometry(
 Change the size and position of the window and return the current size
 and position of the window
 
-* `size`: the size of the window, if it is None, does not change anything
+* `size`: the size of the window, if it is None, does not change
+anything
 * `position`: the position of the window, if it is None, does not
 change anything
 
@@ -468,6 +509,7 @@ This method causes the event `<configure>` to be triggered
 def shutdown(
     self,
     command: typing.Optional[typing.Callable],
+    ensure_destroy: bool = False,
     *args,
     **kwargs,
 ) -> None: ...
@@ -476,6 +518,7 @@ def shutdown(
 Set a function that will be called when the window is closed
 
 * `command`: the function that was called
+* `ensure_destroy`: whether the window is guaranteed to be closed
 * `args`: the variable-length argument of the called function
 * `kwargs`: the keyword argument of the function being called
 
@@ -553,7 +596,6 @@ def __init__(
     position: tuple[int, int] | None = None,
     *,
     title: str | None = None,
-    transient: bool = False,
     grab: bool = False,
     focus: bool = True,
     **kwargs,
@@ -571,11 +613,10 @@ or it can be customized to put anything you want to show in it
 * `position`: the position of the window, default value indicates that
 the location is random
 * `title`: title of window, default is the same as title of master
-* `transient`: instruct the window manager that this window is transient
-with regard to its master
 * `grab`: set grab for this window
 * `focus`: whether direct input focus to this window
-* `**kwargs`: compatible with other parameters of class `tkinter.Toplevel`
+* `**kwargs`: compatible with other parameters of class
+`tkinter.Toplevel`
 
 
 #### <big>`destroy`</big>

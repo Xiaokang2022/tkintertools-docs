@@ -4,7 +4,7 @@
 Various virtual classes
 
 The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`,
-`Image`, and `Feature`.
+`Image` and `Feature`.
 
 Where `Feature` is the function of widgets, and each widget can be bound to up
 to one, but in terms of appearance, there is no limit to the number of `Shape`,
@@ -14,7 +14,7 @@ to one, but in terms of appearance, there is no limit to the number of `Shape`,
 abstract base class `Components`.
 
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`Component`</big>
 
@@ -126,7 +126,7 @@ def configure(
     no_delay: bool = False,
 ) -> None: ...
 ```
-Configure properties of the `Component` and update them immediately
+Configure properties of `Component` and update them immediately
 
 #### <big>`coords`</big>
 
@@ -166,7 +166,7 @@ def detect(
     y: int,
 ) -> bool: ...
 ```
-Detect whether the specified coordinates are within the `Component`
+Detect whether the specified coordinates are within `Component`
 
 #### <big>`disappear`</big>
 
@@ -583,7 +583,7 @@ def __init__(
     limit: int = inf,
     show: str | None = None,
     placeholder: str = '',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     family: str | None = None,
     fontsize: int | None = None,

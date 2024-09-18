@@ -57,7 +57,7 @@ Style files in JSON format must strictly follow the above format, and the
 missing parts are empty by default.
 
 
-## 🔵 Functions / 函数
+## 🔵 函数
 
 ### <big>`_get_name`</big>
 

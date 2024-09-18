@@ -1,8 +1,8 @@
 # tkintertools.standard.widgets
 
-All standard Widgets
+All standard `Widget` classes
 
-## 🟢 Classes / 类
+## 🟢 类
 
 ### <big>`Button`</big>
 
@@ -26,7 +26,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
@@ -113,6 +113,8 @@ Get the state of the check button
 def set(
     self,
     value: bool,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Set the state of the check button
@@ -187,7 +189,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
@@ -239,7 +241,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'w',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'w',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
@@ -285,6 +287,7 @@ def __init__(
     size: tuple[int, int] | None = None,
     *,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     name: str | None = None,
     through: bool = False,
     animation: bool = True,
@@ -296,6 +299,7 @@ Image widget, generally used to display normal still image
 * `position`: position of the widget
 * `size`: size of the widget
 * `image`: image of the widget
+* `anchor`: anchor of the widget
 * `name`: name of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
@@ -466,7 +470,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
     through: bool = False,
@@ -618,7 +622,8 @@ def __init__(
     position: tuple[int, int],
     size: tuple[int, int] = (400, 20),
     *,
-    command: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    default: float | None = None,
+    command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
     through: bool = False,
@@ -630,6 +635,7 @@ Progress bar widget, typically used to show the progress of an event
 * `master`: parent canvas
 * `position`: position of the widget
 * `size`: size of the widget
+* `default`: default value of the widget
 * `command`: a function that is triggered when the progress of progress bar is 100%
 * `image`: image of the widget
 * `name`: name of the widget
@@ -658,6 +664,8 @@ Get the progress of the progress bar
 def set(
     self,
     value: float,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Set the progress of the progress bar
@@ -720,6 +728,8 @@ Get the state of the radio button
 def set(
     self,
     value: bool,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Set the state of the radio button
@@ -748,9 +758,9 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     default: int | None = None,
-    commands: tuple[typing.Optional[typing.Callable[[], typing.Any]], ...] = (),
+    command: typing.Optional[typing.Callable[[int | None], typing.Any]] = None,
     images: tuple[tkintertools.toolbox.enhanced.PhotoImage | None, ...] = (),
     layout: typing.Literal['horizontal', 'vertical'] = 'horizontal',
     name: str | None = None,
@@ -773,7 +783,7 @@ A segmented button that can be used to toggle between multiple states
 * `justify`: justify mode of the text
 * `anchor`: anchor of the text
 * `default`: default value of the widget
-* `commands`: a function that is triggered when the button is pressed
+* `command`: a function that is triggered when the button is pressed
 * `images`: image of the widget
 * `layout`: layout mode of the widget
 * `name`: name of the widget
@@ -805,6 +815,8 @@ If not, None is returned.
 def set(
     self,
     value: int | None,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Activate the child toggle button for the specified index
@@ -826,7 +838,7 @@ def __init__(
     size: tuple[int, int] = (400, 30),
     *,
     default: float | None = None,
-    command: typing.Optional[typing.Callable] = None,
+    command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
     name: str | None = None,
     through: bool = False,
     animation: bool = True,
@@ -865,7 +877,9 @@ Get the value of the slider
 def set(
     self,
     value: float,
-) -> typing.Any: ...
+    *,
+    callback: bool = False,
+) -> None: ...
 ```
 Set the value of the slider
 
@@ -1058,6 +1072,8 @@ Get the state of the switch
 def set(
     self,
     value: bool,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Set the state of the switch
@@ -1085,7 +1101,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     name: str | None = None,
     through: bool = False,
     animation: bool = True,
@@ -1158,7 +1174,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     default: bool | None = None,
     command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
@@ -1210,6 +1226,8 @@ Get the state of the check button
 def set(
     self,
     value: bool,
+    *,
+    callback: bool = False,
 ) -> None: ...
 ```
 Set the state of the switch
@@ -1237,7 +1255,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se'] = 'center',
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,

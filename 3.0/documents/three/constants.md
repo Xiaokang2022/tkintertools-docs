@@ -2,7 +2,7 @@
 
 All constants for 3D
 
-## 🟡 Variables / 变量
+## 🟡 变量
 
 ### <big>`FONT`</big>
 
