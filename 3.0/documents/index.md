@@ -21,8 +21,8 @@ icon: material/file-document
     当前文档适用版本：
 
     * tkintertools: `3.0.0rc2`
-    * tkintertools-mpl (EX): `1.1.1`
-    * tkintertools-media (EX): `1.1.0`
+    * tkintertools-mpl (EX): `1.2.0`
+    * tkintertools-media (EX): `1.1.1`
     * tkintertools-3d (EX): `1.0.1`
 
 * 📦 [`tkintertools.animation`](./animation/index.md)

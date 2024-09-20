@@ -28,7 +28,8 @@ def __init__(
 A canvas that is scalable and playable for videos
 
 * `master`: parent widget
-* `control`: whether to enable the built-in UI
+* `controls`: whether to enable the built-in UI
+* `loop`: whether the video loops automatically
 * `click_pause`: whether to pause when clicked
 * `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
 * `zoom_item`: whether or not to scale its items

@@ -1,7 +1,7 @@
 # tkintertools.mpl
 
 
-extension package for tkintertools to matplotlib
+Extension package for tkintertools to matplotlib
 
 Provides:
 
