@@ -381,6 +381,7 @@ nav:
 
       - 📦 media (Extension):
           - documents/media/index.md
+          - 📑 icons: documents/media/icons.md
           - 📑 main: documents/media/main.md
 
       - 📦 three (Extension):

@@ -22,7 +22,7 @@ icon: material/file-document
 
     * tkintertools: `3.0.0rc2`
     * tkintertools-mpl (EX): `1.1.1`
-    * tkintertools-media (EX): `1.0.6`
+    * tkintertools-media (EX): `1.1.0`
     * tkintertools-3d (EX): `1.0.1`
 
 * 📦 [`tkintertools.animation`](./animation/index.md)
@@ -40,6 +40,7 @@ icon: material/file-document
     - 📑 [`tkintertools.core.virtual`](./core/virtual.md)
 
 * 📦 [`tkintertools.media`](./media/index.md)
+    - 📑 [`tkintertools.media.icons`](./media/icons.md)
     - 📑 [`tkintertools.media.main`](./media/main.md)
 
 * 📦 [`tkintertools.mpl`](./mpl/index.md)
