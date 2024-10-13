@@ -78,3 +78,18 @@ figcaption {
 .md-typeset__scrollwrap {
     text-align: center;
 }
+
+/*打印时隐藏部分元素*/
+@media print {
+    .md-tooltip2 {
+        display: none;
+    }
+
+    .md-feedback {
+        display: none;
+    }
+
+    .giscus-frame {
+        display: none;
+    }
+}
