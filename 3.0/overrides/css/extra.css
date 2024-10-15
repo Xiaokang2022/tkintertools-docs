@@ -84,12 +84,4 @@ figcaption {
     .md-tooltip2 {
         display: none;
     }
-
-    .md-feedback {
-        display: none;
-    }
-
-    .giscus {
-        display: none;
-    }
 }
