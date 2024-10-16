@@ -194,7 +194,7 @@ extra: # 额外设定
   generator: false # 页面底部不显示生成信息
   status: # 元信息状态标识
     new: 最近添加
-    deprecated: 不久将被移除
+    deprecated: 已废弃
   homepage: . # 左上角徽标链接的地址
   annotate: # 允许代码块非注释内的提示，我也不太懂什么意思，貌似是可以在代码里面加悬浮提示框，而不只是在注释中（感觉这样不好，虽然我不用，但不能没有）
     json: [.s2]
@@ -379,7 +379,7 @@ nav:
 
       - 📦 mpl (Extension):
           - documents/mpl/index.md
-          - 📑 constants: documents/mpl/constants.md
+          - 📑 _constants: documents/mpl/_constants.md
           - 📑 main: documents/mpl/main.md
 
       - 📦 media (Extension):

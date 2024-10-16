@@ -148,11 +148,14 @@ Forward methods and attributes of one object to another object
 ```python
 def set_mpl_default_theme(
     theme: typing.Literal['light', 'dark'],
+    *,
+    apply_font: bool = False,
 ) -> None: ...
 ```
 
 Set default color constants of `matplotlib`
 
 * `theme`: theme mode
+* `apply_font`: whether to use the font of `tkintertools`
 
 

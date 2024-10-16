@@ -27,6 +27,7 @@ import inspect
 import os
 import pkgutil
 import pprint
+import time
 import types
 import typing
 
@@ -35,7 +36,7 @@ import tkintertools.media
 import tkintertools.mpl
 import tkintertools.three
 
-__version__ = "0.2.3"
+__version__ = "0.2.4"
 __author__ = "Xiaokang2022 <2951256653@qq.com>"
 
 TAGS: dict[str, str] = {
@@ -391,6 +392,8 @@ def create_variable_md(var: object, *, name: str) -> str:
 
 def create_docs(lib: types.ModuleType) -> None:
     """"""
+    start = time.time()
+
     create_index(lib)
 
     for sub_package, modules in get_package_data(lib).items():
@@ -400,6 +403,8 @@ def create_docs(lib: types.ModuleType) -> None:
         for module in modules:
             create_pages(importlib.import_module(
                 f"{lib.__name__}.{sub_package}.{module}"))
+
+    print(f"Documentation built in {time.time() - start:.2f} seconds")
 
 
 if __name__ == "__main__":

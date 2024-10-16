@@ -21,7 +21,7 @@ icon: material/file-document
     当前文档适用版本：
 
     * tkintertools: `3.0.0rc2`
-    * tkintertools-mpl (EX): `1.2.0`
+    * tkintertools-mpl (EX): `1.2.1`
     * tkintertools-media (EX): `1.1.1`
     * tkintertools-3d (EX): `1.0.1`
 
@@ -44,7 +44,7 @@ icon: material/file-document
     - 📑 [`tkintertools.media.main`](./media/main.md)
 
 * 📦 [`tkintertools.mpl`](./mpl/index.md)
-    - 📑 [`tkintertools.mpl.constants`](./mpl/constants.md)
+    - 📑 [`tkintertools.mpl._constants`](./mpl/_constants.md)
     - 📑 [`tkintertools.mpl.main`](./mpl/main.md)
 
 * 📦 [`tkintertools.standard`](./standard/index.md)

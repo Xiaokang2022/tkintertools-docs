@@ -105,7 +105,7 @@ Get the color mode of the program
 
 ```python
 def get_theme_map(
-) -> dict[typing.Literal['dark', 'light'], str | pathlib.Path | module]: ...
+) -> dict[typing.Literal['dark', 'light'], str | pathlib._local.Path | module]: ...
 ```
 Get the theme map
 
@@ -232,8 +232,8 @@ _color_mode: str = 'system'
 
 ```python linenums="0"
 _theme_map: dict = {
-    'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>,
-    'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python312\\Lib\\site-packages\\tkintertools\\theme\\light.py'>,
+    'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>,
+    'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\light.py'>,
 }
 ```
 

@@ -85,3 +85,10 @@ figcaption {
         display: none;
     }
 }
+
+/*屏幕过窄时隐藏音乐播放器*/
+@media screen and not (min-width: 32em) {
+    audio.md-header__option {
+        display: none;
+    }
+}

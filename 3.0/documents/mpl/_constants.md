@@ -1,4 +1,4 @@
-# tkintertools.mpl.constants
+# tkintertools.mpl._constants
 
 Constants for theme
 
