@@ -1,6 +1,5 @@
 # tkintertools.core.virtual
 
-
 Various virtual classes
 
 The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`,
@@ -245,7 +244,6 @@ def update(
     no_delay: bool = False,
 ) -> None: ...
 ```
-
 Update the style of the `Component` to the corresponding state
 
 * `state`: the state of the `Component`
@@ -270,7 +268,7 @@ Zoom the `Component`
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ABC`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -581,8 +579,6 @@ def __init__(
     limit: int = inf,
     show: str | None = None,
     placeholder: str = '',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
-    justify: typing.Literal['left', 'center', 'right'] = 'left',
     family: str | None = None,
     fontsize: int | None = None,
     weight: typing.Literal['normal', 'bold'] = 'normal',
@@ -607,8 +603,6 @@ The Text of a `Widget`
 * `slant`: slant of the font
 * `underline`: wether text is underline
 * `overstrike`: wether text is overstrike
-* `justify`: justify of the text
-* `anchor`: anchor of the text
 * `limit`: limit on the number of characters
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
@@ -661,11 +655,11 @@ def __init__(
     *,
     name: str | None = None,
     state: str = 'normal',
+    anchor: typing.Literal['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
 ```
-
 Base Widget Class
 
 `Widget` = `Shape` + `Text` + `Image` + `Feature` + `Widget`
@@ -676,6 +670,7 @@ Base Widget Class
 * `size`: size of the widget
 * `name`: name of the widget
 * `state`: default state of the widget
+* `anchor`: layout anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -691,6 +686,48 @@ def appear(
 ) -> None: ...
 ```
 Let all components of the widget to appear
+
+### 🟡`bind`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def bind(
+    self,
+    event_name: str,
+    command: typing.Callable[[tkinter.Event], bool],
+    *,
+    add: bool = False,
+) -> None: ...
+```
+Bind a function to widget on event processing
+
+* `event_name`: event name of `virtual.Feature`
+* `command`: callback function
+* `add`: if True, original callback function will not be overwritten
+
+
+### 🟡`bind_on_update`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def bind_on_update(
+    self,
+    command: typing.Callable[[str, bool], typing.Any],
+) -> None: ...
+```
+Bind an extra function to the widget on update
+
+This extra function has two positional arguments, both of which are
+arguments to the method `update`. And this extra function will be
+called when the widget is updated (whether it's automatically updated
+or manually updated).
+
+* `command`: the extra function that is bound
+
 
 ### 🟡`deregister`
 
@@ -796,6 +833,40 @@ def register(
 ) -> None: ...
 ```
 Register a component to the widget
+
+### 🟡`unbind`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def unbind(
+    self,
+    event_name: str,
+    command: typing.Callable[[tkinter.Event], bool],
+) -> None: ...
+```
+Unbind a function to widget on event processing
+
+* `event_name`: event name of `virtual.Feature`
+* `command`: callback function
+
+
+### 🟡`unbind_on_update`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def unbind_on_update(
+    self,
+    command: typing.Callable[[str, bool], typing.Any],
+) -> None: ...
+```
+Unbind an extra function to the widget on update
+
+* `command`: the extra function that is bound
+
 
 ### 🟡`update`
 

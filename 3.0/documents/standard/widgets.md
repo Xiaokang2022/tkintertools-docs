@@ -24,10 +24,10 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -45,10 +45,10 @@ Button widget, typically used to trigger a function
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -73,6 +73,7 @@ def __init__(
     command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -83,9 +84,11 @@ Checkbox button widget, generally used to check some options
 * `position`: position of the widget
 * `length`: length of the widget
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of check button is on
+* `command`: a function that is triggered when the state of check
+button is on
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -119,53 +122,6 @@ Set the state of the check button
 
 
 
-## 🟢`ComboBox`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
-
-
-```python
-def __init__(
-    self,
-    master: Canvas,
-    position: tuple[int, int],
-    size: tuple[int, int] = (200, 40),
-    *,
-    family: str | None = None,
-    fontsize: int | None = None,
-    weight: typing.Literal['normal', 'bold'] = 'normal',
-    slant: typing.Literal['roman', 'italic'] = 'roman',
-    underline: bool = False,
-    overstrike: bool = False,
-    align: typing.Literal['left', 'right', 'center'] = 'left',
-    default: str | None = None,
-    name: str | None = None,
-    through: bool = False,
-    animation: bool = True,
-) -> None: ...
-```
-
-
-* `master`: parent canvas
-* `position`: position of the widget
-* `size`: size of the widget
-* `family`: font family
-* `fontsize`: font size
-* `weight`: weight of the text
-* `slant`: slant of the text
-* `underline`: whether the text is underline
-* `overstrike`: whether the text is overstrike
-* `align`: align mode of the text
-* `default`: default value of the widget
-* `name`: name of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
-
-
-
-
 ## 🟢`HighlightButton`
 
 
@@ -187,10 +143,10 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -207,10 +163,11 @@ Highlight button, no outline, which added a highlight effect
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
-* `command`: a function that is triggered when the hightlight button is pressed
+* `command`: a function that is triggered when the hightlight button
+is pressed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -239,10 +196,10 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'w',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -260,10 +217,10 @@ A button with an icon on the left side
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -285,8 +242,8 @@ def __init__(
     size: tuple[int, int] | None = None,
     *,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -297,8 +254,8 @@ Image widget, generally used to display normal still image
 * `position`: position of the widget
 * `size`: size of the widget
 * `image`: image of the widget
-* `anchor`: anchor of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -356,11 +313,13 @@ def __init__(
     limit: int = inf,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
 ```
-Input box widget, generally used to enter certain information on a single line
+Input box widget, generally used to enter certain information on a
+single line
 
 * `master`: parent canvas
 * `position`: position of the widget
@@ -377,6 +336,7 @@ Input box widget, generally used to enter certain information on a single line
 * `limit`: limit on the number of characters
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -468,9 +428,9 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -488,120 +448,11 @@ Label widget, which is generally used to display key information
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
-
-
-
-
-## 🟢`OptionButton`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
-
-
-```python
-def __init__(
-    self,
-    master: Canvas,
-    position: tuple[int, int],
-    size: tuple[int, int] = (200, 40),
-    *,
-    family: str | None = None,
-    fontsize: int | None = None,
-    weight: typing.Literal['normal', 'bold'] = 'normal',
-    slant: typing.Literal['roman', 'italic'] = 'roman',
-    underline: bool = False,
-    overstrike: bool = False,
-    default: str | None = None,
-    options: tuple[tuple[str, typing.Optional[typing.Callable]], ...] | None = None,
-    name: str | None = None,
-    through: bool = False,
-    animation: bool = True,
-) -> None: ...
-```
-A Button with multiple options
-
-* `master`: parent canvas
-* `position`: position of the widget
-* `size`: size of the widget
-* `family`: font family
-* `fontsize`: font size
-* `weight`: weight of the text
-* `slant`: slant of the text
-* `underline`: whether the text is underline
-* `overstrike`: whether the text is overstrike
-* `default`: default value of the widget
-* `name`: name of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
-
-
-### 🟡`append`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def append(
-    self,
-    *values: str,
-) -> None: ...
-```
-
-
-### 🟡`get`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def get(
-    self,
-) -> str: ...
-```
-
-
-### 🟡`pop_menu`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def pop_menu(
-    self,
-) -> None: ...
-```
-
-
-### 🟡`remove`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def remove(
-    self,
-    *values: str,
-) -> None: ...
-```
-
-
-### 🟡`set`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def set(
-    self,
-    value: str,
-) -> None: ...
-```
 
 
 
@@ -624,6 +475,7 @@ def __init__(
     command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -634,9 +486,11 @@ Progress bar widget, typically used to show the progress of an event
 * `position`: position of the widget
 * `size`: size of the widget
 * `default`: default value of the widget
-* `command`: a function that is triggered when the progress of progress bar is 100%
+* `command`: a function that is triggered when the progress of progress
+bar is 100%
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -688,6 +542,7 @@ def __init__(
     command: typing.Optional[typing.Callable[[int], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -698,9 +553,11 @@ Radio button widget, generally used to select one of several options
 * `position`: position of the widget
 * `length`: length of the widget
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of radio button is on
+* `command`: a function that is triggered when the state of radio
+button is on
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -748,7 +605,7 @@ def __init__(
     position: tuple[int, int],
     sizes: tuple[tuple[int, int], ...] = (),
     *,
-    texts: tuple[str, ...] = (),
+    text: tuple[str, ...] = (),
     family: str | None = None,
     fontsize: int | None = None,
     weight: typing.Literal['normal', 'bold'] = 'normal',
@@ -756,12 +613,12 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     default: int | None = None,
     command: typing.Optional[typing.Callable[[int | None], typing.Any]] = None,
-    images: tuple[tkintertools.toolbox.enhanced.PhotoImage | None, ...] = (),
+    image: tuple[tkintertools.toolbox.enhanced.PhotoImage | None, ...] = (),
     layout: typing.Literal['horizontal', 'vertical'] = 'horizontal',
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -779,12 +636,12 @@ A segmented button that can be used to toggle between multiple states
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
-* `images`: image of the widget
+* `image`: image of the widget
 * `layout`: layout mode of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -799,10 +656,8 @@ def get(
     self,
 ) -> int | None: ...
 ```
-
-Get the index of the child toggle button with a value of True.
-If not, None is returned.
-
+Get the index of the child toggle button with a value of True. If
+not, None is returned.
 
 ### 🟡`set`
 
@@ -838,6 +693,7 @@ def __init__(
     default: float | None = None,
     command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -850,6 +706,7 @@ A slider for visually resizing values
 * `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -910,6 +767,7 @@ def __init__(
     command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -932,6 +790,7 @@ A widget that makes it easy to enter numeric type data
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -1032,11 +891,13 @@ def __init__(
     command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
 ```
-Switch widget, typically used to control the turning of a function on and off
+Switch widget, typically used to control the turning of a function on
+and off
 
 * `master`: parent canvas
 * `position`: position of the widget
@@ -1045,6 +906,7 @@ Switch widget, typically used to control the turning of a function on and off
 * `command`: a function that is triggered when the switch is changed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -1099,8 +961,8 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -1117,8 +979,8 @@ Text widget, generally used to display plain text
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -1172,11 +1034,11 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     default: bool | None = None,
     command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = True,
 ) -> None: ...
@@ -1194,11 +1056,12 @@ A button that can display information and switch statuses
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of check button is on
+* `command`: a function that is triggered when the state of check
+button is on
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 
@@ -1232,6 +1095,69 @@ Set the state of the switch
 
 
 
+## 🟢`Tooltip`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
+
+
+```python
+def __init__(
+    self,
+    widget: Widget,
+    size: tuple[int, int] | None = None,
+    *,
+    text: str = '',
+    align: typing.Literal['up', 'down', 'right', 'left', 'center'] = 'down',
+    padding: int = 3,
+    family: str | None = None,
+    fontsize: int | None = None,
+    weight: typing.Literal['normal', 'bold'] = 'normal',
+    slant: typing.Literal['roman', 'italic'] = 'roman',
+    underline: bool = False,
+    overstrike: bool = False,
+    justify: typing.Literal['left', 'center', 'right'] = 'left',
+    name: str | None = None,
+    through: bool = True,
+    animation: bool = True,
+) -> None: ...
+```
+A tooltip that can display additional information
+
+* `widget`: the associated widget
+* `size`: size of the widget
+* `text`: text of the widget
+* `align`: align mode of the tooltip
+* `padding`: extra padding between tooltip and the associated widget
+* `family`: font family
+* `fontsize`: font size
+* `weight`: weight of the text
+* `slant`: slant of the text
+* `underline`: whether the text is underline
+* `overstrike`: whether the text is overstrike
+* `justify`: justify mode of the text
+* `name`: name of the widget
+* `through`: wether detect another widget under the widget
+* `animation`: wether enable animation
+
+
+### 🟡`_display`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _display(
+    self,
+    state: str | None,
+    _: bool,
+) -> None: ...
+```
+Show or hide the tooltip
+
+
+
 ## 🟢`UnderlineButton`
 
 
@@ -1253,10 +1179,10 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'center',
     command: typing.Optional[typing.Callable] = None,
     image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
     name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
     animation: bool = False,
 ) -> None: ...
@@ -1273,10 +1199,11 @@ Underline button, generally used to display web links
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `anchor`: anchor of the text
-* `command`: a function that is triggered when the underline button is pressed
+* `command`: a function that is triggered when the underline button
+is pressed
 * `image`: image of the widget
 * `name`: name of the widget
+* `anchor`: anchor of the widget
 * `through`: wether detect another widget under the widget
 * `animation`: wether enable animation
 

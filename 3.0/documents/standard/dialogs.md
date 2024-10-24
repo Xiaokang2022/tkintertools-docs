@@ -71,7 +71,7 @@ def __init__(
     *,
     title: str | None = None,
     icon: typing.Literal['error', 'info', 'question', 'warning'] = 'info',
-    type: typing.Literal['abortretryignore', 'ok', 'okcancel', 'retrycancel', 'yesno', 'yesnocancel'] = 'ok',
+    option: typing.Literal['abortretryignore', 'ok', 'okcancel', 'retrycancel', 'yesno', 'yesnocancel'] = 'ok',
     default: typing.Optional[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']] = None,
     master: tkinter.Tk | None = None,
     command: typing.Optional[typing.Callable[[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']], typing.Any]] = None,
@@ -83,7 +83,7 @@ Message pop-up
 * `detail`: detail message
 * `title`: title of the window
 * `icon`: icon
-* `type`: type of the message pop-up
+* `option`: type of the message pop-up
 * `default`: button where the focus is, default is the leftmost one
 * `master`: parent widget of the window
 * `command`: callback function

@@ -14,7 +14,6 @@ def blend(
     weights: list[tuple] | None = None,
 ) -> tuple[float, float, float]: ...
 ```
-
 Mix colors by weight
 
 * `colors`: color list
@@ -33,7 +32,6 @@ def contrast(
     channels: tuple[bool, bool, bool] = (True, True, True),
 ) -> tuple[float, float, float]: ...
 ```
-
 Get a contrasting color of a color
 
 * `hsl`: a tuple, HSL codes
@@ -54,7 +52,6 @@ def convert(
     channels: tuple[bool, bool, bool] = (True, True, True),
 ) -> tuple[float, float, float]: ...
 ```
-
 Convert one color to another proportionally
 
 * `first`: first color
@@ -79,7 +76,6 @@ def gradient(
     contoller: typing.Callable[[float], float] = flat,
 ) -> list[tuple[float, float, float]]: ...
 ```
-
 Get a list of color gradients from one color to another proportionally
 
 * `first`: first color
@@ -97,7 +93,7 @@ Get a list of color gradients from one color to another proportionally
 
 ```python
 def hsl_to_rgb(
-    hsl: tuple[float, float, float],
+    color: tuple[float, float, float],
 ) -> tuple[int, int, int]: ...
 ```
 Convert HSL to RGB codes
@@ -109,7 +105,7 @@ Convert HSL to RGB codes
 
 ```python
 def hsl_to_rgb(
-    hsl: tuple[float, float, float],
+    color: tuple[float, float, float],
 ) -> tuple[int, int, int]: ...
 ```
 Convert HSL to RGB codes
@@ -121,7 +117,7 @@ Convert HSL to RGB codes
 
 ```python
 def rgb_to_hsl(
-    rgb: tuple[int, int, int],
+    color: tuple[int, int, int],
 ) -> tuple[float, float, float]: ...
 ```
 Convert RGB to HSL codes
@@ -133,7 +129,7 @@ Convert RGB to HSL codes
 
 ```python
 def rgb_to_hsl(
-    rgb: tuple[int, int, int],
+    color: tuple[int, int, int],
 ) -> tuple[float, float, float]: ...
 ```
 Convert RGB to HSL codes

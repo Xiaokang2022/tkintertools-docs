@@ -1,6 +1,5 @@
 # tkintertools.animation.controllers
 
-
 Standard control functions
 
 Definition of control function:
@@ -31,7 +30,6 @@ def _map_t(
     end: float,
 ) -> typing.Callable[[float], float]: ...
 ```
-
 Map parameters in any range between 0 and 1
 
 * `start`: the first value of the parameter of control function
@@ -49,7 +47,6 @@ def _map_y(
     end: float,
 ) -> typing.Callable[[float], float]: ...
 ```
-
 Map the final return value to 1
 
 * `base_function`: base function
@@ -70,7 +67,6 @@ def controller_generator(
     map_y: bool = True,
 ) -> typing.Callable[[float], float]: ...
 ```
-
 Generator of control functions
 
 Modify the generic function to a control function suitable for animation

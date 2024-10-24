@@ -15,7 +15,6 @@ def __init__(
     command: typing.Callable,
 ) -> None: ...
 ```
-
 Single trigger
 
 It can only be triggered once before the reset, and multiple triggers are
@@ -82,11 +81,11 @@ Unlock this trigger so that it can be updated again
 def update(
     self,
     value: bool = True,
+    /,
     *args,
     **kwargs,
 ) -> None: ...
 ```
-
 Update the status of the trigger
 
 `value`: updated value
@@ -107,7 +106,6 @@ def embed_window(
     focus: bool = False,
 ) -> None: ...
 ```
-
 Embed a widget into another widget
 
 * `window`: Widget that will be embedded in
@@ -140,20 +138,22 @@ def get_text_size(
     family: str | None = None,
     *,
     padding: int = 0,
+    master: tkinter.Canvas | tkintertools.core.virtual.Widget | None = None,
+    **kwargs,
 ) -> tuple[int, int]: ...
 ```
-
 Get the size of a text with a special font family and font size
 
 * `text`: the text
 * `fontsize`: font size of the text
 * `family`: font family of the text
 * `padding`: extra padding of the size
+* `master`: default canvas or widget provided
+* `kwargs`: kwargs of `tkinter.font.Font`
 
 ATTENTION:
 
 * This function only works when the fontsize is negative number!
-* When there is a line break, the return value will be inaccurate!
 
 
 ## 🔵`load_font`
@@ -169,15 +169,14 @@ def load_font(
     enumerable: bool = False,
 ) -> bool: ...
 ```
-
 Make fonts located in file `font_path` available to the font system, and
 return `True` if the operation succeeds, `False` otherwise
 
 * `font_path`: the font file path
-* `private`: if True, other processes cannot see this font(Only Windows OS),
-and this font will be unloaded when the process dies
-* `enumerable`: if True, this font will appear when enumerating fonts(Only
-Windows OS)
+* `private`: if True, other processes cannot see this
+font(Only Windows OS), and this font will be unloaded when the process dies
+* `enumerable`: if True, this font will appear when enumerating
+fonts(Only Windows OS)
 
 ATTENTION:
 
@@ -208,7 +207,6 @@ def set_mouse_position(
     y: int,
 ) -> None: ...
 ```
-
 Set mouse cursor position
 
 ATTENTION:

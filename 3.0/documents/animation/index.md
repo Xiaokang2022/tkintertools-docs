@@ -1,6 +1,5 @@
 # tkintertools.animation
 
-
 Subpackage of tkintertools
 
 Animations are supported, and the behavior of animations can be controlled

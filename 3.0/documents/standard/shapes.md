@@ -79,7 +79,7 @@ def __init__(
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
-    points: list[tuple[float, float]] = [],
+    points: list[tuple[float, float]] | None = None,
     name: str | None = None,
     animation: bool = True,
     styles: dict[str | int, dict[str | int, dict[str, str]]] | None = None,

@@ -1,6 +1,5 @@
 # tkintertools.style.manager
 
-
 Support for theme
 
 All third packages which relative to style introduced by `tkintertools` are
@@ -22,8 +21,7 @@ def _callback(
     theme: str,
 ) -> None: ...
 ```
-
-callback function that is triggered when a system theme is switched.
+Callback function that is triggered when a system theme is switched.
 Valid only if the theme mode is set to Follow System
 
 * `theme`: theme name
@@ -36,13 +34,12 @@ Valid only if the theme mode is set to Follow System
 
 ```python
 def _process_event(
-    dark: bool,
+    dark_mode: bool,
 ) -> None: ...
 ```
-
 Handle registered callback functions
 
-* `dark`: Wether it is dark mode
+* `dark_mode`: Wether it is dark mode
 
 
 ## 🔵`customize_window`
@@ -66,7 +63,6 @@ def customize_window(
     boarder_type: typing.Optional[typing.Literal['rectangular', 'smallround', 'round']] = None,
 ) -> None: ...
 ```
-
 Customize the relevant properties of the window
 
 * `window`: the window which being customized
@@ -120,7 +116,6 @@ def register_event(
     *args: typing.Any,
 ) -> None: ...
 ```
-
 When the system accent color changes, the registered function will be
 called, and the parameter is a boolean value indicating whether it is
 currently a dark theme
@@ -139,7 +134,6 @@ def remove_event(
     func: typing.Callable[[bool, typing.Any], typing.Any],
 ) -> None: ...
 ```
-
 Remove a registered function
 
 * `func`: callback function
@@ -166,12 +160,11 @@ def set_color_mode(
     mode: typing.Literal['system', 'dark', 'light'] = 'system',
 ) -> None: ...
 ```
-
 Set the color mode of the program
 
 * `mode`: it can be `"light"`, `"dark"`, and `"system"`
 
-TIPS:
+TIP:
 
 `"system"` is the following system
 
@@ -184,15 +177,14 @@ TIPS:
 ```python
 def set_theme_map(
     *,
-    light: str | module | None = None,
-    dark: str | module | None = None,
+    light_theme: str | module | None = None,
+    dark_theme: str | module | None = None,
 ) -> None: ...
 ```
-
 Set the path to the theme file used by the current program
 
-* `light`: the name of the theme of the light theme
-* `dark`: the name of the theme of the dark theme
+* `light_theme`: the name of the theme of the light theme
+* `dark_theme`: the name of the theme of the dark theme
 
 
 ## 🟣`SYSTEM_DARK_MODE`
@@ -225,13 +217,13 @@ _color_mode: str = 'system'
 ```
 
 
-## 🟣`_theme_map`
+## 🟣`theme_map`
 
 
-<code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
+<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-_theme_map: dict = {
+theme_map: dict = {
     'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>,
     'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\light.py'>,
 }

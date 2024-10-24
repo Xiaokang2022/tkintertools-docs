@@ -1,6 +1,5 @@
 # tkintertools.core.containers
 
-
 All container widgets
 
 There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk`
@@ -32,7 +31,6 @@ def __init__(
     **kwargs,
 ) -> None: ...
 ```
-
 Scalable Canvas
 
 The parent widget of all virtual widgets of tkintertools is `Canvas`
@@ -72,7 +70,7 @@ def _copy(
     event: Event,
 ) -> None: ...
 ```
-Event for copy operation
+Events for copy operation
 
 ### 🟡`_cut`
 
@@ -85,7 +83,21 @@ def _cut(
     event: Event,
 ) -> None: ...
 ```
-Event for cut operation
+Events for cut operation
+
+### 🟡`_get_command`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_command(
+    self,
+    feature: Feature,
+    method: str,
+) -> typing.Callable: ...
+```
+Get command from virtual.Feature
 
 ### 🟡`_initialization`
 
@@ -110,7 +122,7 @@ def _input(
     event: Event,
 ) -> None: ...
 ```
-Event for typing
+Events for typing
 
 ### 🟡`_move`
 
@@ -124,7 +136,7 @@ def _move(
     type_: typing.Literal['left', 'center', 'right', 'none'],
 ) -> None: ...
 ```
-Internal Method: Events to move the mouse
+Events to move the mouse
 
 ### 🟡`_paste`
 
@@ -137,7 +149,7 @@ def _paste(
     event: Event,
 ) -> None: ...
 ```
-Event for paste operation
+Events for paste operation
 
 ### 🟡`_re_place`
 
@@ -149,7 +161,6 @@ def _re_place(
     self,
 ) -> None: ...
 ```
-
 Resize and position the `Canvas` based on the relevant parameters
 
 WARNING:
@@ -182,7 +193,7 @@ def _select_all(
     event: Event,
 ) -> None: ...
 ```
-Event for operation of selecting all
+Events for operation of selecting all
 
 ### 🟡`_theme`
 
@@ -195,7 +206,6 @@ def _theme(
     dark: bool,
 ) -> None: ...
 ```
-
 Change the color theme of the Canvas and its items
 
 * `dark`: whether it is in dark mode
@@ -263,6 +273,7 @@ def create_text(
     x: float,
     y: float,
     /,
+    *args,
     **kwargs,
 ) -> int: ...
 ```
@@ -332,7 +343,6 @@ def __init__(
     **kwargs,
 ) -> None: ...
 ```
-
 Main window
 
 In general, there is only one main window
@@ -355,9 +365,8 @@ def _fixed_theme(
     method,
 ) -> _empty: ...
 ```
-
-This is a decorator that to fix a problem that some methods cause the
-window to lose its theme
+This is a decorator that to fix a problem that some methods cause
+the window to lose its theme
 
 * `method`: the method of being decorated
 
@@ -376,7 +385,6 @@ def _theme(
     include_canvases: bool = True,
 ) -> None: ...
 ```
-
 Change the color theme of the window
 
 * `dark`: whether it is in dark mode
@@ -420,7 +428,6 @@ def alpha(
     value: float | None = None,
 ) -> float | None: ...
 ```
-
 Set or get the transparency of the window
 
 * `value`: the transparency of the window, range is 0~1
@@ -437,7 +444,6 @@ def center(
     master: tkinter.Misc | None = None,
 ) -> None: ...
 ```
-
 Center the widget
 
 `master`: The area of the reference widget, if it is None,
@@ -455,12 +461,11 @@ def fullscreen(
     value: bool | None = True,
 ) -> bool | None: ...
 ```
-
 Set or get whether the window is full-screen
 
 * `value`: indicate whether the window is full-screen
 
-TIPS:
+TIP:
 
 The method should be called at the end of the code,
 or after some time after the program has started
@@ -479,16 +484,15 @@ def geometry(
     position: tuple[int, int] | None = None,
 ) -> tuple[int, int, int, int] | None: ...
 ```
-
-Change the size and position of the window and return the current size
-and position of the window
+Change the size and position of the window and return the current
+size and position of the window
 
 * `size`: the size of the window, if it is None, does not change
 anything
 * `position`: the position of the window, if it is None, does not
 change anything
 
-TIPS:
+TIP:
 
 If you want to use `tkinter.Tk.geometry`, please use
 `tkinter.Tk.wm_geometry` instead
@@ -508,11 +512,11 @@ def shutdown(
     self,
     command: typing.Optional[typing.Callable],
     ensure_destroy: bool = False,
+    /,
     *args,
     **kwargs,
 ) -> None: ...
 ```
-
 Set a function that will be called when the window is closed
 
 * `command`: the function that was called
@@ -520,7 +524,7 @@ Set a function that will be called when the window is closed
 * `args`: the variable-length argument of the called function
 * `kwargs`: the keyword argument of the function being called
 
-TIPS:
+TIP:
 
 Regardless of whether the function is successfully called or not,
 the window will still close gracefully
@@ -537,7 +541,6 @@ def toolwindow(
     value: bool | None = True,
 ) -> bool | None: ...
 ```
-
 Set or get whether the window is tool-window
 
 * `value`: indicate whether the window is tool-window
@@ -554,7 +557,6 @@ def topmost(
     value: bool | None = True,
 ) -> bool | None: ...
 ```
-
 Set or get whether the window is pinned or not
 
 * `value`: indicate whether the window is topmost
@@ -571,7 +573,6 @@ def transparentcolor(
     value: str | None = None,
 ) -> str | None: ...
 ```
-
 Set or get the penetration color of the window
 
 * `value`: the penetration color of the window
@@ -599,7 +600,6 @@ def __init__(
     **kwargs,
 ) -> None: ...
 ```
-
 Toplevel window
 
 It can be used as a pop-up window,

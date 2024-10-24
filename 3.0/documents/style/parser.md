@@ -1,6 +1,5 @@
 # tkintertools.style.parser
 
-
 Parse the style file path and get it
 
 Structure of theme folder:
@@ -82,7 +81,6 @@ def get(
     theme: str | pathlib._local.Path | module | None = None,
 ) -> dict[str, dict[str, str]] | dict[str, typing.Any]: ...
 ```
-
 Get style data based on parameters
 
 * `widget`: widget that need to get styles

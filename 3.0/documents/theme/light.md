@@ -309,6 +309,20 @@ ToggleButton: dict = {
 ```
 
 
+## 🟣`Tooltip`
+
+
+<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
+
+```python linenums="0"
+Tooltip: dict = {
+    'Information': {'normal': {'fill': '#1A1A1A'}},
+    'Rectangle': {'normal': {'fill': '#FBFBFB', 'outline': '#DCDCDC'}},
+    'RoundedRectangle': {'normal': {'fill': '#FBFBFB', 'outline': '#DCDCDC'}},
+}
+```
+
+
 ## 🟣`UnderlineButton`
 
 

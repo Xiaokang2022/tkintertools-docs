@@ -42,7 +42,6 @@ def blend(
     weights: list[tuple] | None = None,
 ) -> tuple[int, int, int]: ...
 ```
-
 Mix colors by weight
 
 * `colors`: color list
@@ -61,7 +60,6 @@ def contrast(
     channels: tuple[bool, bool, bool] = (True, True, True),
 ) -> tuple[int, int, int]: ...
 ```
-
 Get a contrasting color of a color
 
 * `rgb`: a tuple, RGB codes
@@ -82,7 +80,6 @@ def convert(
     channels: tuple[bool, bool, bool] = (True, True, True),
 ) -> tuple[int, int, int]: ...
 ```
-
 Convert one color to another proportionally
 
 * `first`: first color
@@ -107,7 +104,6 @@ def gradient(
     contoller: typing.Callable[[float], float] = flat,
 ) -> list[tuple[int, int, int]]: ...
 ```
-
 Get a list of color gradients from one color to another proportionally
 
 * `first`: first color
@@ -125,7 +121,7 @@ Get a list of color gradients from one color to another proportionally
 
 ```python
 def rgb_to_str(
-    rgb: tuple[int, int, int],
+    color: tuple[int, int, int],
 ) -> str: ...
 ```
 Convert RGB codes to color strings
@@ -137,7 +133,7 @@ Convert RGB codes to color strings
 
 ```python
 def rgb_to_str(
-    rgb: tuple[int, int, int],
+    color: tuple[int, int, int],
 ) -> str: ...
 ```
 Convert RGB codes to color strings

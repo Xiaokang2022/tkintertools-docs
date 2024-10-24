@@ -1,6 +1,5 @@
 # tkintertools.theme
 
-
 Default style data
 
 Base structure for `theme_name.py`:
@@ -25,7 +24,7 @@ widget_name01: dict[str, dict[str, dict[str, str]]] = {
 ```
 
 It is not mandatory for the variable to be a constant, it is enough to conform
-to the above format, and the missing style will be empty by default and will not
-affect the operation of the program.
+to the above format, and the missing style will be empty by default and will
+not affect the operation of the program.
 
 

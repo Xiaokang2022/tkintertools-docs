@@ -1,6 +1,5 @@
 # tkintertools.core.constants
 
-
 All constants
 
 In general, they should not be modified, and if you need to modify them, it is
@@ -54,7 +53,7 @@ SIZE: int = -20
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-SYSTEM: str = 'Windows11'
+SYSTEM: str = 'Windows10'
 ```
 
 

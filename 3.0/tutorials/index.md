@@ -9,8 +9,8 @@ icon: material/book
 
     目前此教程对应的环境如下：
 
-    * tkintertools: `3.0.0rc2`
-    * Python: `3.12.0`
+    * tkintertools: `3.0.0rc3`
+    * Python: `3.13.0`
     * OS: `Windows 11`
 
     若您需要的教程不是该版本，请在网页左上切换版本！

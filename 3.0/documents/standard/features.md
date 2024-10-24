@@ -345,27 +345,6 @@ def _move_none(
 
 
 
-## 🟢`OptionButtonFeature`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
-
-### 🟡`_click_left`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _click_left(
-    self,
-    event: Event,
-) -> bool: ...
-```
-
-
-
-
 ## 🟢`ProgressBarFeature`
 
 

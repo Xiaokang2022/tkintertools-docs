@@ -1,10 +1,10 @@
 # tkintertools.animation.animations
 
-
 Standard animation classes
 
-The built-in basic animation classes are: `MoveTkWidget`, `MoveWidget`,
-`MoveComponent`, `MoveItem`, `GradientTkWidget`, `GradientItem`, `ScaleFontSize`
+The built-in basic animation classes are:
+`MoveTkWidget`, `MoveWidget`, `MoveComponent`, `MoveItem`, `GradientTkWidget`,
+`GradientItem`, `ScaleFontSize`
 
 
 ## 🟢`Animation`
@@ -53,7 +53,6 @@ def _wrapper(
     func: typing.Callable[[float], float],
 ) -> typing.Callable[[float], float]: ...
 ```
-
 Make the ending function call correctly
 
 * `func`: the callback function to be wrapped
@@ -71,7 +70,6 @@ def start(
     delay: int = 0,
 ) -> None: ...
 ```
-
 Start the animation
 
 * `delay`: length of the delay before the animation starts, in
