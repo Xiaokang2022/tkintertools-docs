@@ -90,9 +90,3 @@ flowchart LR
 此项目完全是我以前一时兴起做的，从一代到二代，再到现在的三代，已经过去将近两年了。
 
 大家如果觉得这个项目不错，还请帮忙点一个免费的 ⭐Star 吧，本人只是一个非计算机专业，自学编程大学牲，要点免费的 ⭐Star 不过分吧。
-
-!!! tip "温馨提示：此为文档站"
-
-    不要通过该网站右上角链接来帮我 Star，因为这个是文档站，其 GitHub 仓库不是 tkt 项目源代码的存储库，而是 tkt 文档的存储库，望悉知。
-
-    若要点 Star，请在[站点主页](../index.md)点击 “[返回主站](https://xiaokang2022.github.io/tkintertools)” 后再通过右上角访问存储库。当然，直接访问 tkt 的存储库 https://github.com/Xiaokang2022/tkintertools 也可以。(·'◡'·)
