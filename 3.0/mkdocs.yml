@@ -189,6 +189,8 @@ theme: # 此项各个设定因主题而异
     repo: fontawesome/brands/github # 右上角仓库图标
     edit: material/file-edit # 页面编辑的图标
     view: material/file-eye # 页面查看源代码的图标
+    tag:
+      default: material/tag
 
 extra: # 额外设定
   generator: false # 页面底部不显示生成信息
@@ -196,6 +198,8 @@ extra: # 额外设定
     new: 最近添加
     deprecated: 已废弃
   homepage: . # 左上角徽标链接的地址
+  tags:
+    _:
   annotate: # 允许代码块非注释内的提示，我也不太懂什么意思，貌似是可以在代码里面加悬浮提示框，而不只是在注释中（感觉这样不好，虽然我不用，但不能没有）
     json: [.s2]
   social: # 社交联系方式（页面右下角内容）
@@ -263,9 +267,13 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.5.0/style.min.css # 设置字体（霞鹜文楷）【版本不能再更高了，会导致公式字体变小】
 
 plugins:
-  - search
-  - mike
-  - statistics
+  # 内置插件
+  - search:
+  - tags:
+      tags_file: tags.md
+  # 第三方插件
+  - mike:
+  - statistics:
   - glightbox:
       background: none
       auto_themed: true
@@ -286,6 +294,7 @@ plugins:
 nav:
   - 站点主页:
       - index.md
+      - 标签索引: tags.md
 
   - 官方教程:
       - tutorials/index.md
