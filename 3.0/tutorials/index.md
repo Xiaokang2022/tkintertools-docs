@@ -9,7 +9,7 @@ icon: material/book
 
     目前此教程对应的环境如下：
 
-    * tkintertools: `3.0.0rc3`
+    * tkintertools: `3.0.0rc4`
     * Python: `3.13.0`
     * OS: `Windows 11`
 
@@ -70,13 +70,13 @@ tkintertools 3（以下简称 tkt 3 或 tkt） 专门对 VSC 做了文档字符�
 ```mermaid
 flowchart LR
 
-    subgraph module / 模块
+    subgraph Module / 模块
     1(0.1) -.-> 2(2.5.11)
     end
-    subgraph package / 包
+    subgraph Package / 包
     3(2.5.12) -.-> 4(3.0.0.alpha3)
     end
-    subgraph library / 库
+    subgraph Library / 库
     5(3.0.0.alpha4) -.-> 6(latest)
     end
     2 --> 3

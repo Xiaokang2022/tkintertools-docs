@@ -78,7 +78,7 @@ def get(
     widget: str | virtual.Widget | containers.Canvas,
     component: str | virtual.Component | None = None,
     *,
-    theme: str | pathlib._local.Path | module | None = None,
+    theme: str | pathlib.Path | types.ModuleType | None = None,
 ) -> dict[str, dict[str, str]] | dict[str, typing.Any]: ...
 ```
 Get style data based on parameters

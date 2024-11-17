@@ -2,34 +2,6 @@
 
 Support for RGB
 
-## 🔵`_str_to_rgba`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
-
-```python
-def _str_to_rgba(
-    color: str,
-    *,
-    reference: str,
-) -> tuple[int, int, int]: ...
-```
-Experimental: Convert color strings(RGBA) to RGB codes
-
-## 🔵`_str_to_rgba`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: orange;'>protected</code>
-
-```python
-def _str_to_rgba(
-    color: str,
-    *,
-    reference: str,
-) -> tuple[int, int, int]: ...
-```
-Experimental: Convert color strings(RGBA) to RGB codes
-
 ## 🔵`blend`
 
 
@@ -37,10 +9,10 @@ Experimental: Convert color strings(RGBA) to RGB codes
 
 ```python
 def blend(
-    colors: list[tuple[int, int, int]],
+    colors: list[RGB],
     *,
     weights: list[tuple] | None = None,
-) -> tuple[int, int, int]: ...
+) -> RGB: ...
 ```
 Mix colors by weight
 
@@ -55,10 +27,10 @@ Mix colors by weight
 
 ```python
 def contrast(
-    rgb: tuple[int, int, int],
+    rgb: RGB,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-) -> tuple[int, int, int]: ...
+) -> RGB: ...
 ```
 Get a contrasting color of a color
 
@@ -73,12 +45,12 @@ Get a contrasting color of a color
 
 ```python
 def convert(
-    first: tuple[int, int, int],
-    second: tuple[int, int, int],
+    first: RGB,
+    second: RGB,
     rate: float,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-) -> tuple[int, int, int]: ...
+) -> RGB: ...
 ```
 Convert one color to another proportionally
 
@@ -95,14 +67,14 @@ Convert one color to another proportionally
 
 ```python
 def gradient(
-    first: tuple[int, int, int],
-    second: tuple[int, int, int],
+    first: RGB,
+    second: RGB,
     count: int,
     rate: float = 1,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
     contoller: typing.Callable[[float], float] = flat,
-) -> list[tuple[int, int, int]]: ...
+) -> list[RGB]: ...
 ```
 Get a list of color gradients from one color to another proportionally
 
@@ -121,7 +93,7 @@ Get a list of color gradients from one color to another proportionally
 
 ```python
 def rgb_to_str(
-    color: tuple[int, int, int],
+    color: RGB,
 ) -> str: ...
 ```
 Convert RGB codes to color strings
@@ -133,7 +105,7 @@ Convert RGB codes to color strings
 
 ```python
 def rgb_to_str(
-    color: tuple[int, int, int],
+    color: RGB,
 ) -> str: ...
 ```
 Convert RGB codes to color strings
@@ -146,9 +118,23 @@ Convert RGB codes to color strings
 ```python
 def str_to_rgb(
     color: str,
-) -> tuple[int, int, int]: ...
+) -> RGB: ...
 ```
 Convert color strings to RGB codes
+
+## 🔵`str_to_rgba`
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def str_to_rgba(
+    color: str,
+    *,
+    reference: str,
+) -> RGB: ...
+```
+Experimental: Convert color strings(RGBA) to RGB codes
 
 ## 🔵`str_to_rgb`
 
@@ -158,9 +144,23 @@ Convert color strings to RGB codes
 ```python
 def str_to_rgb(
     color: str,
-) -> tuple[int, int, int]: ...
+) -> RGB: ...
 ```
 Convert color strings to RGB codes
+
+## 🔵`str_to_rgba`
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def str_to_rgba(
+    color: str,
+    *,
+    reference: str,
+) -> RGB: ...
+```
+Experimental: Convert color strings(RGBA) to RGB codes
 
 ## 🟣`MAX`
 

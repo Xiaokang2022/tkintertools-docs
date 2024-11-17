@@ -12,7 +12,7 @@ Standard Geometries
 ```python
 def __init__(
     self,
-    canvas: tkintertools.three.engine.Canvas | tkintertools.three.engine.Space,
+    canvas: engine.Canvas | engine.Space,
     x: float,
     y: float,
     z: float,
@@ -50,7 +50,7 @@ Cuboid
 ```python
 def __init__(
     self,
-    canvas: tkintertools.three.engine.Canvas | tkintertools.three.engine.Space,
+    canvas: engine.Canvas | engine.Space,
     point_1: tuple[float, float, float],
     point_2: tuple[float, float, float],
     point_3: tuple[float, float, float],

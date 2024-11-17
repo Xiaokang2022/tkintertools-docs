@@ -16,7 +16,7 @@ def __init__(
     title: str | None = None,
     color: str | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Optional[typing.Callable[[str], typing.Any]] = None,
+    command: typing.Callable[[str], typing.Any] | None = None,
 ) -> None: ...
 ```
 Color chooser pop-up
@@ -43,7 +43,7 @@ def __init__(
     title: str | None = None,
     font: str | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Optional[typing.Callable[[str], typing.Any]] = None,
+    command: typing.Callable[[str], typing.Any] | None = None,
 ) -> None: ...
 ```
 Font chooser pop-up
@@ -72,9 +72,9 @@ def __init__(
     title: str | None = None,
     icon: typing.Literal['error', 'info', 'question', 'warning'] = 'info',
     option: typing.Literal['abortretryignore', 'ok', 'okcancel', 'retrycancel', 'yesno', 'yesnocancel'] = 'ok',
-    default: typing.Optional[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']] = None,
+    default: typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no'] | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Optional[typing.Callable[[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']], typing.Any]] = None,
+    command: typing.Callable[[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']], typing.Any] | None = None,
 ) -> None: ...
 ```
 Message pop-up

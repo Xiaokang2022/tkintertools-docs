@@ -12,7 +12,7 @@ def parse(
     *,
     light: str = 'black',
     dark: str = 'white',
-) -> dict[str, dict[typing.Literal['light', 'dark'], tkintertools.toolbox.enhanced.PhotoImage]]: ...
+) -> dict[str, dict[typing.Literal['light', 'dark'], enhanced.PhotoImage]]: ...
 ```
 Parse the base64 data to `enhanced.PhotoImage` with diffrent themes
 

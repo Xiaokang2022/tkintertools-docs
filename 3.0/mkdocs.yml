@@ -355,7 +355,7 @@ nav:
 
       - 📦 core:
           - documents/core/index.md
-          - 📑 constants: documents/core/constants.md
+          - 📑 configs: documents/core/configs.md
           - 📑 containers: documents/core/containers.md
           - 📑 virtual: documents/core/virtual.md
 

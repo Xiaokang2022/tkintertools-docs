@@ -20,7 +20,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -32,7 +32,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 

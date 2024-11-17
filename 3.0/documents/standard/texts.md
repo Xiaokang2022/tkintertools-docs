@@ -45,7 +45,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`delete`
 
@@ -70,7 +70,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 ### 🟡`get`
 
@@ -109,7 +109,7 @@ Set the value of `Text`
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -152,6 +152,43 @@ Single-line editable text
 * `kwargs`: extra parameters for CanvasItem
 
 
+### 🟡`_get_index`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_index(
+    self,
+    index: int,
+) -> int: ...
+```
+
+
+### 🟡`_get_margin`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_margin(
+    self,
+) -> float: ...
+```
+Get the size of the spacing between the text and the border
+
+### 🟡`_is_overflow`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _is_overflow(
+    self,
+) -> bool: ...
+```
+Whether the text content extends beyond the text box
+
 ### 🟡`_move_left`
 
 
@@ -176,83 +213,6 @@ def _move_right(
 ```
 Move the text to the right as a whole, i.e. press the left arrow
 
-### 🟡`_text_delete`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_delete(
-    self,
-    start: int,
-    end: typing.Union[int, typing.Literal['end']],
-) -> None: ...
-```
-Delete the actual text that appears on the component
-
-### 🟡`_text_get`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_get(
-    self,
-) -> str: ...
-```
-Get the actual text that appears on the component
-
-### 🟡`_text_insert`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_insert(
-    self,
-    index: int,
-    value: str,
-) -> None: ...
-```
-Insert the actual text that appears on the component
-
-### 🟡`_text_length`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_length(
-    self,
-) -> int: ...
-```
-Get the length of actual text that appears on the component
-
-### 🟡`_text_overflow`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_overflow(
-    self,
-) -> bool: ...
-```
-Whether the text content extends beyond the text box
-
-### 🟡`_text_set`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _text_set(
-    self,
-    value: str,
-) -> None: ...
-```
-Set the actual text that appears on the component
-
 ### 🟡`append`
 
 
@@ -262,9 +222,21 @@ Set the actual text that appears on the component
 def append(
     self,
     value: str,
-) -> None: ...
+) -> bool: ...
 ```
 Add some characters to the text cursor
+
+### 🟡`clear`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def clear(
+    self,
+) -> None: ...
+```
+Clear
 
 ### 🟡`coords`
 
@@ -278,32 +250,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
-
-### 🟡`cursor_find`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def cursor_find(
-    self,
-    x: int,
-) -> int: ...
-```
-Return the index of text with the x position of mouse
-
-### 🟡`cursor_get`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def cursor_get(
-    self,
-) -> int: ...
-```
-Get the index position of the text cursor
+Resize the `Component`
 
 ### 🟡`cursor_move`
 
@@ -331,33 +278,6 @@ def cursor_move_to(
 ```
 Move the index position of the text cursor to a certain index
 
-### 🟡`cursor_set`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def cursor_set(
-    self,
-    index: int,
-) -> int: ...
-```
-Set the index position of the text cursor
-
-### 🟡`delete`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def delete(
-    self,
-    start: int,
-    end: int,
-) -> None: ...
-```
-Delete text within the specified index range, [start, end]
-
 ### 🟡`display`
 
 
@@ -368,7 +288,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 ### 🟡`get`
 
@@ -382,18 +302,6 @@ def get(
 ```
 Get text of the component
 
-### 🟡`get_gap`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def get_gap(
-    self,
-) -> float: ...
-```
-Get the size of the spacing between the text and the border
-
 ### 🟡`insert`
 
 
@@ -404,7 +312,7 @@ def insert(
     self,
     index: int,
     value: str,
-) -> None: ...
+) -> bool: ...
 ```
 Insert text to the location of the specified index
 
@@ -416,9 +324,204 @@ Insert text to the location of the specified index
 ```python
 def pop(
     self,
-) -> None: ...
+    index: int = -1,
+) -> str: ...
 ```
 Delete a character at the text cursor
+
+### 🟡`remove`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def remove(
+    self,
+    start: int,
+    end: int | None = None,
+) -> None: ...
+```
+Remove text within the specified index range
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    value: str,
+) -> bool: ...
+```
+Set text of the component
+
+
+
+## 🟢`_CanvasTextProxy`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code> | `object`
+
+### 🟡`__init__`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
+
+```python
+def __init__(
+    self,
+    canvas: containers.Canvas,
+    tag_or_id: str | int,
+) -> None: ...
+```
+
+
+### 🟡`_get_index`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_index(
+    self,
+    index: int,
+) -> int: ...
+```
+
+
+### 🟡`append`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def append(
+    self,
+    value: str,
+    *,
+    show: str | None = None,
+) -> None: ...
+```
+Append
+
+### 🟡`clear`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def clear(
+    self,
+) -> None: ...
+```
+Clear
+
+### 🟡`cursor_find`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def cursor_find(
+    self,
+    x: int,
+) -> int: ...
+```
+cursor find
+
+### 🟡`cursor_get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def cursor_get(
+    self,
+) -> int | None: ...
+```
+cursor get
+
+### 🟡`cursor_set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def cursor_set(
+    self,
+    index: int,
+) -> None: ...
+```
+cursor set
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> str: ...
+```
+Get
+
+### 🟡`insert`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def insert(
+    self,
+    index: int,
+    value: str,
+    *,
+    show: str | None = None,
+) -> None: ...
+```
+Insert
+
+### 🟡`length`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def length(
+    self,
+) -> int: ...
+```
+Length
+
+### 🟡`pop`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def pop(
+    self,
+    index: int = -1,
+) -> None: ...
+```
+Pop
+
+### 🟡`remove`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def remove(
+    self,
+    start: int,
+    end: int | None = None,
+) -> None: ...
+```
+Remove
 
 ### 🟡`select_all`
 
@@ -430,7 +533,7 @@ def select_all(
     self,
 ) -> None: ...
 ```
-Select all texts
+select all
 
 ### 🟡`select_clear`
 
@@ -442,7 +545,7 @@ def select_clear(
     self,
 ) -> None: ...
 ```
-Clear the selected text
+select clear
 
 ### 🟡`select_get`
 
@@ -454,7 +557,7 @@ def select_get(
     self,
 ) -> tuple[int, int] | None: ...
 ```
-Get the index tuple of the selected text
+select get
 
 ### 🟡`select_set`
 
@@ -465,10 +568,10 @@ Get the index tuple of the selected text
 def select_set(
     self,
     start: int,
-    end: int,
+    end: int | None = None,
 ) -> None: ...
 ```
-Set the index tuple of the selected text, [start, end]
+select set
 
 ### 🟡`set`
 
@@ -479,9 +582,11 @@ Set the index tuple of the selected text, [start, end]
 def set(
     self,
     value: str,
+    *,
+    show: str | None = None,
 ) -> None: ...
 ```
-Set text of the component
+Set
 
 
 

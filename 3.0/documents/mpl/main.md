@@ -12,8 +12,8 @@ APIs for Matplotlib
 ```python
 def __init__(
     self,
-    master: Misc,
-    figure: Figure,
+    master: tkinter.Misc,
+    figure: matplotlib.figure.Figure,
     *args,
     **kwargs,
 ) -> None: ...
@@ -32,7 +32,7 @@ A canvas for interface of `matplotlib`
 ```python
 def _fix_size(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> None: ...
 ```
 Correct the size of Figure
@@ -74,8 +74,8 @@ def destroy(
 ```python
 def __init__(
     self,
-    master: tkinter.Misc | tkintertools.mpl.main.FigureCanvas,
-    figure_canvas: tkintertools.mpl.main.FigureCanvas | None = None,
+    master: tkinter.Misc | FigureCanvas,
+    figure_canvas: FigureCanvas | None = None,
     *,
     pack_toolbar: bool = True,
     **kwargs,

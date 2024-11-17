@@ -12,14 +12,14 @@ APIs for playing videos
 ```python
 def __init__(
     self,
-    master: containers.Tk | containers.Canvas,
+    master: 'containers.Tk | containers.Canvas',
     *,
     controls: bool = False,
     loop: bool = False,
     click_pause: bool = True,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
     zoom_item: bool = False,
-    keep_ratio: typing.Optional[typing.Literal['min', 'max']] = None,
+    keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     name: str = 'Canvas',
     **kwargs,
@@ -89,18 +89,6 @@ def _play(
 ```
 Refresh the canvas
 
-### 🟡`_re_place`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _re_place(
-    self,
-) -> None: ...
-```
-
-
 ### 🟡`_refresh_control_bar`
 
 
@@ -158,6 +146,18 @@ Open a video file and play
 * `file`: the video file path
 * `auto_play`: whether to start playing the video automatically
 * `muted`: whether or not to mute the video at the start
+
+
+### 🟡`re_place`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def re_place(
+    self,
+) -> None: ...
+```
 
 
 

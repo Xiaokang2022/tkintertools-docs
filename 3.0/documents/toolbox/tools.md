@@ -2,11 +2,11 @@
 
 Some useful utility classes or utility functions
 
-## 🟢`_Trigger`
+## 🟢`Trigger`
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: orange;'>protected</code> | `object`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -100,7 +100,7 @@ Update the status of the trigger
 
 ```python
 def embed_window(
-    window: Misc,
+    window: tkinter.Misc,
     parent: tkinter.Misc | None,
     *,
     focus: bool = False,
@@ -121,7 +121,7 @@ screen
 
 ```python
 def get_hwnd(
-    widget: Widget,
+    widget: tkinter.Widget,
 ) -> int: ...
 ```
 Get the HWND of `tkinter.Widget`
@@ -138,7 +138,7 @@ def get_text_size(
     family: str | None = None,
     *,
     padding: int = 0,
-    master: tkinter.Canvas | tkintertools.core.virtual.Widget | None = None,
+    master: tkinter.Canvas | virtual.Widget | None = None,
     **kwargs,
 ) -> tuple[int, int]: ...
 ```
@@ -195,24 +195,6 @@ def screen_size(
 ) -> tuple[int, int]: ...
 ```
 Return the size of the screen
-
-## 🔵`set_mouse_position`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def set_mouse_position(
-    x: int,
-    y: int,
-) -> None: ...
-```
-Set mouse cursor position
-
-ATTENTION:
-
-This function only works on Windows OS!
-
 
 ## 🟣`_LINUX_FONTS_DIR`
 

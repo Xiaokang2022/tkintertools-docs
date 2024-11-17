@@ -12,9 +12,9 @@ All standard `Feature` classes
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     *,
-    command: typing.Optional[typing.Callable] = None,
+    command: typing.Callable | None = None,
     args: tuple = (),
 ) -> None: ...
 ```
@@ -25,80 +25,80 @@ Feature of Button
 * `args`: arguments of callback function
 
 
-### 🟡`_click_left`
+### 🟡`_b_1_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _b_1_motion(
     self,
-    _: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_center`
+### 🟡`_b_2_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_center(
+def _b_2_motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_left`
+### 🟡`_b_3_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_left(
+def _b_3_motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_1(
     self,
-    event: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_right`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_right(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -111,28 +111,28 @@ def _release_left(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-### 🟡`_click_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _button_1(
     self,
-    _: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -145,41 +145,41 @@ def _release_left(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-### 🟡`_click_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _button_1(
     self,
-    _: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -196,24 +196,50 @@ def _release_left(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     *,
-    command: typing.Optional[typing.Callable[..., typing.Any]] = None,
+    command: typing.Callable[..., typing.Any] | None = None,
     args: tuple = (),
 ) -> None: ...
 ```
 Feature of input box
 
 
-### 🟡`_click_left`
+### 🟡`_b_1_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _b_1_motion(
     self,
-    event: Event,
+    event: tkinter.Event,
+) -> bool: ...
+```
+
+
+### 🟡`_button_1`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _button_1(
+    self,
+    event: tkinter.Event,
+) -> bool: ...
+```
+
+
+### 🟡`_button_release_1`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _button_release_1(
+    self,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -226,7 +252,7 @@ def _click_left(
 ```python
 def _copy(
     self,
-    event: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -239,46 +265,33 @@ def _copy(
 ```python
 def _cut(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_input`
+### 🟡`_key_press`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _input(
+def _key_press(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_left(
+def _motion(
     self,
-    event: Event,
-) -> bool: ...
-```
-
-
-### 🟡`_move_none`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _move_none(
-    self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -291,20 +304,7 @@ def _move_none(
 ```python
 def _paste(
     self,
-    event: Event,
-) -> bool: ...
-```
-
-
-### 🟡`_release_left`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _release_left(
-    self,
-    event: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -317,7 +317,7 @@ def _release_left(
 ```python
 def _select_all(
     self,
-    event: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -330,15 +330,15 @@ def _select_all(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
 
-### 🟡`_move_none`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -371,60 +371,60 @@ def _move_none(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
 ) -> None: ...
 ```
 Feature of Slider
 
 
-### 🟡`_click_left`
+### 🟡`_b_1_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _b_1_motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_left(
+def _button_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_release_1(
     self,
-    event: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -441,9 +441,9 @@ def _release_left(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     *,
-    command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
+    command: typing.Callable[[bool], typing.Any] | None = None,
 ) -> None: ...
 ```
 Feature of SpinBox
@@ -452,15 +452,15 @@ Feature of SpinBox
 * `command`: callback function
 
 
-### 🟡`_wheel`
+### 🟡`_mouse_wheel`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _wheel(
+def _mouse_wheel(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -473,41 +473,41 @@ def _wheel(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-### 🟡`_click_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _button_1(
     self,
-    _: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -520,41 +520,41 @@ def _release_left(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-### 🟡`_click_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _button_1(
     self,
-    _: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
@@ -567,41 +567,41 @@ def _release_left(
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
 
-### 🟡`_click_left`
+### 🟡`_button_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_left(
+def _button_1(
     self,
-    _: Event,
+    _: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_move_none`
+### 🟡`_button_release_1`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move_none(
+def _button_release_1(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 
 
-### 🟡`_release_left`
+### 🟡`_motion`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _release_left(
+def _motion(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> bool: ...
 ```
 

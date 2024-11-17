@@ -71,19 +71,6 @@ def __setitem__(
 ```
 Easy to set style data
 
-### 🟡`_get_disabled_style`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _get_disabled_style(
-    self,
-    refer_state: str | None = None,
-) -> dict[str, str]: ...
-```
-Get the style data of disabled state
-
 ### 🟡`appear`
 
 
@@ -191,6 +178,19 @@ def display(
 ```
 Display the `Component` on a `Canvas`
 
+### 🟡`get_disabled_style`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get_disabled_style(
+    self,
+    refer_state: str | None = None,
+) -> dict[str, str]: ...
+```
+Get the style data of disabled state
+
 ### 🟡`move`
 
 
@@ -258,6 +258,9 @@ Update the style of the `Component` to the corresponding state
 def zoom(
     self,
     ratios: tuple[float, float],
+    *,
+    zoom_position: bool = True,
+    zoom_size: bool = True,
 ) -> None: ...
 ```
 Zoom the `Component`
@@ -282,213 +285,30 @@ The features of a `Widget`
 * `widget`: parent widget
 
 
-### 🟡`_click_center`
+### 🟡`_parse_method_name`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _click_center(
-    self,
-    event: Event,
-) -> bool: ...
+def _parse_method_name(
+    name: str,
+) -> str: ...
 ```
-Event of pressing the center mouse button
-
-### 🟡`_click_left`
 
 
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+### 🟡`get_method`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def _click_left(
+def get_method(
     self,
-    event: Event,
-) -> bool: ...
+    name: str,
+) -> typing.Callable: ...
 ```
-Event of pressing the left mouse button
-
-### 🟡`_click_right`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _click_right(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of pressing the right mouse button
-
-### 🟡`_copy`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _copy(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of copy operation
-
-### 🟡`_cut`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _cut(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of cut operation
-
-### 🟡`_input`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _input(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of typing
-
-### 🟡`_move_center`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _move_center(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of holding down the center mouse button to move the mouse
-
-### 🟡`_move_left`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _move_left(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of holding down the left mouse button to move the mouse
-
-### 🟡`_move_none`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _move_none(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of moving the mouse
-
-### 🟡`_move_right`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _move_right(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of holding down the right mouse button to move the mouse
-
-### 🟡`_paste`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _paste(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of paste operation
-
-### 🟡`_release_center`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _release_center(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of releasing the center mouse button
-
-### 🟡`_release_left`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _release_left(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of releasing the left mouse button
-
-### 🟡`_release_right`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _release_right(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of releasing the right mouse button
-
-### 🟡`_select_all`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _select_all(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of selecting all operation
-
-### 🟡`_wheel`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _wheel(
-    self,
-    event: Event,
-) -> bool: ...
-```
-Event of scrolling the mouse wheel
+Return method by name
 
 
 
@@ -506,7 +326,7 @@ def __init__(
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     animation: bool = True,
     styles: dict[str, dict[str, str]] | None = None,
@@ -534,6 +354,9 @@ The Image of a `Widget`
 def zoom(
     self,
     ratios: tuple[float, float],
+    *,
+    zoom_position: bool = True,
+    zoom_size: bool = True,
 ) -> None: ...
 ```
 Scale the image
@@ -555,6 +378,9 @@ Scale the image
 def zoom(
     self,
     ratios: tuple[float, float],
+    *,
+    zoom_position: bool = True,
+    zoom_size: bool = True,
 ) -> None: ...
 ```
 Scale the shape
@@ -633,6 +459,9 @@ Return the decision region of the `Text`
 def zoom(
     self,
     ratios: tuple[float, float],
+    *,
+    zoom_position: bool = True,
+    zoom_size: bool = True,
 ) -> None: ...
 ```
 Scale the text
@@ -695,16 +524,15 @@ Let all components of the widget to appear
 ```python
 def bind(
     self,
-    event_name: str,
-    command: typing.Callable[[tkinter.Event], bool],
-    *,
-    add: bool = False,
+    sequence: str,
+    func: typing.Callable[[tkinter.Event], typing.Any],
+    add: bool | typing.Literal['', '+'] | None = None,
 ) -> None: ...
 ```
-Bind a function to widget on event processing
+Bind to this widget at event SEQUENCE a call to function FUNC.
 
-* `event_name`: event name of `virtual.Feature`
-* `command`: callback function
+* `sequence`: event name
+* `func`: callback function
 * `add`: if True, original callback function will not be overwritten
 
 
@@ -737,7 +565,7 @@ or manually updated).
 ```python
 def deregister(
     self,
-    component: <class 'tkintertools.core.virtual.Component'>,
+    component: Component,
 ) -> None: ...
 ```
 Deregister a component from the widget
@@ -793,6 +621,27 @@ def disappear(
 ```
 Let all components of the widget to disappear
 
+### 🟡`event_generate`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def event_generate(
+    self,
+    sequence: str,
+    event: tkinter.Event | None = None,
+    **kwargs,
+) -> None: ...
+```
+Generate an event SEQUENCE. Additional keyword arguments specify
+parameter of the event
+
+* `sequence`: event name
+* `event`: event
+* `kwargs`: attr of event
+
+
 ### 🟡`move`
 
 
@@ -829,7 +678,7 @@ Move the Widget to a certain position
 ```python
 def register(
     self,
-    component: <class 'tkintertools.core.virtual.Component'>,
+    component: Component,
 ) -> None: ...
 ```
 Register a component to the widget
@@ -842,14 +691,14 @@ Register a component to the widget
 ```python
 def unbind(
     self,
-    event_name: str,
-    command: typing.Callable[[tkinter.Event], bool],
+    sequence: str,
+    funcid: typing.Callable[[tkinter.Event], typing.Any],
 ) -> None: ...
 ```
-Unbind a function to widget on event processing
+Unbind for this widget the event SEQUENCE.
 
-* `event_name`: event name of `virtual.Feature`
-* `command`: callback function
+* `sequence`: event name
+* `funcid`: callback function
 
 
 ### 🟡`unbind_on_update`
@@ -892,6 +741,9 @@ Update the widget
 def zoom(
     self,
     ratios: tuple[float, float] | None = None,
+    *,
+    zoom_position: bool = True,
+    zoom_size: bool = True,
 ) -> None: ...
 ```
 Zoom self

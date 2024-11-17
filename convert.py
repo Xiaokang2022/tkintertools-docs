@@ -36,7 +36,7 @@ import tkintertools.media
 import tkintertools.mpl
 import tkintertools.three
 
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 __author__ = "Xiaokang2022 <2951256653@qq.com>"
 
 TAGS: dict[str, str] = {
@@ -99,7 +99,7 @@ def get_class_data(cls: object) -> dict:
     data = {
         "name": cls.__name__,
         "parents": cls.__bases__,
-        "methods": [method for method in set(cls.__dict__.values()) if callable(method)],
+        "methods": [method for method in cls.__dict__.values() if callable(method)],
         "docstring": cls.__doc__,
     }
 
@@ -269,6 +269,8 @@ def create_pages(module: types.ModuleType) -> None:
                     file.write(create_function_md(getattr(module, func)))
             if data_module["variables"]:
                 for var in sorted(data_module["variables"]):
+                    if var == "annotations":
+                        continue
                     file.write(create_variable_md(
                         getattr(module, var), name=var))
 

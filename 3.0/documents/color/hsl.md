@@ -9,10 +9,10 @@ Support for HSL
 
 ```python
 def blend(
-    colors: list[tuple[float, float, float]],
+    colors: list[HSL],
     *,
     weights: list[tuple] | None = None,
-) -> tuple[float, float, float]: ...
+) -> HSL: ...
 ```
 Mix colors by weight
 
@@ -27,10 +27,10 @@ Mix colors by weight
 
 ```python
 def contrast(
-    hsl: tuple[float, float, float],
+    hsl: HSL,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-) -> tuple[float, float, float]: ...
+) -> HSL: ...
 ```
 Get a contrasting color of a color
 
@@ -45,12 +45,12 @@ Get a contrasting color of a color
 
 ```python
 def convert(
-    first: tuple[float, float, float],
-    second: tuple[float, float, float],
+    first: HSL,
+    second: HSL,
     rate: float,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-) -> tuple[float, float, float]: ...
+) -> HSL: ...
 ```
 Convert one color to another proportionally
 
@@ -67,14 +67,14 @@ Convert one color to another proportionally
 
 ```python
 def gradient(
-    first: tuple[float, float, float],
-    second: tuple[float, float, float],
+    first: HSL,
+    second: HSL,
     count: int,
     rate: float = 1,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
     contoller: typing.Callable[[float], float] = flat,
-) -> list[tuple[float, float, float]]: ...
+) -> list[HSL]: ...
 ```
 Get a list of color gradients from one color to another proportionally
 
@@ -93,8 +93,8 @@ Get a list of color gradients from one color to another proportionally
 
 ```python
 def hsl_to_rgb(
-    color: tuple[float, float, float],
-) -> tuple[int, int, int]: ...
+    color: HSL,
+) -> rgb.RGB: ...
 ```
 Convert HSL to RGB codes
 
@@ -105,8 +105,8 @@ Convert HSL to RGB codes
 
 ```python
 def hsl_to_rgb(
-    color: tuple[float, float, float],
-) -> tuple[int, int, int]: ...
+    color: HSL,
+) -> rgb.RGB: ...
 ```
 Convert HSL to RGB codes
 
@@ -117,8 +117,8 @@ Convert HSL to RGB codes
 
 ```python
 def rgb_to_hsl(
-    color: tuple[int, int, int],
-) -> tuple[float, float, float]: ...
+    color: rgb.RGB,
+) -> HSL: ...
 ```
 Convert RGB to HSL codes
 
@@ -129,8 +129,8 @@ Convert RGB to HSL codes
 
 ```python
 def rgb_to_hsl(
-    color: tuple[int, int, int],
-) -> tuple[float, float, float]: ...
+    color: rgb.RGB,
+) -> HSL: ...
 ```
 Convert RGB to HSL codes
 

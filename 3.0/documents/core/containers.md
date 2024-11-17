@@ -25,7 +25,7 @@ def __init__(
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
     zoom_item: bool = False,
-    keep_ratio: typing.Optional[typing.Literal['min', 'max']] = None,
+    keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     name: str | None = None,
     **kwargs,
@@ -53,51 +53,11 @@ value, `max` follows the maximum value
 ```python
 def _click(
     self,
-    event: Event,
-    type_: typing.Literal['left', 'center', 'right'],
+    event: tkinter.Event,
+    name: str,
 ) -> None: ...
 ```
 Events to active the mouse
-
-### 🟡`_copy`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _copy(
-    self,
-    event: Event,
-) -> None: ...
-```
-Events for copy operation
-
-### 🟡`_cut`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _cut(
-    self,
-    event: Event,
-) -> None: ...
-```
-Events for cut operation
-
-### 🟡`_get_command`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _get_command(
-    self,
-    feature: Feature,
-    method: str,
-) -> typing.Callable: ...
-```
-Get command from virtual.Feature
 
 ### 🟡`_initialization`
 
@@ -111,62 +71,45 @@ def _initialization(
 ```
 Initialization of size data
 
-### 🟡`_input`
+### 🟡`_key_press`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _input(
+def _key_press(
     self,
-    event: Event,
+    event: tkinter.Event,
 ) -> None: ...
 ```
 Events for typing
 
-### 🟡`_move`
+### 🟡`_key_release`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _move(
+def _key_release(
     self,
-    event: Event,
-    type_: typing.Literal['left', 'center', 'right', 'none'],
+    event: tkinter.Event,
+) -> None: ...
+```
+Events for typing
+
+### 🟡`_motion`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _motion(
+    self,
+    event: tkinter.Event,
+    name: str,
 ) -> None: ...
 ```
 Events to move the mouse
-
-### 🟡`_paste`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _paste(
-    self,
-    event: Event,
-) -> None: ...
-```
-Events for paste operation
-
-### 🟡`_re_place`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _re_place(
-    self,
-) -> None: ...
-```
-Resize and position the `Canvas` based on the relevant parameters
-
-WARNING:
-
-This method only works for Canvas with Place layout
-
 
 ### 🟡`_release`
 
@@ -176,40 +119,11 @@ This method only works for Canvas with Place layout
 ```python
 def _release(
     self,
-    event: Event,
-    type_: typing.Literal['left', 'center', 'right'],
+    event: tkinter.Event,
+    name: str,
 ) -> None: ...
 ```
 Events to release the mouse
-
-### 🟡`_select_all`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _select_all(
-    self,
-    event: Event,
-) -> None: ...
-```
-Events for operation of selecting all
-
-### 🟡`_theme`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _theme(
-    self,
-    dark: bool,
-) -> None: ...
-```
-Change the color theme of the Canvas and its items
-
-* `dark`: whether it is in dark mode
-
 
 ### 🟡`_wheel`
 
@@ -219,8 +133,8 @@ Change the color theme of the Canvas and its items
 ```python
 def _wheel(
     self,
-    event: Event,
-    type_: typing.Optional[typing.Literal['up', 'down']] = None,
+    event: tkinter.Event,
+    type_: bool | None,
 ) -> None: ...
 ```
 Events to scroll the mouse wheel
@@ -291,6 +205,54 @@ def destroy(
 ```
 
 
+### 🟡`event_register`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def event_register(
+    self,
+    name: str,
+    *,
+    add: bool | typing.Literal['', '+'] | None = None,
+) -> str: ...
+```
+Register a event to process
+
+### 🟡`re_place`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def re_place(
+    self,
+) -> None: ...
+```
+Resize and position the `Canvas` based on the relevant parameters
+
+WARNING:
+
+This method only works for Canvas with Place layout
+
+
+### 🟡`theme`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def theme(
+    self,
+    dark: bool,
+) -> None: ...
+```
+Change the color theme of the Canvas and its items
+
+* `dark`: whether it is in dark mode
+
+
 
 
 ## 🟢`Frame`
@@ -307,7 +269,7 @@ def __init__(
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
     zoom_item: bool = False,
-    keep_ratio: typing.Optional[typing.Literal['min', 'max']] = None,
+    keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     name: str | None = None,
     **kwargs,
@@ -369,27 +331,6 @@ This is a decorator that to fix a problem that some methods cause
 the window to lose its theme
 
 * `method`: the method of being decorated
-
-
-### 🟡`_theme`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _theme(
-    self,
-    dark: bool,
-    *,
-    include_children: bool = True,
-    include_canvases: bool = True,
-) -> None: ...
-```
-Change the color theme of the window
-
-* `dark`: whether it is in dark mode
-* `include_children`: wether include its children, like Toplevel
-* `include_canvases`: wether include its canvases
 
 
 ### 🟡`_wrap_method`
@@ -510,7 +451,7 @@ This method causes the event `<configure>` to be triggered
 ```python
 def shutdown(
     self,
-    command: typing.Optional[typing.Callable],
+    command: typing.Callable | None,
     ensure_destroy: bool = False,
     /,
     *args,
@@ -528,6 +469,27 @@ TIP:
 
 Regardless of whether the function is successfully called or not,
 the window will still close gracefully
+
+
+### 🟡`theme`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def theme(
+    self,
+    dark: bool,
+    *,
+    include_children: bool = True,
+    include_canvases: bool = True,
+) -> None: ...
+```
+Change the color theme of the window
+
+* `dark`: whether it is in dark mode
+* `include_children`: wether include its children, like Toplevel
+* `include_canvases`: wether include its canvases
 
 
 ### 🟡`toolwindow`
@@ -590,7 +552,7 @@ Set or get the penetration color of the window
 ```python
 def __init__(
     self,
-    master: tkintertools.core.containers.Tk | None = None,
+    master: Tk | None = None,
     size: tuple[int, int] = (960, 540),
     position: tuple[int, int] | None = None,
     *,

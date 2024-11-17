@@ -2,9 +2,6 @@
 
 Support for theme
 
-All third packages which relative to style introduced by `tkintertools` are
-there:
-
 * darkdetect: https://github.com/albertosottile/darkdetect
 * pywinstyles: https://github.com/Akascape/py-window-styles
 * win32material: https://github.com/littlewhitecloud/win32material
@@ -49,18 +46,18 @@ Handle registered callback functions
 
 ```python
 def customize_window(
-    window: Tk,
+    window: tkinter.Tk,
     *,
-    style: typing.Optional[typing.Literal['mica', 'acrylic', 'aero', 'transparent', 'optimised', 'win7', 'inverse', 'native', 'popup', 'dark', 'normal']] = None,
+    style: typing.Literal['mica', 'acrylic', 'aero', 'transparent', 'optimised', 'win7', 'inverse', 'native', 'popup', 'dark', 'normal'] | None = None,
     border_color: str | None = None,
     header_color: str | None = None,
     title_color: str | None = None,
-    enable_file_dnd: typing.Optional[typing.Callable[[str], typing.Any]] = None,
+    enable_file_dnd: typing.Callable[[str], typing.Any] | None = None,
     hide_title_bar: bool | None = None,
-    hide_button: typing.Optional[typing.Literal['all', 'maxmin', 'none']] = None,
+    hide_button: typing.Literal['all', 'maxmin', 'none'] | None = None,
     disable_minimize_button: bool | None = None,
     disable_maximize_button: bool | None = None,
-    boarder_type: typing.Optional[typing.Literal['rectangular', 'smallround', 'round']] = None,
+    boarder_type: typing.Literal['rectangular', 'smallround', 'round'] | None = None,
 ) -> None: ...
 ```
 Customize the relevant properties of the window
@@ -93,17 +90,6 @@ def get_color_mode(
 ) -> typing.Literal['dark', 'light']: ...
 ```
 Get the color mode of the program
-
-## 🔵`get_theme_map`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def get_theme_map(
-) -> dict[typing.Literal['dark', 'light'], str | pathlib._local.Path | module]: ...
-```
-Get the theme map
 
 ## 🔵`register_event`
 
@@ -139,17 +125,6 @@ Remove a registered function
 * `func`: callback function
 
 
-## 🔵`reset_theme_map`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def reset_theme_map(
-) -> None: ...
-```
-Reset the value of theme map
-
 ## 🔵`set_color_mode`
 
 
@@ -177,24 +152,14 @@ TIP:
 ```python
 def set_theme_map(
     *,
-    light_theme: str | module | None = None,
-    dark_theme: str | module | None = None,
+    light_theme: str | types.ModuleType | None = None,
+    dark_theme: str | types.ModuleType | None = None,
 ) -> None: ...
 ```
 Set the path to the theme file used by the current program
 
 * `light_theme`: the name of the theme of the light theme
 * `dark_theme`: the name of the theme of the dark theme
-
-
-## 🟣`SYSTEM_DARK_MODE`
-
-
-<code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
-
-```python linenums="0"
-SYSTEM_DARK_MODE: bool = True
-```
 
 
 ## 🟣`_callback_events`
@@ -204,29 +169,6 @@ SYSTEM_DARK_MODE: bool = True
 
 ```python linenums="0"
 _callback_events: dict = {}
-```
-
-
-## 🟣`_color_mode`
-
-
-<code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
-
-```python linenums="0"
-_color_mode: str = 'system'
-```
-
-
-## 🟣`theme_map`
-
-
-<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
-
-```python linenums="0"
-theme_map: dict = {
-    'dark': <module 'tkintertools.theme.dark' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\dark.py'>,
-    'light': <module 'tkintertools.theme.light' from 'C:\\Software\\Python313\\Lib\\site-packages\\tkintertools\\theme\\light.py'>,
-}
 ```
 
 

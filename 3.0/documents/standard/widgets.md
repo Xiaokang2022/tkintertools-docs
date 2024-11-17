@@ -12,7 +12,7 @@ All standard `Widget` classes
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -24,8 +24,8 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Optional[typing.Callable] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -65,13 +65,13 @@ Button widget, typically used to trigger a function
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     length: int = 30,
     *,
     default: bool | None = None,
-    command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[bool], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -132,7 +132,7 @@ Set the state of the check button
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -143,8 +143,8 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Optional[typing.Callable] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -184,7 +184,7 @@ is pressed
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -196,8 +196,8 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Optional[typing.Callable] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -241,7 +241,7 @@ def __init__(
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -268,7 +268,7 @@ Image widget, generally used to display normal still image
 ```python
 def get(
     self,
-) -> PhotoImage: ...
+) -> enhanced.PhotoImage: ...
 ```
 Get the image of the widget
 
@@ -280,7 +280,7 @@ Get the image of the widget
 ```python
 def set(
     self,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None,
+    image: enhanced.PhotoImage | None,
 ) -> None: ...
 ```
 Set the image of the widget
@@ -297,7 +297,7 @@ Set the image of the widget
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -311,7 +311,7 @@ def __init__(
     placeholder: str = '',
     show: str | None = None,
     limit: int = inf,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -350,7 +350,7 @@ single line
 def append(
     self,
     value: str,
-) -> None: ...
+) -> bool: ...
 ```
 Append text to Entry
 
@@ -366,19 +366,6 @@ def clear(
 ```
 Clear the text value of the Entry
 
-### 🟡`delete`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def delete(
-    self,
-    count: int,
-) -> None: ...
-```
-Delete a specified amount of text
-
 ### 🟡`get`
 
 
@@ -391,6 +378,47 @@ def get(
 ```
 Get the value of the Entry
 
+### 🟡`insert`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def insert(
+    self,
+    index: int,
+    value: str,
+) -> bool: ...
+```
+Insert
+
+### 🟡`pop`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def pop(
+    self,
+    index: int = -1,
+) -> str: ...
+```
+Delete a specified amount of text
+
+### 🟡`remove`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def remove(
+    self,
+    start: int,
+    end: int | None = None,
+) -> int: ...
+```
+Remove
+
 ### 🟡`set`
 
 
@@ -400,7 +428,7 @@ Get the value of the Entry
 def set(
     self,
     value: str,
-) -> None: ...
+) -> bool: ...
 ```
 Set the text value of the Entry
 
@@ -416,7 +444,7 @@ Set the text value of the Entry
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -428,7 +456,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -467,13 +495,13 @@ Label widget, which is generally used to display key information
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] = (400, 20),
     *,
     default: float | None = None,
-    command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[float], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -534,13 +562,13 @@ Set the progress of the progress bar
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     length: int = 30,
     *,
     default: bool | None = None,
-    command: typing.Optional[typing.Callable[[int], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[int], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -601,7 +629,7 @@ Set the state of the radio button
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     sizes: tuple[tuple[int, int], ...] = (),
     *,
@@ -614,8 +642,8 @@ def __init__(
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     default: int | None = None,
-    command: typing.Optional[typing.Callable[[int | None], typing.Any]] = None,
-    image: tuple[tkintertools.toolbox.enhanced.PhotoImage | None, ...] = (),
+    command: typing.Callable[[int | None], typing.Any] | None = None,
+    image: tuple[enhanced.PhotoImage | None, ...] = (),
     layout: typing.Literal['horizontal', 'vertical'] = 'horizontal',
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
@@ -686,12 +714,12 @@ Activate the child toggle button for the specified index
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] = (400, 30),
     *,
     default: float | None = None,
-    command: typing.Optional[typing.Callable[[float], typing.Any]] = None,
+    command: typing.Callable[[float], typing.Any] | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -750,10 +778,12 @@ Set the value of the slider
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
+    style: str = 'd',
+    step: int = 1,
     family: str | None = None,
     fontsize: int | None = None,
     weight: typing.Literal['normal', 'bold'] = 'normal',
@@ -764,8 +794,8 @@ def __init__(
     placeholder: str = '',
     show: str | None = None,
     limit: int = inf,
-    command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[bool], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -777,6 +807,8 @@ A widget that makes it easy to enter numeric type data
 * `master`: parent canvas
 * `position`: position of the widget
 * `size`: size of the widget
+* `style`: format of value
+* `step`: value of each change
 * `family`: font family
 * `fontsize`: font size
 * `weight`: weight of the text
@@ -883,13 +915,13 @@ Set the text value of the Entry
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     length: int = 60,
     *,
     default: bool | None = None,
-    command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[bool], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -950,7 +982,7 @@ Set the state of the switch
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -1022,7 +1054,7 @@ Set the text of the widget
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -1035,8 +1067,8 @@ def __init__(
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     default: bool | None = None,
-    command: typing.Optional[typing.Callable[[bool], typing.Any]] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable[[bool], typing.Any] | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,
@@ -1105,7 +1137,7 @@ Set the state of the switch
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     size: tuple[int, int] | None = None,
     *,
     text: str = '',
@@ -1168,7 +1200,7 @@ Show or hide the tooltip
 ```python
 def __init__(
     self,
-    master: Canvas,
+    master: containers.Canvas,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -1179,8 +1211,8 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Optional[typing.Callable] = None,
-    image: tkintertools.toolbox.enhanced.PhotoImage | None = None,
+    command: typing.Callable | None = None,
+    image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     through: bool = False,

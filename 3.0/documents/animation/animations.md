@@ -20,8 +20,8 @@ def __init__(
     ms: int,
     controller: typing.Callable[[float], float],
     *,
-    callback: typing.Optional[typing.Callable[[float], typing.Any]] = None,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    callback: typing.Callable[[float], typing.Any] | None = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
     derivation: bool = False,
@@ -100,14 +100,14 @@ Stop the animation
 ```python
 def __init__(
     self,
-    canvas: Canvas,
+    canvas: tkinter.Canvas,
     item: int,
     parameter: str,
     ms: int,
     colors: tuple[str, str],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
     derivation: bool = False,
@@ -142,13 +142,13 @@ animation
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: tkinter.Widget,
     parameter: str,
     ms: int,
     colors: tuple[str, str],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
     derivation: bool = False,
@@ -187,7 +187,7 @@ def __init__(
     offset: tuple[float, float],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
 ) -> None: ...
@@ -217,13 +217,13 @@ animation
 ```python
 def __init__(
     self,
-    canvas: Canvas,
+    canvas: tkinter.Canvas,
     item: int,
     ms: int,
     offset: tuple[float, float],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
 ) -> None: ...
@@ -254,12 +254,12 @@ animation
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: tkinter.Widget,
     ms: int,
     offset: tuple[float, float],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
 ) -> None: ...
@@ -294,7 +294,7 @@ def __init__(
     offset: tuple[float, float],
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
 ) -> None: ...
@@ -329,7 +329,7 @@ def __init__(
     sizes: tuple[float, float] | float,
     *,
     controller: typing.Callable[[float], float] = flat,
-    end: typing.Optional[typing.Callable[[], typing.Any]] = None,
+    end: typing.Callable[[], typing.Any] | None = None,
     repeat: int = 0,
     fps: int = 30,
     derivation: bool = False,

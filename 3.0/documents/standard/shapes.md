@@ -12,7 +12,7 @@ All standard `Shape` classes
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -49,7 +49,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -61,7 +61,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -75,7 +75,7 @@ def display(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -110,7 +110,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -122,7 +122,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -144,7 +144,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`detect`
 
@@ -158,7 +158,7 @@ def detect(
     y: int,
 ) -> bool: ...
 ```
-
+Detect whether the specified coordinates are within `Component`
 
 ### 🟡`display`
 
@@ -170,7 +170,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -184,7 +184,7 @@ def display(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -219,7 +219,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -231,7 +231,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -253,7 +253,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -265,7 +265,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -279,7 +279,7 @@ def display(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -316,7 +316,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -328,7 +328,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -342,7 +342,7 @@ def display(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -377,7 +377,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -389,7 +389,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -411,7 +411,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`detect`
 
@@ -425,7 +425,7 @@ def detect(
     y: int,
 ) -> bool: ...
 ```
-
+Detect whether the specified coordinates are within `Component`
 
 ### 🟡`display`
 
@@ -437,7 +437,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 
@@ -451,7 +451,7 @@ def display(
 ```python
 def __init__(
     self,
-    widget: Widget,
+    widget: virtual.Widget,
     relative_position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
@@ -488,7 +488,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-
+Resize the `Component`
 
 ### 🟡`display`
 
@@ -500,7 +500,7 @@ def display(
     self,
 ) -> None: ...
 ```
-
+Display the `Component` on a `Canvas`
 
 
 

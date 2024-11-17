@@ -20,10 +20,10 @@ icon: material/file-document
 
     当前文档适用版本：
 
-    * tkintertools: `3.0.0rc3`
-    * tkintertools-mpl (EX): `1.2.1`
-    * tkintertools-media (EX): `1.1.1`
-    * tkintertools-3d (EX): `1.0.1`
+    * tkintertools: `3.0.0rc4`
+    * tkintertools-mpl (EX): `1.2.2`
+    * tkintertools-media (EX): `1.1.2`
+    * tkintertools-3d (EX): `1.0.2`
 
 * 📦 [`tkintertools.animation`](./animation/index.md)
     - 📑 [`tkintertools.animation.animations`](./animation/animations.md)
@@ -35,7 +35,7 @@ icon: material/file-document
     - 📑 [`tkintertools.color.rgb`](./color/rgb.md)
 
 * 📦 [`tkintertools.core`](./core/index.md)
-    - 📑 [`tkintertools.core.constants`](./core/constants.md)
+    - 📑 [`tkintertools.core.configs`](./core/configs.md)
     - 📑 [`tkintertools.core.containers`](./core/containers.md)
     - 📑 [`tkintertools.core.virtual`](./core/virtual.md)
 
@@ -48,7 +48,6 @@ icon: material/file-document
     - 📑 [`tkintertools.mpl.main`](./mpl/main.md)
 
 * 📦 [`tkintertools.standard`](./standard/index.md)
-    - 📑 [`tkintertools.standard._auxiliary`](./standard/_auxiliary.md)
     - 📑 [`tkintertools.standard.dialogs`](./standard/dialogs.md)
     - 📑 [`tkintertools.standard.features`](./standard/features.md)
     - 📑 [`tkintertools.standard.images`](./standard/images.md)
@@ -65,7 +64,6 @@ icon: material/file-document
     - 📑 [`tkintertools.theme.light`](./theme/light.md)
 
 * 📦 [`tkintertools.three`](./three/index.md)
-    - 📑 [`tkintertools.three.constants`](./three/constants.md)
     - 📑 [`tkintertools.three.engine`](./three/engine.md)
     - 📑 [`tkintertools.three.geometries`](./three/geometries.md)
 

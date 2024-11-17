@@ -12,11 +12,11 @@ Core codes of 3D
 ```python
 def __init__(
     self,
-    master: tkintertools.core.containers.Tk | tkintertools.core.containers.Canvas,
+    master: containers.Tk | containers.Canvas,
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
     zoom_item: bool = False,
-    keep_ratio: typing.Optional[typing.Literal['min', 'max']] = None,
+    keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     **kwargs,
 ) -> None: ...
@@ -476,11 +476,11 @@ def update(
 ```python
 def __init__(
     self,
-    master: tkintertools.core.containers.Tk | tkintertools.core.containers.Canvas,
+    master: containers.Tk | containers.Canvas,
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
     zoom_item: bool = False,
-    keep_ratio: typing.Optional[typing.Literal['min', 'max']] = None,
+    keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     **kwargs,
 ) -> None: ...
@@ -508,7 +508,7 @@ def _initialization(
 ```python
 def _rotate(
     self,
-    event: Event,
+    event: tkinter.Event,
     press: bool | None = None,
     _cache: list[float] = [],
 ) -> None: ...
@@ -529,7 +529,7 @@ Triggering of a rotation event
 ```python
 def _scale(
     self,
-    event: Event,
+    event: tkinter.Event,
     flag: bool | None = None,
 ) -> None: ...
 ```
@@ -543,7 +543,7 @@ Triggering of a scaling event
 ```python
 def _translate(
     self,
-    event: Event,
+    event: tkinter.Event,
     press: bool | None = None,
     _cache: list[float] = [],
 ) -> None: ...
