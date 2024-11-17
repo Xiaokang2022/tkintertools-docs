@@ -1,5 +1,7 @@
 # tkintertools.theme
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/__init__.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/theme/__init__.py){ target='_blank' }</small>
+
 Default style data
 
 Base structure for `theme_name.py`:

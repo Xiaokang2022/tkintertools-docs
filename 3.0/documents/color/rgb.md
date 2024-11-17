@@ -1,5 +1,7 @@
 # tkintertools.color.rgb
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/rgb.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/color/rgb.py){ target='_blank' }</small>
+
 Support for RGB
 
 ## 🔵`blend`

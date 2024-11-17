@@ -1,5 +1,7 @@
 # tkintertools.toolbox.tools
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/tools.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/toolbox/tools.py){ target='_blank' }</small>
+
 Some useful utility classes or utility functions
 
 ## 🟢`Trigger`

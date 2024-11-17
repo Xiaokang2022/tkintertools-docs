@@ -1,5 +1,7 @@
 # tkintertools.standard.features
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/features.py){ target='_blank' }</small>
+
 All standard `Feature` classes
 
 ## 🟢`ButtonFeature`

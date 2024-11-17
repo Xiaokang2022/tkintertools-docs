@@ -1,5 +1,7 @@
 # tkintertools.standard.widgets
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/widgets.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/widgets.py){ target='_blank' }</small>
+
 All standard `Widget` classes
 
 ## 🟢`Button`

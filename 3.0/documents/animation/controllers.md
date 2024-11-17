@@ -1,5 +1,7 @@
 # tkintertools.animation.controllers
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/controllers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/animation/controllers.py){ target='_blank' }</small>
+
 Standard control functions
 
 Definition of control function:

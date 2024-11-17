@@ -1,5 +1,7 @@
 # tkintertools.core.containers
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/containers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/containers.py){ target='_blank' }</small>
+
 All container widgets
 
 There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk`

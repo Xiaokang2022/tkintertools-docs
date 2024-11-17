@@ -1,5 +1,7 @@
 # tkintertools.mpl.main
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/main.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.2/tkintertools/mpl/main.py){ target='_blank' }</small>
+
 APIs for Matplotlib
 
 ## 🟢`FigureCanvas`

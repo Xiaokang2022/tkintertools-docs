@@ -361,7 +361,6 @@ nav:
 
       - 📦 standard:
           - documents/standard/index.md
-          - 📑 _auxiliary: documents/standard/_auxiliary.md
           - 📑 dialogs: documents/standard/dialogs.md
           - 📑 features: documents/standard/features.md
           - 📑 images: documents/standard/images.md
@@ -396,7 +395,6 @@ nav:
 
       - 📦 three (Extension):
           - documents/three/index.md
-          - 📑 constants: documents/three/constants.md
           - 📑 engine: documents/three/engine.md
           - 📑 geometries: documents/three/geometries.md
 

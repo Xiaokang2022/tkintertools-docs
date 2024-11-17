@@ -1,5 +1,7 @@
 # tkintertools.style.parser
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/style/parser.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/style/parser.py){ target='_blank' }</small>
+
 Parse the style file path and get it
 
 Structure of theme folder:

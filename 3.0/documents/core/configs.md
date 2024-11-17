@@ -1,5 +1,7 @@
 # tkintertools.core.configs
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/configs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/configs.py){ target='_blank' }</small>
+
 All configs of tkintertools
 
 ## 🟢`Constant`

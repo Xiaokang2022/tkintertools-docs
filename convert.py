@@ -36,7 +36,7 @@ import tkintertools.media
 import tkintertools.mpl
 import tkintertools.three
 
-__version__ = "0.2.5"
+__version__ = "0.2.6"
 __author__ = "Xiaokang2022 <2951256653@qq.com>"
 
 TAGS: dict[str, str] = {
@@ -259,6 +259,21 @@ def create_pages(module: types.ModuleType) -> None:
 
     with open(file, "w", encoding="utf-8") as file:
         file.write(f"# {data_module["name"].replace(".__init__", "")}\n\n")
+        path = data_module["name"].replace(".", "/") + ".py"
+        if "mpl" in path:
+            version = tkintertools.mpl.__version__
+            repo = "tkintertools-mpl"
+        elif "media" in path:
+            version = tkintertools.media.__version__
+            repo = "tkintertools-media"
+        elif "three" in path:
+            version = tkintertools.three.__version__
+            repo = "tkintertools-3d"
+        else:
+            version = tkintertools.__version__
+            repo = "tkintertools"
+        file.write(
+            f"<small>:octicons-mark-github-16: 源代码：[`{path}`](https://github.com/Xiaokang2022/{repo}/blob/{version}/{path}){{ target='_blank' }}</small>\n\n")
         file.write(f"{data_module["docstring"]}\n\n")
         if module_name != "__init__":
             if data_module["classes"]:

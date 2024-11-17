@@ -1,5 +1,7 @@
 # tkintertools.three.engine
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/engine.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.2/tkintertools/three/engine.py){ target='_blank' }</small>
+
 Core codes of 3D
 
 ## 🟢`Canvas`

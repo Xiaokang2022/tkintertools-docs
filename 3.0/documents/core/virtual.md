@@ -1,5 +1,7 @@
 # tkintertools.core.virtual
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/virtual.py){ target='_blank' }</small>
+
 Various virtual classes
 
 The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`,

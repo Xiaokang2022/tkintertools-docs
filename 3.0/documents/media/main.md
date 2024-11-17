@@ -1,5 +1,7 @@
 # tkintertools.media.main
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/main.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.2/tkintertools/media/main.py){ target='_blank' }</small>
+
 APIs for playing videos
 
 ## 🟢`VideoCanvas`

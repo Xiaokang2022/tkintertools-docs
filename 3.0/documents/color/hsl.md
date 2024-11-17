@@ -1,5 +1,7 @@
 # tkintertools.color.hsl
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/color/hsl.py){ target='_blank' }</small>
+
 Support for HSL
 
 ## 🔵`blend`

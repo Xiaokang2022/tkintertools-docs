@@ -1,5 +1,7 @@
 # tkintertools.theme.dark
 
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/dark.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/theme/dark.py){ target='_blank' }</small>
+
 Dark theme
 
 ## 🟣`Button`
