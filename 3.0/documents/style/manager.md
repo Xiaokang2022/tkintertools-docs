@@ -1,6 +1,6 @@
 # tkintertools.style.manager
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/style/manager.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/style/manager.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/style/manager.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/style/manager.py){ target='_blank' }</small>
 
 Support for theme
 
@@ -20,8 +20,8 @@ def _callback(
     theme: str,
 ) -> None: ...
 ```
-Callback function that is triggered when a system theme is switched.
-Valid only if the theme mode is set to Follow System
+Callback function that is triggered when a system theme is switched. Valid only if the theme
+mode is set to Follow System
 
 * `theme`: theme name
 
@@ -54,7 +54,7 @@ def customize_window(
     border_color: str | None = None,
     header_color: str | None = None,
     title_color: str | None = None,
-    enable_file_dnd: typing.Callable[[str], typing.Any] | None = None,
+    enable_file_dnd: collections.abc.Callable[[str], typing.Any] | None = None,
     hide_title_bar: bool | None = None,
     hide_button: typing.Literal['all', 'maxmin', 'none'] | None = None,
     disable_minimize_button: bool | None = None,
@@ -78,8 +78,7 @@ Customize the relevant properties of the window
 
 WARNING:
 
-This function is only works on Windows OS!
-And some parameters are useless on Windows 7/10!
+This function is only works on Windows OS! And some parameters are useless on Windows 7/10!
 
 
 ## 🔵`get_color_mode`
@@ -100,13 +99,12 @@ Get the color mode of the program
 
 ```python
 def register_event(
-    func: typing.Callable[[bool, typing.Any], typing.Any],
+    func: collections.abc.Callable[[bool, typing.Any], typing.Any],
     *args: typing.Any,
 ) -> None: ...
 ```
-When the system accent color changes, the registered function will be
-called, and the parameter is a boolean value indicating whether it is
-currently a dark theme
+When the system accent color changes, the registered function will be called, and the
+parameter is a boolean value indicating whether it is currently a dark theme
 
 * `func`: callback function
 * `args`: extra arguments
@@ -119,7 +117,7 @@ currently a dark theme
 
 ```python
 def remove_event(
-    func: typing.Callable[[bool, typing.Any], typing.Any],
+    func: collections.abc.Callable[[bool, typing.Any], typing.Any],
 ) -> None: ...
 ```
 Remove a registered function

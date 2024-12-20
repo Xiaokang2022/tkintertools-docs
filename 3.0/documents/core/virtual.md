@@ -1,18 +1,17 @@
 # tkintertools.core.virtual
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/virtual.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/virtual.py){ target='_blank' }</small>
 
 Various virtual classes
 
-The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`,
-`Image` and `Feature`.
+The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`, `Image` and
+`Feature`.
 
-Where `Feature` is the function of widgets, and each widget can be bound to up
-to one, but in terms of appearance, there is no limit to the number of `Shape`,
-`Text`, and `Image`.
+Where `Feature` is the function of widgets, and each widget can be bound to up to one, but in terms
+of appearance, there is no limit to the number of `Shape`, `Text`, and `Image`.
 
-`Shape`, `Text`, and `Image` are all appearance components that inherit from
-abstract base class `Components`.
+`Shape`, `Text`, and `Image` are all appearance components that inherit from abstract base class
+`Components`.
 
 
 ## 🟢`Component`
@@ -73,20 +72,6 @@ def __setitem__(
 ```
 Easy to set style data
 
-### 🟡`appear`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def appear(
-    self,
-    *,
-    no_delay: bool = True,
-) -> None: ...
-```
-Let the component to appear
-
 ### 🟡`center`
 
 
@@ -95,7 +80,7 @@ Let the component to appear
 ```python
 def center(
     self,
-) -> tuple[int, int]: ...
+) -> tuple[float, float]: ...
 ```
 Return the geometric center of the `Component`
 
@@ -162,6 +147,7 @@ Detect whether the specified coordinates are within `Component`
 ```python
 def disappear(
     self,
+    value: bool = True,
     *,
     no_delay: bool = True,
 ) -> None: ...
@@ -229,7 +215,7 @@ Move the `Component` to a certain position
 ```python
 def region(
     self,
-) -> tuple[int, int, int, int]: ...
+) -> tuple[float, float, float, float]: ...
 ```
 Return the decision region of the `Component`
 
@@ -308,7 +294,7 @@ def _parse_method_name(
 def get_method(
     self,
     name: str,
-) -> typing.Callable: ...
+) -> collections.abc.Callable: ...
 ```
 Return method by name
 
@@ -404,7 +390,7 @@ def __init__(
     size: tuple[int, int] | None = None,
     *,
     text: str = '',
-    limit: int = inf,
+    limit: int = -1,
     show: str | None = None,
     placeholder: str = '',
     family: str | None = None,
@@ -487,8 +473,8 @@ def __init__(
     name: str | None = None,
     state: str = 'normal',
     anchor: typing.Literal['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Base Widget Class
@@ -506,18 +492,6 @@ Base Widget Class
 * `animation`: wether enable animation
 
 
-### 🟡`appear`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def appear(
-    self,
-) -> None: ...
-```
-Let all components of the widget to appear
-
 ### 🟡`bind`
 
 
@@ -527,7 +501,7 @@ Let all components of the widget to appear
 def bind(
     self,
     sequence: str,
-    func: typing.Callable[[tkinter.Event], typing.Any],
+    func: collections.abc.Callable[[tkinter.Event], typing.Any],
     add: bool | typing.Literal['', '+'] | None = None,
 ) -> None: ...
 ```
@@ -546,15 +520,14 @@ Bind to this widget at event SEQUENCE a call to function FUNC.
 ```python
 def bind_on_update(
     self,
-    command: typing.Callable[[str, bool], typing.Any],
+    command: collections.abc.Callable[[str, bool], typing.Any],
 ) -> None: ...
 ```
 Bind an extra function to the widget on update
 
-This extra function has two positional arguments, both of which are
-arguments to the method `update`. And this extra function will be
-called when the widget is updated (whether it's automatically updated
-or manually updated).
+This extra function has two positional arguments, both of which are arguments to the method
+`update`. And this extra function will be called when the widget is updated (whether it's
+automatically updated or manually updated).
 
 * `command`: the extra function that is bound
 
@@ -619,6 +592,7 @@ Disable the widget
 ```python
 def disappear(
     self,
+    value: bool = True,
 ) -> None: ...
 ```
 Let all components of the widget to disappear
@@ -636,13 +610,24 @@ def event_generate(
     **kwargs,
 ) -> None: ...
 ```
-Generate an event SEQUENCE. Additional keyword arguments specify
-parameter of the event
+Generate an event SEQUENCE. Additional keyword arguments specify parameter of the event
 
 * `sequence`: event name
 * `event`: event
 * `kwargs`: attr of event
 
+
+### 🟡`is_nested`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def is_nested(
+    self,
+) -> bool: ...
+```
+Whether the widget is a nested widget
 
 ### 🟡`move`
 
@@ -652,8 +637,8 @@ parameter of the event
 ```python
 def move(
     self,
-    dx: int,
-    dy: int,
+    dx: int | float,
+    dy: int | float,
 ) -> None: ...
 ```
 Move the widget
@@ -694,7 +679,7 @@ Register a component to the widget
 def unbind(
     self,
     sequence: str,
-    funcid: typing.Callable[[tkinter.Event], typing.Any],
+    funcid: collections.abc.Callable[[tkinter.Event], typing.Any],
 ) -> None: ...
 ```
 Unbind for this widget the event SEQUENCE.
@@ -711,7 +696,7 @@ Unbind for this widget the event SEQUENCE.
 ```python
 def unbind_on_update(
     self,
-    command: typing.Callable[[str, bool], typing.Any],
+    command: collections.abc.Callable[[str, bool], typing.Any],
 ) -> None: ...
 ```
 Unbind an extra function to the widget on update
@@ -730,6 +715,7 @@ def update(
     state: str | None = None,
     *,
     no_delay: bool = False,
+    nested: bool = True,
 ) -> None: ...
 ```
 Update the widget

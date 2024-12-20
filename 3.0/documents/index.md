@@ -20,7 +20,7 @@ icon: material/file-document
 
     当前文档适用版本：
 
-    * tkintertools: `3.0.0rc4`
+    * tkintertools: `3.0.0rc5`
     * tkintertools-mpl (EX): `1.2.2`
     * tkintertools-media (EX): `1.1.2`
     * tkintertools-3d (EX): `1.0.2`

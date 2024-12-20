@@ -1,8 +1,29 @@
 # tkintertools.standard.features
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/features.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/features.py){ target='_blank' }</small>
 
 All standard `Feature` classes
+
+## 🟢`BaseFeature`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
+
+### 🟡`_motion`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _motion(
+    self,
+    event: tkinter.Event,
+) -> bool: ...
+```
+
+
+
 
 ## 🟢`ButtonFeature`
 
@@ -16,7 +37,7 @@ def __init__(
     self,
     widget: virtual.Widget,
     *,
-    command: typing.Callable | None = None,
+    command: collections.abc.Callable | None = None,
     args: tuple = (),
 ) -> None: ...
 ```
@@ -200,7 +221,7 @@ def __init__(
     self,
     widget: virtual.Widget,
     *,
-    command: typing.Callable[..., typing.Any] | None = None,
+    command: collections.abc.Callable[..., typing.Any] | None = None,
     args: tuple = (),
 ) -> None: ...
 ```
@@ -445,7 +466,7 @@ def __init__(
     self,
     widget: virtual.Widget,
     *,
-    command: typing.Callable[[bool], typing.Any] | None = None,
+    command: collections.abc.Callable[[bool], typing.Any] | None = None,
 ) -> None: ...
 ```
 Feature of SpinBox

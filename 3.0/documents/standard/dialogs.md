@@ -1,6 +1,6 @@
 # tkintertools.standard.dialogs
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/dialogs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/dialogs.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/dialogs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/dialogs.py){ target='_blank' }</small>
 
 All standard dialog classes
 
@@ -18,7 +18,7 @@ def __init__(
     title: str | None = None,
     color: str | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Callable[[str], typing.Any] | None = None,
+    command: collections.abc.Callable[[str], typing.Any] | None = None,
 ) -> None: ...
 ```
 Color chooser pop-up
@@ -45,7 +45,7 @@ def __init__(
     title: str | None = None,
     font: str | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Callable[[str], typing.Any] | None = None,
+    command: collections.abc.Callable[[str], typing.Any] | None = None,
 ) -> None: ...
 ```
 Font chooser pop-up
@@ -76,7 +76,7 @@ def __init__(
     option: typing.Literal['abortretryignore', 'ok', 'okcancel', 'retrycancel', 'yesno', 'yesnocancel'] = 'ok',
     default: typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no'] | None = None,
     master: tkinter.Tk | None = None,
-    command: typing.Callable[[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']], typing.Any] | None = None,
+    command: collections.abc.Callable[[typing.Literal['abort', 'retry', 'ignore', 'ok', 'cancel', 'yes', 'no']], typing.Any] | None = None,
 ) -> None: ...
 ```
 Message pop-up

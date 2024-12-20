@@ -1,6 +1,6 @@
 # tkintertools.color.rgb
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/rgb.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/color/rgb.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/rgb.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/color/rgb.py){ target='_blank' }</small>
 
 Support for RGB
 
@@ -13,7 +13,7 @@ Support for RGB
 def blend(
     colors: list[RGB],
     *,
-    weights: list[tuple] | None = None,
+    weights: list[float] | None = None,
 ) -> RGB: ...
 ```
 Mix colors by weight
@@ -75,7 +75,7 @@ def gradient(
     rate: float = 1,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-    contoller: typing.Callable[[float], float] = flat,
+    contoller: collections.abc.Callable[[int | float], int | float] = flat,
 ) -> list[RGB]: ...
 ```
 Get a list of color gradients from one color to another proportionally

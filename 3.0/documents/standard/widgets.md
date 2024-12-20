@@ -1,6 +1,6 @@
 # tkintertools.standard.widgets
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/widgets.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/widgets.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/widgets.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/widgets.py){ target='_blank' }</small>
 
 All standard `Widget` classes
 
@@ -14,7 +14,7 @@ All standard `Widget` classes
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -26,12 +26,12 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Callable | None = None,
+    command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Button widget, typically used to trigger a function
@@ -67,17 +67,17 @@ Button widget, typically used to trigger a function
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     length: int = 30,
     *,
     default: bool | None = None,
-    command: typing.Callable[[bool], typing.Any] | None = None,
+    command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Checkbox button widget, generally used to check some options
@@ -86,8 +86,7 @@ Checkbox button widget, generally used to check some options
 * `position`: position of the widget
 * `length`: length of the widget
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of check
-button is on
+* `command`: a function that is triggered when the state of check button is on
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -124,6 +123,142 @@ Set the state of the check button
 
 
 
+## 🟢`ComboBox`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
+
+
+```python
+def __init__(
+    self,
+    master: containers.Canvas | virtual.Widget,
+    position: tuple[int, int],
+    size: tuple[int, int] | None = None,
+    *,
+    text: tuple[str, ...] = (),
+    family: str | None = None,
+    fontsize: int | None = None,
+    weight: typing.Literal['normal', 'bold'] = 'normal',
+    slant: typing.Literal['roman', 'italic'] = 'roman',
+    underline: bool = False,
+    overstrike: bool = False,
+    justify: typing.Literal['left', 'center', 'right'] = 'left',
+    default: int | None = None,
+    command: collections.abc.Callable[[int | None], typing.Any] | None = None,
+    image: tuple[enhanced.PhotoImage | None, ...] = (),
+    name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
+    align: typing.Literal['up', 'down'] = 'down',
+    through: bool | None = None,
+    animation: bool | None = None,
+) -> None: ...
+```
+An input box that can provide several options
+
+* `master`: parent canvas
+* `position`: position of the widget
+* `size`: size of the widget
+* `text`: text of the widget
+* `family`: font family
+* `fontsize`: font size
+* `weight`: weight of the text
+* `slant`: slant of the text
+* `underline`: whether the text is underline
+* `overstrike`: whether the text is overstrike
+* `justify`: justify mode of the text
+* `default`: default value of the widget
+* `command`: a function that is triggered when the button is pressed
+* `image`: image of the widget
+* `name`: name of the widget
+* `anchor`: anchor of the widget
+* `align`: align of the widget
+* `through`: wether detect another widget under the widget
+* `animation`: wether enable animation
+
+
+### 🟡`_close_options`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _close_options(
+    self,
+    index: int | None = None,
+) -> None: ...
+```
+Close the options
+
+### 🟡`_extra_bind`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _extra_bind(
+    self,
+    event,
+) -> None: ...
+```
+
+
+### 🟡`_get_position`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_position(
+    self,
+    align: typing.Literal['up', 'center', 'down'],
+) -> tuple[int, int]: ...
+```
+Get the position of "pop-up" SegmentedButton
+
+### 🟡`_open_options`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _open_options(
+    self,
+) -> None: ...
+```
+Open the options
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> int | None: ...
+```
+Get the index of the child toggle button with a value of True. If not, None is
+returned.
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    value: int | None,
+    *,
+    callback: bool = False,
+) -> None: ...
+```
+Activate the child toggle button for the specified index
+
+
+
 ## 🟢`HighlightButton`
 
 
@@ -134,7 +269,7 @@ Set the state of the check button
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -145,12 +280,12 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Callable | None = None,
+    command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Highlight button, no outline, which added a highlight effect
@@ -165,8 +300,7 @@ Highlight button, no outline, which added a highlight effect
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `command`: a function that is triggered when the hightlight button
-is pressed
+* `command`: a function that is triggered when the hightlight button is pressed
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -186,7 +320,7 @@ is pressed
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -198,12 +332,12 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Callable | None = None,
+    command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A button with an icon on the left side
@@ -239,15 +373,15 @@ A button with an icon on the left side
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Image widget, generally used to display normal still image
@@ -299,7 +433,7 @@ Set the image of the widget
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -313,15 +447,15 @@ def __init__(
     placeholder: str = '',
     show: str | None = None,
     limit: int = inf,
+    limit_width: int = 0,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
-Input box widget, generally used to enter certain information on a
-single line
+Input box widget, generally used to enter certain information on a single line
 
 * `master`: parent canvas
 * `position`: position of the widget
@@ -336,6 +470,7 @@ single line
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
 * `limit`: limit on the number of characters
+* `limit_width`: limit on the width of characters
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -446,7 +581,7 @@ Set the text value of the Entry
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -461,8 +596,8 @@ def __init__(
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Label widget, which is generally used to display key information
@@ -487,6 +622,142 @@ Label widget, which is generally used to display key information
 
 
 
+## 🟢`OptionButton`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
+
+
+```python
+def __init__(
+    self,
+    master: containers.Canvas | virtual.Widget,
+    position: tuple[int, int],
+    size: tuple[int, int] | None = None,
+    *,
+    text: tuple[str, ...] = (),
+    family: str | None = None,
+    fontsize: int | None = None,
+    weight: typing.Literal['normal', 'bold'] = 'normal',
+    slant: typing.Literal['roman', 'italic'] = 'roman',
+    underline: bool = False,
+    overstrike: bool = False,
+    justify: typing.Literal['left', 'center', 'right'] = 'left',
+    default: int | None = None,
+    command: collections.abc.Callable[[int | None], typing.Any] | None = None,
+    image: tuple[enhanced.PhotoImage | None, ...] = (),
+    name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
+    align: typing.Literal['up', 'center', 'down'] = 'center',
+    through: bool | None = None,
+    animation: bool | None = None,
+) -> None: ...
+```
+A button that has many options to choose
+
+* `master`: parent canvas
+* `position`: position of the widget
+* `size`: size of the widget
+* `text`: text of the widget
+* `family`: font family
+* `fontsize`: font size
+* `weight`: weight of the text
+* `slant`: slant of the text
+* `underline`: whether the text is underline
+* `overstrike`: whether the text is overstrike
+* `justify`: justify mode of the text
+* `default`: default value of the widget
+* `command`: a function that is triggered when the button is pressed
+* `image`: image of the widget
+* `name`: name of the widget
+* `anchor`: anchor of the widget
+* `align`: align of the widget
+* `through`: wether detect another widget under the widget
+* `animation`: wether enable animation
+
+
+### 🟡`_close_options`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _close_options(
+    self,
+    index: int | None = None,
+) -> None: ...
+```
+Close the options
+
+### 🟡`_extra_bind`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _extra_bind(
+    self,
+    event,
+) -> None: ...
+```
+
+
+### 🟡`_get_position`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_position(
+    self,
+    align: typing.Literal['up', 'center', 'down'],
+) -> tuple[int, int]: ...
+```
+Get the position of "pop-up" SegmentedButton
+
+### 🟡`_open_options`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _open_options(
+    self,
+) -> None: ...
+```
+Open the options
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> int | None: ...
+```
+Get the index of the child toggle button with a value of True. If not, None is
+returned.
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    value: int | None,
+    *,
+    callback: bool = False,
+) -> None: ...
+```
+Activate the child toggle button for the specified index
+
+
+
 ## 🟢`ProgressBar`
 
 
@@ -497,17 +768,17 @@ Label widget, which is generally used to display key information
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] = (400, 20),
     *,
     default: float | None = None,
-    command: typing.Callable[[float], typing.Any] | None = None,
+    command: collections.abc.Callable[[float], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Progress bar widget, typically used to show the progress of an event
@@ -516,8 +787,7 @@ Progress bar widget, typically used to show the progress of an event
 * `position`: position of the widget
 * `size`: size of the widget
 * `default`: default value of the widget
-* `command`: a function that is triggered when the progress of progress
-bar is 100%
+* `command`: a function that is triggered when the progress of progress bar is 100%
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -564,17 +834,17 @@ Set the progress of the progress bar
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     length: int = 30,
     *,
     default: bool | None = None,
-    command: typing.Callable[[int], typing.Any] | None = None,
+    command: collections.abc.Callable[[int], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Radio button widget, generally used to select one of several options
@@ -583,8 +853,7 @@ Radio button widget, generally used to select one of several options
 * `position`: position of the widget
 * `length`: length of the widget
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of radio
-button is on
+* `command`: a function that is triggered when the state of radio button is on
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -631,7 +900,7 @@ Set the state of the radio button
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     sizes: tuple[tuple[int, int], ...] = (),
     *,
@@ -644,13 +913,13 @@ def __init__(
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     default: int | None = None,
-    command: typing.Callable[[int | None], typing.Any] | None = None,
+    command: collections.abc.Callable[[int | None], typing.Any] | None = None,
     image: tuple[enhanced.PhotoImage | None, ...] = (),
     layout: typing.Literal['horizontal', 'vertical'] = 'horizontal',
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A segmented button that can be used to toggle between multiple states
@@ -686,8 +955,8 @@ def get(
     self,
 ) -> int | None: ...
 ```
-Get the index of the child toggle button with a value of True. If
-not, None is returned.
+Get the index of the child toggle button with a value of True. If not, None is
+returned.
 
 ### 🟡`set`
 
@@ -716,16 +985,16 @@ Activate the child toggle button for the specified index
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] = (400, 30),
     *,
     default: float | None = None,
-    command: typing.Callable[[float], typing.Any] | None = None,
+    command: collections.abc.Callable[[float], typing.Any] | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A slider for visually resizing values
@@ -780,7 +1049,7 @@ Set the value of the slider
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -796,12 +1065,12 @@ def __init__(
     placeholder: str = '',
     show: str | None = None,
     limit: int = inf,
-    command: typing.Callable[[bool], typing.Any] | None = None,
+    command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A widget that makes it easy to enter numeric type data
@@ -907,6 +1176,86 @@ Set the text value of the Entry
 
 
 
+## 🟢`Spinner`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Widget`
+
+
+```python
+def __init__(
+    self,
+    master: containers.Canvas | virtual.Widget,
+    position: tuple[int, int],
+    size: tuple[int, int] = (30, 30),
+    *,
+    default: float | None = None,
+    command: collections.abc.Callable[[float], typing.Any] | None = None,
+    widths: tuple[int, int] | None = None,
+    mode: typing.Literal['determinate', 'indeterminate'] = 'determinate',
+    name: str | None = None,
+    anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
+    through: bool | None = None,
+    animation: bool | None = None,
+) -> None: ...
+```
+Spinners visually communicate that something is processing
+
+* `master`: parent canvas
+* `position`: position of the widget
+* `size`: size of the widget
+* `default`: default value of the widget
+* `command`: a function that is triggered when the progress of progress bar is 100%
+* `widths`: width of the outside ring and inside ring
+* `mode`: mode of the Spinner
+* `name`: name of the widget
+* `anchor`: anchor of the widget
+* `through`: wether detect another widget under the widget
+* `animation`: wether enable animation
+
+
+### 🟡`destroy`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def destroy(
+    self,
+) -> None: ...
+```
+Destroy the widget
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> float: ...
+```
+Get the progress of the Spinner
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    value: float,
+    *,
+    callback: bool = False,
+) -> None: ...
+```
+Set the progress of the Spinner
+
+
+
 ## 🟢`Switch`
 
 
@@ -917,21 +1266,20 @@ Set the text value of the Entry
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     length: int = 60,
     *,
     default: bool | None = None,
-    command: typing.Callable[[bool], typing.Any] | None = None,
+    command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
-Switch widget, typically used to control the turning of a function on
-and off
+Switch widget, typically used to control the turning of a function on and off
 
 * `master`: parent canvas
 * `position`: position of the widget
@@ -984,7 +1332,7 @@ Set the state of the switch
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -997,8 +1345,8 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 Text widget, generally used to display plain text
@@ -1056,7 +1404,7 @@ Set the text of the widget
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
@@ -1069,12 +1417,12 @@ def __init__(
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     default: bool | None = None,
-    command: typing.Callable[[bool], typing.Any] | None = None,
+    command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
-    animation: bool = True,
+    through: bool | None = None,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A button that can display information and switch statuses
@@ -1091,8 +1439,7 @@ A button that can display information and switch statuses
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
 * `default`: default state of the widget
-* `command`: a function that is triggered when the state of check
-button is on
+* `command`: a function that is triggered when the state of check button is on
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget
@@ -1154,7 +1501,7 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     name: str | None = None,
     through: bool = True,
-    animation: bool = True,
+    animation: bool | None = None,
 ) -> None: ...
 ```
 A tooltip that can display additional information
@@ -1202,7 +1549,7 @@ Show or hide the tooltip
 ```python
 def __init__(
     self,
-    master: containers.Canvas,
+    master: containers.Canvas | virtual.Widget,
     position: tuple[int, int],
     *,
     text: str = '',
@@ -1213,11 +1560,11 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    command: typing.Callable | None = None,
+    command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool = False,
+    through: bool | None = None,
     animation: bool = False,
 ) -> None: ...
 ```
@@ -1233,8 +1580,7 @@ Underline button, generally used to display web links
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `command`: a function that is triggered when the underline button
-is pressed
+* `command`: a function that is triggered when the underline button is pressed
 * `image`: image of the widget
 * `name`: name of the widget
 * `anchor`: anchor of the widget

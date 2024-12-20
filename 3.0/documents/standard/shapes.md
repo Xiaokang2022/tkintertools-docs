@@ -1,8 +1,42 @@
 # tkintertools.standard.shapes
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/shapes.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/shapes.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/shapes.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/shapes.py){ target='_blank' }</small>
 
 All standard `Shape` classes
+
+## 🟢`Arc`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Shape`
+
+### 🟡`coords`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def coords(
+    self,
+    size: tuple[float, float] | None = None,
+    position: tuple[float, float] | None = None,
+) -> None: ...
+```
+Resize the `Component`
+
+### 🟡`display`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def display(
+    self,
+) -> None: ...
+```
+Display the `Component` on a `Canvas`
+
+
 
 ## 🟢`HalfRoundedRectangle`
 

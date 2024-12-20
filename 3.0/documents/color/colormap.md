@@ -1,6 +1,6 @@
 # tkintertools.color.colormap
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/colormap.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/color/colormap.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/colormap.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/color/colormap.py){ target='_blank' }</small>
 
 The mapping of the color name to its RGB code
 
@@ -12,7 +12,7 @@ The mapping of the color name to its RGB code
 ```python
 def name_to_rgb(
     color_name: str,
-) -> tuple[int, int, int]: ...
+) -> rgb.RGB: ...
 ```
 Convert a color name to RGB code
 
@@ -24,7 +24,7 @@ Convert a color name to RGB code
 ```python
 def name_to_rgb(
     color_name: str,
-) -> tuple[int, int, int]: ...
+) -> rgb.RGB: ...
 ```
 Convert a color name to RGB code
 

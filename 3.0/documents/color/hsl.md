@@ -1,6 +1,6 @@
 # tkintertools.color.hsl
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/color/hsl.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/color/hsl.py){ target='_blank' }</small>
 
 Support for HSL
 
@@ -13,7 +13,7 @@ Support for HSL
 def blend(
     colors: list[HSL],
     *,
-    weights: list[tuple] | None = None,
+    weights: list[float] | None = None,
 ) -> HSL: ...
 ```
 Mix colors by weight
@@ -75,7 +75,7 @@ def gradient(
     rate: float = 1,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-    contoller: typing.Callable[[float], float] = flat,
+    contoller: collections.abc.Callable[[int | float], int | float] = flat,
 ) -> list[HSL]: ...
 ```
 Get a list of color gradients from one color to another proportionally

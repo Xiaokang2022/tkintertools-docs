@@ -1,6 +1,6 @@
 # tkintertools.standard.texts
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/texts.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/standard/texts.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/texts.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/texts.py){ target='_blank' }</small>
 
 All standard `Text` classes
 
@@ -117,6 +117,7 @@ def __init__(
     *,
     text: str = '',
     limit: int = inf,
+    limit_width: int = 0,
     show: str | None = None,
     placeholder: str = '',
     align: typing.Literal['left', 'center', 'right'] = 'left',
@@ -146,6 +147,7 @@ Single-line editable text
 * `overstrike`: wether text is overstrike
 * `align`: align mode of the text
 * `limit`: limit on the number of characters
+* `limit_width`: limit on the width of characters
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
 * `name`: name of component

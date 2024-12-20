@@ -1,16 +1,15 @@
 # tkintertools.core.containers
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/containers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/containers.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/containers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/containers.py){ target='_blank' }</small>
 
 All container widgets
 
-There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk`
-is generally used for the main window, while `Toplevel` is a pop-up window.
+There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk` is generally used
+for the main window, while `Toplevel` is a pop-up window.
 
-There are two container widgets at the canvas level: `Canvas` and `Frame`.
-`Canvas` is the main widget carrier in tkintertools, and `Frame` is similar to
-`Canvas`, but with a different default color. `Frame` is generally used for
-layout.
+There are two container widgets at the canvas level: `Canvas` and `Frame`. `Canvas` is the main
+widget carrier in tkintertools, and `Frame` is similar to `Canvas`, but with a different default
+color. `Frame` is generally used for layout.
 
 
 ## 🟢`Canvas`
@@ -41,8 +40,8 @@ The parent widget of all virtual widgets of tkintertools is `Canvas`
 * `master`: parent widget
 * `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
 * `zoom_item`: whether or not to scale its items
-* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum
-value, `max` follows the maximum value
+* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum value, `max` follows
+the maximum value
 * `free_anchor`: whether the anchor point is free-floating
 * `kwargs`: compatible with other parameters of class `tkinter.Canvas`
 
@@ -282,8 +281,8 @@ A frame for auxiliary layouts
 * `master`: parent widget
 * `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
 * `zoom_item`: whether or not to scale its items
-* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum
-value, `max` follows the maximum value
+* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum value, `max` follows
+the maximum value
 * `free_anchor`: whether the anchor point is free-floating
 * `kwargs`: compatible with other parameters of class `tkinter.Canvas`
 
@@ -303,7 +302,8 @@ def __init__(
     size: tuple[int, int] = (1280, 720),
     position: tuple[int, int] | None = None,
     *,
-    title: str = '',
+    title: str | None = '',
+    icon: str | None = '',
     **kwargs,
 ) -> None: ...
 ```
@@ -313,9 +313,9 @@ In general, there is only one main window
 
 
 * `size`: the size of the window, default value is 1280x720(px)
-* `position`: the position of the window, default value indicates that
-the location is random
+* `position`: the position of the window, default value indicates that location is random
 * `title`: the title of the window, default value is an empty string
+* `icon`: the icon of the window, default value indicates no icon, `None` indicates tk icon
 * `**kwargs`: compatible with other parameters of class `tkinter.Tk`
 
 
@@ -327,10 +327,10 @@ the location is random
 ```python
 def _fixed_theme(
     method,
-) -> _empty: ...
+) -> collections.abc.Callable: ...
 ```
-This is a decorator that to fix a problem that some methods cause
-the window to lose its theme
+This is a decorator that to fix a problem that some methods cause the window to lose its
+theme
 
 * `method`: the method of being decorated
 
@@ -389,8 +389,8 @@ def center(
 ```
 Center the widget
 
-`master`: The area of the reference widget, if it is None,
-means that the reference area is the entire screen
+`master`: The area of the reference widget, if it is None, means that the reference area is
+the entire screen
 
 
 ### 🟡`fullscreen`
@@ -410,8 +410,8 @@ Set or get whether the window is full-screen
 
 TIP:
 
-The method should be called at the end of the code,
-or after some time after the program has started
+The method should be called at the end of the code, or after some time after the program
+has started
 
 
 ### 🟡`geometry`
@@ -427,18 +427,15 @@ def geometry(
     position: tuple[int, int] | None = None,
 ) -> tuple[int, int, int, int] | None: ...
 ```
-Change the size and position of the window and return the current
-size and position of the window
+Change the size and position of the window and return the current size and position of
+the window
 
-* `size`: the size of the window, if it is None, does not change
-anything
-* `position`: the position of the window, if it is None, does not
-change anything
+* `size`: the size of the window, if it is None, does not change anything
+* `position`: the position of the window, if it is None, does not change anything
 
 TIP:
 
-If you want to use `tkinter.Tk.geometry`, please use
-`tkinter.Tk.wm_geometry` instead
+If you want to use `tkinter.Tk.geometry`, please use `tkinter.Tk.wm_geometry` instead
 
 CAUTION:
 
@@ -453,7 +450,7 @@ This method causes the event `<configure>` to be triggered
 ```python
 def shutdown(
     self,
-    command: typing.Callable | None,
+    command: collections.abc.Callable | None,
     ensure_destroy: bool = False,
     /,
     *args,
@@ -469,8 +466,8 @@ Set a function that will be called when the window is closed
 
 TIP:
 
-Regardless of whether the function is successfully called or not,
-the window will still close gracefully
+Regardless of whether the function is successfully called or not, the window will still
+close gracefully
 
 
 ### 🟡`theme`
@@ -559,6 +556,7 @@ def __init__(
     position: tuple[int, int] | None = None,
     *,
     title: str | None = None,
+    icon: str | None = None,
     grab: bool = False,
     focus: bool = True,
     **kwargs,
@@ -566,19 +564,17 @@ def __init__(
 ```
 Toplevel window
 
-It can be used as a pop-up window,
-or it can be customized to put anything you want to show in it
+It can be used as a pop-up window, or it can be customized to put anything you want to show
 
 
 * `master`: parent widget
 * `size`: the size of the window, default value is 960x540(px)
-* `position`: the position of the window, default value indicates that
-the location is random
+* `position`: the position of the window, default value indicates that location is random
 * `title`: title of window, default is the same as title of master
+* `icon`: the icon of the window, default is the same as title of master
 * `grab`: set grab for this window
 * `focus`: whether direct input focus to this window
-* `**kwargs`: compatible with other parameters of class
-`tkinter.Toplevel`
+* `**kwargs`: compatible with other parameters of class `tkinter.Toplevel`
 
 
 ### 🟡`destroy`

@@ -9,15 +9,15 @@ icon: material/book
 
     目前此教程对应的环境如下：
 
-    * tkintertools: `3.0.0rc4`
+    * tkintertools: `3.0.0rc5`
     * Python: `3.13.0`
-    * OS: `Windows 11`
+    * OS: `Windows 11 24H2`
 
     若您需要的教程不是该版本，请在网页左上切换版本！
 
 !!! success "特别提供：相关教程及文档链接"
 
-    * Tcl / Tk 8.6.14 官方文档：https://tcl.tk/man/tcl8.6/TkCmd/contents.htm
+    * Tcl / Tk 8.6 官方文档：https://tcl.tk/man/tcl8.6/TkCmd/contents.htm
     * 个人不完整 Tk 参考教程：https://xiaokang2022.blog.csdn.net/category_11600888.html
     * 个人推荐的 Tk 教程：https://blog.csdn.net/qq_41556318/category_9283243.html
 

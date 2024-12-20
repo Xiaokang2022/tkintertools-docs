@@ -1,6 +1,6 @@
 # tkintertools.toolbox.enhanced
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/enhanced.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/toolbox/enhanced.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/enhanced.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/toolbox/enhanced.py){ target='_blank' }</small>
 
 Enhanced versions of some tkinter classes and functions
 
@@ -32,8 +32,8 @@ Resize the PhotoImage
 ```python
 def scale(
     self,
-    x: float,
-    y: float,
+    x: int | float,
+    y: int | float,
 ) -> PhotoImage: ...
 ```
 Scale the PhotoImage

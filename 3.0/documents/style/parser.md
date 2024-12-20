@@ -1,6 +1,6 @@
 # tkintertools.style.parser
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/style/parser.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/style/parser.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/style/parser.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/style/parser.py){ target='_blank' }</small>
 
 Parse the style file path and get it
 
@@ -54,8 +54,8 @@ theme/
 }
 ```
 
-Style files in JSON format must strictly follow the above format, and the
-missing parts are empty by default.
+Style files in JSON format must strictly follow the above format, and the missing parts are empty
+by default.
 
 
 ## 🔵`_get_name`
@@ -65,7 +65,7 @@ missing parts are empty by default.
 
 ```python
 def _get_name(
-    obj: str | virtual.Widget | virtual.Component | None,
+    obj: str | virtual.Widget | virtual.Component | containers.Canvas | None,
 ) -> str | None: ...
 ```
 Get the name of the object

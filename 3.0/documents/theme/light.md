@@ -1,6 +1,6 @@
 # tkintertools.theme.light
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/light.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/theme/light.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/light.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/theme/light.py){ target='_blank' }</small>
 
 Light theme
 
@@ -231,6 +231,18 @@ Slider: dict = {
     'Rectangle.out': {'normal': {'fill': '#878787', 'outline': '#878787'}},
     'SemicircularRectangle.in': {'normal': {'fill': '#0067C0', 'outline': '#0067C0'}},
     'SemicircularRectangle.out': {'normal': {'fill': '#878787', 'outline': '#878787'}},
+}
+```
+
+
+## 🟣`Spinner`
+
+
+<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
+
+```python linenums="0"
+Spinner: dict = {
+    'Arc': {'normal': {'outline': '#0F6CBD'}}, 'Oval': {'normal': {'outline': '#B4D6FA'}},
 }
 ```
 

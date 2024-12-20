@@ -1,18 +1,17 @@
 # tkintertools.animation.controllers
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/controllers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/animation/controllers.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/controllers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/animation/controllers.py){ target='_blank' }</small>
 
 Standard control functions
 
 Definition of control function:
 
 ```python
-def f(t: float) -> float: ...
+def f(t: int | float) -> int | float: ...
 ```
 
 * t: 0% ~ 100%, indicates the percentage of time
-* return value: Any real number, represents a multiple of the cardinality of
-the animation
+* return value: Any real number, represents a multiple of the cardinality of the animation
 
 The built-in control functions are:
 
@@ -28,9 +27,9 @@ The built-in control functions are:
 
 ```python
 def _map_t(
-    start: float,
-    end: float,
-) -> typing.Callable[[float], float]: ...
+    start: int | float,
+    end: int | float,
+) -> collections.abc.Callable[[int | float], int | float]: ...
 ```
 Map parameters in any range between 0 and 1
 
@@ -45,9 +44,9 @@ Map parameters in any range between 0 and 1
 
 ```python
 def _map_y(
-    base_function: typing.Callable[[float], float],
-    end: float,
-) -> typing.Callable[[float], float]: ...
+    base_function: collections.abc.Callable[[int | float], int | float],
+    end: int | float,
+) -> collections.abc.Callable[[int | float], float]: ...
 ```
 Map the final return value to 1
 
@@ -62,12 +61,12 @@ Map the final return value to 1
 
 ```python
 def controller_generator(
-    base_function: typing.Callable[[float], float],
-    start: float,
-    end: float,
+    base_function: collections.abc.Callable[[int | float], int | float],
+    start: int | float,
+    end: int | float,
     *,
     map_y: bool = True,
-) -> typing.Callable[[float], float]: ...
+) -> collections.abc.Callable[[int | float], int | float]: ...
 ```
 Generator of control functions
 
@@ -91,8 +90,8 @@ For example:
 
 ```python
 def flat(
-    t: float,
-) -> float: ...
+    t: int | float,
+) -> int | float: ...
 ```
 Flat animation: speed remains the same
 
@@ -103,7 +102,7 @@ Flat animation: speed remains the same
 
 ```python
 def rebound(
-    t: float,
+    t: int | float,
 ) -> float: ...
 ```
 Rebound animation: before the end, displacement will bounce off a bit
@@ -115,7 +114,7 @@ Rebound animation: before the end, displacement will bounce off a bit
 
 ```python
 def smooth(
-    t: float,
+    t: int | float,
 ) -> float: ...
 ```
 Smooth animation: speed is slow first, then fast and then slow

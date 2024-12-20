@@ -1,6 +1,6 @@
 # tkintertools.toolbox.tools
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/tools.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/toolbox/tools.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/tools.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/toolbox/tools.py){ target='_blank' }</small>
 
 Some useful utility classes or utility functions
 
@@ -14,13 +14,13 @@ Some useful utility classes or utility functions
 ```python
 def __init__(
     self,
-    command: typing.Callable,
+    command: collections.abc.Callable[..., typing.Any],
 ) -> None: ...
 ```
 Single trigger
 
-It can only be triggered once before the reset, and multiple triggers are
-invalid. When triggered, the callback function is called.
+It can only be triggered once before the reset, and multiple triggers are invalid. When
+triggered, the callback function is called.
 
 
 * `command`: the function that is called when triggered
@@ -111,8 +111,7 @@ def embed_window(
 Embed a widget into another widget
 
 * `window`: Widget that will be embedded in
-* `parent`: parent widget, `None` indicates that the parent widget is the
-screen
+* `parent`: parent widget, `None` indicates that the parent widget is the screen
 * `focus`: whether direct input focus to this window
 
 
@@ -123,7 +122,7 @@ screen
 
 ```python
 def get_hwnd(
-    widget: tkinter.Widget,
+    widget: tkinter.Misc,
 ) -> int: ...
 ```
 Get the HWND of `tkinter.Widget`
@@ -171,14 +170,13 @@ def load_font(
     enumerable: bool = False,
 ) -> bool: ...
 ```
-Make fonts located in file `font_path` available to the font system, and
-return `True` if the operation succeeds, `False` otherwise
+Make fonts located in file `font_path` available to the font system, and return `True` if
+the operation succeeds, `False` otherwise
 
 * `font_path`: the font file path
-* `private`: if True, other processes cannot see this
-font(Only Windows OS), and this font will be unloaded when the process dies
-* `enumerable`: if True, this font will appear when enumerating
-fonts(Only Windows OS)
+* `private`: if True, other processes cannot see this font(Only Windows OS), and this font will
+be unloaded when the process dies
+* `enumerable`: if True, this font will appear when enumerating fonts(Only Windows OS)
 
 ATTENTION:
 

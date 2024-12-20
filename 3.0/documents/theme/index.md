@@ -1,6 +1,6 @@
 # tkintertools.theme
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/__init__.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/theme/__init__.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/theme/__init__.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/theme/__init__.py){ target='_blank' }</small>
 
 Default style data
 
@@ -25,8 +25,7 @@ widget_name01: dict[str, dict[str, dict[str, str]]] = {
 ...
 ```
 
-It is not mandatory for the variable to be a constant, it is enough to conform
-to the above format, and the missing style will be empty by default and will
-not affect the operation of the program.
+It is not mandatory for the variable to be a constant, it is enough to conform to the above format,
+and the missing style will be empty by default and will not affect the operation of the program.
 
 

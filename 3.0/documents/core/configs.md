@@ -1,6 +1,6 @@
 # tkintertools.core.configs
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/configs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc4/tkintertools/core/configs.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/configs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/configs.py){ target='_blank' }</small>
 
 All configs of tkintertools
 
@@ -81,7 +81,7 @@ Get default themes.
 
 
 
-## 🟢`_DefaultRoot`
+## 🟢`_DefaultRootDescriptor`
 
 
 
@@ -95,9 +95,9 @@ Get default themes.
 ```python
 def __get__(
     self,
-    obj,
-    cls,
-) -> tkinter.Tk | None: ...
+    obj: typing.Any,
+    cls: typing.Any,
+) -> tkinter.Tk: ...
 ```
 Return the current default root.
 
