@@ -1,6 +1,6 @@
 # tkintertools.standard.shapes
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/shapes.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/shapes.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/shapes.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/shapes.py){ target='_blank' }</small>
 
 All standard `Shape` classes
 
@@ -22,7 +22,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -34,7 +34,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -55,8 +55,7 @@ def __init__(
     radius: int = 5,
     ignore: typing.Literal['left', 'right'] = 'left',
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -64,12 +63,11 @@ Create a half rounded rectangle for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `radius`: radius of the fillet
 * `ignore`: edges to ignore
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -85,7 +83,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -97,7 +95,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -117,8 +115,7 @@ def __init__(
     *,
     points: list[tuple[float, float]] | None = None,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str | int, dict[str | int, dict[str, str]]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -126,11 +123,10 @@ Create a line for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `points`: key points of line
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -146,7 +142,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -158,7 +154,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -180,7 +176,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`detect`
 
@@ -194,7 +190,7 @@ def detect(
     y: int,
 ) -> bool: ...
 ```
-Detect whether the specified coordinates are within `Component`
+Detect whether the specified coordinates are within `Element`
 
 ### 🟡`display`
 
@@ -206,7 +202,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -226,8 +222,7 @@ def __init__(
     *,
     theta: float = 0.5235987755982988,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -235,11 +230,10 @@ Create a parallelogram for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `theta`: number of radians that the parallelogram is inclined to
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -255,7 +249,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -267,7 +261,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -289,7 +283,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -301,7 +295,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -322,8 +316,7 @@ def __init__(
     side: int = 3,
     angle: float = 0,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -331,12 +324,11 @@ Create a regular polygon for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `side`: number of sides of a regular polygon
 * `angle`: number of radians of a regular polygon rotated clockwise
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -352,7 +344,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -364,7 +356,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -384,8 +376,7 @@ def __init__(
     *,
     radius: int = 5,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -393,11 +384,10 @@ Create a rounded rectangle for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `radius`: radius of the fillet
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -413,7 +403,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -425,7 +415,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -447,7 +437,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`detect`
 
@@ -461,7 +451,7 @@ def detect(
     y: int,
 ) -> bool: ...
 ```
-Detect whether the specified coordinates are within `Component`
+Detect whether the specified coordinates are within `Element`
 
 ### 🟡`display`
 
@@ -473,7 +463,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 
@@ -494,8 +484,7 @@ def __init__(
     theta: float = 0.5235987755982988,
     ratio: tuple[float, float] = (0.5, 0.5),
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -503,12 +492,11 @@ Create a sharp rectangle for a widget
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `theta`: number of radians of sharp corners
 * `ratio`: height ratio of the left and right sharp corners
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -524,7 +512,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`display`
 
@@ -536,7 +524,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 
 

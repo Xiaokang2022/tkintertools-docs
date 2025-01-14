@@ -1,8 +1,8 @@
 # tkintertools.toolbox.enhanced
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/enhanced.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/toolbox/enhanced.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/enhanced.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/toolbox/enhanced.py){ target='_blank' }</small>
 
-Enhanced versions of some tkinter classes and functions
+Enhanced versions of some tkinter classes and functions.
 
 ## 🟢`PhotoImage`
 
@@ -22,7 +22,11 @@ def resize(
     height: int,
 ) -> PhotoImage: ...
 ```
-Resize the PhotoImage
+Resize the PhotoImage.
+
+* `width`: The new width of the image
+* `height`: The new height of the image
+
 
 ### 🟡`scale`
 
@@ -32,11 +36,15 @@ Resize the PhotoImage
 ```python
 def scale(
     self,
-    x: int | float,
-    y: int | float,
+    x: float,
+    y: float,
 ) -> PhotoImage: ...
 ```
-Scale the PhotoImage
+Scale the PhotoImage.
+
+* `x`: The x-axis scale factor
+* `y`: The y-axis scale factor
+
 
 
 

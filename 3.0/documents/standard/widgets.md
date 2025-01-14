@@ -1,6 +1,6 @@
 # tkintertools.standard.widgets
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/widgets.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/widgets.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/widgets.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/widgets.py){ target='_blank' }</small>
 
 All standard `Widget` classes
 
@@ -28,10 +28,11 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Button widget, typically used to trigger a function
@@ -49,15 +50,16 @@ Button widget, typically used to trigger a function
 * `justify`: justify mode of the text
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 
 
-## 🟢`CheckButton`
+## 🟢`CheckBox`
 
 
 
@@ -74,10 +76,11 @@ def __init__(
     default: bool | None = None,
     command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Checkbox button widget, generally used to check some options
@@ -88,10 +91,11 @@ Checkbox button widget, generally used to check some options
 * `default`: default state of the widget
 * `command`: a function that is triggered when the state of check button is on
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -148,11 +152,12 @@ def __init__(
     default: int | None = None,
     command: collections.abc.Callable[[int | None], typing.Any] | None = None,
     image: tuple[enhanced.PhotoImage | None, ...] = (),
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     align: typing.Literal['up', 'down'] = 'down',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 An input box that can provide several options
@@ -171,11 +176,12 @@ An input box that can provide several options
 * `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
 * `align`: align of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`_close_options`
@@ -282,10 +288,11 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Highlight button, no outline, which added a highlight effect
@@ -302,10 +309,11 @@ Highlight button, no outline, which added a highlight effect
 * `justify`: justify mode of the text
 * `command`: a function that is triggered when the hightlight button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 
@@ -334,10 +342,11 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A button with an icon on the left side
@@ -355,10 +364,11 @@ A button with an icon on the left side
 * `justify`: justify mode of the text
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 
@@ -378,10 +388,11 @@ def __init__(
     size: tuple[int, int] | None = None,
     *,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Image widget, generally used to display normal still image
@@ -390,10 +401,11 @@ Image widget, generally used to display normal still image
 * `position`: position of the widget
 * `size`: size of the widget
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -449,10 +461,11 @@ def __init__(
     limit: int = inf,
     limit_width: int = 0,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Input box widget, generally used to enter certain information on a single line
@@ -472,10 +485,11 @@ Input box widget, generally used to enter certain information on a single line
 * `limit`: limit on the number of characters
 * `limit_width`: limit on the width of characters
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`append`
@@ -594,10 +608,11 @@ def __init__(
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Label widget, which is generally used to display key information
@@ -614,10 +629,11 @@ Label widget, which is generally used to display key information
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 
@@ -647,11 +663,12 @@ def __init__(
     default: int | None = None,
     command: collections.abc.Callable[[int | None], typing.Any] | None = None,
     image: tuple[enhanced.PhotoImage | None, ...] = (),
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
     align: typing.Literal['up', 'center', 'down'] = 'center',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A button that has many options to choose
@@ -670,11 +687,12 @@ A button that has many options to choose
 * `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
 * `align`: align of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`_close_options`
@@ -775,10 +793,11 @@ def __init__(
     default: float | None = None,
     command: collections.abc.Callable[[float], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Progress bar widget, typically used to show the progress of an event
@@ -789,10 +808,11 @@ Progress bar widget, typically used to show the progress of an event
 * `default`: default value of the widget
 * `command`: a function that is triggered when the progress of progress bar is 100%
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -824,7 +844,7 @@ Set the progress of the progress bar
 
 
 
-## 🟢`RadioButton`
+## 🟢`RadioBox`
 
 
 
@@ -841,10 +861,11 @@ def __init__(
     default: bool | None = None,
     command: collections.abc.Callable[[int], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Radio button widget, generally used to select one of several options
@@ -855,10 +876,11 @@ Radio button widget, generally used to select one of several options
 * `default`: default state of the widget
 * `command`: a function that is triggered when the state of radio button is on
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -872,6 +894,22 @@ def get(
 ) -> bool: ...
 ```
 Get the state of the radio button
+
+### 🟡`group`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def group(
+    self,
+    *radio_boxes: RadioBox,
+) -> None: ...
+```
+Combine other radio boxes.
+
+* `radio_boxes`: other radio boxes
+
 
 ### 🟡`set`
 
@@ -916,10 +954,11 @@ def __init__(
     command: collections.abc.Callable[[int | None], typing.Any] | None = None,
     image: tuple[enhanced.PhotoImage | None, ...] = (),
     layout: typing.Literal['horizontal', 'vertical'] = 'horizontal',
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A segmented button that can be used to toggle between multiple states
@@ -939,10 +978,11 @@ A segmented button that can be used to toggle between multiple states
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
 * `layout`: layout mode of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -991,10 +1031,11 @@ def __init__(
     *,
     default: float | None = None,
     command: collections.abc.Callable[[float], typing.Any] | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A slider for visually resizing values
@@ -1004,10 +1045,11 @@ A slider for visually resizing values
 * `size`: size of the widget
 * `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -1053,7 +1095,7 @@ def __init__(
     position: tuple[int, int],
     size: tuple[int, int] | None = None,
     *,
-    style: str = 'd',
+    format_spec: str = 'd',
     step: int = 1,
     family: str | None = None,
     fontsize: int | None = None,
@@ -1065,12 +1107,14 @@ def __init__(
     placeholder: str = '',
     show: str | None = None,
     limit: int = inf,
+    default: str | None = None,
     command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A widget that makes it easy to enter numeric type data
@@ -1078,7 +1122,7 @@ A widget that makes it easy to enter numeric type data
 * `master`: parent canvas
 * `position`: position of the widget
 * `size`: size of the widget
-* `style`: format of value
+* `format_spec`: format of value
 * `step`: value of each change
 * `family`: font family
 * `fontsize`: font size
@@ -1090,12 +1134,14 @@ A widget that makes it easy to enter numeric type data
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
 * `limit`: limit on the number of characters
+* `default`: default value of the widget
 * `command`: a function that is triggered when the button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`append`
@@ -1194,10 +1240,11 @@ def __init__(
     command: collections.abc.Callable[[float], typing.Any] | None = None,
     widths: tuple[int, int] | None = None,
     mode: typing.Literal['determinate', 'indeterminate'] = 'determinate',
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Spinners visually communicate that something is processing
@@ -1209,10 +1256,11 @@ Spinners visually communicate that something is processing
 * `command`: a function that is triggered when the progress of progress bar is 100%
 * `widths`: width of the outside ring and inside ring
 * `mode`: mode of the Spinner
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`destroy`
@@ -1273,10 +1321,11 @@ def __init__(
     default: bool | None = None,
     command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Switch widget, typically used to control the turning of a function on and off
@@ -1287,10 +1336,11 @@ Switch widget, typically used to control the turning of a function on and off
 * `default`: default value of the widget
 * `command`: a function that is triggered when the switch is changed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -1343,10 +1393,11 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Text widget, generally used to display plain text
@@ -1361,10 +1412,11 @@ Text widget, generally used to display plain text
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -1419,10 +1471,11 @@ def __init__(
     default: bool | None = None,
     command: collections.abc.Callable[[bool], typing.Any] | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A button that can display information and switch statuses
@@ -1441,10 +1494,11 @@ A button that can display information and switch statuses
 * `default`: default state of the widget
 * `command`: a function that is triggered when the state of check button is on
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`get`
@@ -1499,9 +1553,9 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     justify: typing.Literal['left', 'center', 'right'] = 'left',
-    name: str | None = None,
-    through: bool = True,
-    animation: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 A tooltip that can display additional information
@@ -1518,9 +1572,9 @@ A tooltip that can display additional information
 * `underline`: whether the text is underline
 * `overstrike`: whether the text is overstrike
 * `justify`: justify mode of the text
-* `name`: name of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`_display`
@@ -1562,10 +1616,11 @@ def __init__(
     justify: typing.Literal['left', 'center', 'right'] = 'left',
     command: collections.abc.Callable | None = None,
     image: enhanced.PhotoImage | None = None,
-    name: str | None = None,
     anchor: typing.Literal['n', 'e', 'w', 's', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool = False,
+    capture_events: bool | None = None,
+    gradient_animation: bool = False,
+    auto_update: bool | None = None,
+    style: type[virtual.Style] | None = None,
 ) -> None: ...
 ```
 Underline button, generally used to display web links
@@ -1582,10 +1637,11 @@ Underline button, generally used to display web links
 * `justify`: justify mode of the text
 * `command`: a function that is triggered when the underline button is pressed
 * `image`: image of the widget
-* `name`: name of the widget
 * `anchor`: anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable gradient_animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 

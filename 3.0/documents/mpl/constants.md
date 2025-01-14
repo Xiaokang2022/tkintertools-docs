@@ -1,6 +1,6 @@
-# tkintertools.mpl._constants
+# tkintertools.mpl.constants
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/_constants.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.2/tkintertools/mpl/_constants.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/constants.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.3/tkintertools/mpl/constants.py){ target='_blank' }</small>
 
 Constants for theme
 

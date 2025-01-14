@@ -1,8 +1,8 @@
 # tkintertools.color.hsl
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/color/hsl.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/color/hsl.py){ target='_blank' }</small>
 
-Support for HSL
+Some functions about HSL codes.
 
 ## 🔵`blend`
 
@@ -11,15 +11,14 @@ Support for HSL
 
 ```python
 def blend(
-    colors: list[HSL],
-    *,
+    *values: tuple[float, float, float],
     weights: list[float] | None = None,
-) -> HSL: ...
+) -> tuple[float, float, float]: ...
 ```
-Mix colors by weight
+Mix colors by weight.
 
-* `colors`: color list
-* `weights`: weight list
+* `values`: HSL codes
+* `weights`: weight list, default value indicates the same weights
 
 
 ## 🔵`contrast`
@@ -29,36 +28,15 @@ Mix colors by weight
 
 ```python
 def contrast(
-    hsl: HSL,
+    value: tuple[float, float, float],
+    /,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-) -> HSL: ...
+) -> tuple[float, float, float]: ...
 ```
-Get a contrasting color of a color
+Get the contrasting color of a HSL code.
 
-* `hsl`: a tuple, HSL codes
-* `channels`: three color channels
-
-
-## 🔵`convert`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def convert(
-    first: HSL,
-    second: HSL,
-    rate: float,
-    *,
-    channels: tuple[bool, bool, bool] = (True, True, True),
-) -> HSL: ...
-```
-Convert one color to another proportionally
-
-* `first`: first color
-* `second`: second color
-* `rate`: conversion rate
+* `value`: a HSL code
 * `channels`: three color channels
 
 
@@ -69,92 +47,44 @@ Convert one color to another proportionally
 
 ```python
 def gradient(
-    first: HSL,
-    second: HSL,
+    first: tuple[float, float, float],
+    second: tuple[float, float, float],
     count: int,
     rate: float = 1,
     *,
     channels: tuple[bool, bool, bool] = (True, True, True),
-    contoller: collections.abc.Callable[[int | float], int | float] = flat,
-) -> list[HSL]: ...
+    contoller: collections.abc.Callable[[float], float] = linear,
+) -> list[tuple[float, float, float]]: ...
 ```
-Get a list of color gradients from one color to another proportionally
+Get a list of color gradients from one color to another proportionally.
 
-* `first`: first color
-* `second`: second color
-* `count`: number of gradients
-* `rate`: conversion rate
+* `first`: the first HSL code
+* `second`: the second HSL code
+* `count`: the number of gradients
+* `rate`: transition rate
 * `channels`: three color channels
 * `controller`: control function
 
 
-## 🔵`hsl_to_rgb`
+## 🔵`transition`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
 ```python
-def hsl_to_rgb(
-    color: HSL,
-) -> rgb.RGB: ...
+def transition(
+    first: tuple[float, float, float],
+    second: tuple[float, float, float],
+    rate: float,
+    *,
+    channels: tuple[bool, bool, bool] = (True, True, True),
+) -> tuple[float, float, float]: ...
 ```
-Convert HSL to RGB codes
+Transition one color to another proportionally.
 
-## 🔵`hsl_to_rgb`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def hsl_to_rgb(
-    color: HSL,
-) -> rgb.RGB: ...
-```
-Convert HSL to RGB codes
-
-## 🔵`rgb_to_hsl`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def rgb_to_hsl(
-    color: rgb.RGB,
-) -> HSL: ...
-```
-Convert RGB to HSL codes
-
-## 🔵`rgb_to_hsl`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def rgb_to_hsl(
-    color: rgb.RGB,
-) -> HSL: ...
-```
-Convert RGB to HSL codes
-
-## 🟣`HSL`
-
-
-<code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
-
-```python linenums="0"
-HSL: GenericAlias = tuple[float, float, float]
-```
-
-
-## 🟣`MAX`
-
-
-<code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
-
-```python linenums="0"
-MAX: tuple = (
-    6.283185307179586, 1, 1,
-)
-```
+* `first`: the first HSL code
+* `second`: the second HSL code
+* `rate`: transition rate
+* `channels`: three color channels
 
 

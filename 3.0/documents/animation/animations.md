@@ -1,12 +1,11 @@
 # tkintertools.animation.animations
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/animations.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/animation/animations.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/animations.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/animation/animations.py){ target='_blank' }</small>
 
-Standard animation classes
+Base and standard animation classes.
 
-The built-in basic animation classes are:
-`MoveTkWidget`, `MoveWidget`, `MoveComponent`, `MoveItem`, `GradientTkWidget`, `GradientItem`,
-`ScaleFontSize`
+The animation base class can be inherited or called directly. Other standard
+animation classes are best used by direct calls, rather than inheritance.
 
 
 ## 🟢`Animation`
@@ -19,42 +18,55 @@ The built-in basic animation classes are:
 ```python
 def __init__(
     self,
-    ms: int,
-    controller: collections.abc.Callable[[int | float], int | float],
+    duration: int,
+    command: collections.abc.Callable[[float], typing.Any],
     *,
-    callback: collections.abc.Callable[[int | float], typing.Any] | None = None,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
     derivation: bool = False,
 ) -> None: ...
 ```
-Animation base class
+Base animation class.
 
-* `ms`: duration of the animation, in milliseconds
-* `controller`: control functions that determine the course of the entire animation movement
-* `callback`: callback function, which will be called once per frame, with the parameter
-being the percentage of the current animation progress
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `command`: callback function, which will be called once per frame
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 * `derivation`: whether the callback function is derivative
 
 
-### 🟡`_wrapper`
+### 🟡`_repeat`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
 
 ```python
-def _wrapper(
+def _repeat(
     self,
-    func: collections.abc.Callable[[int | float], typing.Any],
-) -> collections.abc.Callable[[int | float], None]: ...
+) -> None: ...
 ```
-Make the ending function call correctly
+Processing of the number of repetitions.
 
-* `func`: the callback function to be wrapped
+### 🟡`skip`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def skip(
+    self,
+    count: int = 1,
+) -> None: ...
+```
+Skip some loops.
+
+* `count`: count of skipping
 
 
 ### 🟡`start`
@@ -67,11 +79,11 @@ def start(
     self,
     *,
     delay: int = 0,
-) -> None: ...
+) -> str | None: ...
 ```
-Start the animation
+Start the animation.
 
-* `delay`: length of the delay before the animation starts, in milliseconds 
+* `delay`: length of the delay before the animation starts
 
 
 ### 🟡`stop`
@@ -82,9 +94,14 @@ Start the animation
 ```python
 def stop(
     self,
-) -> None: ...
+    *,
+    delay: int = 0,
+) -> str | None: ...
 ```
-Stop the animation
+Stop the animation.
+
+* `delay`: length of the delay before the animation stops
+
 
 
 
@@ -98,30 +115,32 @@ Stop the animation
 ```python
 def __init__(
     self,
-    canvas: tkinter.Canvas,
+    canvas: tkinter.Canvas | containers.Canvas,
     item: int,
     parameter: str,
-    ms: int,
     colors: tuple[str, str],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
     derivation: bool = False,
 ) -> None: ...
 ```
-Animation that makes color of canvas item gradient
+Animation of making the color of canvas item to be gradient.
 
 * `canvas`: an instance of `tkinter.Canvas` that contains the item
 * `item`: item whose color is to be gradient
-* `parameter`: parameter name of the part of the item that needs to be modified in color
-* `ms`: duration of the animation, in milliseconds
+* `parameter`: parameter name of item that is to be modified in color
 * `colors`: a tuple of the initial and ending colors
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 * `derivation`: whether the callback function is derivative
 
 
@@ -139,32 +158,34 @@ def __init__(
     self,
     widget: tkinter.Widget,
     parameter: str,
-    ms: int,
     colors: tuple[str, str],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
     derivation: bool = False,
 ) -> None: ...
 ```
-Animation that makes color of `tkinter.Widget` gradient
+Animation of making the color of `tkinter.Widget` to be gradient.
 
-* `widget`: tkinter widget whose color is to be gradient
-* `parameter`: parameter name of the part of the item that needs to be modified in color
-* `ms`: duration of the animation, in milliseconds
+* `widget`: the `tkinter.Widget` whose color is to be gradient
+* `parameter`: parameter name of widget that is to be modified in color
 * `colors`: a tuple of the initial and ending colors
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 * `derivation`: whether the callback function is derivative
 
 
 
 
-## 🟢`MoveComponent`
+## 🟢`MoveElement`
 
 
 
@@ -174,25 +195,27 @@ Animation that makes color of `tkinter.Widget` gradient
 ```python
 def __init__(
     self,
-    component: virtual.Component,
-    ms: int,
-    offset: tuple[int | float, int | float],
+    element: virtual.Element,
+    offset: tuple[float, float],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
 ) -> None: ...
 ```
-Animation of moving `Component`
+Animation of moving `virtual.Element`.
 
-* `component`: component to be moved
-* `ms`: duration of the animation, in milliseconds
+* `element`: the `virtual.Element` to be moved
 * `offset`: relative offset of the coordinates
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 
 
 
@@ -207,27 +230,29 @@ Animation of moving `Component`
 ```python
 def __init__(
     self,
-    canvas: tkinter.Canvas,
+    canvas: tkinter.Canvas | containers.Canvas,
     item: int,
-    ms: int,
-    offset: tuple[int | float, int | float],
+    offset: tuple[float, float],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
 ) -> None: ...
 ```
-Animation of moving a item
+Animation of moving a item of `tkinter.Canvas`.
 
 * `canvas`: an instance of `tkinter.Canvas` that contains the item
 * `item`: the item to be moved
-* `ms`: duration of the animation, in milliseconds
 * `offset`: relative offset of the coordinates
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 
 
 
@@ -243,24 +268,26 @@ Animation of moving a item
 def __init__(
     self,
     widget: tkinter.Widget,
-    ms: int,
-    offset: tuple[int | float, int | float],
+    offset: tuple[float, float],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
 ) -> None: ...
 ```
-Animation of moving `tkinter.Widget`
+Animation of moving `tkinter.Widget`.
 
-* `widget`: tkinter widget to be moved
-* `ms`: duration of the animation, in milliseconds
+* `widget`: the `tkinter.Widget` to be moved
 * `offset`: relative offset of the coordinates
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 
 
 
@@ -276,24 +303,61 @@ Animation of moving `tkinter.Widget`
 def __init__(
     self,
     widget: virtual.Widget,
-    ms: int,
-    offset: tuple[int | float, int | float],
+    offset: tuple[float, float],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
 ) -> None: ...
 ```
-Animation of moving `Widget`
+Animation of moving `virtual.Widget`.
 
-* `widget`: widget to be moved
-* `ms`: duration of the animation, in milliseconds
+* `widget`: the `virtual.Widget` to be moved
 * `offset`: relative offset of the coordinates
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
+
+
+
+
+## 🟢`MoveWindow`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Animation`
+
+
+```python
+def __init__(
+    self,
+    window: tkinter.Tk | tkinter.Toplevel | containers.Tk | containers.Toplevel,
+    offset: tuple[float, float],
+    duration: int,
+    *,
+    controller: collections.abc.Callable[[float], float] = linear,
+    end: collections.abc.Callable[[], typing.Any] | None = None,
+    fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
+) -> None: ...
+```
+Animation of moving the window.
+
+* `window`: the window to be moved
+* `offset`: relative offset of the coordinates
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 
 
 
@@ -309,40 +373,29 @@ Animation of moving `Widget`
 def __init__(
     self,
     text: virtual.Text,
-    ms: int,
-    sizes: int | float | tuple[int | float, int | float],
+    sizes: float | tuple[float, float],
+    duration: int,
     *,
-    controller: collections.abc.Callable[[int | float], int | float] = flat,
+    controller: collections.abc.Callable[[float], float] = linear,
     end: collections.abc.Callable[[], typing.Any] | None = None,
-    repeat: int = 0,
     fps: int = 30,
+    repeat: int = 0,
+    repeat_delay: int = 0,
     derivation: bool = False,
 ) -> None: ...
 ```
-Animation of scaling the font size
+Animation of scaling the font size of `virtual.Text`.
 
-* `text`: an instance of `virtual.Text` that needs to be scaled in font size
-* `ms`: duration of the animation, in milliseconds
+* `text`: an instance of `virtual.Text` that needs to be scaled
 * `sizes`: a tuple of the initial and ending sizes or target font size
-* `controller`: control functions that determine the course of the entire animation movement
-* `end`: ending function, which is called once at the end of the animation
-* `repeat`: number of repetitions of the entire animation process
-* `fps`: the FPS of the animation
+* `duration`: duration of the animation, in milliseconds
+* `controller`: a function that controls the animation process
+* `end`: end function, which is called once at the end of the animation
+* `fps`: frame rate of the animation
+* `repeat`: number of repetitions of the animation
+* `repeat_delay`: length of the delay before the animation repeats
 * `derivation`: whether the callback function is derivative
 
-
-### 🟡`_scale`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _scale(
-    self,
-    size: int,
-) -> None: ...
-```
-Scale font size
 
 
 

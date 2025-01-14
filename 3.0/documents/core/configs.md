@@ -1,8 +1,13 @@
 # tkintertools.core.configs
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/configs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/configs.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/configs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/core/configs.py){ target='_blank' }</small>
 
-All configs of tkintertools
+All global configuration options.
+
+Some options are read-only, but most of them can be changed, and once changed,
+they will take effect globally for the program. Some changes take effect
+immediately, but some need to take effect when the relevant option is invoked.
+
 
 ## 🟢`Constant`
 
@@ -17,18 +22,6 @@ All configs of tkintertools
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
-
-### 🟡`<lambda>`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def <lambda>(
-    _,
-) -> _empty: ...
-```
-
 
 ### 🟡`get_default_system`
 
@@ -58,26 +51,7 @@ Get the system of environment.
 def get_default_family(
 ) -> str: ...
 ```
-Get font family.
-
-
-
-## 🟢`Theme`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
-
-### 🟡`get_default_themes`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def get_default_themes(
-) -> tuple[types.ModuleType, types.ModuleType]: ...
-```
-Get default themes.
+Get the default font family.
 
 
 
@@ -95,22 +69,26 @@ Get default themes.
 ```python
 def __get__(
     self,
-    obj: typing.Any,
-    cls: typing.Any,
+    *args,
+    **kwargs,
 ) -> tkinter.Tk: ...
 ```
-Return the current default root.
+Returns the current default root.
+
+In some cases, the method also returns `tkinter.Tk` and `None`, but
+this can happen if the usage is not recommended.
 
 
 
-## 🔵`reset_configs`
+
+## 🔵`reset`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
 ```python
-def reset_configs(
+def reset(
 ) -> None: ...
 ```
-Reset all configs.
+Reset all configuration options.
 

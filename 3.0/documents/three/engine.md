@@ -1,6 +1,6 @@
 # tkintertools.three.engine
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/engine.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.2/tkintertools/three/engine.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/engine.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.3/tkintertools/three/engine.py){ target='_blank' }</small>
 
 Core codes of 3D
 
@@ -14,10 +14,10 @@ Core codes of 3D
 ```python
 def __init__(
     self,
-    master: containers.Tk | containers.Canvas,
+    master: containers.Tk | containers.Toplevel | containers.Canvas | None = None,
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
-    zoom_item: bool = False,
+    auto_zoom: bool = False,
     keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     **kwargs,
@@ -44,7 +44,7 @@ Sort the contextual relationship between the spatial positions of the components
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ABC`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
 
 
 ```python
@@ -164,7 +164,7 @@ def update(
     self,
 ) -> None: ...
 ```
-
+Update
 
 
 
@@ -478,10 +478,10 @@ def update(
 ```python
 def __init__(
     self,
-    master: containers.Tk | containers.Canvas,
+    master: containers.Tk | containers.Toplevel | containers.Canvas | None = None,
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
-    zoom_item: bool = False,
+    auto_zoom: bool = False,
     keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
     **kwargs,

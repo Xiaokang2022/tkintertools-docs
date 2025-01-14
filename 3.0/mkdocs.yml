@@ -6,7 +6,7 @@ edit_uri: https://github.com/Xiaokang2022/tkintertools-docs/edit/main/3.0/ # 编
 edit_uri_template: null # 编辑地址模板（默认值）
 site_description: tkintertools 的官方文档网站 # 站点描述
 site_author: Xiaokang2022 # 站点作者
-copyright: <a href="#__consent">修改 Cookie 设置</a><br/>Copyright &copy; 2022-2024 Xiaokang2022 # 版权信息和 Cookie 设置
+copyright: <a href="#__consent">修改 Cookie 设置</a><br/>Copyright &copy; 2024 Xiaokang2022 # 版权信息和 Cookie 设置
 remote_branch: gh-pages # GitHub Pages 远程分支名称（默认值）
 remote_name: origin # 远程名称（默认值）
 docs_dir: 3.0/ # 文档目录（默认值）
@@ -203,7 +203,7 @@ extra: # 额外设定
   social: # 社交联系方式（页面右下角内容）
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/tkintertools/
-      name: GitHub 存储库
+      name: GitHub
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/tkintertools/
       name: PyPI
@@ -349,7 +349,8 @@ nav:
 
       - 📦 color:
           - documents/color/index.md
-          - 📑 colormap: documents/color/colormap.md
+          - 📑 colortable: documents/color/colortable.md
+          - 📑 convert: documents/color/convert.md
           - 📑 hsl: documents/color/hsl.md
           - 📑 rgb: documents/color/rgb.md
 
@@ -365,27 +366,22 @@ nav:
           - 📑 features: documents/standard/features.md
           - 📑 images: documents/standard/images.md
           - 📑 shapes: documents/standard/shapes.md
+          - 📑 styles: documents/standard/styles.md
           - 📑 texts: documents/standard/texts.md
           - 📑 widgets: documents/standard/widgets.md
 
-      - 📦 style:
-          - documents/style/index.md
-          - 📑 manager: documents/style/manager.md
-          - 📑 parser: documents/style/parser.md
-
       - 📦 theme:
           - documents/theme/index.md
-          - 📑 dark: documents/theme/dark.md
-          - 📑 light: documents/theme/light.md
+          - 📑 manager: documents/theme/manager.md
 
       - 📦 toolbox:
           - documents/toolbox/index.md
           - 📑 enhanced: documents/toolbox/enhanced.md
-          - 📑 tools: documents/toolbox/tools.md
+          - 📑 utility: documents/toolbox/utility.md
 
       - 📦 mpl (Extension):
           - documents/mpl/index.md
-          - 📑 _constants: documents/mpl/_constants.md
+          - 📑 constants: documents/mpl/constants.md
           - 📑 main: documents/mpl/main.md
 
       - 📦 media (Extension):

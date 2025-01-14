@@ -1,6 +1,6 @@
 # tkintertools.media.icons
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/icons.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.2/tkintertools/media/icons.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/icons.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.3/tkintertools/media/icons.py){ target='_blank' }</small>
 
 All icons with base64 format
 
@@ -16,7 +16,7 @@ def parse(
     dark: str = 'white',
 ) -> dict[str, dict[typing.Literal['light', 'dark'], enhanced.PhotoImage]]: ...
 ```
-Parse the base64 data to `enhanced.PhotoImage` with diffrent themes
+Parse the base64 data to `enhanced.PhotoImage` with diffrent themes.
 
 ## 🟣`BASE64_DATAS`
 

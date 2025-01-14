@@ -1,6 +1,6 @@
 # tkintertools.standard.dialogs
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/dialogs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/dialogs.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/dialogs.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/dialogs.py){ target='_blank' }</small>
 
 All standard dialog classes
 

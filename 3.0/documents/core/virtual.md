@@ -1,20 +1,22 @@
 # tkintertools.core.virtual
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/virtual.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/core/virtual.py){ target='_blank' }</small>
 
-Various virtual classes
+All virtual classes.
 
-The virtual `Widget` consists of 5 parts, which are `Widget`, `Shape`, `Text`, `Image` and
-`Feature`.
+The `virtual.Widget` consists of five parts, which are `Shape`, `Text`, `Image`,
+`Style` and `Feature`. In addition, they can be nested within each other.
 
-Where `Feature` is the function of widgets, and each widget can be bound to up to one, but in terms
-of appearance, there is no limit to the number of `Shape`, `Text`, and `Image`.
+Where `Feature` is the function of widgets, `Style` control the color of the
+widget, and each widget can be bound to up to one `Feature` and one `Style`,
+but in terms of appearance, there is no limit to the number of `Shape`, `Text`,
+and `Image`.
 
-`Shape`, `Text`, and `Image` are all appearance components that inherit from abstract base class
-`Components`.
+`Shape`, `Text`, and `Image` are all appearance elements that inherit from
+abstract base class `Elements`.
 
 
-## 🟢`Component`
+## 🟢`Element`
 
 
 
@@ -25,52 +27,23 @@ of appearance, there is no limit to the number of `Shape`, `Text`, and `Image`.
 def __init__(
     self,
     widget: Widget,
-    relative_position: tuple[int, int] = (0, 0),
+    position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool | None = None,
     **kwargs,
 ) -> None: ...
 ```
-The basic part of a `Widget`
+The basic visible part of a `virtual.Widget`.
 
 * `widget`: parent widget
-* `relative_position`: position relative to its widgets
-* `size`: size of component
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `position`: position relative to its widgets
+* `size`: size of element
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
-
-### 🟡`__getitem__`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
-
-```python
-def __getitem__(
-    self,
-    key: str,
-) -> dict[str, str]: ...
-```
-Easy to get style data
-
-### 🟡`__setitem__`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
-
-```python
-def __setitem__(
-    self,
-    key: str,
-    value: dict[str, str],
-) -> None: ...
-```
-Easy to set style data
 
 ### 🟡`center`
 
@@ -82,7 +55,7 @@ def center(
     self,
 ) -> tuple[float, float]: ...
 ```
-Return the geometric center of the `Component`
+Return the geometric center of the `Element`.
 
 ### 🟡`configure`
 
@@ -94,10 +67,14 @@ def configure(
     self,
     style: dict[str, str],
     *,
-    no_delay: bool = False,
+    gradient_animation: bool = True,
 ) -> None: ...
 ```
-Configure properties of `Component` and update them immediately
+Configure properties of `Element` and update them immediately.
+
+* `style`: style data
+* `gradient_animation`: whether use gradient animation
+
 
 ### 🟡`coords`
 
@@ -111,7 +88,11 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`.
+
+* `size`: new size of the element
+* `position`: new position of the element
+
 
 ### 🟡`destroy`
 
@@ -123,7 +104,7 @@ def destroy(
     self,
 ) -> None: ...
 ```
-Destroy the `Component`
+Destroy the `Element`.
 
 ### 🟡`detect`
 
@@ -133,26 +114,15 @@ Destroy the `Component`
 ```python
 def detect(
     self,
-    x: int,
-    y: int,
+    x: float,
+    y: float,
 ) -> bool: ...
 ```
-Detect whether the specified coordinates are within `Component`
+Detect whether the specified coordinates are within `Element`.
 
-### 🟡`disappear`
+* `x`: x-coordinate of the location to be detected
+* `y`: y-coordinate of the location to be detected
 
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def disappear(
-    self,
-    value: bool = True,
-    *,
-    no_delay: bool = True,
-) -> None: ...
-```
-Let the component to disappear
 
 ### 🟡`display`
 
@@ -164,20 +134,26 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`.
 
-### 🟡`get_disabled_style`
+### 🟡`forget`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def get_disabled_style(
+def forget(
     self,
-    refer_state: str | None = None,
-) -> dict[str, str]: ...
+    value: bool = True,
+    *,
+    gradient_animation: bool = False,
+) -> None: ...
 ```
-Get the style data of disabled state
+Let the element to forget.
+
+* `value`: whether to forget
+* `gradient_animation`: whether use gradient animation
+
 
 ### 🟡`move`
 
@@ -191,7 +167,11 @@ def move(
     dy: float,
 ) -> None: ...
 ```
-Move the `Component`
+Move the `Element`.
+
+* `dx`: x-coordinate offset
+* `dy`: y-coordinate offset
+
 
 ### 🟡`moveto`
 
@@ -205,7 +185,11 @@ def moveto(
     y: float,
 ) -> None: ...
 ```
-Move the `Component` to a certain position
+Move the `Element` to a certain position.
+
+* `x`: x-coordinate of the target location
+* `y`: y-coordinate of the target location
+
 
 ### 🟡`region`
 
@@ -215,9 +199,9 @@ Move the `Component` to a certain position
 ```python
 def region(
     self,
-) -> tuple[float, float, float, float]: ...
+) -> tuple[int, int, int, int]: ...
 ```
-Return the decision region of the `Component`
+Return the decision region of the `Element`.
 
 ### 🟡`update`
 
@@ -229,12 +213,13 @@ def update(
     self,
     state: str | None = None,
     *,
-    no_delay: bool = False,
+    gradient_animation: bool = False,
 ) -> None: ...
 ```
-Update the style of the `Component` to the corresponding state
+Update the style of the `Element` to the corresponding state.
 
-* `state`: the state of the `Component`
+* `state`: the state of the `Element`
+* `gradient_animation`: whether use gradient animation
 
 
 ### 🟡`zoom`
@@ -251,7 +236,12 @@ def zoom(
     zoom_size: bool = True,
 ) -> None: ...
 ```
-Zoom the `Component`
+Zoom the `Element`.
+
+* `ratios`: ratios of zooming
+* `zoom_position`: whether or not to zoom the location of the element
+* `zoom_size`: whether or not to zoom the size of the element
+
 
 
 
@@ -268,7 +258,7 @@ def __init__(
     widget: Widget,
 ) -> None: ...
 ```
-The features of a `Widget`
+The features of a `Widget`.
 
 * `widget`: parent widget
 
@@ -283,6 +273,14 @@ def _parse_method_name(
     name: str,
 ) -> str: ...
 ```
+Parse the name to method name.
+
+* `name`: original name
+
+Example:
+
+* `"<Ctrl-C>"` -> `"_ctrl_c"`
+* `"<MouseWheel>"` -> `"_mouse_wheel"`
 
 
 ### 🟡`get_method`
@@ -296,7 +294,10 @@ def get_method(
     name: str,
 ) -> collections.abc.Callable: ...
 ```
-Return method by name
+Return method by name.
+
+* `name`: name of the method
+
 
 
 
@@ -304,7 +305,7 @@ Return method by name
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Element`
 
 
 ```python
@@ -316,22 +317,32 @@ def __init__(
     *,
     image: enhanced.PhotoImage | None = None,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
-The Image of a `Widget`
+The Image of a `Widget`.
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
-* `image`: image object of the component
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `size`: size of element
+* `image`: image object of the element
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
+
+### 🟡`region`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def region(
+    self,
+) -> tuple[int, int, int, int]: ...
+```
+Return the decision region of the `Image`.
 
 ### 🟡`zoom`
 
@@ -347,7 +358,12 @@ def zoom(
     zoom_size: bool = True,
 ) -> None: ...
 ```
-Scale the image
+Scale the image.
+
+* `ratios`: ratios of zooming
+* `zoom_position`: whether or not to zoom the location of the image
+* `zoom_size`: whether or not to zoom the size of the image
+
 
 
 
@@ -355,7 +371,7 @@ Scale the image
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Element`
 
 ### 🟡`zoom`
 
@@ -371,7 +387,181 @@ def zoom(
     zoom_size: bool = True,
 ) -> None: ...
 ```
-Scale the shape
+Scale the shape.
+
+* `ratios`: ratios of zooming
+* `zoom_position`: whether or not to zoom the location of the shape
+* `zoom_size`: whether or not to zoom the size of the shape
+
+
+
+
+## 🟢`Style`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `object`
+
+
+```python
+def __init__(
+    self,
+    widget: Widget,
+    *,
+    auto_update: bool | None = None,
+) -> None: ...
+```
+The styles of a `Widget`.
+
+* `widget`: parent widget
+* `auto_update`: whether the theme manager update it automatically
+
+
+### 🟡`__getitem__`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
+
+```python
+def __getitem__(
+    self,
+    key: Element | str | int,
+) -> dict[str, dict[str, str]]: ...
+```
+
+
+### 🟡`_get_key`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _get_key(
+    self,
+    key: Element | str | int,
+) -> str: ...
+```
+Get the key.
+
+* `key`: the object related to the key
+
+
+### 🟡`_set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _set(
+    self,
+    theme: typing.Literal['light', 'dark'] | None = None,
+    data: tuple[str | types.EllipsisType, ...] | str | None = None,
+    **kwargs: tuple[Element | str | int, ...] | Element | str | int,
+) -> None: ...
+```
+Set the color of a style conveniently.
+
+* `theme`: the theme name, None indicates both
+* `data`: data of color
+* `kwargs`: { arg name: element key or element keys tuple }
+
+
+### 🟡`_wrap_arg`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _wrap_arg(
+    arg: tuple[str | types.EllipsisType | None, ...] | str,
+) -> tuple[str | types.EllipsisType | None, ...]: ...
+```
+Wrap the argument to a tuple.
+
+* `arg`: argument
+
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+    *,
+    theme: typing.Literal['light', 'dark'] | None = None,
+) -> dict[str, dict[str, dict[str, str]]]: ...
+```
+Return the style of the widget.
+
+* `theme`: the theme of the widget, None indicates the current theme
+
+
+### 🟡`get_disabled_style`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get_disabled_style(
+    self,
+    *,
+    element: Element,
+) -> dict[str, str]: ...
+```
+Get the style data of disabled state.
+
+* `element`: element that style to be calculated
+
+
+### 🟡`init`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def init(
+    self,
+    key: Element | str | int,
+    *,
+    theme: typing.Literal['light', 'dark'] | None = None,
+) -> None: ...
+```
+Initialize some style of an element.
+
+* `name`: the key of the element
+* `theme`: the theme name, None indicates both
+
+
+### 🟡`reset`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def reset(
+    self,
+    *,
+    theme: typing.Literal['light', 'dark'] | None = None,
+) -> None: ...
+```
+Reset the style of the widget and update.
+
+* `theme`: the theme to be reset, None indicates both
+
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+) -> None: ...
+```
+Set the style of the widget.
 
 
 
@@ -379,7 +569,7 @@ Scale the shape
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Component`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Element`
 
 
 ```python
@@ -400,16 +590,15 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
-The Text of a `Widget`
+The Text of a `Widget`.
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `text`: text value
 * `family`: font family
 * `fontsize`: font size
@@ -420,9 +609,8 @@ The Text of a `Widget`
 * `limit`: limit on the number of characters
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -436,7 +624,7 @@ def region(
     self,
 ) -> tuple[int, int, int, int]: ...
 ```
-Return the decision region of the `Text`
+Return the decision region of the `Text`.
 
 ### 🟡`zoom`
 
@@ -452,7 +640,12 @@ def zoom(
     zoom_size: bool = True,
 ) -> None: ...
 ```
-Scale the text
+Scale the text.
+
+* `ratios`: ratios of zooming
+* `zoom_position`: whether or not to zoom the location of the text
+* `zoom_size`: whether or not to zoom the size of the text
+
 
 
 
@@ -470,26 +663,26 @@ def __init__(
     position: tuple[int, int] = (0, 0),
     size: tuple[int, int] | None = None,
     *,
-    name: str | None = None,
-    state: str = 'normal',
     anchor: typing.Literal['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'center'] = 'nw',
-    through: bool | None = None,
-    animation: bool | None = None,
+    capture_events: bool | None = None,
+    gradient_animation: bool | None = None,
+    auto_update: bool | None = None,
+    style: type[Style] | None = None,
 ) -> None: ...
 ```
-Base Widget Class
+Base Widget Class.
 
-`Widget` = `Shape` + `Text` + `Image` + `Feature` + `Widget`
+`Widget` = `Element` + `Style` + `Feature`
 
 
 * `master`: parent canvas
 * `position`: position of the widget
 * `size`: size of the widget
-* `name`: name of the widget
-* `state`: default state of the widget
 * `anchor`: layout anchor of the widget
-* `through`: wether detect another widget under the widget
-* `animation`: wether enable animation
+* `capture_events`: wether detect another widget under the widget
+* `gradient_animation`: wether enable animation
+* `auto_update`: whether the theme manager update it automatically
+* `style`: style of the widget
 
 
 ### 🟡`bind`
@@ -501,14 +694,14 @@ Base Widget Class
 def bind(
     self,
     sequence: str,
-    func: collections.abc.Callable[[tkinter.Event], typing.Any],
+    command: collections.abc.Callable[[tkinter.Event], typing.Any],
     add: bool | typing.Literal['', '+'] | None = None,
 ) -> None: ...
 ```
-Bind to this widget at event SEQUENCE a call to function FUNC.
+Bind to this widget at event sequence a call to function command.
 
 * `sequence`: event name
-* `func`: callback function
+* `command`: callback function
 * `add`: if True, original callback function will not be overwritten
 
 
@@ -523,27 +716,31 @@ def bind_on_update(
     command: collections.abc.Callable[[str, bool], typing.Any],
 ) -> None: ...
 ```
-Bind an extra function to the widget on update
+Bind an extra function to the widget on update.
 
-This extra function has two positional arguments, both of which are arguments to the method
-`update`. And this extra function will be called when the widget is updated (whether it's
-automatically updated or manually updated).
+This extra function has two positional arguments, both of which are
+arguments to the method `update`. And this extra function will be
+called when the widget is updated (whether it's automatically updated
+or manually updated).
 
 * `command`: the extra function that is bound
 
 
-### 🟡`deregister`
+### 🟡`deregister_elements`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def deregister(
+def deregister_elements(
     self,
-    component: Component,
+    *elements: Element,
 ) -> None: ...
 ```
-Deregister a component from the widget
+Deregister a element from the widget.
+
+* `elements`: elements to be deregistered
+
 
 ### 🟡`destroy`
 
@@ -555,7 +752,7 @@ def destroy(
     self,
 ) -> None: ...
 ```
-Destroy the widget
+Destroy the widget.
 
 ### 🟡`detect`
 
@@ -565,69 +762,68 @@ Destroy the widget
 ```python
 def detect(
     self,
-    x: int,
-    y: int,
+    x: float,
+    y: float,
 ) -> bool: ...
 ```
-Detect whether the specified coordinates are within the `Widget`
+Detect whether the specified coordinates are within the `Widget`.
 
-### 🟡`disabled`
+* `x`: x-coordinate of the location to be detected
+* `y`: y-coordinate of the location to be detected
+
+
+### 🟡`disable`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def disabled(
+def disable(
     self,
     value: bool = True,
 ) -> None: ...
 ```
-Disable the widget
+Disable the widget.
 
-### 🟡`disappear`
+* `value`: whether to disable
+
+
+### 🟡`forget`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def disappear(
+def forget(
     self,
     value: bool = True,
 ) -> None: ...
 ```
-Let all components of the widget to disappear
+Let all elements of the widget to forget.
 
-### 🟡`event_generate`
+* `value`: whether to forget the widget
+
+
+### 🟡`generate_event`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def event_generate(
+def generate_event(
     self,
     sequence: str,
     event: tkinter.Event | None = None,
     **kwargs,
 ) -> None: ...
 ```
-Generate an event SEQUENCE. Additional keyword arguments specify parameter of the event
+Generate an event sequence. Additional keyword arguments specify
+parameter of the event.
 
 * `sequence`: event name
 * `event`: event
 * `kwargs`: attr of event
 
-
-### 🟡`is_nested`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def is_nested(
-    self,
-) -> bool: ...
-```
-Whether the widget is a nested widget
 
 ### 🟡`move`
 
@@ -637,11 +833,15 @@ Whether the widget is a nested widget
 ```python
 def move(
     self,
-    dx: int | float,
-    dy: int | float,
+    dx: float,
+    dy: float,
 ) -> None: ...
 ```
-Move the widget
+Move the widget.
+
+* `dx`: x-coordinate offset
+* `dy`: y-coordinate offset
+
 
 ### 🟡`moveto`
 
@@ -651,24 +851,31 @@ Move the widget
 ```python
 def moveto(
     self,
-    x: int,
-    y: int,
+    x: float,
+    y: float,
 ) -> None: ...
 ```
-Move the Widget to a certain position
+Move the Widget to a certain position.
 
-### 🟡`register`
+* `x`: x-coordinate of the target location
+* `y`: y-coordinate of the target location
+
+
+### 🟡`register_elements`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def register(
+def register_elements(
     self,
-    component: Component,
+    *elements: Element,
 ) -> None: ...
 ```
-Register a component to the widget
+Register elements to the widget.
+
+* `elements`: elements to be registered
+
 
 ### 🟡`unbind`
 
@@ -679,13 +886,13 @@ Register a component to the widget
 def unbind(
     self,
     sequence: str,
-    funcid: collections.abc.Callable[[tkinter.Event], typing.Any],
+    command: collections.abc.Callable[[tkinter.Event], typing.Any],
 ) -> None: ...
 ```
-Unbind for this widget the event SEQUENCE.
+Unbind for this widget the event sequence.
 
 * `sequence`: event name
-* `funcid`: callback function
+* `command`: callback function
 
 
 ### 🟡`unbind_on_update`
@@ -699,7 +906,7 @@ def unbind_on_update(
     command: collections.abc.Callable[[str, bool], typing.Any],
 ) -> None: ...
 ```
-Unbind an extra function to the widget on update
+Unbind an extra function to the widget on update.
 
 * `command`: the extra function that is bound
 
@@ -714,11 +921,16 @@ def update(
     self,
     state: str | None = None,
     *,
-    no_delay: bool = False,
+    gradient_animation: bool | None = None,
     nested: bool = True,
 ) -> None: ...
 ```
-Update the widget
+Update the widget.
+
+* `state`: state of the widget
+* `gradient_animation`: whether use gradient animation
+* `nested`: whether nested
+
 
 ### 🟡`zoom`
 
@@ -734,7 +946,12 @@ def zoom(
     zoom_size: bool = True,
 ) -> None: ...
 ```
-Zoom self
+Zoom widget ifself.
+
+* `ratios`: ratios of zooming
+* `zoom_position`: whether or not to zoom the location of the widget
+* `zoom_size`: whether or not to zoom the size of the widget
+
 
 
 

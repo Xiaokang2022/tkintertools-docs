@@ -1,6 +1,6 @@
 # tkintertools.media.main
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/main.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.2/tkintertools/media/main.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/main.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.3/tkintertools/media/main.py){ target='_blank' }</small>
 
 APIs for playing videos
 
@@ -14,16 +14,15 @@ APIs for playing videos
 ```python
 def __init__(
     self,
-    master: 'containers.Tk | containers.Canvas',
+    master: containers.Tk | containers.Toplevel | containers.Canvas | None = None,
     *,
     controls: bool = False,
     loop: bool = False,
     click_pause: bool = True,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
-    zoom_item: bool = False,
+    auto_zoom: bool = False,
     keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
-    name: str = 'Canvas',
     **kwargs,
 ) -> None: ...
 ```
@@ -34,7 +33,7 @@ A canvas that is scalable and playable for videos
 * `loop`: whether the video loops automatically
 * `click_pause`: whether to pause when clicked
 * `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
-* `zoom_item`: whether or not to scale its items
+* `auto_zoom`: whether or not to scale its items
 * `keep_ratio`: the mode of aspect ratio, `min` follows the minimum
 value, `max` follows the maximum value
 * `free_anchor`: whether the anchor point is free-floating
@@ -128,6 +127,18 @@ def close(
 ```
 Close the video player
 
+### 🟡`destroy`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def destroy(
+    self,
+) -> None: ...
+```
+
+
 ### 🟡`open`
 
 
@@ -150,13 +161,13 @@ Open a video file and play
 * `muted`: whether or not to mute the video at the start
 
 
-### 🟡`re_place`
+### 🟡`zoom`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def re_place(
+def zoom(
     self,
 ) -> None: ...
 ```
@@ -211,7 +222,7 @@ process some thing about theme
 ```python
 def _theme(
     self,
-    dark: bool,
+    theme: typing.Literal['light', 'dark'],
 ) -> None: ...
 ```
 Switch the icon theme of the widget

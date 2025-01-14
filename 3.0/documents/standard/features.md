@@ -1,29 +1,8 @@
 # tkintertools.standard.features
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/features.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/features.py){ target='_blank' }</small>
 
 All standard `Feature` classes
-
-## 🟢`BaseFeature`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
-
-### 🟡`_motion`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _motion(
-    self,
-    event: tkinter.Event,
-) -> bool: ...
-```
-
-
-
 
 ## 🟢`ButtonFeature`
 
@@ -128,37 +107,11 @@ def _motion(
 
 
 
-## 🟢`CheckButtonFeature`
+## 🟢`CheckBoxFeature`
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
-
-### 🟡`_button_1`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _button_1(
-    self,
-    _: tkinter.Event,
-) -> bool: ...
-```
-
-
-### 🟡`_button_release_1`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _button_release_1(
-    self,
-    event: tkinter.Event,
-) -> bool: ...
-```
-
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ToggleButtonFeature`
 
 
 
@@ -376,11 +329,58 @@ def _motion(
 
 
 
-## 🟢`RadioButtonFeature`
+## 🟢`RadioBoxFeature`
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `CheckButtonFeature`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ButtonFeature`
+
+### 🟡`_button_1`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _button_1(
+    self,
+    _: tkinter.Event,
+) -> bool: ...
+```
+
+
+### 🟡`_button_release_1`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _button_release_1(
+    self,
+    event: tkinter.Event,
+) -> bool: ...
+```
+
+
+
+
+## 🟢`SegmentedButtonFeature`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Feature`
+
+### 🟡`_motion`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _motion(
+    self,
+    event: tkinter.Event,
+) -> bool: ...
+```
+
 
 
 

@@ -1,23 +1,17 @@
 # tkintertools.animation.controllers
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/controllers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/animation/controllers.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/animation/controllers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/animation/controllers.py){ target='_blank' }</small>
 
-Standard control functions
+Controller generator and standard control functions.
 
 Definition of control function:
 
 ```python
-def f(t: int | float) -> int | float: ...
+def f(t: float) -> float: ...
 ```
 
-* t: 0% ~ 100%, indicates the percentage of time
-* return value: Any real number, represents a multiple of the cardinality of the animation
-
-The built-in control functions are:
-
-* `flat`: speed remains the same
-* `smooth`: speed is slow first, then fast and then slow
-* `rebound`: before the end, displacement will bounce off a bit
+* `t`: 0% ~ 100%, indicates the percentage of time
+* return: real number, indicates a multiple of the cardinality of the animation
 
 
 ## 🔵`_map_t`
@@ -27,14 +21,14 @@ The built-in control functions are:
 
 ```python
 def _map_t(
-    start: int | float,
-    end: int | float,
-) -> collections.abc.Callable[[int | float], int | float]: ...
+    start: float,
+    end: float,
+) -> collections.abc.Callable[[float], float]: ...
 ```
-Map parameters in any range between 0 and 1
+Map parameters in any range between 0 and 1.
 
-* `start`: the first value of the parameter of control function
-* `end`: the last value of the parameter of control function
+* `start`: the first value of the parameter of the base function
+* `end`: the last value of the parameter of the base function
 
 
 ## 🔵`_map_y`
@@ -44,56 +38,82 @@ Map parameters in any range between 0 and 1
 
 ```python
 def _map_y(
-    base_function: collections.abc.Callable[[int | float], int | float],
-    end: int | float,
-) -> collections.abc.Callable[[int | float], float]: ...
+    base: collections.abc.Callable[[float], float],
+    end: float,
+) -> collections.abc.Callable[[float], float]: ...
 ```
-Map the final return value to 1
+Map the final return value to 1.
 
-* `base_function`: base function
-* `end`: the last value of the parameter of control function
+* `base`: base function
+* `end`: the last value of the parameter of the base function
 
 
-## 🔵`controller_generator`
+## 🔵`ease_in`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
 ```python
-def controller_generator(
-    base_function: collections.abc.Callable[[int | float], int | float],
-    start: int | float,
-    end: int | float,
+def ease_in(
+    t: float,
+) -> float: ...
+```
+Gradually accelerate. (slow -> fast)
+
+* `t`: the percentage of time
+
+
+## 🔵`ease_out`
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def ease_out(
+    t: float,
+) -> float: ...
+```
+Gradually decelerate. (fast -> slow)
+
+* `t`: the percentage of time
+
+
+## 🔵`generate`
+
+
+<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
+
+```python
+def generate(
+    base: collections.abc.Callable[[float], float],
+    start: float,
+    end: float,
     *,
     map_y: bool = True,
-) -> collections.abc.Callable[[int | float], int | float]: ...
+) -> collections.abc.Callable[[float], float]: ...
 ```
-Generator of control functions
+Generate a control function from an ordinary mathematical function.
 
-Modify the generic function to a control function suitable for animation
-
-* `base_function`: base function
-* `start`: the first value of the parameter of control function
-* `end`: the last value of the parameter of control function
+* `base`: base function, an ordinary mathematical function
+* `start`: the first value of the parameter of the base function
+* `end`: the last value of the parameter of the base function
 * `map_y`: whether map the final return value to 1
 
-For example:
 
-* Before modifying: $y = 2\sint, 0 <= t <= \pi/2$
-* After modifying: $y = \sin\frac{\pi}{2}t, 0 <= t <= 1$
-
-
-## 🔵`flat`
+## 🔵`linear`
 
 
 <code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
 
 ```python
-def flat(
-    t: int | float,
-) -> int | float: ...
+def linear(
+    t: float,
+) -> float: ...
 ```
-Flat animation: speed remains the same
+Speed remains the same.
+
+* `t`: the percentage of time
+
 
 ## 🔵`rebound`
 
@@ -102,10 +122,13 @@ Flat animation: speed remains the same
 
 ```python
 def rebound(
-    t: int | float,
+    t: float,
 ) -> float: ...
 ```
-Rebound animation: before the end, displacement will bounce off a bit
+Before the end, displacement will bounce off a bit.
+
+* `t`: the percentage of time
+
 
 ## 🔵`smooth`
 
@@ -114,8 +137,11 @@ Rebound animation: before the end, displacement will bounce off a bit
 
 ```python
 def smooth(
-    t: int | float,
+    t: float,
 ) -> float: ...
 ```
-Smooth animation: speed is slow first, then fast and then slow
+Speed is slow first, then fast and then slow. (slow -> fast -> slow)
+
+* `t`: the percentage of time
+
 

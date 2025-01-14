@@ -1,6 +1,6 @@
 # tkintertools.standard.texts
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/texts.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/standard/texts.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/texts.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/texts.py){ target='_blank' }</small>
 
 All standard `Text` classes
 
@@ -47,7 +47,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`delete`
 
@@ -72,7 +72,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 ### 🟡`get`
 
@@ -128,8 +128,7 @@ def __init__(
     underline: bool = False,
     overstrike: bool = False,
     name: str | None = None,
-    animation: bool = True,
-    styles: dict[str, dict[str, str]] | None = None,
+    gradient_animation: bool = True,
     **kwargs,
 ) -> None: ...
 ```
@@ -137,7 +136,7 @@ Single-line editable text
 
 * `widget`: parent widget
 * `relative_position`: position relative to its widgets
-* `size`: size of component
+* `size`: size of element
 * `text`: text value
 * `family`: font family
 * `fontsize`: font size
@@ -150,9 +149,8 @@ Single-line editable text
 * `limit_width`: limit on the width of characters
 * `show`: display a value that obscures the original content
 * `placeholder`: a placeholder for the prompt
-* `name`: name of component
-* `animation`: Wether use animation to change color
-* `styles`: style dict of component
+* `name`: name of element
+* `gradient_animation`: Wether use animation to change color
 * `kwargs`: extra parameters for CanvasItem
 
 
@@ -254,7 +252,7 @@ def coords(
     position: tuple[float, float] | None = None,
 ) -> None: ...
 ```
-Resize the `Component`
+Resize the `Element`
 
 ### 🟡`cursor_move`
 
@@ -292,7 +290,7 @@ def display(
     self,
 ) -> None: ...
 ```
-Display the `Component` on a `Canvas`
+Display the `Element` on a `Canvas`
 
 ### 🟡`get`
 
@@ -304,7 +302,7 @@ def get(
     self,
 ) -> str: ...
 ```
-Get text of the component
+Get text of the element
 
 ### 🟡`insert`
 
@@ -358,7 +356,7 @@ def set(
     value: str,
 ) -> bool: ...
 ```
-Set text of the component
+Set text of the element
 
 
 

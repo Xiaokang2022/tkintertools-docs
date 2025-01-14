@@ -20,17 +20,18 @@ icon: material/file-document
 
     当前文档适用版本：
 
-    * tkintertools: `3.0.0rc5`
-    * tkintertools-mpl (EX): `1.2.2`
-    * tkintertools-media (EX): `1.1.2`
-    * tkintertools-3d (EX): `1.0.2`
+    * tkintertools: `3.0.0rc6`
+    * tkintertools-mpl (EX): `1.2.3`
+    * tkintertools-media (EX): `1.1.3`
+    * tkintertools-3d (EX): `1.0.3`
 
 * 📦 [`tkintertools.animation`](./animation/index.md)
     - 📑 [`tkintertools.animation.animations`](./animation/animations.md)
     - 📑 [`tkintertools.animation.controllers`](./animation/controllers.md)
 
 * 📦 [`tkintertools.color`](./color/index.md)
-    - 📑 [`tkintertools.color.colormap`](./color/colormap.md)
+    - 📑 [`tkintertools.color.colortable`](./color/colortable.md)
+    - 📑 [`tkintertools.color.convert`](./color/convert.md)
     - 📑 [`tkintertools.color.hsl`](./color/hsl.md)
     - 📑 [`tkintertools.color.rgb`](./color/rgb.md)
 
@@ -44,7 +45,7 @@ icon: material/file-document
     - 📑 [`tkintertools.media.main`](./media/main.md)
 
 * 📦 [`tkintertools.mpl`](./mpl/index.md)
-    - 📑 [`tkintertools.mpl._constants`](./mpl/_constants.md)
+    - 📑 [`tkintertools.mpl.constants`](./mpl/constants.md)
     - 📑 [`tkintertools.mpl.main`](./mpl/main.md)
 
 * 📦 [`tkintertools.standard`](./standard/index.md)
@@ -52,16 +53,12 @@ icon: material/file-document
     - 📑 [`tkintertools.standard.features`](./standard/features.md)
     - 📑 [`tkintertools.standard.images`](./standard/images.md)
     - 📑 [`tkintertools.standard.shapes`](./standard/shapes.md)
+    - 📑 [`tkintertools.standard.styles`](./standard/styles.md)
     - 📑 [`tkintertools.standard.texts`](./standard/texts.md)
     - 📑 [`tkintertools.standard.widgets`](./standard/widgets.md)
 
-* 📦 [`tkintertools.style`](./style/index.md)
-    - 📑 [`tkintertools.style.manager`](./style/manager.md)
-    - 📑 [`tkintertools.style.parser`](./style/parser.md)
-
 * 📦 [`tkintertools.theme`](./theme/index.md)
-    - 📑 [`tkintertools.theme.dark`](./theme/dark.md)
-    - 📑 [`tkintertools.theme.light`](./theme/light.md)
+    - 📑 [`tkintertools.theme.manager`](./theme/manager.md)
 
 * 📦 [`tkintertools.three`](./three/index.md)
     - 📑 [`tkintertools.three.engine`](./three/engine.md)
@@ -69,4 +66,4 @@ icon: material/file-document
 
 * 📦 [`tkintertools.toolbox`](./toolbox/index.md)
     - 📑 [`tkintertools.toolbox.enhanced`](./toolbox/enhanced.md)
-    - 📑 [`tkintertools.toolbox.tools`](./toolbox/tools.md)
+    - 📑 [`tkintertools.toolbox.utility`](./toolbox/utility.md)

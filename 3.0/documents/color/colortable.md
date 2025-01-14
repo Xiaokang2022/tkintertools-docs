@@ -1,40 +1,16 @@
-# tkintertools.color.colormap
+# tkintertools.color.colortable
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/colormap.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/color/colormap.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/colortable.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/color/colortable.py){ target='_blank' }</small>
 
-The mapping of the color name to its RGB code
+Mapping table between the color names and the RGB codes.
 
-## 🔵`name_to_rgb`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def name_to_rgb(
-    color_name: str,
-) -> rgb.RGB: ...
-```
-Convert a color name to RGB code
-
-## 🔵`name_to_rgb`
-
-
-<code style='color: royalblue;'>function</code> <code style='color: green;'>public</code>
-
-```python
-def name_to_rgb(
-    color_name: str,
-) -> rgb.RGB: ...
-```
-Convert a color name to RGB code
-
-## 🟣`COLOR_MAP`
+## 🟣`MAPPING_TABLE`
 
 
 <code style='color: skyblue;'>constant</code> <code style='color: green;'>public</code>
 
 ```python linenums="0"
-COLOR_MAP: dict = {
+MAPPING_TABLE: dict = {
     'agua': (0, 255, 255),
     'alice blue': (240, 248, 255),
     'aliceblue': (240, 248, 255),

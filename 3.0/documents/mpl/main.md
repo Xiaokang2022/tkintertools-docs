@@ -1,6 +1,6 @@
 # tkintertools.mpl.main
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/main.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.2/tkintertools/mpl/main.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/main.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.3/tkintertools/mpl/main.py){ target='_blank' }</small>
 
 APIs for Matplotlib
 
@@ -37,20 +37,7 @@ def _fix_size(
     event: tkinter.Event,
 ) -> None: ...
 ```
-Correct the size of Figure
-
-### 🟡`_theme`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _theme(
-    self,
-    dark: bool,
-) -> None: ...
-```
-Change the color theme of the Figure
+Correct the size of Figure.
 
 ### 🟡`destroy`
 
@@ -62,6 +49,22 @@ def destroy(
     self,
 ) -> None: ...
 ```
+
+
+### 🟡`theme`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def theme(
+    self,
+    theme: typing.Literal['light', 'dark'],
+) -> None: ...
+```
+Change the color theme of the Figure.
+
+* `theme`: the theme name
 
 
 
@@ -91,24 +94,9 @@ An interface class for the matplotlib navigation cursor
 manager's packing list during initialization with `side="bottom"` and
 `fill="x"`.
 
-TIPS:
-
 If you want to use the toolbar with a different layout manager,
 use `pack_toolbar=False`
 
-
-### 🟡`_theme`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _theme(
-    self,
-    dark: bool,
-) -> None: ...
-```
-Change the color theme of the Toolbar
 
 ### 🟡`destroy`
 
@@ -122,6 +110,22 @@ def destroy(
 ```
 
 
+### 🟡`theme`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def theme(
+    self,
+    theme: typing.Literal['light', 'dark'],
+) -> None: ...
+```
+Change the color theme of the Toolbar.
+
+* `theme`: the theme name
+
+
 
 
 ## 🔵`_forward_methods`
@@ -131,15 +135,14 @@ def destroy(
 
 ```python
 def _forward_methods(
-    source_object: object | type,
-    target_object: object,
+    src_obj: object | type,
+    tgt_obj: object,
 ) -> None: ...
 ```
+Forward methods and attributes of one object to another object.
 
-Forward methods and attributes of one object to another object
-
-* `source_object`: the source object, that is, the forwarded object
-* `target_object`: the target object, that is, the object to be forwarded
+* `src_obj`: the source object, that is, the forwarded object
+* `tgt_obj`: the target object, that is, the object to be forwarded
 
 
 ## 🔵`set_mpl_default_theme`
@@ -154,8 +157,7 @@ def set_mpl_default_theme(
     apply_font: bool = False,
 ) -> None: ...
 ```
-
-Set default color constants of `matplotlib`
+Set default color constants of `matplotlib`.
 
 * `theme`: theme mode
 * `apply_font`: whether to use the font of `tkintertools`

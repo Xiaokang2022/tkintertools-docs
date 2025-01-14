@@ -1,64 +1,52 @@
 # tkintertools.core.containers
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/containers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc5/tkintertools/core/containers.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/containers.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/core/containers.py){ target='_blank' }</small>
 
-All container widgets
+All containers.
 
-There are two container widgets at the window level: `Tk` and `Toplevel`. `Tk` is generally used
-for the main window, while `Toplevel` is a pop-up window.
+There are two containers at the window level: `Tk` and `Toplevel`. `Tk` is
+generally used for the main window, while `Toplevel` is a pop-up window.
 
-There are two container widgets at the canvas level: `Canvas` and `Frame`. `Canvas` is the main
-widget carrier in tkintertools, and `Frame` is similar to `Canvas`, but with a different default
-color. `Frame` is generally used for layout.
+There is another container at the canvas level: `Canvas`. `Canvas` is the main
+container carrier.
 
 
 ## 🟢`Canvas`
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas` `Misc`
 
 
 ```python
 def __init__(
     self,
-    master: Tk | Canvas,
+    master: Tk | Toplevel | Canvas | None = None,
     *,
     expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
-    zoom_item: bool = False,
+    auto_zoom: bool = False,
     keep_ratio: typing.Literal['min', 'max'] | None = None,
     free_anchor: bool = False,
-    name: str | None = None,
+    auto_update: bool | None = None,
+    zoom_all_items: bool = False,
     **kwargs,
 ) -> None: ...
 ```
-Scalable Canvas
+Main contrainer: Canvas.
 
-The parent widget of all virtual widgets of tkintertools is `Canvas`
+The parent widget of all virtual widgets is `Canvas`.
 
 
 * `master`: parent widget
 * `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
-* `zoom_item`: whether or not to scale its items
-* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum value, `max` follows
-the maximum value
+* `auto_zoom`: whether or not to scale its items automatically
+* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum
+value, `max` follows the maximum value
 * `free_anchor`: whether the anchor point is free-floating
+* `auto_update`: whether the theme manager update it automatically
+* `zoom_all_items`: (Experimental) whether or not to scale its all items
 * `kwargs`: compatible with other parameters of class `tkinter.Canvas`
 
-
-### 🟡`_click`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _click(
-    self,
-    event: tkinter.Event,
-    name: str,
-) -> None: ...
-```
-Events to active the mouse
 
 ### 🟡`_initialization`
 
@@ -70,88 +58,7 @@ def _initialization(
     self,
 ) -> None: ...
 ```
-Initialization of size data
-
-### 🟡`_key_press`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _key_press(
-    self,
-    event: tkinter.Event,
-) -> None: ...
-```
-Events for typing
-
-### 🟡`_key_release`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _key_release(
-    self,
-    event: tkinter.Event,
-) -> None: ...
-```
-Events for typing
-
-### 🟡`_motion`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _motion(
-    self,
-    event: tkinter.Event,
-    name: str,
-) -> None: ...
-```
-Events to move the mouse
-
-### 🟡`_release`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _release(
-    self,
-    event: tkinter.Event,
-    name: str,
-) -> None: ...
-```
-Events to release the mouse
-
-### 🟡`_wheel`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _wheel(
-    self,
-    event: tkinter.Event,
-    type_: bool | None,
-) -> None: ...
-```
-Events to scroll the mouse wheel
-
-### 🟡`_zoom_children`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
-
-```python
-def _zoom_children(
-    self,
-    relative_ratio: tuple[float, float],
-) -> None: ...
-```
-Experimental: Scale the tkinter Widgets
+Initialization of size data.
 
 ### 🟡`_zoom_self`
 
@@ -163,7 +70,23 @@ def _zoom_self(
     self,
 ) -> None: ...
 ```
-Scale the `Canvas` itself
+Scale the `Canvas` itself.
+
+### 🟡`_zoom_tk_widgets`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: orange;'>protected</code>
+
+```python
+def _zoom_tk_widgets(
+    self,
+    rel_ratio: tuple[float, float],
+) -> None: ...
+```
+Scale the tkinter widgets of the Canvas.
+
+* `rel_ratio`: the ratio of the current size to the previous size
+
 
 ### 🟡`clear`
 
@@ -175,7 +98,7 @@ def clear(
     self,
 ) -> None: ...
 ```
-Clear all things in the Canvas
+Clear all things in the Canvas.
 
 ### 🟡`create_text`
 
@@ -192,6 +115,188 @@ def create_text(
     **kwargs,
 ) -> int: ...
 ```
+Create text with coordinates x, y.
+
+### 🟡`destroy`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def destroy(
+    self,
+) -> None: ...
+```
+Destroy this and all descendants widgets.
+
+### 🟡`on_click`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_click(
+    self,
+    event: tkinter.Event,
+    name: str,
+) -> None: ...
+```
+Events to active the mouse
+
+### 🟡`on_key_press`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_key_press(
+    self,
+    event: tkinter.Event,
+) -> None: ...
+```
+Events for typing
+
+### 🟡`on_key_release`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_key_release(
+    self,
+    event: tkinter.Event,
+) -> None: ...
+```
+Events for typing
+
+### 🟡`on_motion`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_motion(
+    self,
+    event: tkinter.Event,
+    name: str,
+) -> None: ...
+```
+Events to move the mouse
+
+### 🟡`on_release`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_release(
+    self,
+    event: tkinter.Event,
+    name: str,
+) -> None: ...
+```
+Events to release the mouse
+
+### 🟡`on_wheel`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def on_wheel(
+    self,
+    event: tkinter.Event,
+    type_: bool | None,
+) -> None: ...
+```
+Events to scroll the mouse wheel
+
+### 🟡`register_event`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def register_event(
+    self,
+    name: str,
+    *,
+    add: bool | typing.Literal['', '+'] | None = None,
+) -> str: ...
+```
+Register a event to process.
+
+* `name`: event name, such as "<Alt-A>"
+* `add`: whether it is an attached call
+
+In general, you don't need to call this method, but when the event to
+be bound is not in the predefined event, you need to manually call the
+method once.
+
+
+### 🟡`theme`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def theme(
+    self,
+    value: typing.Literal['light', 'dark'],
+) -> None: ...
+```
+Change the color theme of the Canvas and its items
+
+* `value`: theme name
+
+
+### 🟡`zoom`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def zoom(
+    self,
+) -> None: ...
+```
+Resize and position the `Canvas` based on the relevant parameters.
+
+This method only works for Canvas with Place layout.
+
+
+
+
+## 🟢`Misc`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ABC`
+
+### 🟡`__enter__`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
+
+```python
+def __enter__(
+    self,
+) -> typing_extensions.Self: ...
+```
+
+
+### 🟡`__exit__`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: purple;'>special</code>
+
+```python
+def __exit__(
+    self,
+    *args,
+    **kwargs,
+) -> None: ...
+```
 
 
 ### 🟡`destroy`
@@ -204,88 +309,7 @@ def destroy(
     self,
 ) -> None: ...
 ```
-
-
-### 🟡`event_register`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def event_register(
-    self,
-    name: str,
-    *,
-    add: bool | typing.Literal['', '+'] | None = None,
-) -> str: ...
-```
-Register a event to process
-
-### 🟡`re_place`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def re_place(
-    self,
-) -> None: ...
-```
-Resize and position the `Canvas` based on the relevant parameters
-
-WARNING:
-
-This method only works for Canvas with Place layout
-
-
-### 🟡`theme`
-
-
-<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
-
-```python
-def theme(
-    self,
-    dark: bool,
-) -> None: ...
-```
-Change the color theme of the Canvas and its items
-
-* `dark`: whether it is in dark mode
-
-
-
-
-## 🟢`Frame`
-
-
-
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Canvas`
-
-
-```python
-def __init__(
-    self,
-    master: Tk | Canvas | Frame,
-    *,
-    expand: typing.Literal['', 'x', 'y', 'xy'] = 'xy',
-    zoom_item: bool = False,
-    keep_ratio: typing.Literal['min', 'max'] | None = None,
-    free_anchor: bool = False,
-    name: str | None = None,
-    **kwargs,
-) -> None: ...
-```
-A frame for auxiliary layouts
-
-* `master`: parent widget
-* `expand`: the mode of expand, `x` is horizontal, and `y` is vertical
-* `zoom_item`: whether or not to scale its items
-* `keep_ratio`: the mode of aspect ratio, `min` follows the minimum value, `max` follows
-the maximum value
-* `free_anchor`: whether the anchor point is free-floating
-* `kwargs`: compatible with other parameters of class `tkinter.Canvas`
-
+Destroy the object.
 
 
 
@@ -293,7 +317,7 @@ the maximum value
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Tk`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Tk` `Misc`
 
 
 ```python
@@ -302,20 +326,22 @@ def __init__(
     size: tuple[int, int] = (1280, 720),
     position: tuple[int, int] | None = None,
     *,
-    title: str | None = '',
-    icon: str | None = '',
+    title: str | None = None,
+    icon: str | enhanced.PhotoImage | None = None,
     **kwargs,
 ) -> None: ...
 ```
-Main window
+Main window.
 
-In general, there is only one main window
+In general, there is only one main window. But after destroying it, another
+one can be created.
 
 
-* `size`: the size of the window, default value is 1280x720(px)
-* `position`: the position of the window, default value indicates that location is random
-* `title`: the title of the window, default value is an empty string
-* `icon`: the icon of the window, default value indicates no icon, `None` indicates tk icon
+* `size`: size of the window
+* `position`: position of the window, based on the upper left (nw)
+corner. And negative numbers are based on the bottom right (se) corner.
+* `title`: title of the window, default value is `"tk"`
+* `icon`: icon of the window, default value is the icon of tk
 * `**kwargs`: compatible with other parameters of class `tkinter.Tk`
 
 
@@ -329,8 +355,8 @@ def _fixed_theme(
     method,
 ) -> collections.abc.Callable: ...
 ```
-This is a decorator that to fix a problem that some methods cause the window to lose its
-theme
+This is a decorator that to fix a problem that some methods cause
+the window to lose its theme.
 
 * `method`: the method of being decorated
 
@@ -346,7 +372,10 @@ def _wrap_method(
     method_name: str,
 ) -> None: ...
 ```
-Some problems can be fixed by decorating the original method
+Some problems can be fixed by decorating the original method.
+
+* `method_name`: the name of the method to be decorated
+
 
 ### 🟡`_zoom`
 
@@ -358,7 +387,7 @@ def _zoom(
     self,
 ) -> None: ...
 ```
-Zoom contents of the window
+Zoom contents of the window.
 
 ### 🟡`alpha`
 
@@ -376,6 +405,25 @@ Set or get the transparency of the window
 * `value`: the transparency of the window, range is 0~1
 
 
+### 🟡`at_exit`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def at_exit(
+    self,
+    command: collections.abc.Callable[[], typing.Any],
+    *,
+    ensure_destroy: bool = True,
+) -> None: ...
+```
+Set a function that will be called when the window is closed.
+
+* `command`: the function that was called
+* `ensure_destroy`: whether the window is guaranteed to be closed
+
+
 ### 🟡`center`
 
 
@@ -384,14 +432,27 @@ Set or get the transparency of the window
 ```python
 def center(
     self,
-    master: tkinter.Misc | None = None,
+    *,
+    refer: tkinter.Misc | None = None,
 ) -> None: ...
 ```
-Center the widget
+Center the container
 
-`master`: The area of the reference widget, if it is None, means that the reference area is
-the entire screen
+`refer`: The area of the reference widget, if it is None, means that
+the reference area is the entire screen.
 
+
+### 🟡`destroy`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def destroy(
+    self,
+) -> None: ...
+```
+Destroy this and all descendants widgets.
 
 ### 🟡`fullscreen`
 
@@ -404,14 +465,12 @@ def fullscreen(
     value: bool | None = True,
 ) -> bool | None: ...
 ```
-Set or get whether the window is full-screen
+Set or get whether the window is full-screen.
 
 * `value`: indicate whether the window is full-screen
 
-TIP:
-
-The method should be called at the end of the code, or after some time after the program
-has started
+The method should be called at the end of the code, or after some time
+after the program has started.
 
 
 ### 🟡`geometry`
@@ -427,47 +486,30 @@ def geometry(
     position: tuple[int, int] | None = None,
 ) -> tuple[int, int, int, int] | None: ...
 ```
-Change the size and position of the window and return the current size and position of
-the window
+Change the size and position of the window and return the current
+size and position of the window.
 
 * `size`: the size of the window, if it is None, does not change anything
 * `position`: the position of the window, if it is None, does not change anything
 
-TIP:
-
-If you want to use `tkinter.Tk.geometry`, please use `tkinter.Tk.wm_geometry` instead
-
-CAUTION:
-
-This method causes the event `<configure>` to be triggered
+If you want to use `tkinter.Tk.geometry`, please use
+`tkinter.Tk.wm_geometry` instead.
 
 
-### 🟡`shutdown`
+### 🟡`icon`
 
 
 <code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
 
 ```python
-def shutdown(
+def icon(
     self,
-    command: collections.abc.Callable | None,
-    ensure_destroy: bool = False,
-    /,
-    *args,
-    **kwargs,
+    value: str | enhanced.PhotoImage,
 ) -> None: ...
 ```
-Set a function that will be called when the window is closed
+Set the icon of the window.
 
-* `command`: the function that was called
-* `ensure_destroy`: whether the window is guaranteed to be closed
-* `args`: the variable-length argument of the called function
-* `kwargs`: the keyword argument of the function being called
-
-TIP:
-
-Regardless of whether the function is successfully called or not, the window will still
-close gracefully
+* `value`: the icon
 
 
 ### 🟡`theme`
@@ -478,7 +520,7 @@ close gracefully
 ```python
 def theme(
     self,
-    dark: bool,
+    value: typing.Literal['light', 'dark'],
     *,
     include_children: bool = True,
     include_canvases: bool = True,
@@ -486,7 +528,7 @@ def theme(
 ```
 Change the color theme of the window
 
-* `dark`: whether it is in dark mode
+* `value`: theme name
 * `include_children`: wether include its children, like Toplevel
 * `include_canvases`: wether include its canvases
 
@@ -505,6 +547,8 @@ def toolwindow(
 Set or get whether the window is tool-window
 
 * `value`: indicate whether the window is tool-window
+
+This method only works on Windows!
 
 
 ### 🟡`topmost`
@@ -538,6 +582,8 @@ Set or get the penetration color of the window
 
 * `value`: the penetration color of the window
 
+This method only works on Windows!
+
 
 
 
@@ -545,33 +591,34 @@ Set or get the penetration color of the window
 
 
 
-<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Toplevel` `Tk`
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `Toplevel` `Tk` `Misc`
 
 
 ```python
 def __init__(
     self,
-    master: Tk | None = None,
+    master: Tk | Toplevel | None = None,
     size: tuple[int, int] = (960, 540),
     position: tuple[int, int] | None = None,
     *,
     title: str | None = None,
-    icon: str | None = None,
+    icon: str | enhanced.PhotoImage | None = None,
     grab: bool = False,
     focus: bool = True,
     **kwargs,
 ) -> None: ...
 ```
-Toplevel window
+Toplevel window.
 
-It can be used as a pop-up window, or it can be customized to put anything you want to show
+It can be used as a pop-up window, or it can be customized to put anything
+you want to show.
 
 
 * `master`: parent widget
-* `size`: the size of the window, default value is 960x540(px)
-* `position`: the position of the window, default value indicates that location is random
+* `size`: size of the window, default value is 960x540(px)
+* `position`: position of the window, default value indicates random
 * `title`: title of window, default is the same as title of master
-* `icon`: the icon of the window, default is the same as title of master
+* `icon`: icon of the window, default is the same as title of master
 * `grab`: set grab for this window
 * `focus`: whether direct input focus to this window
 * `**kwargs`: compatible with other parameters of class `tkinter.Toplevel`
@@ -587,7 +634,7 @@ def destroy(
     self,
 ) -> None: ...
 ```
-
+Destroy this and all descendants widgets.
 
 
 
