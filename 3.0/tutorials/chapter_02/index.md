@@ -11,7 +11,7 @@ comments: true
 
     本章会详细介绍容器控件的使用方式和需要注意的地方。
 
-    tkt 中的容器控件包括 `Tk`、`Toplevel`、`Canvas`。
+    `maliang` 中的容器控件包括 `Tk`、`Toplevel`、`Canvas`。
 
 ## 本章内容
 

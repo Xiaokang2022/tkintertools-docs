@@ -298,7 +298,7 @@ nav:
       - tutorials/index.md
       - 第一章：安装与初识:
           - tutorials/chapter_01/index.md
-          - 1.1 安装 maliang: tutorials/chapter_01/1.md
+          - 1.1 环境搭建: tutorials/chapter_01/1.md
           - 1.2 实现一个简单的界面: tutorials/chapter_01/2.md
           - 1.3 框架概述: tutorials/chapter_01/3.md
       - 第二章：容器控件:
