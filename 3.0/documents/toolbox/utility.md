@@ -1,6 +1,6 @@
-# tkintertools.toolbox.utility
+# maliang.toolbox.utility
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/toolbox/utility.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/toolbox/utility.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/toolbox/utility.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/toolbox/utility.py){ target='_blank' }</small>
 
 Some useful utility classes or utility functions.
 

@@ -1,6 +1,6 @@
-# tkintertools.three.geometries
+# maliang.three.geometries
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/geometries.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.3/tkintertools/three/geometries.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/three/geometries.py`](https://github.com/Xiaokang2022/maliang-three/blob/1.0.3/maliang/three/geometries.py){ target='_blank' }</small>
 
 Standard Geometries
 

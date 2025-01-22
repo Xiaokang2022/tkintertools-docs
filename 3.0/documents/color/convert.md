@@ -1,6 +1,6 @@
-# tkintertools.color.convert
+# maliang.color.convert
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/convert.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/color/convert.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/color/convert.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/color/convert.py){ target='_blank' }</small>
 
 Convert a format of color to another format.
 

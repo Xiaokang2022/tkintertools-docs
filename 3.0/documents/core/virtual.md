@@ -1,6 +1,6 @@
-# tkintertools.core.virtual
+# maliang.core.virtual
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/core/virtual.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/core/virtual.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/core/virtual.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/core/virtual.py){ target='_blank' }</small>
 
 All virtual classes.
 

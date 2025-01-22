@@ -1,10 +1,10 @@
-site_name: tkintertools # 站点名称
-site_url: https://Xiaokang2022.github.io/tkintertools-docs/ # 站点链接
-repo_url: https://github.com/Xiaokang2022/tkintertools # 仓库地址
-repo_name: Xiaokang2022/tkintertools # 仓库名称
-edit_uri: https://github.com/Xiaokang2022/tkintertools-docs/edit/main/2.6/ # 编辑地址
+site_name: maliang # 站点名称
+site_url: https://Xiaokang2022.github.io/maliang-docs/ # 站点链接
+repo_url: https://github.com/Xiaokang2022/maliang # 仓库地址
+repo_name: Xiaokang2022/maliang # 仓库名称
+edit_uri: https://github.com/Xiaokang2022/maliang-docs/edit/main/2.6/ # 编辑地址
 edit_uri_template: null # 编辑地址模板（默认值）
-site_description: tkintertools 的官方文档网站 # 站点描述
+site_description: maliang 的官方文档网站 # 站点描述
 site_author: Xiaokang2022 # 站点作者
 copyright: <a href="#__consent">修改 Cookie 设置</a><br/>Copyright &copy; 2022-2024 Xiaokang2022 # 版权信息和 Cookie 设置
 remote_branch: gh-pages # GitHub Pages 远程分支名称（默认值）
@@ -202,10 +202,10 @@ extra: # 额外设定
     _:
   social: # 社交联系方式（页面右下角内容）
     - icon: fontawesome/brands/github
-      link: https://github.com/Xiaokang2022/tkintertools/
+      link: https://github.com/Xiaokang2022/maliang/
       name: GitHub 存储库
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/tkintertools/
+      link: https://pypi.org/project/maliang/
       name: PyPI
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/498105668
@@ -247,10 +247,10 @@ extra: # 额外设定
           note: 感谢您的反馈！
 
 extra_javascript:
-  - https://Xiaokang2022.github.io/tkintertools/js/click-colorful.js # 鼠标点击效果
-  - https://Xiaokang2022.github.io/tkintertools/js/shortcuts.js # 绑定左右键换页的键盘快捷键
-  - https://Xiaokang2022.github.io/tkintertools/js/mathjax.js # 数学表达式
-  - https://Xiaokang2022.github.io/tkintertools/js/tablesort.js # 表格排序功能
+  - https://Xiaokang2022.github.io/maliang/js/click-colorful.js # 鼠标点击效果
+  - https://Xiaokang2022.github.io/maliang/js/shortcuts.js # 绑定左右键换页的键盘快捷键
+  - https://Xiaokang2022.github.io/maliang/js/mathjax.js # 数学表达式
+  - https://Xiaokang2022.github.io/maliang/js/tablesort.js # 表格排序功能
   - https://unpkg.com/mathjax@latest/es5/tex-mml-chtml.js # 数学表达式运行环境
   - https://unpkg.com/tablesort@latest/dist/tablesort.min.js # 表格排序功能运行环境（默认文本类型）
   - https://unpkg.com/tablesort@latest/dist/sorts/tablesort.date.min.js # 表格排序功能（日期类型）
@@ -260,7 +260,7 @@ extra_javascript:
   - https://unpkg.com/tablesort@latest/dist/sorts/tablesort.number.min.js # 表格排序功能（数字类型）
 
 extra_css:
-  - https://Xiaokang2022.github.io/tkintertools/css/extra.css # 加载自定义的样式
+  - https://Xiaokang2022.github.io/maliang/css/extra.css # 加载自定义的样式
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css # 图标字体库
   - https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.5.0/style.min.css # 设置字体（霞鹜文楷）【版本不能再更高了，会导致公式字体变小】
 
@@ -280,7 +280,7 @@ plugins:
       type: timeago
       locale: zh
   - git-committers:
-      repository: Xiaokang2022/tkintertools-docs
+      repository: Xiaokang2022/maliang-docs
       branch: main
       docs_path: 2.6/
       cache_dir: .cache/plugin/git-committers/2.6/
@@ -298,9 +298,9 @@ nav:
   - 官方教程:
       - tutorials/index.md
       - 第一章：安装与初识:
-          - 1.1 安装 tkintertools: tutorials/1-1.md
-          - 1.2 认识 tkintertools: tutorials/1-2.md
-          - 1.3 tkintertools 初体验: tutorials/1-3.md
+          - 1.1 安装 maliang: tutorials/1-1.md
+          - 1.2 认识 maliang: tutorials/1-2.md
+          - 1.3 maliang 初体验: tutorials/1-3.md
       - 第二章：容器控件: tutorials/2-1.md
         # - Tk
         # - Toplevel

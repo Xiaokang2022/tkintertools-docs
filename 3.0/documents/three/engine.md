@@ -1,6 +1,6 @@
-# tkintertools.three.engine
+# maliang.three.engine
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/engine.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.3/tkintertools/three/engine.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/three/engine.py`](https://github.com/Xiaokang2022/maliang-three/blob/1.0.3/maliang/three/engine.py){ target='_blank' }</small>
 
 Core codes of 3D
 

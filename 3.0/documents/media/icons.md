@@ -1,6 +1,6 @@
-# tkintertools.media.icons
+# maliang.media.icons
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/media/icons.py`](https://github.com/Xiaokang2022/tkintertools-media/blob/1.1.3/tkintertools/media/icons.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/media/icons.py`](https://github.com/Xiaokang2022/maliang-media/blob/1.1.3/maliang/media/icons.py){ target='_blank' }</small>
 
 All icons with base64 format
 

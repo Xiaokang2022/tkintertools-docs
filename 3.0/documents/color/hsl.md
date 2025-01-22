@@ -1,6 +1,6 @@
-# tkintertools.color.hsl
+# maliang.color.hsl
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/hsl.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/color/hsl.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/color/hsl.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/color/hsl.py){ target='_blank' }</small>
 
 Some functions about HSL codes.
 

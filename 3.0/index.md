@@ -4,11 +4,11 @@ comments: true
 icon: material/home
 ---
 
-# tkintertools `3.0.x`
+# maliang `3.0.x`
 
 !!! tip "温馨提示"
 
-    这里是 `tkintertools 3.0.x` 系列版本的教程和文档网站，请走错的朋友在网页左上角切换版本哈……😅
+    这里是 `maliang 3.0.x` 系列版本的教程和文档网站，请走错的朋友在网页左上角切换版本哈……😅
 
     - [X] 您可以通过按下快捷键 ++left++ 和 ++right++ 来快速跳转到上一页和下一页！🎉
     - [X] 您可以通过点击页面顶部搜索栏或按下快捷键 <kbd>/</kbd> 来快速查找想要的内容！✨
@@ -25,6 +25,6 @@ icon: material/home
     </div>
 
 <div align="center" markdown>
-[<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/tkintertools){ .md-button title="点我闪现返回主站！" }
+[<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/maliang){ .md-button title="点我闪现返回主站！" }
 [<small>:fontawesome-solid-paper-plane:</small> 最新内容](./tutorials/chapter_04/3.md){ .md-button title="点我飞到最近更新的内容！" }
 </div>

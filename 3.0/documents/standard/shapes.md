@@ -1,6 +1,6 @@
-# tkintertools.standard.shapes
+# maliang.standard.shapes
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/shapes.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/shapes.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/standard/shapes.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/standard/shapes.py){ target='_blank' }</small>
 
 All standard `Shape` classes
 

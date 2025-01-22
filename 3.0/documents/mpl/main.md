@@ -1,6 +1,6 @@
-# tkintertools.mpl.main
+# maliang.mpl.main
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/mpl/main.py`](https://github.com/Xiaokang2022/tkintertools-mpl/blob/1.2.3/tkintertools/mpl/main.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/mpl/main.py`](https://github.com/Xiaokang2022/maliang-mpl/blob/1.2.3/maliang/mpl/main.py){ target='_blank' }</small>
 
 APIs for Matplotlib
 
@@ -160,6 +160,6 @@ def set_mpl_default_theme(
 Set default color constants of `matplotlib`.
 
 * `theme`: theme mode
-* `apply_font`: whether to use the font of `tkintertools`
+* `apply_font`: whether to use the font of `maliang`
 
 

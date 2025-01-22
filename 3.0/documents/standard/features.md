@@ -1,6 +1,6 @@
-# tkintertools.standard.features
+# maliang.standard.features
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/standard/features.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/standard/features.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/standard/features.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/standard/features.py){ target='_blank' }</small>
 
 All standard `Feature` classes
 

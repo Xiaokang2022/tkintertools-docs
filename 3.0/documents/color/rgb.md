@@ -1,6 +1,6 @@
-# tkintertools.color.rgb
+# maliang.color.rgb
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/color/rgb.py`](https://github.com/Xiaokang2022/tkintertools/blob/3.0.0rc6/tkintertools/color/rgb.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/color/rgb.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/color/rgb.py){ target='_blank' }</small>
 
 Some functions about RGB codes.
 

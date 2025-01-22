@@ -31,12 +31,12 @@ import time
 import types
 import typing
 
-import tkintertools
-import tkintertools.media
-import tkintertools.mpl
-import tkintertools.three
+import maliang
+import maliang.media
+import maliang.mpl
+import maliang.three
 
-__version__ = "0.2.6"
+__version__ = "0.2.7"
 __author__ = "Xiaokang2022 <2951256653@qq.com>"
 
 TAGS: dict[str, str] = {
@@ -228,10 +228,10 @@ icon: material/file-document
 
     当前文档适用版本：
 
-    * tkintertools: `{tkintertools.__version__}`
-    * tkintertools-mpl (EX): `{tkintertools.mpl.__version__}`
-    * tkintertools-media (EX): `{tkintertools.media.__version__}`
-    * tkintertools-3d (EX): `{tkintertools.three.__version__}`
+    * maliang: `{maliang.__version__}`
+    * maliang-mpl (EX): `{maliang.mpl.__version__}`
+    * maliang-media (EX): `{maliang.media.__version__}`
+    * maliang-three (EX): `{maliang.three.__version__}`
 """)
 
         for sub_package, modules in data_package.items():
@@ -261,17 +261,17 @@ def create_pages(module: types.ModuleType) -> None:
         file.write(f"# {data_module["name"].replace(".__init__", "")}\n\n")
         path = data_module["name"].replace(".", "/") + ".py"
         if "mpl" in path:
-            version = tkintertools.mpl.__version__
-            repo = "tkintertools-mpl"
+            version = maliang.mpl.__version__
+            repo = "maliang-mpl"
         elif "media" in path:
-            version = tkintertools.media.__version__
-            repo = "tkintertools-media"
+            version = maliang.media.__version__
+            repo = "maliang-media"
         elif "three" in path:
-            version = tkintertools.three.__version__
-            repo = "tkintertools-3d"
+            version = maliang.three.__version__
+            repo = "maliang-three"
         else:
-            version = tkintertools.__version__
-            repo = "tkintertools"
+            version = maliang.__version__
+            repo = "maliang"
         file.write(
             f"<small>:octicons-mark-github-16: 源代码：[`{path}`](https://github.com/Xiaokang2022/{repo}/blob/{version}/{path}){{ target='_blank' }}</small>\n\n")
         file.write(f"{data_module["docstring"]}\n\n")
@@ -425,4 +425,4 @@ def create_docs(lib: types.ModuleType) -> None:
 
 
 if __name__ == "__main__":
-    create_docs(tkintertools)
+    create_docs(maliang)

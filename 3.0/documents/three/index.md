@@ -1,9 +1,9 @@
-# tkintertools.three
+# maliang.three
 
-<small>:octicons-mark-github-16: 源代码：[`tkintertools/three/__init__.py`](https://github.com/Xiaokang2022/tkintertools-3d/blob/1.0.3/tkintertools/three/__init__.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/three/__init__.py`](https://github.com/Xiaokang2022/maliang-three/blob/1.0.3/maliang/three/__init__.py){ target='_blank' }</small>
 
 
-Extension package of tkintertools for simple 3D drawings
+Extension package of maliang for simple 3D drawings
 
 Provides:
 
