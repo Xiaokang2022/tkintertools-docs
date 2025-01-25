@@ -585,6 +585,42 @@ Set or get the penetration color of the window
 This method only works on Windows!
 
 
+### 🟡`modified`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def modified(
+    self,
+    value: bool | None = None,
+) -> bool | None: ...
+```
+Set or get whether the window is modified.
+
+* `value`: indicate whether the window is modified
+
+This method only works on macOS!
+
+
+### 🟡`transparent`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def transparent(
+    self,
+    value: bool | None = None,
+) -> bool | None: ...
+```
+Set or get whether the window is transparent.
+
+* `value`: indicate whether the window is transparent
+
+This method only works on macOS!
+
+
 
 
 ## 🟢`Toplevel`
