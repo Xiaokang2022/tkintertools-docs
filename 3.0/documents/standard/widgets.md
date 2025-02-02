@@ -1,6 +1,6 @@
 # maliang.standard.widgets
 
-<small>:octicons-mark-github-16: 源代码：[`maliang/standard/widgets.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/standard/widgets.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/standard/widgets.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0/maliang/standard/widgets.py){ target='_blank' }</small>
 
 All standard `Widget` classes
 
@@ -56,6 +56,31 @@ Button widget, typically used to trigger a function
 * `auto_update`: whether the theme manager update it automatically
 * `style`: style of the widget
 
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> str: ...
+```
+Get the text of the widget
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    text: str,
+) -> None: ...
+```
+Set the text of the widget
 
 
 
@@ -371,6 +396,31 @@ A button with an icon on the left side
 * `style`: style of the widget
 
 
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> str: ...
+```
+Get the text of the widget
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    text: str,
+) -> None: ...
+```
+Set the text of the widget
+
 
 
 ## 🟢`Image`
@@ -635,6 +685,31 @@ Label widget, which is generally used to display key information
 * `auto_update`: whether the theme manager update it automatically
 * `style`: style of the widget
 
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> str: ...
+```
+Get the text of the widget
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    text: str,
+) -> None: ...
+```
+Set the text of the widget
 
 
 
@@ -1590,6 +1665,31 @@ def _display(
 ) -> None: ...
 ```
 Show or hide the tooltip
+
+### 🟡`get`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def get(
+    self,
+) -> str: ...
+```
+Get the text of the widget
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    text: str,
+) -> None: ...
+```
+Set the text of the widget
 
 
 

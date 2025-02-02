@@ -1,6 +1,6 @@
 # maliang.standard.styles
 
-<small>:octicons-mark-github-16: 源代码：[`maliang/standard/styles.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/standard/styles.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/standard/styles.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0/maliang/standard/styles.py){ target='_blank' }</small>
 
 All standard `Style` classes
 
@@ -9,6 +9,31 @@ All standard `Style` classes
 
 
 <code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `LabelStyle`
+
+### 🟡`set`
+
+
+<code style='color: #BBBB00;'>method</code> <code style='color: green;'>public</code>
+
+```python
+def set(
+    self,
+    theme: typing.Literal['light', 'dark'] | None = None,
+    *,
+    fg: tuple[str | types.EllipsisType, ...] | str | None = None,
+    bg: tuple[str | types.EllipsisType, ...] | str | None = None,
+    ol: tuple[str | types.EllipsisType, ...] | str | None = None,
+) -> None: ...
+```
+Set the style of the widget.
+
+* `theme`: the theme name, None indicates both
+* `fg`: the foreground color of the widget.
+* `bg`: the background color of the widget.
+* `ol`: the outline color of the widget.
+
+states: "normal", "hover", "active"
+
 
 
 
@@ -99,7 +124,7 @@ Set the style of the widget.
 * `bg`: the background color of the widget.
 * `ol`: the outline color of the widget.
 
-states: "normal", "hover", "active"
+states: "normal", "hover"
 
 
 
@@ -363,7 +388,7 @@ Set the style of the widget.
 * `theme`: the theme name, None indicates both
 * `fg`: the foreground color of the widget
 
-states: "normal", "hover", "active"
+states: "normal"
 
 
 
@@ -399,6 +424,14 @@ Set the style of the widget.
 states: "normal-off", "hover-off", "active-off", "normal-on",
 "hover-on", "active-on"
 
+
+
+
+## 🟢`ToggleButtonStyle4SB`
+
+
+
+<code style='color: limegreen;'>class</code> <code style='color: green;'>public</code> | `ToggleButtonStyle`
 
 
 

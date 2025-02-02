@@ -1,6 +1,6 @@
 # maliang.core.virtual
 
-<small>:octicons-mark-github-16: 源代码：[`maliang/core/virtual.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/core/virtual.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/core/virtual.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0/maliang/core/virtual.py){ target='_blank' }</small>
 
 All virtual classes.
 
@@ -696,6 +696,8 @@ def bind(
     sequence: str,
     command: collections.abc.Callable[[tkinter.Event], typing.Any],
     add: bool | typing.Literal['', '+'] | None = None,
+    *,
+    auto_detect: bool = True,
 ) -> None: ...
 ```
 Bind to this widget at event sequence a call to function command.
@@ -703,6 +705,8 @@ Bind to this widget at event sequence a call to function command.
 * `sequence`: event name
 * `command`: callback function
 * `add`: if True, original callback function will not be overwritten
+* `auto_detect`: Automatically determine whether to execute binding
+events based on the method `detect`
 
 
 ### 🟡`bind_on_update`

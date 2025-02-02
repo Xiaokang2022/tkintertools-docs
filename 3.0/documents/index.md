@@ -20,7 +20,7 @@ icon: material/file-document
 
     当前文档适用版本：
 
-    * maliang: `3.0.0rc6`
+    * maliang: `3.0.0`
     * maliang-mpl (EX): `1.2.3`
     * maliang-media (EX): `1.1.3`
     * maliang-three (EX): `1.0.3`

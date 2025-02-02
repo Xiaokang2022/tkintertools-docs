@@ -1,6 +1,6 @@
 # maliang.core.containers
 
-<small>:octicons-mark-github-16: 源代码：[`maliang/core/containers.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/core/containers.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/core/containers.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0/maliang/core/containers.py){ target='_blank' }</small>
 
 All containers.
 
@@ -544,7 +544,7 @@ def toolwindow(
     value: bool | None = True,
 ) -> bool | None: ...
 ```
-Set or get whether the window is tool-window
+Set or get whether the window is tool-window.
 
 * `value`: indicate whether the window is tool-window
 
@@ -578,7 +578,7 @@ def transparentcolor(
     value: str | None = None,
 ) -> str | None: ...
 ```
-Set or get the penetration color of the window
+Set or get the penetration color of the window.
 
 * `value`: the penetration color of the window
 

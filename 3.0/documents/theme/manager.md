@@ -1,6 +1,6 @@
 # maliang.theme.manager
 
-<small>:octicons-mark-github-16: 源代码：[`maliang/theme/manager.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0rc6/maliang/theme/manager.py){ target='_blank' }</small>
+<small>:octicons-mark-github-16: 源代码：[`maliang/theme/manager.py`](https://github.com/Xiaokang2022/maliang/blob/3.0.0/maliang/theme/manager.py){ target='_blank' }</small>
 
 Support for theme
 
@@ -182,6 +182,16 @@ TIP:
 `"system"` is the following system
 
 
+## 🟣`_`
+
+
+<code style='color: #BBBB00;'>variable</code> <code style='color: orange;'>protected</code>
+
+```python linenums="0"
+_: str = '0'
+```
+
+
 ## 🟣`_callback_events`
 
 
@@ -199,6 +209,26 @@ _callback_events: dict = {}
 
 ```python linenums="0"
 _color_mode: str = 'system'
+```
+
+
+## 🟣`major`
+
+
+<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
+
+```python linenums="0"
+major: str = '10'
+```
+
+
+## 🟣`micro`
+
+
+<code style='color: #BBBB00;'>variable</code> <code style='color: green;'>public</code>
+
+```python linenums="0"
+micro: str = '26100'
 ```
 
 
