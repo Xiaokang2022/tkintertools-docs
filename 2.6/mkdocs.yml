@@ -203,7 +203,7 @@ extra: # 额外设定
   social: # 社交联系方式（页面右下角内容）
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/maliang/
-      name: GitHub 存储库
+      name: GitHub
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/maliang/
       name: PyPI
@@ -267,8 +267,8 @@ extra_css:
 plugins:
   # 内置插件
   - search:
+  - meta:
   - tags:
-      tags_file: tags.md
   # 第三方插件
   - mike:
   - statistics:
@@ -278,7 +278,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
-      locale: zh
   - git-committers:
       repository: Xiaokang2022/maliang-docs
       branch: main

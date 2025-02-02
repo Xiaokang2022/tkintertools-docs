@@ -267,8 +267,8 @@ extra_css:
 plugins:
   # 内置插件
   - search:
+  - meta:
   - tags:
-      tags_file: tags.md
   # 第三方插件
   - mike:
   - statistics:

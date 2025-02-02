@@ -31,5 +31,6 @@ icon: material/home
     </div>
 
 <div align="center" markdown>
-[<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/tkintertools){ .md-button title="点我闪现返回主站！" }
+[<small>:fontawesome-solid-circle-arrow-left:</small> 返回主站](https://Xiaokang2022.github.io/maliang/){ .md-button title="点我闪现返回主站！" }
+[<small>:fontawesome-solid-paper-plane:</small> 最新版本](https://Xiaokang2022.github.io/maliang-docs/){ .md-button title="点我飞到最新的版本！" }
 </div>
