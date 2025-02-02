@@ -171,7 +171,7 @@ theme: # 此项各个设定因主题而异
     - media: "(prefers-color-scheme: light)" # 亮色主题
       scheme: default
       primary: white
-      accent: orange
+      accent: green
       toggle:
         icon: material/weather-sunny
         name: 明亮主题
