@@ -6,4 +6,12 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-statistics-plugin
 mkdocs-minify-plugin
 mkdocs-rss-plugin
+mkdocs-autorefs
+mkdocstrings[python]
+# griffe-typingdoc
+# griffe-pydantic
 mike
+
+maliang
+maliang[opt]
+maliang[ext]

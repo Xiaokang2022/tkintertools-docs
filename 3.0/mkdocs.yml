@@ -41,7 +41,7 @@ markdown_extensions:
       marker: "" # 目录替换文本，空字符串则不替换，缺省为 [TOC]
       # title: "" # 目录标题，material 主题会自动根据语言计算
       anchorlink: false # 锚点链接（默认值），给标题自身锚定链接
-      permalink: "&para;" # 锚点符号
+      permalink: ¶ # 锚点符号
       permalink_title: "" # 锚点链接提示词，空字符表示没有
       permalink_leading: false # 前置锚点链接（默认值），将锚点放到标题前面
       baselevel: 1 # 最高级别（默认值），往下顺延
@@ -272,6 +272,37 @@ plugins:
   # 第三方插件
   - mike:
   - statistics:
+  - autorefs:
+      resolve_closest: true
+  - mkdocstrings:
+      handlers:
+        python:
+          inventories:
+          - https://docs.python.org/3/objects.inv
+          options:
+            show_bases: true
+            show_source: false
+            heading_level: 2
+            parameter_headings: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            members_order: source
+            summary: true
+            docstring_section_style: list
+            show_docstring_attributes: true
+            separate_signature: true
+            show_signature_annotations: true
+            annotations_path: source
+            line_length: 80
+            inherited_members: true
+            merge_init_into_class: true
+            signature_crossrefs: true
+            filters: ["!^_"]
+            show_root_full_path: false
+            # extensions:
+            # - griffe_typingdoc:
+            # - griffe-pydantic:
+            #     schema: true
   - glightbox:
       background: none
       auto_themed: true
@@ -317,9 +348,9 @@ nav:
           - 4.3 自定义动画: tutorials/chapter_04/3.md
       - 第五章：颜色:
           - tutorials/chapter_05/index.md
-      #     - 5.1 RGB: tutorials/1-1.md
-      #     - 5.2 HSL: tutorials/1-1.md
-      #     - 5.3 RGBA: tutorials/1-1.md
+          # - 5.1 颜色格式: tutorials/chapter_05/1.md
+          # - 5.3 颜色函数: tutorials/chapter_05/2.md
+          # - 5.2 颜色转换: tutorials/chapter_05/3.md
       # - 第八章：自定义开发:
       #     - 8.1 自定义容器控件: tutorials/1-1.md
       #     - 8.2 自定义基础控件: tutorials/1-1.md
