@@ -7,16 +7,7 @@ icon: material/file-document
 
 !!! warning "特别说明"
 
-    本文档仍在测试中，由于是直接通过程序将 Python 源代码转换成的数据，因此语言为英语，且可能存在数据不完整的问题，请大家查阅时注意甄别！
-
-    条目类型：
-
-    * 📦 **Package / 包**
-    * 📑 **Module / 模块**
-    * 🟢 **Class / 类**
-    * 🔵 **Function / 函数**
-    * 🟡 **Method / 方法**
-    * 🟣 **Variable / 变量**
+    本文档仍在测试中，由于是直接通过开源项目 <https://github.com/mkdocstrings/mkdocstrings> 将 Python 源代码转换成的数据，因此语言为英语。
 
     当前文档适用版本：
 

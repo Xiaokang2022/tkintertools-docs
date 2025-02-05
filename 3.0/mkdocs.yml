@@ -273,7 +273,6 @@ plugins:
   - mike:
   - statistics:
   - autorefs:
-      resolve_closest: true
   - mkdocstrings:
       handlers:
         python:
@@ -294,7 +293,7 @@ plugins:
             show_signature_annotations: true
             annotations_path: source
             line_length: 80
-            inherited_members: true
+            # inherited_members: true
             merge_init_into_class: true
             signature_crossrefs: true
             filters: ["!^_"]
