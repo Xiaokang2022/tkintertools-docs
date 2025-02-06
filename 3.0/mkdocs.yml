@@ -263,6 +263,7 @@ extra_css:
   - https://Xiaokang2022.github.io/maliang/css/extra.css # 加载自定义的样式
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css # 图标字体库
   - https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.5.0/style.min.css # 设置字体（霞鹜文楷）【版本不能再更高了，会导致公式字体变小】
+  - css/mkdocstrings.css
 
 plugins:
   # 内置插件
@@ -272,12 +273,32 @@ plugins:
   # 第三方插件
   - mike:
   - statistics:
+  - markdown-exec:
+  - glightbox:
+      background: none
+      auto_themed: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - git-committers:
+      repository: Xiaokang2022/maliang-docs
+      branch: main
+      docs_path: 3.0/
+      cache_dir: .cache/plugin/git-committers/3.0/
+      token: !ENV GH_TOKEN # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
   - autorefs:
+      resolve_closest: true
+  - gen-files:
+      scripts:
+      - Scripts/gen_doc_pages.py
+  - literate-nav:
+      nav_file: summary.md
   - mkdocstrings:
       handlers:
         python:
           inventories:
           - https://docs.python.org/3/objects.inv
+          locale: zh
           options:
             show_bases: true
             show_source: false
@@ -292,7 +313,7 @@ plugins:
             separate_signature: true
             show_signature_annotations: true
             annotations_path: source
-            line_length: 80
+            line_length: 100
             # inherited_members: true
             merge_init_into_class: true
             signature_crossrefs: true
@@ -302,18 +323,6 @@ plugins:
             # - griffe_typingdoc:
             # - griffe-pydantic:
             #     schema: true
-  - glightbox:
-      background: none
-      auto_themed: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-  - git-committers:
-      repository: Xiaokang2022/maliang-docs
-      branch: main
-      docs_path: 3.0/
-      cache_dir: .cache/plugin/git-committers/3.0/
-      token: !ENV GH_TOKEN # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
   - minify:
       minify_html: true
       htmlmin_opts:
@@ -369,60 +378,7 @@ nav:
       #     - 9.3 3D 扩展包: tutorials/1-1.md
       #     - 9.4 Demos & Projects: tutorials/1-1.md
 
-  - 参考文档:
-      - documents/index.md
-
-      - 📦 animation:
-          - documents/animation/index.md
-          - 📑 animations: documents/animation/animations.md
-          - 📑 controllers: documents/animation/controllers.md
-
-      - 📦 color:
-          - documents/color/index.md
-          - 📑 colortable: documents/color/colortable.md
-          - 📑 convert: documents/color/convert.md
-          - 📑 hsl: documents/color/hsl.md
-          - 📑 rgb: documents/color/rgb.md
-
-      - 📦 core:
-          - documents/core/index.md
-          - 📑 configs: documents/core/configs.md
-          - 📑 containers: documents/core/containers.md
-          - 📑 virtual: documents/core/virtual.md
-
-      - 📦 standard:
-          - documents/standard/index.md
-          - 📑 dialogs: documents/standard/dialogs.md
-          - 📑 features: documents/standard/features.md
-          - 📑 images: documents/standard/images.md
-          - 📑 shapes: documents/standard/shapes.md
-          - 📑 styles: documents/standard/styles.md
-          - 📑 texts: documents/standard/texts.md
-          - 📑 widgets: documents/standard/widgets.md
-
-      - 📦 theme:
-          - documents/theme/index.md
-          - 📑 manager: documents/theme/manager.md
-
-      - 📦 toolbox:
-          - documents/toolbox/index.md
-          - 📑 enhanced: documents/toolbox/enhanced.md
-          - 📑 utility: documents/toolbox/utility.md
-
-      - 📦 mpl (Extension):
-          - documents/mpl/index.md
-          - 📑 constants: documents/mpl/constants.md
-          - 📑 main: documents/mpl/main.md
-
-      - 📦 media (Extension):
-          - documents/media/index.md
-          - 📑 icons: documents/media/icons.md
-          - 📑 main: documents/media/main.md
-
-      - 📦 three (Extension):
-          - documents/three/index.md
-          - 📑 engine: documents/three/engine.md
-          - 📑 geometries: documents/three/geometries.md
+  - 参考文档: documents/  # 自动生成
 
   - 实战教学:
       - practices/index.md

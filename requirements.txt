@@ -7,7 +7,10 @@ mkdocs-statistics-plugin
 mkdocs-minify-plugin
 # mkdocs-rss-plugin
 mkdocs-autorefs
+mkdocs-gen-files
+mkdocs-literate-nav
 mkdocstrings[python]
+markdown-exec[ansi]
 mike
 
 maliang
