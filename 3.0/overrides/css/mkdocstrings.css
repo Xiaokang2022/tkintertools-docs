@@ -1,0 +1,3 @@
+.doc-symbol.doc-symbol-nav.doc-symbol-parameter::after {
+    content: "pkg";
+}
