@@ -11,7 +11,7 @@ remote_branch: gh-pages # GitHub Pages 远程分支名称（默认值）
 remote_name: origin # 远程名称（默认值）
 docs_dir: docs/ # 文档目录（默认值）
 site_dir: site # 网站目录（默认值）
-dev_addr: 127.0.0.1:8080 # 预览模式地址（默认值）
+dev_addr: 127.0.0.1:8000 # 预览模式地址（默认值）
 use_directory_urls: true # URL 使用目录名还是文件名（默认值）
 strict: false # 警告级别（默认值），出现警告就终止程序
 
@@ -281,9 +281,9 @@ plugins:
   - git-committers:
       repository: Xiaokang2022/maliang-docs
       branch: "2.6"
-      docs_path: docs/
-      cache_dir: .cache/plugin/git-committers/docs/
       token: !ENV GH_TOKEN # 需要自行在终端中设置临时环境变量，强烈不建议显式地在此处设置 token
+      exclude_committers:
+        - web-flow
   - minify:
       minify_html: true
       htmlmin_opts:
